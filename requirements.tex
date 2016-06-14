@@ -1,0 +1,379 @@
+%% -*- coding:utf-8 -*-
+\chapter*{Requirements}
+
+\section{Groups}
+
+\begin{definition}[Monoid]
+  The set of elements $M$ with defined binary operation $\circ$ we will call
+  as a monoid if the following conditions are satisfied.
+  \begin{enumerate}
+  \item Closure: $\forall a, b \in M$: $a \circ b \in G$
+  \item Associativity: $\forall a, b, c \in M$:
+    $a \circ \left( b \circ c \right) =
+    \left( a \circ b \right) \circ c$
+  \item Identity element: $\exists e \in M$ such that
+    $\forall a \in G$: $e \circ a = a \circ e = a$
+  \end{enumerate}
+  \label{def:monoid}
+\end{definition}
+
+\begin{definition}[Group]
+  Let we have a set of elements $G$ with a defined binary operation
+  $\circ$ that satisfied the following properties.
+  \begin{enumerate}
+  \item Closure: $\forall a, b \in G$: $a \circ b \in G$
+  \item Associativity: $\forall a, b, c \in G$:
+    $a \circ \left( b \circ c \right) =
+    \left( a \circ b \right) \circ c$
+  \item Identity element: $\exists e \in G$ such that
+    $\forall a \in G$: $e \circ a = a \circ e = a$
+  \item Inverse element: $\forall a \in G$ $\exists a^{-1} \in G$ such that
+    $a \circ a^{-1} = e$
+  \end{enumerate}
+  In this case $\left(G, \circ\right)$ is called as group.
+  \label{def:group}
+\end{definition}
+Therefore the group is a \nameref{def:monoid} with inverse element
+property. 
+
+\begin{example}[Group $\mathbb{Z}/2\mathbb{Z}$]
+  Consider a set of 2 elements: $G = \left\{0, 1\right\}$ with the
+  operation $\circ$ defined by the table \ref{tab:CayleyZ2Z}.
+  \begin{table}
+    \centering
+    \caption{Cayley table for $\mathbb{Z}/2\mathbb{Z}$}
+    \label{tab:CayleyZ2Z}
+    \begin{tabular}{l|ll}
+      \toprule
+      $\circ$ & 0 & 1 \\
+      \midrule
+      0 & 0 & 1 \\
+      1 & 1 & 0 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+
+  The identity element is $0$ i.e. $e = 0$.
+  Inverse element is the element itself
+  because $\forall a \in G$: $a \circ a = 0 = e$.
+  \label{ex:group}
+\end{example}
+
+\begin{definition}[Subgroup]
+  Let we have a \nameref{def:group} $\left(G, \circ\right)$. The
+  subset $S \subset G$ is called as subgroup if $\left(S,
+  \circ\right)$ is a \nameref{def:group}.
+  \label{def:subgroup}
+\end{definition}
+
+\begin{definition}[Abelian group]
+  Let we have a \nameref{def:group} $\left(G, \circ\right)$.
+  The group is called an Abelian or commutative if
+  $\forall a, b \in G$ it holds $a \circ b = b \circ a$.
+  \label{def:abeliangroup}
+\end{definition}
+
+\section{Rings, Ideals and Fields}
+
+\begin{definition}[Ring]
+  Consider a set $R$ with 2 binary operations defined. The first one
+  $\oplus$ (addition) and elements of $R$ forms an
+  \nameref{def:abeliangroup}
+  under this operation. The second one is $\odot$ (multiplication) and
+  the elements of $R$ forms a \nameref{def:monoid} under 
+  the operation. The two binary operations are connected each other
+  via the following distributive law
+  \begin{itemize}
+  \item Left distributivity:
+    $\forall a,b,c \in R$:
+    $a \odot \left(b \oplus c\right) =
+    a \odot b \oplus a \odot c$
+  \item Right distributivity:
+    $\forall a,b,c \in R$:
+    $\left( a \oplus b \right) \odot c =
+    a \odot c \oplus b \odot c$
+    
+  The identity element for $\left(R, \oplus\right)$ is denoted as $0$
+  (additive identity).
+  The identity element for $\left(R, \odot\right)$ is denoted as $1$
+  (multiplicative identity).
+
+  The inverse element to $a$ in $\left(R, \oplus\right)$ is denoted as $-a$
+  \end{itemize}
+
+  In this case $\left(R, \oplus, \odot\right)$ is called as ring.
+  \label{def:ring}
+\end{definition}
+
+The \nameref{def:ring} is a generalization of integer numbers conception.
+\begin{example}[Ring of integers $\mathbb{Z}$]
+  The set of integer numbers $\mathbb{Z}$ forms a \nameref{def:ring}
+  under $+$ and $\cdot$ operations i.e. addition $\oplus$ is
+  $+$ and multiplication $\odot$ is $\cdot$. Thus for integer
+  numbers we have the following \nameref{def:ring}:
+  $\left(\mathbb{Z}, +, \cdot\right)$
+  \label{ex:ring}
+\end{example}
+
+\begin{definition}[Ideal]
+  Lets we have the \nameref{def:ring}
+  $\left(R, \oplus, \odot\right)$. Subset $I \subset R$ will be an
+  ideal if it satisfied the following conditions
+  \begin{enumerate}
+  \item $\left(I, \oplus\right)$ is \nameref{def:subgroup} of
+    $\left(R, \oplus\right)$
+  \item $\forall i \in I$ and $\forall r \in R$:
+    $i \odot r \in I$ and $r \odot i \in I$
+  \end{enumerate}
+  \label{def:ideal}
+\end{definition}
+
+\begin{example}[Ideal $2 \mathbb{Z}$]
+  Consider even numbers. They forms an \nameref{def:ideal} in
+  $\mathbb{Z}$. Because multiplication of any even number to any
+  integer is an even. The ideal's symbolic name is $2 \mathbb{Z}$.
+  \label{ex:ideal}
+\end{example}
+
+\begin{example}[Ring of integers modulo $n$: $\mathbb{Z}/n\mathbb{Z}$]
+  Let $n \in \mathbb{Z}$ and $n > 1$. Then $n \mathbb{Z}$ is an
+  \nameref{def:ideal}.
+
+  Two integer $a, b \in \mathbb{Z}$  are said to be congruent modulo
+  $n$, written
+  \[
+  a \equiv b ( mod n )
+  \]
+  if their difference $a - b$ is an integer multiple of $n$.
+
+  Thus we have a separation of set $\mathbb{Z}$ into subsets of
+  numbers that are congruent. Each subset has the following form
+  \[
+  \left\{r\right\}_n = r + n \mathbb{Z} =
+  \left\{r + n k \mid k \in \mathbb{Z}\right\}
+  \],
+  thus
+  \[
+  \mathbb{Z} = \left\{0\right\}_n \cup \left\{1\right\}_n
+  \cup \dots \cup \left\{n-1\right\}_n.
+  \]
+
+  Very often use the following notation
+  \[
+  \bar{r} = \left\{r\right\}_n.
+  \]
+
+  We can define the following operations
+  \begin{eqnarray}
+    \bar{k} \oplus \bar{l} = \overline{k + l}
+    \nonumber \\
+    \bar{k} \odot \bar{l} = \overline{k \cdot l}
+    \nonumber
+  \end{eqnarray}
+  
+  The \nameref{def:ring} where the objects are defined is called as
+  $\mathbb{Z}/n\mathbb{Z}$.
+  \label{ex:intmodulo}
+\end{example}
+
+\begin{definition}[Principal ideal]
+  The ideal that is generated by one element $a$ is called as
+  principal ideal and is denoted as $\left(a\right)$ i.e.
+  left principal ideal:
+  $\left(a\right) = \left\{r a \mid \forall r \in R\right\}$ and
+  right principal ideal:
+  $\left(a\right) = \left\{a r \mid \forall r \in R\right\}$
+  \label{def:prinicipalideal}
+\end{definition}
+
+\begin{definition}[Integral domain]
+In mathematics, and specifically in abstract algebra, an integral
+domain is a nonzero commutative \nameref{def:ring} in which the
+product of any two nonzero elements is nonzero.
+\label{def:integraldomain}
+\end{definition}
+
+\begin{definition}[Principal ideal domain]
+  In abstract algebra, a principal ideal domain, or PID, is an
+  \nameref{def:integraldomain} in which every ideal is principal, i.e., can be
+  generated by a single element.
+  \label{def:pid}
+\end{definition}
+
+\begin{definition}[Maximal ideal]
+$I$ is a maximal ideal of a ring $R$ if there are no other ideals
+contained between $I$ and $R$.
+\label{def:maxideal}
+\end{definition}
+
+
+\begin{definition}[Field]
+  The ring $\left(R, \oplus, \odot\right)$ is called as a field if
+  $\left(R \setminus \{0\}, \odot\right)$ is an \nameref{def:abeliangroup}.
+
+  The inverse element to $a$ in
+  $\left(R \setminus\{0\}, \odot\right)$ is denoted as $a^{-1}$
+  \label{def:field}
+\end{definition}
+
+\begin{example}[Field $\mathbb{Q}$]
+  Note that $\mathbb{Z}$ is not a field because not for every integer
+  number an inverse exists. But if we consider a set of fractions
+  $\mathbb{Q} = \left\{a/b \mid a \in \mathbb{Z}, b \in
+  \mathbb{Z}\setminus\{0\}\right\}$ when it will be a field.
+
+  The
+  inverse element to $a/b$  in
+  $\left(\mathbb{Q}\setminus\{0\}, \cdot\right)$  will be $b/a$.
+  \label{ex:field}
+\end{example}
+
+\begin{definition}[Unique factorization domain]
+   Unique factorization domain (UFD) is a commutative ring, which is
+   an \nameref{def:integraldomain}, and in which every non-zero non-unit element
+   can be written as a product of prime elements (or irreducible
+   elements), uniquely up to order and units, analogous to the
+   fundamental theorem of arithmetic for the integers. 
+  \label{def:ufd}
+\end{definition}
+
+\section{Linear algebra}
+
+\begin{definition}[Vector space]
+  Let $F$ is a \nameref{def:field}. The set $V$ is called as vector
+  space under $F$ if the following conditions are satisfied
+  \begin{enumerate}
+  \item We have a binary operation $V \times V \rightarrow V$
+    (addition): $(x,y) \rightarrow x + y$ with the following
+    properties:
+    \begin{enumerate}
+    \item $x + y = y + x$
+    \item $(x + y) + z = x + ( y + z )$
+    \item $\exists 0 \in V$ such that $\forall x \in V: x + 0 = x$
+    \item $\forall x \in V \exists -x \in V$ such that $x + (-x) = x -
+      x = 0$ 
+    \end{enumerate}    
+  \item We have a binary operation $F \times V \rightarrow V$ (scalar
+    multiplication) with the following properties
+    \begin{enumerate}
+    \item $1_F \cdot x = x$
+    \item $\forall a,b \in F, x \in V$: $a\cdot\left(b \cdot x\right)
+      = \left(a b\right) \cdot x$.
+    \item $\forall a,b \in F, x \in V$:
+      $(a+b)\cdot x = a \cdot x + b \cdot x$
+    \item $\forall a \in F, x, y \in V$:
+      $a\cdot(x+y) = a\cdot x + a \cdot y$
+    \end{enumerate}        
+  \end{enumerate}
+  \label{def:vectorspace}
+\end{definition}
+
+\section{Functions}
+
+\begin{definition}[Surjection]
+  The function $f: X \rightarrow Y$ is surjective (or onto) if
+  $\forall y \in Y$, $\exists x \in X$ such that
+  $f\left(x\right) = y$.
+  \label{def:surjection}
+\end{definition}
+
+\begin{definition}[Injection]
+  The function $f: X \rightarrow Y$ is injective (or one-to-one function) if
+  $\forall x_1, x_2 \in X$, such that $x_1 \ne x_2$ then
+  $f\left(x_1\right) \ne f\left(x_2\right)$.
+  \label{def:injection}
+\end{definition}
+
+\begin{definition}[Bijection]
+  The function $f: X \rightarrow Y$ is bijective (or one-to-one
+  correspondence) if it is an \nameref{def:injection} and a
+  \nameref{def:surjection}. 
+  \label{def:bijection}
+\end{definition}
+
+\begin{definition}[Homomorphism]
+  The homomorphism is a function (map) between two sets that preserves
+  its algebraic structure. For the case of groups
+  $\left(X, \circ\right)$ and $\left(Y, \odot\right)$ the function
+  $f: X \rightarrow Y$ is called homomorphism if
+  $\forall x_1, x_2 \in X$ it holds
+  $f\left(x_1 \circ x_2\right) = f\left(x_1 \right) \odot f\left( x_2\right)$.
+  \label{def:homomorphism}
+\end{definition}
+
+\begin{definition}[Isomorphism]
+  If a map is \nameref{def:bijection} as well as
+  \nameref{def:homomorphism} when it is called as isomorphism.
+
+  We use the following symbolic notation for isomorphism between $X$
+  and $Y$: $X \cong Y$.
+  \label{def:isomorphism}
+\end{definition}
+
+\section{Polynomial ring $K\left[X\right]$}
+
+Let we have a commutative \nameref{def:ring} $K$. Lets create a new
+\nameref{def:ring} $B$ with the following infinite sets as elements:
+\begin{equation}
+  f = \left(f_0, f_1, \dots \right), \, f_i \in K,
+  \label{eq:polynomial}
+\end{equation}
+such that only finite number of elements of the sets are non zero.
+
+We can define addition and multiplication on $B$ as follows
+\begin{eqnarray}
+  f + g = \left(f_0 + g_0, f_1 + g_1, \dots \right),
+  \nonumber \\
+  f \cdot g = h = \left(h_0, h_1, \dots \right),
+  \label{eq:polynomialops}
+\end{eqnarray}
+where
+\[
+h_k = \sum_{i + j =k} f_i g_j. 
+\]
+
+The sequences (\ref{eq:polynomial}) forms a \nameref{def:ring} with
+the following identities:
+\begin{itemize}
+\item Additive identity: $\left(0, 0, \dots \right)$
+\item Multiplicative identity: $\left(1, 0, \dots \right)$
+\end{itemize}
+
+The
+sequences $k = \left(k, 0, \dots \right)$ added and multiplied as
+elements of $K$ this allows say that such elements are elements of
+original \nameref{def:ring} $K$. Thus $K$ is sub-ring of the new ring
+$B$.
+
+Let
+\begin{eqnarray}
+  X = \left(0, 1, 0, \dots \right),
+  \nonumber \\
+  X^2 = \left(0, 0, 1, \dots \right)
+  \nonumber
+\end{eqnarray}
+thus if we have
+\[
+f = \left(f_0, f_1, f_2, \dots, f_n, 0, \dots \right),
+\]
+where $f_n$ is the last non-zero element of (\ref{eq:polynomial}),
+when one can get
+\[
+f = f_0 + f_1 X + f_2 X^2 + \dots + f_n X^n.
+\]
+
+\begin{definition}[Polynomial ring]
+  The \nameref{def:ring} of sequences (\ref{eq:polynomial}) with
+  operations defined by (\ref{eq:polynomialops}) is called as
+  polynomial ring $K\left[X\right]$.
+  \label{def:polynomial}
+\end{definition}
+
+\begin{lemma}[Bézout's lemma]
+  Let $a$ and $b$ be nonzero integers and let $d$ be their greatest common
+  divisor. Then there exist integers $x$ and $y$ such that 
+  \[
+  a x + by = d.
+  \]
+  \label{lem:bezout}
+\end{lemma}

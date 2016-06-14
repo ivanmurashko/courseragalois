@@ -1,0 +1,645 @@
+%% -*- coding:utf-8 -*-
+\chapter{Generalities on algebraic extensions}
+We introduce the basic notions such as a field extension, algebraic
+element, minimal polynomial, finite extension, and study their very
+basic properties such as the multiplicativity of degree in towers. 
+
+\section{Field extensions: examples}
+
+\subsection{K-algebra}
+\begin{definition}[K-algebra]
+  Let $K$ be a field and $A$ be a \nameref{def:vectorspace} over $K$
+  equipped with 
+  an additional binary operation $A \times A \rightarrow A$ that we
+  denote as $\cdot$ here. The the $A$ is an algebra over $K$ if the
+  following identities hold $\forall x,y,z \in A$ and for every
+  elements (often called as scalar) $a, b \in K$
+  \begin{itemize}
+  \item Right distributivity:
+    $(x + y) \cdot z = x \cdot z + y \cdot z$
+  \item Left distributivity:
+    $z \cdot (x + y) = z \cdot x + z \cdot y$
+  \item Compatibility with scalars:
+    $(ax) \cdot (by) = (ab) (x \cdot y)$
+  \end{itemize}
+  \label{def:kalgebra}
+\end{definition}
+
+\begin{example}[Field of complex numbers $\mathbb{C}$]
+  The field of complex numbers $\mathbb{C}$ can be considered as a
+  K-algebra over field of real numbers $\mathbb{R}$.
+  \label{ex:complexnumbers}
+\end{example}
+
+\subsection{Field extension}
+
+Let $K$ and $L$ are fields.
+\begin{definition}[Field extension]
+  $L$ is an extension of $K$ if $L \supset K$
+  \label{def:fextension1}
+\end{definition}
+and another definition
+\begin{definition}[Field extension]
+  $L$ is an extension of $K$ if $L$ is a K-algebra
+  \label{def:fextension2}
+\end{definition}
+Why the 2 definitions are equivalent?
+
+\begin{lemma}[K-algebra and \nameref{def:homomorphism}]
+Given a K-algebra is the same as
+having \nameref{def:homomorphism} $f: K \rightarrow A$ of rings.
+\begin{proof}
+Really if I have a K-algebra I can define the
+\nameref{def:homomorphism} $f(k) = k \cdot 1_A$, where $1_A$ is an
+identity element of $A$. Thus $k \cdot 1_A \in A$.
+
+And conversely if I have the \nameref{def:homomorphism}
+$f: K \rightarrow A$
+I can define the K-algebra structure by setting
+$k a = f(k) a$ because $f(k), a \in A$ and there is a multiplication
+defined on $A$. As result I have a rule for multiplication a scalar
+($k \in K$) on a vector ($a \in A$).
+\end{proof}
+\end{lemma}
+
+\begin{lemma}[About \nameref{def:homomorphism} of fields]
+Any \nameref{def:homomorphism} of fields is
+\nameref{def:injection}.
+\begin{proof}
+Lets proof by contradiction.
+Really if $f(x) = f(y)$ and $x \ne y$ then
+\begin{eqnarray}
+  f(x) - f(y) = 0_A,
+  \nonumber \\
+  f(x - y) = 0_A,
+  \nonumber \\
+  f(x - y) f(\left(x - y\right)^{-1}) =
+  f\left(\frac{x - y}{x - y}\right) = f(1_K) = 1_A = 0_A
+  \nonumber
+\end{eqnarray}
+that is impossible.
+\end{proof}
+\end{lemma}
+
+There are some comments on the results. We have got that a
+\nameref{def:homomorphism} can be set between field $K$ and its
+K-algebra. This means that K-algebra is a field.
+The \nameref{def:homomorphism} is \nameref{def:injection}
+therefore we can allocate a sub-field $A' \subset A$ for that we will
+have the \nameref{def:homomorphism} is a \nameref{def:surjection} and
+therefore we have an \nameref{def:isomorphism} between original field $K$
+and a sub-field $A'$. This means that we can say that the original
+field $K$ is a sub-field for the K-algebra.
+
+\begin{example}[Field extensions]
+  $\mathbb{C}$ is a field extension for $\mathbb{R}$.
+  $\mathbb{R}$ is a field extension for $\mathbb{Q}$
+  \label{ex:fieldextension}
+\end{example}
+
+\subsection{Field characteristic}
+If $L$ is a field there are 2 possibilities
+\begin{enumerate}
+\item $1 + 1 + \dots \ne 0$. In this case
+  $\mathbb{Z} \subset L$ but $\mathbb{Z}$ is not a field therefore $L$
+  is an extension of $\mathbb{Q}$. In the case $char L = 0$
+  \item $1 + 1 + \dots + 1 = \sum_{i = 1}^m 1 = 0$ for some $m \in
+    \mathbb{Z}$. The first time when it happens is for a prime number
+    i.e. minimal $m$ with the property is prime. In this case $char L
+    = p$, where $p = min m$  - the minimal $m$ (prime) with the
+    property. In this 
+    case $\mathbb{Z}/p\mathbb{Z} \subset L$. The
+    $\mathbb{Z}/p\mathbb{Z}$ is a field denoted by $\mathbb{F}_p$. The
+    $L$ is an extension of $\mathbb{F}_p$.
+\end{enumerate}
+No other possibilities exist. The $\mathbb{Q}$ and $\mathbb{F}_p$ are
+the prime fields. Any field is an extension of one of those.
+
+\subsection{Field $K\left[X\right]/\left(P\right)$}
+Let $K\left[X\right]$ \nameref{def:ring} of polynomials.
+The $P \in K\left[X\right]$ is an irreducible. $\left(P\right)$ is an
+\nameref{def:ideal} formed by the polynomial. The set of residues by
+the polynomial forms a field that denoted by
+$K\left[X\right]/\left(P\right)$. How we can see it?
+If $Q \in K\left[X\right]$ is a polynomial that $Q \notin
+\left(P\right)$ when $Q$ is prime to $P$. Then with
+\nameref{lem:bezout} we can get $\exists A, B \in K\left[X\right]$
+such that
+\[
+A P + B Q = 1,
+\]
+or
+\[
+B Q \equiv 1 mod P,
+\]
+thus $B$ is $Q^{-1}$ in $K\left[X\right]/\left(P\right)$.
+
+
+\section{Algebraic elements. Minimal polynomial}
+
+\subsection{$K\left[X\right]/\left(P\right)$ field}
+
+Alternative proof that $K\left[X\right]/\left(P\right)$ is the
+\nameref{def:field}. The $\left(P\right)$ is a \nameref{def:maxideal}
+but a quotient by a  \nameref{def:maxideal} is a \nameref{def:field}.
+
+$K\left[X\right]/\left(P\right)$ is an extension of $K$ because it's
+\nameref{def:kalgebra}.
+
+\begin{example}[$\mathbb{F}_2/\left(x^2+x+1\right)$]
+  Lets consider the following field
+  $K = \mathbb{F}_2 = \mathbb{Z}/2\mathbb{Z} = \{0,1\}$ in the
+  field polynomial $x^2+x+1$ is irreducible. It has the following
+  residues: $\bar{x} = x + \left(x^2+x+1\right)$ and
+  $\overline{x + 1} = x + 1 + \left(x^2+x+1\right)$. Thus the field
+  $\mathbb{F}_2/\left(x^2+x+1\right)$ consists of 4 elements:
+  $\{0, 1, \bar{x}, \overline{x+1}\}$.
+
+  \[
+  \bar{x}^2 + \bar{x} + 1 = \bar{0},
+  \]
+  therefore 
+  \[
+  \bar{x}^2 = - \bar{x} - 1 = \bar{x} + 1 = \overline{x+1}.
+  \]
+  This is because we are in field $\mathbb{F}_2$ where
+  \[
+  2 \left(x + 1\right) mod 2 = 0 
+  \]
+  and thus
+  \[
+  - \bar{x} - 1 = \bar{x} + 1
+  \]
+  
+  Also
+  \[
+  \overline{x+1}^2 = \bar{x},
+  \]
+  and they are inverse each other
+  \[
+  \overline{x+1} \bar{x} = 1,
+  \]
+\end{example}
+
+\subsection{Algebraic elements}
+
+\begin{definition}[Algebraic element]
+  Let $K \subset L$ and $\alpha \in L$. $\alpha$ is an algebraic
+  element if $\exists P \in K\left[X\right]$ such that
+    $P\left(\alpha\right) = 0$. Otherwise the $\alpha$ is called
+    transcendental.
+  \label{def:algebraicelement}
+\end{definition}
+
+\subsection{Minimal polynomial}
+
+\begin{lemma}[About minimal polynomial existence]
+  If $\alpha$ is \nameref{def:algebraicelement} then
+  $\exists!$ unitary polynomial $P$ of minimal degree such that
+  $P\left(\alpha\right) = 0$. It is ineducable. $\forall Q$ such that
+  $Q\left(\alpha\right) = 0$ is divisible by $P$
+  \begin{definition}[Minimal polynomial]
+    Such polynomial is called minimal polynomial and denoted by
+    $P_{min}\left(\alpha, K\right)$.
+    \label{def:minpolynomial}
+  \end{definition}
+  \begin{proof}
+    We know that $K\left[X\right]$ is a \nameref{def:pid} and a
+    polynomial $Q\left(\alpha\right) = 0$ forms an
+    \nameref{def:ideal}: $I \left\{Q \in K\left[X\right] \mid
+    Q\left(\alpha\right) = 0 \right\}$, so the ideal is generated by
+    one element: $I = \left(P\right)$. This is an unique (up to
+    constant) polynomial minimal degree in $I$.
+    If $P$ is not ineducable then $\exists Q,R \in I$ such that $P = Q
+    R$, $Q(\alpha) = 0$ or $R(\alpha) = 0$ and
+    $deg R,Q < deg P$ that is in contradiction with the definition
+    that $P$ is a polynomial of minimal degree.
+  \end{proof}
+\end{lemma}
+
+\section{Algebraic elements. Algebraic extensions}
+
+\begin{definition}
+  Let $K \subset L$, $\alpha \in L$. The smallest sub-field contained
+  $K$ and $\alpha$ denoted by $K\left(\alpha\right)$. The smallest
+  sub-ring contained $K$ and $\alpha$ denoted by $K\left[\alpha\right]$.
+\end{definition}
+
+As soon as $K\left[\alpha\right]$ is a \nameref{def:kalgebra} it is a
+\nameref{def:vectorspace} generated by $1, \alpha, \alpha^2, \dots,
+\alpha^n, \dots$.
+
+\begin{example}[$\mathbb{C}$]
+  \[
+  \mathbb{C} = \mathbb{R}\left(i\right) = \mathbb{R}\left[i\right]
+  \]
+  $\mathbb{C}$ is also a \nameref{def:vectorspace} generated by $1$
+  and $i$: $\forall z \in \mathbb{Z}$ it holds $z = x + i y$ where
+  $x,y \in \mathbb{R}$.
+\end{example}
+
+\begin{proposition}
+  The following assignment are equivalent
+  \begin{enumerate}
+  \item $\alpha$ is algebraic over $K$
+  \item $K\left[\alpha\right]$ is a finite dimensional
+    \nameref{def:vectorspace} over $K$
+  \item $K\left[\alpha\right] = K\left(\alpha\right)$ 
+  \end{enumerate}
+  \begin{proof}
+    Lets proof that 1 implies 2. If $\alpha$ is algebraic over $K$
+    then using lemma \nameref{def:minpolynomial} $\exists
+    P_{min}\left(\alpha, K\right)$:
+    \[
+    P_{min}\left(\alpha, K\right) = \alpha^d + a_{d-1}\alpha^{d-1} +
+    a_1 \alpha + a_0 = 0,
+    \]
+    where $a_k \in K$. Then
+    \[
+    \alpha^d  = - a_{d-1}\alpha^{d-1} -
+    a_1 \alpha - a_0
+    \]
+    this means that any $\alpha^n$ can be represented as a linear
+    combination of finite number of powers of $\alpha$ i.e.
+    $K\left[\alpha\right]$ generated by $1, \alpha, \dots,
+    \alpha^{d-1}$ is a finite dimensional \nameref{def:vectorspace}.
+
+    Lets proof that 2 implies 3. Its enough proof that
+    $K\left[\alpha\right]$ is a field. Let $x \ne 0 \in
+    K\left[\alpha\right]$ then lets look at an operation
+    $x \cdot K\left[\alpha\right] \rightarrow
+    K\left[\alpha\right]$. This is \nameref{def:injection} because if
+    $y, z \in K\left[\alpha\right]$ and $z \ne y$ then $x \cdot y \ne x
+    \cdot z$. But the $K\left[\alpha\right]$ is finite dimensional
+    \nameref{def:vectorspace} and a \nameref{def:homomorphism} between
+    2 vector spaces with the same dimension is
+    \nameref{def:surjection} thus $\exists y \in K\left[\alpha\right]$
+    such that $x \cdot y = 1_{K\left[\alpha\right]}$. Therefore $x$ is
+    invertable and $K\left[\alpha\right]$ is a
+    \nameref{def:field}.
+
+    Lets proof that 3 implies 1. Let $K\left[\alpha\right]$ is a
+    \nameref{def:field} but $\alpha$ is not algebraic. Thus $\forall P
+    \in K\left[X\right]$ $P(\alpha) \ne 0$. The we have an
+    \nameref{def:injection} \nameref{def:homomorphism} $f$ :
+    $K\left[X\right] \to K\left[\alpha\right]$ but $K\left[X\right]$
+    is not a field thus $K\left[\alpha\right]$ should not be a field
+    too that is in contradiction with the initial conditions.
+  \end{proof}
+  \label{prop:lec1_1}
+\end{proposition}
+
+\begin{definition}[Algebraic extension]
+  $L$ an extension of $K$ is called algebraic if $\forall \alpha \in
+  L$ - $\alpha$ is algebraic over $K$.
+  \label{def:algebraicextension}
+\end{definition}
+
+\begin{proposition}
+  If $L$ is algebraic over $K$ then any K-subalgebra of $L$ is a
+  \nameref{def:field}.
+  \begin{proof}
+    Let $L' \subset L$ a subalgebra and let $\alpha \in L'$. We want
+    to show that $\alpha$ is invertable. $\alpha$ is algebraic
+    therefore $\alpha \in K\left[\alpha\right] \subset L' \subset L$
+    and it's invertable.
+  \end{proof}
+\end{proposition}
+
+\begin{proposition}
+  Let $K \subset L \subset M$. $\alpha \in M$ - algebraic over $K$
+  then $\alpha$ algebraic over $L$ and
+  $P_{min}\left(\alpha, L\right)$ divides $P_{min}\left(\alpha,
+  K\right)$. 
+  \begin{proof}
+    Its clear because $P_{min}\left(\alpha,K\right) \in
+    L\left[X\right]$ thus $\exists P_L \in L\left[X\right]$ such that
+    $P_L\left(\alpha\right) = 0$ i.e. $\alpha$ is algebraic over $L$.
+
+    As soon as $P_{min}\left(\alpha,K\right) \in L\left[X\right]$ then
+    $deg P_{min}\left(\alpha,L\right) \le
+    P_{min}\left(\alpha,K\right)$ and as soon as
+    \(
+    P_{min}\left(\alpha,K\right) \in \left(P_{min}\left(\alpha,L\right)\right)
+    \)
+    then $P_{min}\left(\alpha,L\right)$ divides
+    $P_{min}\left(\alpha,K\right)$. 
+  \end{proof}
+\end{proposition}
+
+
+\section{Finite extensions. Algebraicity and finiteness}
+
+\begin{definition}[Finite extension]
+  $L$ is a finite extension of $K$ if $dim_k L < \infty$. $dim_k L$ is
+  called as degree of $L$ over $K$ and is denoted by
+  $\left[L:K\right]$
+  \label{def:finiteextension}
+\end{definition}
+
+\begin{theorem}[The multiplicativity formula for degrees]
+  Let $K \subset L \subset M$. Then $M$ is
+  \nameref{def:finiteextension} over $K$ if and only if
+  $M$ is \nameref{def:finiteextension} over $L$ and
+  $L$ is \nameref{def:finiteextension} over $K$. In this case
+  \[
+  \left[M:K\right] = \left[M:L\right] \left[L:K\right].
+  \]
+  \begin{proof}
+    Let $\left[M:K\right] < \infty$ but any linear independent set of
+    vectors  $\left\{m_1, m_2, \dots, m_n\right\}$ over $L$ is also
+    linear independent over $K$ thus
+    \[
+    \left[M:K\right] < \infty \Rightarrow \left[M:L\right] < \infty
+    \]
+    also $L$ is a vector sub space of $M$ thus if
+    $\left[M:K\right] < \infty$ then $\left[L:K\right] < \infty$.
+
+    Let $\left[M:L\right] < \infty$ and $\left[L:K\right] < \infty$
+    then we have the following basises
+    \begin{itemize}
+    \item $L$-basis over $M$: $\left(e_1, e_2, \dots, e_n\right)$
+    \item $K$-basis over $L$:
+      $\left(\varepsilon_1, \varepsilon_2, \dots, \varepsilon_d\right)$
+    \end{itemize}
+    Lets proof that $e_i\varepsilon_j$ forms a $K$-basis over $M$.
+    $\forall x \in M$:
+    \[
+    x = \sum_{i=1}^n a_i e_i, 
+    \]
+    where $a_i \in L$ and can be also written as
+    \[
+    a_i = \sum_{j=1}^d b_{ij} \varepsilon_j,
+    \]
+    where $b_{ij} \in K$.
+    Thus
+    \[
+    x = \sum_{i=1}^n \sum_{j=1}^d b_{ij} \varepsilon_j e_i, 
+    \]
+    therefore $\varepsilon_j e_i = e_i \varepsilon_j$ generates $M$
+    over $K$. From the other side we should check that $\varepsilon_j
+    e_i$ linear independent system of vectors. Lets
+    \[
+    \sum_{i,j} c_{ij} \varepsilon_j e_i =
+    \sum_{i=1}^n \left( \sum_{j=1}^d c_{ij} \varepsilon_j \right) e_i,
+    \]
+    then $\forall i$:
+    \[
+    \sum_{j=1}^d c_{ij} \varepsilon_j = 0.
+    \]
+    Thus $\forall i,j: c_{ik} = 0$ that finishes the proof the linear
+    independence.   
+    The number of linear independent vectors is $n \times d$ i.e.
+    \[
+    \left[M:K\right] = \left[M:L\right] \left[L:K\right].
+    \]
+  \end{proof}
+  \label{thm:mulformuladegrees}
+\end{theorem}
+
+\begin{definition}[$K\left(\alpha_1, \dots, \alpha_n\right)$]
+  $K\left(\alpha_1, \dots, \alpha_n\right) \subset L$ generated by
+  $\alpha_1, \dots, \alpha_n$ is the smallest sub field of $L$
+  contained  $K$ and $\alpha_i \in L$.
+\end{definition}
+
+\begin{theorem}[About towers]
+  $L$ is finite over $K$ if and only if $L$ is generated by a finite
+  number of algebraic elements over $K$.
+  \begin{proof}
+    If $L$ is finite then $\alpha_1, \dots, \alpha_d$ is a basis. In
+    this case
+    $L = K\left[\alpha_1, \dots, \alpha_d\right] = K\left(\alpha_1,
+    \dots, \alpha_d\right)$. Moreover each
+    $K\left[\alpha_i\right]$ is finite dimensional thus by
+    proposition \ref{prop:lec1_1} $\alpha_i$ is algebraic.
+
+    From other side if we have a finite set of algebraic elements
+    $\alpha_1, \dots, \alpha_d$ then
+    $K\left[\alpha_1\right]$ is a finite dimensional
+    \nameref{def:vectorspace} over $K$,
+    $K\left[\alpha_1, \alpha_2\right]$ is a finite dimensional
+    \nameref{def:vectorspace} over $K\left[\alpha_1\right]$ and
+    so on $K\left[\alpha_1, \dots, \alpha_d\right]$ is a finite dimensional
+    \nameref{def:vectorspace} over
+    $K\left[\alpha_1, \dots, \alpha_{d-1}\right]$. All elements
+    are algebraic thus
+    \[
+    K\left[\alpha_1, \dots, \alpha_i\right] =
+    K\left(\alpha_1, \dots, \alpha_i\right)
+    \]
+    Then using theorem \ref{thm:mulformuladegrees} we can conclude
+    that $K\left(\alpha_1, \dots, \alpha_d\right)$ has finite
+    dimension. 
+  \end{proof}
+  \label{thm:lec1_2}
+\end{theorem}
+
+\section{Algebraicity in towers. An example}
+
+\begin{theorem}
+  $K \subset L \subset M$ then $M$ \nameref{def:algebraicextension}
+  over $K$ if and only if $M$ algebraic over $L$ and $L$ algebraic
+  over $K$. 
+  \begin{proof}
+    If $\alpha \in M$ is an \nameref{def:algebraicelement} over $K$ then
+    $\exists P \in K\left[X\right]$ such that
+    $P\left(\alpha\right) = 0$ but the
+    polynomial $P \in K\left[X\right] \subset L\left[X\right]$
+    thus $\alpha$ is algebraic over $L$.
+    If $\alpha \in L \subset M$ then $\alpha$ is algebraic over $K$
+    thus $L$ is algebraic over $K$.
+
+    Let $M$ algebraic over $L$ and $L$ algebraic over $K$ and let
+    $\alpha \in M$. We want to prove that $\alpha$ is algebraic over
+    $K$. Lets consider $P_{min}\left(\alpha, L\right)$ the polynomial
+    coefficients are from $L$ and they (as soon as they count is a
+    finite)  generate a finite extension $E$ over $K$ thus
+    $E\left(\alpha\right)$ is finite over $E$ (exists a relation
+    between powers of $\alpha$) and by theorem
+    \ref{thm:lec1_2} is finite over $K$ thus $\alpha$ is algebraic
+    over $K$.
+  \end{proof}
+\end{theorem}
+\begin{example}[$\mathbb{Q}$ extension]
+  $\mathbb{Q}\left( \sqrt[3]{2}, \sqrt{3}\right)$ algebraic and finite
+  over $\mathbb{Q}$:
+  \[
+  \mathbb{Q} \subset \mathbb{Q}\left( \sqrt[3]{2}\right)
+  \subset \mathbb{Q}\left( \sqrt[3]{2}, \sqrt{3}\right)
+  \]
+
+  Minimal polynomial
+  \[
+  P_{min}\left(\sqrt[3]{2}, \mathbb{Q}\right) = x^3 - 2.
+  \]
+
+  $\mathbb{Q}\left( \sqrt[3]{2}\right)$ is generated over $\mathbb{Q}$
+  by $1, \sqrt[3]{2}, \sqrt[3]{4}$ thus
+  $\left[\mathbb{Q}\left( \sqrt[3]{2}\right): \mathbb{Q}\right] = 3$.
+
+  But $\sqrt{3} \notin \mathbb{Q}\left( \sqrt[3]{2}\right)$ because
+  otherwise $\left[\mathbb{Q}\left( \sqrt{3}\right): \mathbb{Q}\right]
+  = 2$ must devide  
+  $\left[\mathbb{Q}\left( \sqrt[3]{2}\right): \mathbb{Q}\right] = 3$
+  that is impossible.
+
+  Therefore $x^2 - 3$ is ineducable over
+  $\mathbb{Q}\left( \sqrt[3]{2}\right)$ and
+  \[
+  P_{min}\left(\sqrt{3}, \mathbb{Q}\left( \sqrt[3]{2}\right)\right) =
+  x^2 - 3.
+  \]
+
+  \[
+  \left[\mathbb{Q}\left( \sqrt[3]{2}, \sqrt{3}\right):
+    \mathbb{Q}\right] = 3 \cdot 2 = 6.
+  \]
+\end{example}
+
+\begin{proposition}[On dimension of extension]
+  \[
+  \left[K\left(\alpha\right) : K\right] =
+  deg P_{min}\left(\alpha, K\right),
+  \]
+  if $\alpha$ is algebraic.
+  \begin{proof}
+    If $deg P_{min}\left(\alpha, K\right) = d$ then $1, \alpha,
+    \cdots, \alpha^{d-1}$ - $d$ independent vectors and dimension
+    $K\left(\alpha\right)$ is $d$.
+  \end{proof}
+  \label{prop:dimextension}
+\end{proposition}
+
+\begin{proposition}[About algebraic closure]
+  If $K \subset L$ ($L$ extension of $K$). Consider
+  \[
+  L' = \left\{
+  \alpha \in L \mid \alpha \mbox{ algebraic over } K
+  \right\},
+  \]
+  then $L'$ sub-field of $L$ and is called as algebraic closure of $K$
+  in $L$.
+  \begin{proof}
+    We have to prove that if $\alpha, \beta$ are algebraic then
+    $\alpha + \beta$ and $\alpha \cdot \beta$ are also algebraic. This
+    is trivial  because
+    \[
+    \alpha + \beta, \alpha \cdot \beta \in K\left[\alpha, \beta\right]
+    = K\left(\alpha, \beta\right)
+    \]
+  \end{proof}
+\end{proposition}
+
+
+\section{A digression: Gauss lemma, Eisenstein criterion}
+
+What we have seen so far:
+
+\begin{itemize}
+\item $K$ is a field, $\alpha$ is an \nameref{def:algebraicelement}
+  over $K$ if it is a root of a polynomial $P \in K\left[X\right]$.
+\item $L$ is an \nameref{def:algebraicextension} over $K$ if
+  $\forall \alpha \in L$: $\alpha$ is an algebraic over $K$
+\item $L$ is a \nameref{def:finiteextension} over $K$ if $dim_K L <
+  \infty$.
+\item If an extension is finite then it is algebraic
+\item An extension is finite if and only if it is algebraic and
+  generated by a finite number of algebraic elements (see theorem
+  \ref{thm:lec1_2})
+\item $\left[K\left[\alpha\right]:K\right] =
+  deg P_{min}\left(\alpha, K\right)$ (see proposition
+  \ref{prop:dimextension}). 
+\end{itemize}
+
+How to decide that a polynomial $P$ is irreducible over $K$?
+About polynomial $x^3 - 2$ it is easy to decide that it's irreducible
+over $\mathbb{Q}$, but what's about $x^{100}-2$?
+
+\begin{lemma}[Gauss]
+  Let $P \in \mathbb{Z}\left[X\right]$, i.e. a polynomial with integer
+  coefficients, then if $P$ decomposes over $\mathbb{Q}$ ($P = Q\cdot
+  R, deg Q,R < deg P$) then it also decomposes over $\mathbb{Z}$.
+  \begin{proof}
+    Let $P = Q R$ over $\mathbb{Q}$. Then
+    \begin{eqnarray}
+      Q = m Q_1, Q_1 \in \mathbb{Z}\left[X\right],
+      \nonumber \\
+      R = n R_1, R_1 \in \mathbb{Z}\left[X\right],
+      \nonumber
+    \end{eqnarray}
+    thus
+    \[
+    n m P = Q_1 R_1. 
+    \]
+    There exists $p$ that divides $mn$: $p \mid mn$ thus in modulo $p$
+    we have
+    \[
+    0 = \overline{Q_1}\overline{R_1}
+    \]
+    but $p$ is prime and the equation is in the field $\mathbb{F}_p$
+    thus either $\overline{Q_1} = 0$ or $\overline{R_1} = 0$. Let
+    $\overline{Q_1} = 0$ thus $p$ divides all coefficients in $Q_1$
+    and we can take $\frac{Q_1}{p} = Q_2 \in
+    \mathbb{Z}\left[X\right]$. Continue for all primes in $mn$ we can
+    get that
+    \[
+    P = Q_s R_t,
+    \]
+    where $Q_s, R_t \in \mathbb{Z}\left[X\right]$.
+  \end{proof}
+  \label{lem:gauss}
+\end{lemma}
+
+\begin{example}[Eisenstein criterion]
+  Lets consider the following polynomial $x^{100} -2$. It's
+  irreducible. Lets prove it. If it reducible then
+  $\exists Q, R \in \mathbb{Z}\left[X\right]$ such that
+  \begin{equation}
+    x^{100} -2 = Q R
+    \label{eq:ex_eisenstein}
+  \end{equation}
+  Lets consider (\ref{eq:ex_eisenstein}) modulo 2. In the case we will
+  have
+  \[
+  Q R \equiv x^{100} mod 2,
+  \]
+  therefore
+  \begin{eqnarray}
+    Q \equiv x^k mod 2,
+    \nonumber \\
+    R \equiv x^l mod 2,
+    \nonumber
+  \end{eqnarray}
+  or
+  \[
+  Q = x^k + \dots + 2 \cdot m
+  \]
+  and
+  \[
+  R = x^l + \dots + 2 \cdot n
+  \]
+  thus
+  \[
+  QR = x^{100} + 4 \cdot nm
+  \]
+  that is impossible because $n,m \in \mathbb{Z}$ and $nm \ne
+  -\frac{1}{2}$. 
+  \label{ex:eisenstein}
+\end{example}
+
+\begin{lemma}[Eisenstein criterion]
+  Lets $P \in \mathbb{Z}\left[X\right]$ and
+  $P = a_n X^n + a_{n-1} X^{n-1} + a_1 X + a_0$. If $\exists p$ -
+  prime such that $p \nmid a_n$, $p \mid a_i \forall i < n$ and
+  $p^2 \nmid a_0$, then $P \in \mathbb{Z}\left[X\right]$ is
+  irreducible. 
+  \begin{proof}
+    the same as for example \ref{ex:eisenstein}.
+  \end{proof}
+  \label{lem:eisenstein}
+\end{lemma}
+
+Note: that both: \nameref{lem:gauss} and \nameref{lem:eisenstein} are
+valid by replacing $\mathbb{Z}$ with an \nameref{def:ufd} $R$ and
+$\mathbb{Q}$ by its factorization field.
