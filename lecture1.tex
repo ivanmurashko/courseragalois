@@ -149,12 +149,30 @@ $K\left[X\right]/\left(P\right)$ is an extension of $K$ because it's
 \begin{example}[$\mathbb{F}_2/\left(x^2+x+1\right)$]
   Lets consider the following field
   $K = \mathbb{F}_2 = \mathbb{Z}/2\mathbb{Z} = \{0,1\}$ in the
-  field polynomial $x^2+x+1$ is irreducible. It has the following
+  field polynomial $x^2+x+1$ is irreducible. It's very easy to verify
+  it because $\mathbb{F}_2$ has only 2 elements that can be (possible)
+  a root:
+  \[
+  0^2+0+1 = 1\ne 0
+  \]
+  and
+  \[
+  1^2+1+1 = 1\ne 0
+  \]
+  
+  The polynomial has the following
   residues: $\bar{x} = x + \left(x^2+x+1\right)$ and
   $\overline{x + 1} = x + 1 + \left(x^2+x+1\right)$. Thus the field
   $\mathbb{F}_2/\left(x^2+x+1\right)$ consists of 4 elements:
   $\{0, 1, \bar{x}, \overline{x+1}\}$.
 
+  It's easy to see that the third element ($\bar{x}$) is a root of
+  $P(x) = x^2+x+1$:
+  \[
+  \bar{x}^2 + \bar{x} + 1 =
+  P(x) + \left(P(x)\right) = \left(P(x)\right) \equiv 0 mod P.
+  \]
+  
   \[
   \bar{x}^2 + \bar{x} + 1 = \bar{0},
   \]
