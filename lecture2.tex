@@ -7,6 +7,71 @@ on extension of homomorphisms.
 
 \section{Stem field. Some irreducibility criteria}
 
+\subsection{Stem field}
+
+\begin{definition}[Stem field]
+Let $P \in K\left[X\right]$ is an irreducible
+\nameref{def:monicpolynomial}. \nameref{def:fextension1} E is a stem
+field of $P$ if $\exists \alpha \in E$ - the root of polynomial
+$P$ and $E = K\left[\alpha\right]$.
+\label{def:stemfield}
+\end{definition}
+
+Such things exist, for instance we can take
+$K\left[X\right]/\left(P\right)$. It is a field because $P$ is
+irreducible moreover the root of the $P$ is in the field (see example
+\ref{ex:F2overP}).
+
+We also can say that for any stem field $E$:
+\[
+K\left[X\right]/\left(P\right) \cong E.
+\]
+We can use the following \nameref{def:isomorphism}:
+$f: \forall p \in K\left[X\right]/\left(P\right) \rightarrow
+p(\alpha)$, there $\alpha$ is a root of polynomial $P$.
+To summarize we have the following
+\begin{proposition}[About stem field existence]
+  The stem field exist and if we have 2 stem fields $E$ and $E'$ which
+  correspond 2 roots of $P$: $E = K\left[\alpha\right]$,
+  $E' = K\left[\alpha'\right]$ then $\exists! f: E \cong E'$
+  (\nameref{def:isomorphism} of K-algebras) such that $f(\alpha) =
+  \alpha'$. 
+  \begin{proof}
+    Existence: $K\left[X\right]/\left(P\right)$ can be took as the
+    stem field.
+
+    Uniquest of the \nameref{def:isomorphism} is easy because it is
+    defined by it's value on argument $\alpha$:
+    \begin{eqnarray}
+      \phi: K\left[X\right]/\left(P\right) \cong_{x \to \alpha} E,
+      \nonumber \\
+      \psi: K\left[X\right]/\left(P\right) \cong_{x \to \alpha'} E',
+      \nonumber
+    \end{eqnarray}
+    thus
+    \[
+    \phi^{-1} \circ \psi: E \cong_{\alpha \to \alpha'} E'.
+    \]
+  \end{proof}
+  \label{prop:stemfield}
+\end{proposition}
+
+\begin{remark}
+  \begin{enumerate}
+  \item In particular: If a stem field contains 2 roots of $P$ then
+    $\exists!$ \nameref{def:automorphism} taking one root into
+    another.
+  \item If $E$ stem field then $\left[E:K\right] = deg P$
+  \item If $\left[E:K\right] = deg P$ and $E$ contains a root of $P$
+    then $E$ is a stem field
+  \item If $E$ is not a stem field but contains root of $P$ then
+    $\left[E:K\right] > deg P$ (???)
+  \end{enumerate}
+\end{remark}
+
+\subsection{Some irreducibility criteria}
+
+
 \section{Splitting field}
 
 \section{An example. Algebraic closure}
