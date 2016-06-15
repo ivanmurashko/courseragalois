@@ -56,7 +56,7 @@ To summarize we have the following
   \label{prop:stemfield}
 \end{proposition}
 
-\begin{remark}
+\begin{remark}[About stem field]
   \begin{enumerate}
   \item In particular: If a stem field contains 2 roots of $P$ then
     $\exists!$ \nameref{def:automorphism} taking one root into
@@ -67,6 +67,7 @@ To summarize we have the following
   \item If $E$ is not a stem field but contains root of $P$ then
     $\left[E:K\right] > deg P$ (???)
   \end{enumerate}
+  \label{rem:lec2_1}
 \end{remark}
 
 \subsection{Some irreducibility criteria}
@@ -87,7 +88,7 @@ To summarize we have the following
     $\Leftarrow$: If $P$ has a root $\alpha$ in $L$ then $\exists
     P_{min}\left(\alpha, K\right)$ with degree
     $\le \frac{n}{2} < n$ (because $\left[L:K\right] \le \frac{n}{2}$)
-    that divides $P$.
+    that divides $P$ i.e. $P$ become reducible.
   \end{proof}
 \end{corollary}
 
@@ -116,6 +117,71 @@ To summarize we have the following
 
 
 \section{Splitting field}
+
+\begin{definition}[Splitting field]
+  Let $P \in K\left[X\right]$.
+  The splitting field of $P$ over $K$ is an extension $L$ where $P$ is
+  split (i.e. is a product of linear factors) and roots of $P$
+  generate $L$
+  \label{def:splittingfield}
+\end{definition}
+
+\begin{theorem}[About splitting fields]
+  \begin{enumerate}
+    \item Splitting field $L$ exists and $\left[L:K\right] \le d!$,
+      where $d = deg P$.
+    \item If $L$ and $M$ are 2 splitting fields then
+      $\exists \phi: L \cong M$ (an \nameref{def:isomorphism}). But
+      the \nameref{def:isomorphism} is not necessary to be unique.
+  \end{enumerate}
+  \begin{proof}
+    Lets prove by induction on $d$. The first case ($d = 1$) is
+    trivial the $K$ itself is the splitting field. Now assume $d > 1$
+    and that the theorem is valid for any polynomial of degree $< d$
+    over any field $K$. Let $Q$ be any irreducible factor of $P$. We
+    can create a \nameref{def:stemfield} $L_1 = K\left(\alpha\right)$
+    for $Q$ that will be also a \nameref{def:stemfield} for $P$.
+
+    Over $L_1$ we have $P = (x - \alpha) R$, where $R$ is a polynomial
+    with $deg R = d - 1$. We know (see remark \ref{rem:lec2_1}) that
+    there exists a \nameref{def:splittingfield} $L$ for $R$ over $L_1$
+    and its degree:
+    \(
+    \left[L:L_1\right] \le (d-1)!
+    \)
+    We have $K \subset L_1 \subset L$. The $L$ will be a splitting
+    field for original polynomial $P$. Its degree (by
+    \nameref{thm:mulformuladegrees}) is $ \le d \cdot (d-1)! = d!$.
+
+    Uniqueness: Let $L$ and $M$ are 2 splitting fields. Let $\beta$ is
+    a root of $Q$ (irreducible factor of $P$) in $M$.
+    We have 2 stem fields: $L_1 = K\left(\alpha\right)$ and
+    $M_1 = K\left(\beta\right)$. Proposition \ref{prop:stemfield} says
+    as that
+    \[
+    \exists \phi: L_1 = K\left(\alpha\right) \cong
+    K\left(\beta\right) = M_1, 
+    \]
+    such that $\phi(\alpha) = \beta$.
+
+    Over $M_1$ we have $P = (x - \beta) S$, where
+    $S = \phi\left(R\right)$.
+
+    $M$ is splitting field for $S$ over
+    $K\left(\beta\right) = M_1$. $M$ is also $L_1$-algebra (via the
+    \nameref{def:isomorphism} $\phi$) and as such it's a splitting
+    field for $R$ over $L_1$. By induction we have an
+    $L_1 = K\left(\alpha\right)$ \nameref{def:isomorphism} $L \cong M$
+    and we have $K$ \nameref{def:isomorphism} $L \cong M$.    
+  \end{proof}
+  \label{thm:lec2_1}
+\end{theorem}
+
+\begin{remark}
+  The \nameref{def:isomorphism} is not unique. A splitting field  can
+  have many \nameref{def:automorphism} and this is in fact the subject
+  of Galois theory.
+\end{remark}
 
 \section{An example. Algebraic closure}
 
