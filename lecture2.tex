@@ -71,6 +71,49 @@ To summarize we have the following
 
 \subsection{Some irreducibility criteria}
 
+\begin{corollary}
+  $P \in K\left[X\right]$ is irreducible over $K$ if and only if it
+  does not have a root in \nameref{def:fextension1} $L$ of $K$ of such that
+  $\left[L:K\right] \le \frac{n}{2}$, where $n = deg P$.
+  \label{cor:lec2_1}
+  \begin{proof}
+    $\Rightarrow$: If $P$ is not irreducible then it has a polynomial $Q$ that
+    divides $P$ and $deg Q \le \frac{n}{2}$ ($P = RQ$ and if
+    $deg Q > \frac{n}{2}$ then we can take $R$ as $Q$). The
+    \nameref{def:stemfield} $L$ for $Q$ exists and it's degree is $deg Q
+    \le \frac{n}{2}$. $L$ should have root of $Q$ (as soon as root of
+    $P$) by definition.
+
+    $\Leftarrow$: If $P$ has a root $\alpha$ in $L$ then $\exists
+    P_{min}\left(\alpha, K\right)$ with degree
+    $\le \frac{n}{2} < n$ (because $\left[L:K\right] \le \frac{n}{2}$)
+    that divides $P$.
+  \end{proof}
+\end{corollary}
+
+\begin{corollary}
+  $P \in K\left[X\right]$ irreducible with $deg P = n$. Let $L$ be an
+  extension of $K$ such that $\left[L:K\right] = m$.
+  If $gcd\left(n,m\right) = 1$ then $P$ is irreducible over $L$.
+  \label{cor:lec2_2}
+  \begin{proof}
+    If it is not a case and $\exists Q$ such that $Q \mid P$ in
+    $L\left[X\right]$. Let $M$ be a \nameref{def:stemfield} of $Q$
+    over $L$.
+
+    So we have $K \subset L \subset M = L\left(\alpha\right)$. $M$ is
+    a stem field that $\left[M:L\right] = deg Q = d < n$. Thus
+    $\left[M:L\right] = m d$
+
+    Lets $K\left(\alpha\right)$ is a stem field of $P$ over $K$ then
+    $\left[K\left(\alpha\right):K\right] = deg P = n$.
+
+    $K\left(\alpha\right) \subseteq M$ and therefore $n \mid md$ thus
+    using $gcd(m,n)=1$ one can get that $n \mid d$ but this is
+    impossible because $d < n$.
+  \end{proof}
+\end{corollary}
+
 
 \section{Splitting field}
 
