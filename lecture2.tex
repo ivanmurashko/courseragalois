@@ -165,12 +165,26 @@ To summarize we have the following
     such that $\phi(\alpha) = \beta$.
 
     Over $M_1$ we have $P = (x - \beta) S$, where
-    $S = \phi\left(R\right)$.
+    $S = \phi\left(R\right)$
+    \footnote{
+      We have $\phi: K\left(\alpha\right) \to
+      K\left(\beta\right)$. The $\phi: K \to K$ because
+      $K \subset K\left(\alpha\right)$ as well as
+      $K \subset K\left(\beta\right)$. Therefore
+      $\phi\left(P\right) = P$ because $P \in K\left[X\right]$.
+      Thus
+      \[
+      P = (x - \beta) S = \phi\left(P\right) =
+      \phi\left((x - \alpha) R\right) =
+      (x - \beta) \phi\left(R\right)
+      \]
+      and $S = \phi\left(R\right)$.
+    }
 
     $M$ is splitting field for $S$ over
     $K\left(\beta\right) = M_1$. $M$ is also $L_1$-algebra (via the
     \nameref{def:isomorphism} $\phi$) and as such it's a splitting
-    field for $R$ over $L_1$. By induction we have an
+    field for $R$ over $L_1$. By induction (???) we have an
     $L_1 = K\left(\alpha\right)$ \nameref{def:isomorphism} $L \cong M$
     and we have $K$ \nameref{def:isomorphism} $L \cong M$.    
   \end{proof}
