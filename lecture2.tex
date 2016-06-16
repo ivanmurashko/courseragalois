@@ -202,6 +202,112 @@ To summarize we have the following
 
 \section{An example. Algebraic closure}
 
+\subsection{An example of automorphism}
+
+\begin{example}[$x^3-2$ over $\mathbb{Q}$]
+  Let we have the following polynomial $x^3-2$ over $\mathbb{Q}$. It
+  has the following roots: $\sqrt[3]{2}, j\sqrt[3]{2}$ and
+  $j^2\sqrt[3]{2}$, where $j = e^{\frac{2 \pi i}{3}}$. Splitting field
+  is the following $L = \mathbb{Q}\left(\sqrt[3]{2}, j\right)$. Lets
+  find \nameref{def:automorphism}s of the field.
+
+  \begin{tikzpicture}[descr/.style={fill=white,inner sep=2.5pt}]
+    \matrix (m) [matrix of math nodes, row sep=3em,
+      column sep=3em]
+            { & \mathbb{Q}\left(j\right) & \\
+              \mathbb{Q} & & \mathbb{Q}\left(\sqrt[3]{2}, j\right) = L\\
+              & \mathbb{Q}\left(\sqrt[3]{2}\right) & \\ };
+            \path[->,font=\scriptsize]
+            (m-2-1) edge node[descr] {$ 2 $} (m-1-2)
+            (m-1-2) edge node[descr] {$ 3 $} (m-2-3)
+            (m-2-1) edge node[descr] {$ 3 $} (m-3-2)
+            (m-3-2) edge node[descr] {$ 2 $} (m-2-3);
+  \end{tikzpicture}
+
+  As soon as $L$ is a stem field for $\mathbb{Q}\left(j\right)$ 
+  and for $\mathbb{Q}\left(\sqrt[3]{2}\right)$ then 2 types of
+  automorphism exist:
+  \begin{enumerate}
+    \item $\mathbb{Q}\left(\sqrt[3]{2}\right)$
+      \nameref{def:automorphism}. We have
+      $x^2+x+1$ as
+      $P_{min}\left(j, \mathbb{Q}\left(\sqrt[3]{2}\right)\right)$. The
+      polynomial has 2 roots: $j$ and $j^2$ and there is an
+      \nameref{def:automorphism} that exchanges the root. Lets call it
+      $\tau$
+      \item $\mathbb{Q}\left(j\right)$ \nameref{def:automorphism}. In
+        this case the automorphism of exchanging $\sqrt[3]{2}$ and
+        $j \sqrt[3]{2}$. \footnote{
+          ??? The minimal polynomial is $x^3 - 2$ there and thus we
+          have 3 roots: $\sqrt[3]{2}$, $j \sqrt[3]{2}$ and $j^2
+          \sqrt[3]{2}$ 
+        }. Lets call it $\sigma$
+  \end{enumerate}
+
+  The group of automorphism of $L$ $Aut\left(L/K\right)$ is embedded
+  into permutation group of 3 elements $S_3$:
+  \[
+  Aut\left(L/K\right) \hookrightarrow S_3.
+  \]
+  It's embedded because the automorphism exchanges the roots of
+  $x^3-2$. Moreover
+  \[
+  Aut\left(L/K\right) = S_3,
+  \]
+  because $\sigma$ and $\tau$ generates $S_3$ because
+  \begin{itemize}
+  \item $\sigma$: $\sqrt[3]{2} \to j \sqrt[3]{2} \to j^2 \sqrt[3]{2}
+    \to \sqrt[3]{2}$. This is a circle.
+  \item: $\tau$ - it keeps $\sqrt[3]{2}$ and exchanges $j$ and $j^2$:
+    $\sqrt[3]{2} j \leftrightarrow \sqrt[3]{2} j^2$ (???). This is a
+    transposition. 
+  \end{itemize}
+\end{example}
+
+\subsection{Algebraic closure}
+
+\begin{definition}[Algebraically closed field]
+  $K$ is algebraically closed if any non constant polynomial $P \in
+  K\left[X\right]$ has a root in $K$ or in other words if any $P \in
+  K\left[X\right]$ splits
+  \label{def:algebraicallyclosed}
+\end{definition}
+
+\begin{example}[$\mathbb{C}$]
+  $\mathbb{C}$ is an \nameref{def:algebraicallyclosed}. This will be
+  proved later.
+\end{example}
+
+\begin{definition}[Algebraic closure]
+  An algebraic closure of $K$ is a field $L$ that is
+  \nameref{def:algebraicallyclosed} and
+  \nameref{def:algebraicextension} 
+  over $K$.
+  \label{def:algebraicclosure}
+\end{definition}
+
+\begin{theorem}[About Algebraic closure]
+  Any field $K$ has an \nameref{def:algebraicclosure}
+  \begin{proof}
+    Lets discuss the strategy of the prove.
+    First construct $K_1$ such that $\forall P \in K\left[X\right]$
+    has a root in $K_1$. There is not a victory because $K_1$ can
+    introduce new coefficients and polynomials that can be irreducible
+    over $K_1$. Then construct $K_2$ such that $\forall P \in
+    K_1\left[X\right]$ has a root in $K_2$ and so forth. As result we
+    will have
+    \[
+    K \subset K_1 \subset K_2 \subset \dots \subset \subset K_n \subset \dots
+    \]
+    Take $\bar{K} = \cup_i K_i$ and we claim that $\bar{K}$ is
+    algebraically closed. Really
+    $\forall P \in \bar{K}\left[X\right]$ $\exists j: P \in
+    K_j\left[X\right]$ thus it has a root in $K_{j+1}$ and as result
+    in $\bar{K}$.
+  \end{proof}
+  \label{thm:lec2_2}
+\end{theorem}
+
 \section{Algebraic closure (continued)}
 
 \section{Extension of homomorphisms. Uniqueness of algebraic closure}
