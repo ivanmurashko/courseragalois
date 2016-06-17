@@ -73,6 +73,20 @@ property.
   \label{def:abeliangroup}
 \end{definition}
 
+\begin{definition}[Coset]
+  If $G$ is a group, and $H$ is a subgroup of $G$, and $g$ is an
+  element of $G$, then
+  \[
+  gH = \left\{ gh \vert h \in H\right\}
+  \]
+  is the left coset of $H$ in $G$ with respect to $g$, and
+  \[
+  Hg = \left\{ hg \vert h \in H\right\}
+  \]
+  is the right coset of $H$ in $G$ with respect to $g$.
+  \label{def:coset}
+\end{definition}
+  
 \subsection{Permutations}
 
 \begin{example}[$S_n$ group]
@@ -284,6 +298,24 @@ $I$ is a proper ideal of a ring $R$ if $I \subsetneq R$.
 \label{def:properideal}
 \end{definition}
 
+\begin{definition}[Quotient ring]
+  Quotient ring is a construction where one
+  starts with a ring $R$ and a two-sided ideal $I$ in $R$, and constructs a
+  new ring, the quotient ring $R/I$, whose elements are the
+  \nameref{def:coset}s of $I$ 
+  in $R$ subject to special $+$ and $\cdot$ operations.
+
+  Given a ring $R$ and a two-sided ideal $I \subset R$, we may define
+  an equivalence relation $\sim$ on $R$ as follows: 
+  $a \sim b$ if and only if $a - b \in I$.
+  The equivalence class of the element $a$ in $R$ is given by
+  \[
+  \left[a\right] = a + I := \left\{ a + r : r \in I \right\}.
+  \]
+  This equivalence class is also sometimes written as a mod $I$ and
+  called the "residue class of a modulo I".
+  \label{def:quotientring}
+\end{definition}
 
 \begin{definition}[Field]
   The ring $\left(R, \oplus, \odot\right)$ is called as a field if

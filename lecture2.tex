@@ -384,7 +384,8 @@ has an upper bound: it's $\cup_\alpha I_\alpha$ (exercise that the
 union is an ideal). So $\mathcal{P}$ has a maximal element $m$ and $I
 \subset m$.
 
-If we take a quotient by maximal ideal it's always a field otherwise
+If we take a \nameref{def:quotientring} by maximal ideal it's always a
+field otherwise 
 it will have a proper ideal: $\exists a \in A/m$ such that $(a)$ is a
 proper ideal and it pre-image in $\pi: A \to A/m$ should strictly
 contain $m$
@@ -392,3 +393,78 @@ contain $m$
 }.
 
 \section{Extension of homomorphisms. Uniqueness of algebraic closure}
+
+Some summary about just proved existence of algebraic closure. There
+exists $\bar{K} = \cup_{i=1}^\infty K_i$ - algebraic closure of $K$,
+where
+\[
+K \subset K_1 \subset K_2 \subset \dots \subset K_{i-1} \subset K_i
+\subset \dots
+\]
+$K_i$ is a field where each polynomial $P \in K_{i-1}$ has a root. The
+field $K_i$ is \nameref{def:quotientring} of huge polynomial ring
+$K_{i-1}\left[X\right]$ by a suitable \nameref{def:maxideal} that is
+got by means of \nameref{lem:zorn} lemma.
+
+Another question is the closure unique? The answer is yes. We start
+the proof with the following theorem 
+
+\begin{theorem}[On extension of homomorphism]
+  Let $K \subset L \subset M$ - \nameref{def:algebraicextension}.
+  $K \subset \Omega$, where $\Omega$ - \nameref{def:algebraicclosure}
+  of $K$.
+  $\forall \phi: L \to \Omega$ extends to $\widetilde{\phi}: M \to
+  \Omega$
+  \begin{proof}
+    Apply \nameref{lem:zorn} lemma to the following set (of pairs)
+    \[
+    \mathcal{E} = \left\{
+    \left(N, \psi\right): L \subset N \subset M, \psi \mbox{ extends }
+    \phi 
+    \right\}
+    \]
+    $\mathcal{E}$ is non empty because $\left(L,\phi\right) \in
+    \mathcal{E}$.
+
+    The set $\mathcal{E}$ is partially ordered by the following
+    relation ($\le$):
+    \[
+    \left(N, \psi\right) \le \left(N', \psi'\right),
+    \]
+    if $N \subseteq N'$ and $\psi'/N = \psi$ ($\psi'$ extends $\psi$).
+    Any \nameref{def:chain} $\left(N_\alpha, \psi_\alpha\right)$
+    has an upper bound $\left(N, \psi\right)$, where
+    \(
+    N = \cup_\alpha N_\alpha
+    \) - field, sub extension of $M$. $\psi$ defined in the following
+    way: for $x \in N_\alpha$ $\psi(x) = \psi_\alpha(x)$.
+
+    Thus $\mathcal{E}$ has a maximal element that we denote by
+    $\left(N_0, \psi_0\right)$.
+
+    Lets suppose that $N_0 \ne M$, i.e.
+    $N_0 \subsetneq M$. Now it's very easy to get a
+    contradiction. Lets take $x \in M \setminus N_0$ and consider
+    \nameref{def:minpolynomial} $P_{min}\left(x, N_0\right)$. It
+    should have a root $\alpha \in \Omega$. Now we extend $N_0$ to
+    $N_0\left(x\right)$ and define $\psi'$ on
+    $N_0\left(x\right)$ as follows: $\forall y \in N_0: \psi'(y)
+    = \psi_0(y)$ and $\psi'(x) = \alpha$. Thus we was able to find an
+    element of the chain that is greater than maximal. Therefore our
+    assumption about $N_0 \ne M$ was incorrect and we can conclude
+    than $N_0 = M$ and therefore $\tilde{\phi} = \psi_0$. 
+  \end{proof}
+  \label{thm:lec2_3}
+\end{theorem}
+
+\begin{corollary}[About algebraic closure isomorphism]
+  If $\Omega$ and $\Omega'$ are 2 algebraic closures of $K$ then they
+  are isomorphic as K-algebras.
+  \begin{proof}
+    ???
+    We have $K \hookrightarrow \Omega$ and $K \hookrightarrow \Omega'$
+    I.e. the homomorphism $i: K \to \Omega$ can be extended to
+    homomorphism $\psi: \Omega \to \Omega'$. The same is true for
+    another direction too.
+  \end{proof}
+\end{corollary}
