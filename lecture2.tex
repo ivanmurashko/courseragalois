@@ -262,6 +262,26 @@ To summarize we have the following
     $\sqrt[3]{2} j \leftrightarrow \sqrt[3]{2} j^2$ (???). This is a
     transposition. 
   \end{itemize}
+
+  Lets also look at $\mathbb{Q}\left(\sqrt[3]{2}\right)$. The question
+  is the following: how many \nameref{def:homomorphism}s to $L =
+  \mathbb{Q}\left(\sqrt[3]{2}, j\right)$ do we have. As we know
+  \[
+  L = \mathbb{Q}\left(\sqrt[3]{2}, j\right) =
+  \mathbb{Q}\left(\sqrt[3]{2}, j\sqrt[3]{2}, j^2\sqrt[3]{2}\right),
+  \]
+  i.e. $\sqrt[3]{2}$ can be switched with one of the roots:
+  $\sqrt[3]{2}, j\sqrt[3]{2}, j^2\sqrt[3]{2}$ and each permutation is a
+  homomorphism. To demonstrate it lets look at the following
+  permutation $\sqrt[3]{2} \leftrightarrow j\sqrt[3]{2}$. We have a
+  unique \nameref{def:isomorphism}
+  \[
+  \mathbb{Q}\left(\sqrt[3]{2}\right) \to
+  \mathbb{Q}\left(j\sqrt[3]{2}\right) \subset L.
+  \]
+  i.e. we have a homomorphism $\mathbb{Q}\left(\sqrt[3]{2}\right) \to
+  L$ associated with the following permutation:
+  $\sqrt[3]{2} \leftrightarrow j\sqrt[3]{2}$
 \end{example}
 
 \subsection{Algebraic closure}
@@ -458,13 +478,23 @@ the proof with the following theorem
 \end{theorem}
 
 \begin{corollary}[About algebraic closure isomorphism]
-  If $\Omega$ and $\Omega'$ are 2 algebraic closures of $K$ then they
+  If $\Delta$ and $\Delta'$ are 2 algebraic closures of $K$ then they
   are isomorphic as K-algebras.
   \begin{proof}
-    ???
-    We have $K \hookrightarrow \Omega$ and $K \hookrightarrow \Omega'$
-    I.e. the homomorphism $i: K \to \Omega$ can be extended to
-    homomorphism $\psi: \Omega \to \Omega'$. The same is true for
-    another direction too.
+    Using theorem \ref{thm:lec2_3} one can assume
+    $L = K$, $M = \Delta'$ and $\Omega = \Delta$ i.e. we have
+    \[
+    K \subset K \subset \Delta'
+    \]
+    in this case homomorphism $K \to \Delta$ can be extended to
+    $\Delta' \to \Delta$ i.e. there exists a homomorphism
+    (i.e. \nameref{def:injection}) from $\Delta'$ to $Delta$.
+
+    If we assume $M = \Delta$ and $\Omega = \Delta$ then there exists
+    a homomorphism (i.e. \nameref{def:injection}) from $\Delta$ to
+    $\Delta'$. The \nameref{def:injection} is also
+    \nameref{def:surjection} in another direction: $\Delta' \to
+    \Delta$ and as result we have \nameref{def:isomorphism} $\Delta' \to
+    \Delta$ 
   \end{proof}
 \end{corollary}
