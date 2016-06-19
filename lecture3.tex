@@ -92,8 +92,11 @@ finite extension of a finite field: $\mathbb{F}_{p^n}$
   \label{rem:frobeniushomomorphism}
 \end{remark}
 
-Also $F_{p^n} : x \in K \to x^{p^n} \to K$ is also homomorphism (a
+\begin{remark}
+Also $F_{p^n} : x \in K \to x^{p^n} \in K$ is also homomorphism (a
 power of \nameref{rem:frobeniushomomorphism}.
+  \label{rem:frobeniuspowerhomomorphism}
+\end{remark}
 
 \section{Properties of finite fields}
 
@@ -106,6 +109,52 @@ power of \nameref{rem:frobeniushomomorphism}.
   field of $x^{p^n} - x$. Moreover there is an unique sub extension of
   $\overline{\mathbb{F}_P}$ with $p^n$ elements.
   \begin{proof}
+    Note that $F_{p^n} : x \to x^{p^n}$ is a
+    \nameref{def:homomorphism} (see remark
+    \ref{rem:frobeniuspowerhomomorphism}) as result the following set
+    $\{
+    x \mid F_{p^n}\left(x\right) = x
+    \}$ is a sub-field containing $\mathbb{F}_p$
+    \footnote{
+      For $x \in \mathbb{F}_p$ we have that $x^{p-1} = 1$ (the field
+      with fixed number of elements) and therefore
+      $\forall x \in \mathbb{F}_p: x^p = x$ i. e.
+      $F_{p^n}\left(x\right) = x$.
+    }
+    Lets $Q_n\left(X\right) = X^{p^n} - X$ thus the considered set
+    consists of the root of the polynomial $Q_n$. The polynomial has
+    no multiple roots because $gcd(Q_n, Q_n') = 1$.
+    \footnote{
+      If $Q_n$ has a multiple root $\beta$ then it is divisible by
+      $\left(X - \beta\right)^2$ and the $Q_n'$ is divisible by (at
+      least) $\left(X - \beta\right)$ thus the $\left(X -
+      \beta\right)$ should be a part of gcd.
+    }
+    This is because $Q_n' \equiv 1 \mod p$.
+    \footnote{
+      ??? $Q_n' = p^n X^{p^n - 1} - 1 \equiv -1 \mod p$
+    }
+    As soon as $Q_n$ has no multiple roots then there are $p^n$
+    different roots and therefore the splitting field is the field
+    with $p^n$ elements.
+
+    Conversely lets $\left|K\right| = p^n$ and
+    $\alpha \ne 0 \in K$.
+    Using the fact that the multiplication group of $K$ has $p^n - 1$
+    elements: $\left|K^*\right| = p^n - 1$
+    \footnote{
+      $K^* = K \setminus \{0\}$
+    }
+    as result the multiplication of all the elements should give us
+    $1$: $\alpha^{p^n-1} = 1$ or $\alpha^{p^n} - \alpha = 0$.
+    Therefore $\alpha$ is a root of $Q_n$. Thus the splitting field of
+    $Q_n$ consists of elements of $K$.
+
+    The uniqueness of sub-extension of
+    $\mathbb{F}_p$ with $p^n$ elements is a result of uniqueness of
+    the splitting field (see theorem \ref{thm:lec2_1}). 
+    
+    
   \end{proof}
   \label{thm:lec3_1}
 \end{theorem}
