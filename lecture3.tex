@@ -7,8 +7,108 @@ the Frobenius map. We introduce the notions of separable (resp. purely
 inseparable) elements, extensions, degree. We briefly discuss perfect
 fields.
 
-\section{An example (of extension). Finite fields}
+\section{An example (of extension)s. Finite fields}
+
+\begin{corollary}
+  \nameref{def:algebraicclosure} of $K$ is unique up to
+  \nameref{def:isomorphism} of K-algebras
+  \footnote{
+    There is a redefinition of corollary
+    \ref{col:algebraic_closure_isomorphism}.
+  }
+  \label{col:lec3_1}
+\end{corollary}
+
+\begin{corollary}
+  Any \nameref{def:algebraicextension} of $K$ is embedded into the
+  \nameref{def:algebraicclosure} \footnote{seems to be a reformulation
+  of theorem \ref{thm:lec2_3}}
+  \label{col:lec3_2}
+\end{corollary}
+
+\begin{example}[Of extension of homomorphism]
+  Let $K = \mathbb{Q}$ and $\bar{\mathbb{Q}}$ is the
+  \nameref{def:algebraicclosure} of $K$. For instance we can consider
+  $\bar{\mathbb{Q}} \subset \mathbb{C}$.
+  \footnote{
+    Really $\bar{\mathbb{Q}} = \mathbb{A}$ - the set of all algebraic
+    numbers, i.e. roots of polynomials $P \in
+    \mathbb{Q}\left[X\right]$.
+  }
+
+  Let
+  \[
+  L = \mathbb{Q}\left(\sqrt{2}\right) =
+  \mathbb{Q}\left[X\right]/\left(X^2 - 2\right)
+  \],
+  $\alpha$ is a class of $X$ in $L$. $L$ has 2 \nameref{def:embedding}s into
+  $\bar{\mathbb{Q}}$
+  \begin{enumerate}
+  \item $\phi_1: \alpha \to \sqrt{2}$
+  \item $\phi_2: \alpha \to -\sqrt{2}$
+  \end{enumerate}
+
+  Let
+  \[
+  M = \mathbb{Q}\left(\sqrt[4]{2}\right) =
+  \mathbb{Q}\left[Y\right]/\left(Y^4 - 2\right)
+  \],
+  $\beta$ is a class of $Y$ in $M$. $M$ has 4 \nameref{def:embedding}s into
+  $\bar{\mathbb{Q}}$
+  \begin{enumerate}
+  \item $\psi_1: \beta \to \sqrt[4]{2}$ (extends $\phi_1$)
+  \item $\psi_2: \beta \to -\sqrt[4]{2}$ (extends $\phi_1$)
+  \item $\psi_3: \beta \to i\sqrt[4]{2}$ (extends $\phi_2$)
+  \item $\psi_4: \beta \to -i\sqrt[4]{2}$ (extends $\phi_2$)
+  \end{enumerate}
+  This (``extends'') is because
+  \[
+  M = L\left[Y\right]/\left(Y^2 - \alpha\right) 
+  \]
+\end{example}
+
+\subsection{Finite fields}
+
+\begin{definition}[Finite field]
+  $K$ is a finite field if it's characteristic (see section
+  \ref{sec:fieldcharacteristic}) $char K = p$, where $p$ 
+  - prime number 
+  \label{def:finitefield}
+\end{definition}
+
+Note: if $K$ is a finite extension of $\mathbb{F}_p$ and
+$n = \left[K:\mathbb{F}_p\right]$ then number of elements of $K$:
+$\left|K\right| = p^n$. The following notation is also used for a
+finite extension of a finite field: $\mathbb{F}_{p^n}$
+
+\begin{remark}[Frobenius homomorphism]
+  If $char K = p$, then exists a \nameref{def:homomorphism}
+  $F_p: K \to K$ such that $x \in K \to x^p \to K$.
+  Really if we consider $\left(x+y\right)^p = x^p + y^p$ and
+  $\left(xy\right)^p = x^p y^p$. The second property is the truth in
+  the all fields (of course) but the first one is the special property
+  of $\mathbb{F}_p$ fields.
+  \label{rem:frobeniushomomorphism}
+\end{remark}
+
+Also $F_{p^n} : x \in K \to x^{p^n} \to K$ is also homomorphism (a
+power of \nameref{rem:frobeniushomomorphism}.
+
 \section{Properties of finite fields}
+
+\begin{theorem}
+  Lets fix $\mathbb{F}_P$ and it's \nameref{def:algebraicclosure}
+  $\overline{\mathbb{F}_P}$.
+
+  The \nameref{def:splittingfield} of $x^{p^n} - x$ has $p^n$
+  elements. Conversely any field of $p^n$ elements is a splitting
+  field of $x^{p^n} - x$. Moreover there is an unique sub extension of
+  $\overline{\mathbb{F}_P}$ with $p^n$ elements.
+  \begin{proof}
+  \end{proof}
+  \label{thm:lec3_1}
+\end{theorem}
+
 \section{Multiplicative group and automorphism group of a finite field}
 \section{Separable elements}
 \section{Separable degree, separable extensions}
