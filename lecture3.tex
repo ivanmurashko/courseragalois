@@ -76,10 +76,13 @@ fields.
   \label{def:finitefield}
 \end{definition}
 
-Note: if $K$ is a finite extension of $\mathbb{F}_p$ and
-$n = \left[K:\mathbb{F}_p\right]$ then number of elements of $K$:
-$\left|K\right| = p^n$. The following notation is also used for a
-finite extension of a finite field: $\mathbb{F}_{p^n}$
+\begin{remark}[$\mathbb{F}_{p^n}$]
+  If $K$ is a finite extension of $\mathbb{F}_p$ and
+  $n = \left[K:\mathbb{F}_p\right]$ then number of elements of $K$:
+  $\left|K\right| = p^n$. The following notation is also used for a
+  finite extension of a finite field: $\mathbb{F}_{p^n}$
+  \label{rem:fpn}
+\end{remark}
 
 \begin{remark}[Frobenius homomorphism]
   If $char K = p$, then exists a \nameref{def:homomorphism}
@@ -156,6 +159,86 @@ power of \nameref{rem:frobeniushomomorphism}.
   \end{proof}
   \label{thm:lec3_1}
 \end{theorem}
+
+\begin{theorem}
+  $\mathbb{F}_{p^d} \subset \mathbb{F}_{p^n}$ if and only if $d \mid n$. 
+  \begin{proof}
+    Let $\mathbb{F}_{p^d} \subset \mathbb{F}_{p^n}$ in this case
+    $\mathbb{F}_p \subset \mathbb{F}_{p^d} \subset \mathbb{F}_{p^n}$
+    and
+    \[
+    \left[\mathbb{F}_{p^n}:\mathbb{F}_{p}\right] =
+    \left[\mathbb{F}_{p^n}:\mathbb{F}_{p^d}\right]
+    \left[\mathbb{F}_{p^d}:\mathbb{F}_{p}\right]
+    \]
+    or $n = x \cdot d$ i.e. $d \mid n$
+
+    Conversely if $d \mid n$ then $n = x \cdot d$ or
+    $p^n = \prod^x_{i=1} p^d$ thus if $x^{p^d} = x$ then
+    \[
+    x^{p^n} = x^{\prod^x_{i=1} p^d}
+    \left(x^{p^d}\right)^{\prod^x_{i=2} p^d} = x^{\prod^x_{i=2} p^d} =
+    \dots = x^{p^d} = x,
+    \]
+    i.e. $\forall \alpha \in \mathbb{F}_{p^d}$ we also have
+    $\alpha \in \mathbb{F}_{p^n}$ or in other notation:
+    $\mathbb{F}_{p^d} \subset \mathbb{F}_{p^n}$.
+  \end{proof}
+  \label{thm:lec3_1_2}
+\end{theorem}
+
+\begin{theorem}
+  $\mathbb{F}_{p^n}$ is a \nameref{def:stemfield} and a
+  \nameref{def:splittingfield} of any irreducible polynomial
+  $P \in \mathbb{F}_p$ of degree $n$.
+  \begin{proof}
+    \nameref{def:stemfield} $K$ has to have degree $n$ over
+    $\mathbb{F}_p$ i.e.
+    $\left[K:\mathbb{F_p}\right] = n$ i.e. it should have $p^n$
+    elements and therefore $K=\mathbb{F_{p^n}}$
+    (see also remark \ref{rem:fpn}).
+
+    About \nameref{def:splittingfield}. Using the just proved result
+    we can say that if $\alpha$ is a root of $P$
+    then $\alpha \in \mathbb{F_{p^n}}$ thus
+    $Q_n\left(\alpha\right) = 0$. Therefore $P$ divides $Q_n$ 
+    \footnote{as soon as any root of $P$ also a root of $Q_n$} and as
+    result $P$ splits in $\mathbb{F_{p^n}}$.
+  \end{proof}
+  \label{thm:lec3_1_3}
+\end{theorem}
+
+\begin{corollary}
+  Let $\mathcal{P}_d$ is the set of all irreducible,
+  \nameref{def:monicpolynomial}s of degree $d$ then 
+  \[
+  Q_n = \prod_{d \mid n} \prod_{P \in \mathcal{P}_d} P
+  \]
+  \begin{proof}
+    As we just seen if $P \in \mathcal{P}_d$ and $d \mid n$ then
+    $P \mid Q_n$.
+    \footnote{
+      Since stem field is $\mathbb{F}_{p^d} \subset \mathbb{F}_{p^n}$ 
+    }
+    Since all such polynomials are prime each other
+    \footnote{
+      ??? 
+    }
+    and $Q_n$ have no multiple roots (as result no multiple factors) 
+    then
+    \[
+    \prod_{d \mid n} \prod_{P \in \mathcal{P}_d} P \mid Q_n
+    \]
+
+    From other side let $R$ is an irreducible factor of $Q_n$.
+    $\alpha$ is a root of $R$ then $Q_n\left(\alpha\right) = 0$ thus
+    $\mathbb{F}_p\left(\alpha\right) \subset \mathbb{F}_{p^n}$
+    therefore $\mathbb{F}_p\left(\alpha\right) = \mathbb{F}_{p^d}$
+    where $d \mid n$ and as result, $deg R \mid n$. Thus the
+    polynomial should be in the product
+    $\prod_{d \mid n} \prod_{P \in \mathcal{P}_d} P$.
+  \end{proof}
+\end{corollary}
 
 \section{Multiplicative group and automorphism group of a finite field}
 \section{Separable elements}
