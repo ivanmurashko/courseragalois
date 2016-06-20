@@ -210,7 +210,8 @@ power of \nameref{rem:frobeniushomomorphism}.
 
 \begin{corollary}
   Let $\mathcal{P}_d$ is the set of all irreducible,
-  \nameref{def:monicpolynomial}s of degree $d$ then 
+  \nameref{def:monicpolynomial}s of degree $d$ such that
+  $\mathcal{P}_d \subset \mathbb{F}_p\left[X\right]$ then 
   \[
   Q_n = \prod_{d \mid n} \prod_{P \in \mathcal{P}_d} P
   \]
@@ -220,9 +221,14 @@ power of \nameref{rem:frobeniushomomorphism}.
     \footnote{
       Since stem field is $\mathbb{F}_{p^d} \subset \mathbb{F}_{p^n}$ 
     }
-    Since all such polynomials are prime each other
+    Since all such polynomials are relatively prime of course
     \footnote{
-      ??? 
+      ??? As soon as $\mathbb{F}_p\left[X\right]$ is \nameref{def:ufd}
+      then any polynomial can be written as a product of irreducible
+      elements, uniquely up to order and units this means that each
+      $P \in \mathcal{P}_d$ (where $d \mid n$) should be in the
+      factorization of $Q_n$. It should be only one time because there
+      is no multiply roots. 
     }
     and $Q_n$ have no multiple roots (as result no multiple factors) 
     then
