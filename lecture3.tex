@@ -356,13 +356,28 @@ fields.
   $K = \mathbb{F}_p\left(\alpha\right)$. In particular $\exists$ an
   irreducible polynomial of degree $n$ over $\mathbb{F}_p$
   \footnote{
-    The theorem \ref{thm:lec3_1_3} says that the stem field for any
+    The theorem \ref{thm:lec3_1_3} and remark \ref{rem:fpn} says that
+    the stem field for any 
     polynomial of degree $n$ over $\mathbb{F}_p$ exists and there is
-    over $\mathbb{F}_{p^n}$ but we had not proved yet that an
+    $\mathbb{F}_{p^n}$ and
+    $\left[\mathbb{F}_{p^n}:\mathbb{F}_{p}\right] = n$ i.e.
+    $K = \mathbb{F}_{p^n}$.
+    But we had not proved yet that an
     irreducible polynomial of degree $n$ exists.
   }
   \begin{proof}
-    We can take $\alpha = \mbox{ generator of } K^*$.
+    We can take $\alpha = \mbox{ generator of } K^*$
+    \footnote{
+      This is because
+      $K^* = \left<\alpha\right>$ i.e. any element of $K$ except $0$
+      can be got as a power of $\alpha$ i.e. we really got
+      $K = \mathbb{F}_p\left(\alpha\right)$.
+
+      ??? The irreducible
+      polynomial we can take $P_{min}\left(\alpha,
+      \mathbb{F}_p\right)$ (see also lemma \nameref{def:minpolynomial})
+      
+      }
   \end{proof}
   \label{cor:lec3_1}
 \end{corollary}
