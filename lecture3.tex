@@ -430,5 +430,39 @@ fields.
 \end{corollary}
 
 \section{Separable elements}
+
+Let $E$ is a \nameref{def:splittingfield} of an irreducible polynomial
+$P$. We would like to say that it ``has many
+\nameref{def:automorphism}s''. What does this mean? This means the
+following thing:
+Let $\alpha$ and $\beta$ be 2 roots of $P$ then we have 2 extensions
+$K\left(\alpha\right) \subset E$ and 
+$K\left(\beta\right) \subset E$.
+
+There exists an \nameref{def:isomorphism} (see proposition
+\ref{prop:stemfield}) over $K$
+\[
+\phi: K\left(\alpha\right) \to K\left(\beta\right)
+\]
+that is also extended to an \nameref{def:automorphism} on $E$
+(see theorem \ref{thm:lec2_3}).
+
+There is one problem with it: is that truth that an irreducible
+polynomial of degree $n$ has ``many'' (no more than $n$ and not
+single) roots.
+
+The answer is yes if $char K = 0$, but not always if $char K = p$
+(where $p$ is a prime number). $P$ can have multiple roots in the case
+i.e. $gcd(P, P') \ne 1$.
+
+Why it's not a case for $char K = 0$ - it is because
+$\deg P' < \deg P$ and $P \nmid P'$ for $P' \ne 0$ (non constant
+polynomial)
+
+But for $char K = p$ there can be a case when $P' = 0$ for a non
+constant polynomial thus $P \mid P'$ and as result $gcd(P, P') = P$.
+The $P' = 0$ i.e. is vanish if
+$P = \sum a_i x^i$ and $p \mid i$ or $a_i = 0$.
+
 \section{Separable degree, separable extensions}
 \section{Perfect fields}
