@@ -223,13 +223,27 @@ fields.
     }
     Since all such polynomials are relatively prime of course
     \footnote{
-      ??? As soon as $\mathbb{F}_p\left[X\right]$ is \nameref{def:ufd}
+      As soon as $\mathbb{F}_p\left[X\right]$ is \nameref{def:ufd}
       then any polynomial can be written as a product of irreducible
       elements, uniquely up to order and units this means that each
       $P \in \mathcal{P}_d$ (where $d \mid n$) should be in the
       factorization of $Q_n$. It should be only one time because there
       is no multiply roots. 
     }
+    \footnote{
+      We also can say that 2 irreducible polynomial
+      $P_1, P_2 \in \mathbb{F}_p\left[X\right]$ should not have same
+      roots. For example if $\alpha$ is the same root - it cannot be
+      in $\mathbb{F}_p$ because in the case the polynomials will be
+      reducible. Thus it can be only in an extension of $\mathbb{F}_p$
+      from other side $gcd(P_1,P_2) = 1$ and therefore with
+      \nameref{lem:bezout} one can get that $\exists Q,R \in
+      \mathbb{F}_p\left[X\right]$ such that
+      \(
+      P_1 Q + P_2 R = 1
+      \) and setting $\alpha$ into the equation leads to fail
+      statement that $0 = 1$.
+      }
     and $Q_n$ have no multiple roots (as result no multiple factors) 
     then
     \[
