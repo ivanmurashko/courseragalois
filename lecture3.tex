@@ -521,15 +521,17 @@ $a_i = 0$ whenever $p^h \nmid i$
 
 \begin{definition}[Degree of separability]
   $d_{sep}(P) = \deg Q$ (as above)
-  It requires some explanation compare to that one was got on the
-  lecture video.
-  If $P$ is a \nameref{def:separablepolynomial} then
-  $d_{sep}(P) = \deg P$. In other case $P$ should be represented as
-  $P\left(X\right) = q_1(X^p)$. If $q_1\left(Y\right)$ is separable
-  than $Q = q_1$ otherwise we continue and represent
-  $q_1\left(X\right) = q_2\left(X^p\right)$. We should stop on some
-  $q_r$ in this case $Q = q_r$ and $P\left(X\right) =
-  Q\left(X^{p^r}\right)$. In the case $d_{sep}(P) = \deg Q$. 
+  \footnote{    
+    It requires some explanation compare to that one was got on the
+    lecture video.
+    If $P$ is a \nameref{def:separablepolynomial} then
+    $d_{sep}(P) = \deg P$. In other case $P$ should be represented as
+    $P\left(X\right) = q_1(X^p)$. If $q_1\left(Y\right)$ is separable
+    than $Q = q_1$ otherwise we continue and represent
+    $q_1\left(X\right) = q_2\left(X^p\right)$. We should stop on some
+    $q_r$ in this case $Q = q_r$ and $P\left(X\right) =
+    Q\left(X^{p^r}\right)$. In the case $d_{sep}(P) = \deg Q$.
+  }
   \label{def:degsep}
 \end{definition}
 
@@ -548,7 +550,7 @@ $a_i = 0$ whenever $p^h \nmid i$
   \label{def:deginseppol}
 \end{definition}
 
-\begin{definition}[Algebraic element (in)separability]
+\begin{definition}[Separable element]
   Let $L$ be an \nameref{def:algebraicextension} of $K$ then $\alpha \in K$ is
   called separable(inseparable) if it's
   \nameref{def:minpolynomial} $P_{min}\left(\alpha, K\right)$ has
@@ -575,4 +577,58 @@ $a_i = 0$ whenever $p^h \nmid i$
 \end{proposition}
 
 \section{Separable degree, separable extensions}
+
+We want to generalize the proposition \ref{prop:lec3_2} for any field
+extension (not necessary $K\left(\alpha\right)$).
+Let $L$ be a finite extension of $K$
+
+\begin{definition}[Separable degree]
+  $\left[L:K\right]_{sep} = \left|Hom_k\left(L, \bar{K}\right)\right|$  
+  \label{def:separabledegree}
+\end{definition}
+
+As we know if $L = K\left(\alpha\right)$ then
+\nameref{def:separabledegree} is a number of distinct roots of
+minimal polynomial $P_{min}\left(\alpha, K\right)$
+
+\begin{definition}[Separable extension]
+  $L$ is separable over $K$ if
+  $\left[L:K\right]_{sep} = \left[L:K\right]$
+  \label{def:separableextension}
+\end{definition}
+
+\begin{definition}[Inseparable degree]
+  \[
+  \left[L:K\right]_i =
+  \frac{\left[L:K\right]}{\left[L:K\right]_{sep}}
+  \]
+  \label{def:inseparabledegree}
+\end{definition}
+
+\begin{theorem}[About separable extensions]
+  \begin{enumerate}
+  \item If $K \subset L \subset M$ then
+    $\left[M:K\right]_{sep} = \left[M:L\right]_{sep}
+    \left[L:K\right]_{sep}$
+    and $M$ is \nameref{def:separableextension} over $K$ if and only
+    if $M$ is separable over $L$ and $L$ is separable over $K$
+  \item The following things are equivalent
+    \begin{enumerate}
+    \item $L$ is separable over $K$
+    \item $\forall \alpha \in L$ $\alpha$ \nameref{def:degsepelem}
+      over $K$
+    \item $L$ is generated over $K$ by a finite number of
+      \nameref{def:degsepelem}s i.e.
+      $L = K\left(\alpha_1, \alpha_2, \dots, \alpha_n\right)$, there
+      $\alpha_i$ is separable over $K$
+    \item   $L = K\left(\alpha_1, \alpha_2, \dots, \alpha_n\right)$, there
+      $\alpha_i$ is separable over
+      $K\left(\alpha_1, \alpha_2, \dots, \alpha_{i-1}\right)$
+    \end{enumerate}
+  \end{enumerate}
+  \begin{proof}
+  \end{proof}
+  \label{thm:lec3_3}
+\end{theorem}
+
 \section{Perfect fields}
