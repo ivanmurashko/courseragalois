@@ -626,7 +626,53 @@ minimal polynomial $P_{min}\left(\alpha, K\right)$
       $K\left(\alpha_1, \alpha_2, \dots, \alpha_{i-1}\right)$
     \end{enumerate}
   \end{enumerate}
+  \begin{remark}
+    That holds if we replace separability with pure inseparability.
+  \end{remark}
   \begin{proof}
+    About 1st part:
+    If we have a \nameref{def:homomorphism} $\phi: L \to \bar{K}$ then
+    it is extended to $\tilde{\phi}: M \to \bar{K}$ (by extension
+    theorem \ref{thm:lec2_3}) it can be done with one way per each
+    homomorphism from $L$ to $M$ i.e. it can be done by
+    $\left[M:L\right]_{sep}$ ways. From other side $\bar{K}$ is also
+    $\bar{L}$ (\nameref{def:algebraicclosure} over $L$) thus ???
+    \[
+    \left[M:L\right]_{sep} = \left|Hom_L\left(M, \bar{L}\right)\right|
+    = \left|Hom_L\left(M, \bar{K}\right)\right|    
+    \]
+    For the total number of homomorphisms one can get the following
+    equations ???
+    \begin{eqnarray}
+      \left[M:K\right]_{sep} = 
+      \left|Hom_k\left(M, \bar{K}\right)\right| =
+      \left|Hom_k\left(L, \bar{K}\right)\right|
+      \left|Hom_L\left(M, \bar{K}\right)\right| =
+      \nonumber \\
+      \left|Hom_k\left(L, \bar{K}\right)\right|
+      \left|Hom_L\left(M, \bar{L}\right)\right| =
+      \left[M:L\right]_{sep} \left[L:K\right]_{sep}
+      \nonumber
+    \end{eqnarray}
+    
+    We also have
+    \begin{eqnarray}
+    \left[M:K\right]_{sep} = 
+    \left[M:L\right]_{sep} \left[L:K\right]_{sep} \le
+    \left[M:L\right] \left[L:K\right] = \left[M:K\right]
+    \nonumber
+    \end{eqnarray}
+    The equality is possible if
+    $\left[M:L\right]_{sep} = \left[M:L\right]$ and 
+    $\left[L:K\right]_{sep} = \left[L:K\right]$ i.e. if
+    $M$ is separable over $L$ and $L$ is
+    separable over $K$.
+    \footnote{
+      In video EA suggested to use induction. How???
+    }
+    This finishes the proof of the first part.
+    
+    About 2d part:
   \end{proof}
   \label{thm:lec3_3}
 \end{theorem}
