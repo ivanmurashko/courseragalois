@@ -485,5 +485,80 @@ constant polynomial thus $P \mid P'$ and as result $gcd(P, P') = P$.
 The $P' = 0$ i.e. is vanish if
 $P = \sum a_i x^i$ and $p \mid i$ or $a_i = 0$.
 
+Let $r = \max h$ such that $P$ is a polynomial in $x^{p^h}$ that is
+$a_i = 0$ whenever $p^h \nmid i$
+
+\begin{proposition}
+  Let $P\left(X\right) = Q\left(x^{p^r}\right)$ and $Q' \ne 0$ i.e.
+  $gcd(Q, Q') = 1$ and $Q$ does not have multiple roots but
+  all roots of $P$ have multiplicity $p^r$.
+  \begin{proof}
+    If $\lambda$ is a root of $P$ then $\lambda$:
+    $P(X) = (X - \lambda)R$
+    Thus $\mu = \lambda^{p^r}$ is the root of $Q$:
+    $Q(Y) = (Y - \lambda^{p^r}) S(Y)$ therefore
+    \[
+    P(X) =
+    \left(X^{p^r} - \lambda^{p^r}\right)S\left(X^{p^r}\right) =
+    \left(X - \lambda\right)^{p^r}S\left(X^{p^r}\right)
+    \]
+    and $\lambda$ is not a root of $S\left(X^{p^r}\right)$.
+    Thus we just got that multiplicity of $\lambda$ is $p^r$.
+  \end{proof}
+  \label{prop:lect3_1}
+\end{proposition}
+
+\begin{definition}[Separable polynomial]
+  $P\in K\left[X\right]$ irreducible polynomial is called separable if
+  $\gcd\left(P, P'\right) = 1$
+  \label{def:separablepolynomial}
+\end{definition}
+
+\begin{definition}[Degree of separability]
+  $d_{sep}(P) = \deg Q$ (as above)
+  \label{def:degsep}
+\end{definition}
+
+\begin{definition}[Degree of inseparability]
+  $d_{i}(P) = \frac{\deg P}{\deg Q}$ ( $=p^r$ in proposition
+  \ref{prop:lect3_1}) 
+  \label{def:deginsep}
+\end{definition}
+
+\begin{definition}[Pure inseparable polynomial]
+  $P$ is pure inseparable if $d_i = \deg P$.
+  Then $P = X^{p^r} - a$
+  \footnote{
+    ???
+  }
+  \label{def:deginseppol}
+\end{definition}
+
+\begin{definition}[Element (in)separability]
+  Let $L$ be an \nameref{def:algebraicextension} of $K$ then $\alpha \in K$ is
+  called separable(inseparable) if it's
+  \nameref{def:minpolynomial} $P_{min}\left(\alpha, K\right)$ has
+  the property
+  \label{def:degsepelem}
+\end{definition}
+
+\begin{proposition}[On number of homomorphisms]
+  If $\alpha$ is separable on $K$ then the number of
+  \nameref{def:homomorphism}s
+  \[
+  \left|Hom_k\left(K\left(\alpha\right), \bar{K}\right)\right| =
+  \deg P_{min}\left(\alpha, K\right)
+  \]
+  in general
+  \[
+  \left|Hom_k\left(K\left(\alpha\right), \bar{K}\right)\right| =
+  d_{sep} P_{min}\left(\alpha, K\right)
+  \]  
+  \begin{proof}
+    It's obvious because $d_{sep}$ is the number of distinct roots.
+  \end{proof}
+  \label{prop:lec3_2}
+\end{proposition}
+
 \section{Separable degree, separable extensions}
 \section{Perfect fields}
