@@ -503,6 +503,11 @@ $a_i = 0$ whenever $p^h \nmid i$
     \left(X - \lambda\right)^{p^r}S\left(X^{p^r}\right)
     \]
     and $\lambda$ is not a root of $S\left(X^{p^r}\right)$.
+    \footnote{
+      This is because $Q$ does not have multiply roots and as result
+      $\mu = \lambda^{p^r}$ is not a root of $S$ or in other words
+      $S\left(X^{p^r}\right)_{X=\lambda} \ne 0$
+      }
     Thus we just got that multiplicity of $\lambda$ is $p^r$.
   \end{proof}
   \label{prop:lect3_1}
@@ -516,12 +521,21 @@ $a_i = 0$ whenever $p^h \nmid i$
 
 \begin{definition}[Degree of separability]
   $d_{sep}(P) = \deg Q$ (as above)
+  It requires some explanation compare to that one was got on the
+  lecture video.
+  If $P$ is a \nameref{def:separablepolynomial} then
+  $d_{sep}(P) = \deg P$. In other case $P$ should be represented as
+  $P\left(X\right) = q_1(X^p)$. If $q_1\left(Y\right)$ is separable
+  than $Q = q_1$ otherwise we continue and represent
+  $q_1\left(X\right) = q_2\left(X^p\right)$. We should stop on some
+  $q_r$ in this case $Q = q_r$ and $P\left(X\right) =
+  Q\left(X^{p^r}\right)$. In the case $d_{sep}(P) = \deg Q$. 
   \label{def:degsep}
 \end{definition}
 
 \begin{definition}[Degree of inseparability]
-  $d_{i}(P) = \frac{\deg P}{\deg Q}$ ( $=p^r$ in proposition
-  \ref{prop:lect3_1}) 
+  $d_{i}(P) = \frac{\deg P}{\deg Q}$ ( $=p^r$ in definition
+  \ref{def:degsep}) 
   \label{def:deginsep}
 \end{definition}
 
@@ -529,7 +543,7 @@ $a_i = 0$ whenever $p^h \nmid i$
   $P$ is pure inseparable if $d_i = \deg P$.
   Then $P = X^{p^r} - a$
   \footnote{
-    ???
+    ??? For example but not then
   }
   \label{def:deginseppol}
 \end{definition}
