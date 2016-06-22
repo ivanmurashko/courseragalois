@@ -536,3 +536,25 @@ f = f_0 + f_1 X + f_2 X^2 + \dots + f_n X^n.
   \]
   \label{def:monicpolynomial}
 \end{definition}
+
+\begin{theorem}[About irreducible polynomials]
+  Let $\pi(X)$ is an irreducible polynomial in $K\left[X\right]$ and let
+  $\alpha$ be a root of $\pi(X)$ in a some larger field.
+  $\forall h(x) \in K\left(X\right)$ if have the following statement:
+  $h\left(\alpha\right) = 0$ if and only if $\pi(X) \mid h(X)$ in
+  $K\left[X\right]$.
+  \begin{proof}
+    If $h(X) = \pi(X) g(X)$ then $h(\alpha) = 0$
+
+    From other side let $\pi \nmid h$ in $K\left[X\right]$ this means
+    that they are relatively prime in $K\left[X\right]$ and by
+    \nameref{lem:bezout} we can get $Q,R \in K\left[X\right]$ such
+    that
+    \[
+    \pi(X) R(X) + h(X) Q(X) = 1,
+    \]
+    and especially for $X = \alpha$ we will get that $0 = 1$ that is
+    impossible. 
+  \end{proof}
+  \label{thm:irreduciblediv}
+\end{theorem}

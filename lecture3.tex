@@ -458,6 +458,13 @@ i.e. $gcd(P, P') \ne 1$.
 Why it's not a case for $char K = 0$ - it is because
 $\deg P' < \deg P$ and $P \nmid P'$ for $P' \ne 0$ (non constant
 polynomial)
+\footnote{
+  Let $P$ has multiply roots. As soon as it's irreducible a multiply
+  root is in an extension of $K$. In this case the root should be also
+  a root for $P'$ thus by theorem \ref{thm:irreduciblediv} one can get
+  that $P \mid P'$ in $K\left[X\right]$ but that is impossible because
+  $\deg P' < \deg P$ and can be only possible if $P' = 0$.
+}
 
 But for $char K = p$ there can be a case when $P' = 0$ for a non
 constant polynomial thus $P \mid P'$ and as result $gcd(P, P') = P$.
