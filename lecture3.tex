@@ -703,16 +703,18 @@ minimal polynomial $P_{min}\left(\alpha, K\right)$
     Part 1 implies that a separable sub extension
     $K\left(\alpha\right)$ or a separable extension $L$ is separable.
     \footnote{
-      ??? I.e. in the case we have $K \subset K\left(\alpha\right) \subset
+      I.e. in the case we have $K \subset K\left(\alpha\right) \subset
       L$ and if $L$ is separable then $K\left(\alpha\right)$ is
       separable and as result $\alpha$ is a
-      \nameref{def:degsepelem}
+      \nameref{def:degsepelem} because $P_{min}\left(\alpha, K\right)$
+      is separable.
     }
     
     \ref{thm:lec3_3:itm:2} $\Rightarrow$ \ref{thm:lec3_3:itm:3}:
     obvious
     \footnote{
-      ???
+      We consider finite extensions (see remark \ref{rem:fpn})
+      i.e. which consists of finite number of elements
     }
 
     \ref{thm:lec3_3:itm:3} $\Rightarrow$ \ref{thm:lec3_3:itm:4}:
@@ -733,7 +735,20 @@ minimal polynomial $P_{min}\left(\alpha, K\right)$
     \ref{thm:lec3_3:itm:4} $\Rightarrow$ \ref{thm:lec3_3:itm:1}:
     Induction as above
     \footnote{
-      ???
+      The first induction step is trivial: $L=K\left(\alpha\right)$
+      where $\alpha$ is separable over $K$ in this case
+      $K\left(\alpha\right)$ is also separable.
+      Now we have that $\forall k < n$:
+      if $L = K\left(\alpha_1, \alpha_2, \dots, \alpha_k\right)$, there
+      $\alpha_i$ is separable over
+      $K\left(\alpha_1, \alpha_2, \dots, \alpha_{i-1}\right)$ then $L$
+      is separable over $K$. Thus we have
+      $K\left(\alpha_1, \alpha_2, \dots, \alpha_{n-1}\right)$
+      separable and $\alpha_n$ is separable over $K\left(\alpha_1,
+      \alpha_2, \dots, \alpha_{n-1}\right)$ thus using the first part
+      of the theorem we can conclude that 
+      $K\left(\alpha_1, \alpha_2, \dots, \alpha_{n}\right)$ is also
+      separable over $K$
     }    
   \end{proof}
   \label{thm:lec3_3}
