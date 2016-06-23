@@ -554,7 +554,9 @@ $a_i = 0$ whenever $p^h \nmid i$
   Let $L$ be an \nameref{def:algebraicextension} of $K$ then $\alpha \in K$ is
   called separable(inseparable) if it's
   \nameref{def:minpolynomial} $P_{min}\left(\alpha, K\right)$ has
-  the property
+  the property.
+  Note: the separable element is also \nameref{def:algebraicelement}
+  because it has minimal polynomial.
   \label{def:degsepelem}
 \end{definition}
 
@@ -614,16 +616,18 @@ minimal polynomial $P_{min}\left(\alpha, K\right)$
     if $M$ is separable over $L$ and $L$ is separable over $K$
   \item The following things are equivalent
     \begin{enumerate}
-    \item $L$ is separable over $K$
+    \item $L$ is separable over $K$ \label{thm:lec3_3:itm:1}
     \item $\forall \alpha \in L$ $\alpha$ \nameref{def:degsepelem}
-      over $K$
+      over $K$ \label{thm:lec3_3:itm:2}
     \item $L$ is generated over $K$ by a finite number of
       \nameref{def:degsepelem}s i.e.
       $L = K\left(\alpha_1, \alpha_2, \dots, \alpha_n\right)$, there
       $\alpha_i$ is separable over $K$
+      \label{thm:lec3_3:itm:3}
     \item   $L = K\left(\alpha_1, \alpha_2, \dots, \alpha_n\right)$, there
       $\alpha_i$ is separable over
       $K\left(\alpha_1, \alpha_2, \dots, \alpha_{i-1}\right)$
+      \label{thm:lec3_3:itm:4}
     \end{enumerate}
   \end{enumerate}
   \begin{remark}
@@ -635,14 +639,15 @@ minimal polynomial $P_{min}\left(\alpha, K\right)$
     it is extended to $\tilde{\phi}: M \to \bar{K}$ (by extension
     theorem \ref{thm:lec2_3}) it can be done with one way per each
     homomorphism from $L$ to $M$ i.e. it can be done by
-    $\left[M:L\right]_{sep}$ ways. From other side $\bar{K}$ is also
-    $\bar{L}$ (\nameref{def:algebraicclosure} over $L$) thus ???
+    $\left|Hom_L\left(M, \bar{K}\right)\right|$ ways but we have
     \[
-    \left[M:L\right]_{sep} = \left|Hom_L\left(M, \bar{L}\right)\right|
-    = \left|Hom_L\left(M, \bar{K}\right)\right|    
+    \left|Hom_L\left(M, \bar{K}\right)\right| =
+    \left|Hom_L\left(M, \bar{L}\right)\right| = \left[M:L\right]_{sep}
     \]
-    For the total number of homomorphisms one can get the following
-    equations ???
+    because $\bar{K}$ is also
+    $\bar{L}$ (\nameref{def:algebraicclosure} over $L$) thus for the
+    total number of homomorphisms one can get the following 
+    equations 
     \begin{eqnarray}
       \left[M:K\right]_{sep} = 
       \left|Hom_k\left(M, \bar{K}\right)\right| =
@@ -654,8 +659,31 @@ minimal polynomial $P_{min}\left(\alpha, K\right)$
       \left[M:L\right]_{sep} \left[L:K\right]_{sep}
       \nonumber
     \end{eqnarray}
-    
-    We also have
+
+    We have the following inequality
+    \begin{equation}
+      \left[E:K\right]_{sep} \le \left[E:K\right]
+      \label{eq:sepineq}
+    \end{equation}
+    \footnote{
+      The inequality can be proved by induction using the fact that
+      it's true for $K\left(\alpha\right)$ because from general case
+      of proposition \ref{prop:lec3_2} 
+      \[
+      \left|Hom_k\left(K\left(\alpha\right), \bar{K}\right)\right| =
+      d_{sep} P_{min}\left(\alpha, K\right) \le
+      \deg P_{min}\left(\alpha, K\right) =
+      \left[K\left(\alpha\right): K \right]
+      \]
+      Then let it was proved for $E = K\left(\alpha_1, \dots,
+      \alpha_{n-1}\right)$ and we want to prove it for
+      $K\left(\alpha_1, \dots,
+      \alpha_{n-1}, \alpha_n\right) = E\left(\alpha_n\right)$.
+      It's easy because $\bar{E} = \bar{K}$  and we can use the same
+      approach as for the first induction step.
+    }
+
+    With the inequality (\ref{eq:sepineq}) we also have
     \begin{eqnarray}
     \left[M:K\right]_{sep} = 
     \left[M:L\right]_{sep} \left[L:K\right]_{sep} \le
@@ -667,14 +695,72 @@ minimal polynomial $P_{min}\left(\alpha, K\right)$
     $\left[L:K\right]_{sep} = \left[L:K\right]$ i.e. if
     $M$ is separable over $L$ and $L$ is
     separable over $K$.
-    \footnote{
-      In video EA suggested to use induction. How???
-    }
     This finishes the proof of the first part.
     
     About 2d part:
+
+    \ref{thm:lec3_3:itm:1} $\Rightarrow$ \ref{thm:lec3_3:itm:2}:
+    Part 1 implies that a separable sub extension
+    $K\left(\alpha\right)$ or a separable extension $L$ is separable.
+    \footnote{
+      ??? I.e. in the case we have $K \subset K\left(\alpha\right) \subset
+      L$ and if $L$ is separable then $K\left(\alpha\right)$ is
+      separable and as result $\alpha$ is a
+      \nameref{def:degsepelem}
+    }
+    
+    \ref{thm:lec3_3:itm:2} $\Rightarrow$ \ref{thm:lec3_3:itm:3}:
+    obvious
+    \footnote{
+      ???
+    }
+
+    \ref{thm:lec3_3:itm:3} $\Rightarrow$ \ref{thm:lec3_3:itm:4}:
+    We know that
+    $P_{min}\left(\alpha_i, K\left(\alpha_1, \dots,
+    \alpha_{i-1}\right)\right)$ divides
+    $P_{min}\left(\alpha_i, K\right)$.
+    \footnote{
+      ???
+    }
+    Thus if 
+    $P_{min}\left(\alpha_i, K\right)$ is separable (i.e. have distinct
+    roots) then it's divisor $P_{min}\left(\alpha_i, K\left(\alpha_1, \dots,
+    \alpha_{i-1}\right)\right)$ also should have distinct roots i.e.
+    $\alpha_i$ is a \nameref{def:degsepelem} over
+    $K\left(\alpha_1, \dots,\alpha_{i-1}\right)$
+    
+    \ref{thm:lec3_3:itm:4} $\Rightarrow$ \ref{thm:lec3_3:itm:1}:
+    Induction as above
+    \footnote{
+      ???
+    }    
   \end{proof}
   \label{thm:lec3_3}
 \end{theorem}
+
+What's about not finite extension? For that case we can define
+separable extension as follows.
+\begin{definition}[Separable closure]
+  If $L$ over $K$ not necessary finite (but algebraic over $K$) we can
+  define
+  \[
+  L^{sep} = \left\{x \vert x \mbox{ separable over } K \right\}
+  \]
+  $L^{sep}$ is a sub extension (??? from theorem \ref{thm:lec3_3})
+  called separable closure of $K$ over
+  $L$
+  \label{def:separableclosure}
+\end{definition}
+$L$ is pure inseparable over $L^{sep}$.
+
+\begin{remark}
+  \begin{enumerate}
+  \item If $char K = 0$ then any extension of $K$ is separable
+  \item If $char K = p$ then pure inseparable extension has degree
+    $p^r$ and always degree of inseparability
+    $\left[L:K\right]_i = p^r$
+  \end{enumerate}
+\end{remark}
 
 \section{Perfect fields}
