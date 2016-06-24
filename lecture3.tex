@@ -785,3 +785,68 @@ $L$ is pure inseparable over $L^{sep}$.
 \end{remark}
 
 \section{Perfect fields}
+
+\begin{definition}[Perfect field]
+  Let $K$ is a field and $char K = p > 0$. $K$ is perfect if
+  \nameref{rem:frobeniushomomorphism} is a \nameref{def:surjection}
+  \label{def:perfectfield}
+\end{definition}
+
+\begin{example}
+  \begin{enumerate}
+    \item Finite field is perfect because an \nameref{def:injection}
+      of a set into itself is always a \nameref{def:surjection}
+    \item Algebraically closed fields are perfect because
+      $x^p - a$ has a root for any $a$ particularly
+      $a = F_p\left(\alpha\right)$
+      \footnote{
+        As a polynomial in $Y=X^p$ has a root then it also have a root
+        for $X$ variable.
+      }
+    \item Not perfect field example. Let
+      $K=\mathbb{F}_p\left(X\right)$ be a field of rational fractions
+      in 1 variable over $\mathbb{F}_p$. I.e. elements of the field
+      are $\frac{f(X)}{g(X)}$ where
+      $f,g \in \mathbb{F}_p\left[X\right]$. It's not perfect because
+      $Im\left(F\right) = \mathbb{F}_p\left(X^p\right) \ne
+      \mathbb{F}_p\left(X\right)$ 
+  \end{enumerate}
+\end{example}
+
+\begin{theorem}
+  $K$ is a \nameref{def:perfectfield} if and only if all irreducible
+  polynomial over $K$ 
+  are separable or in other words all
+  \nameref{def:algebraicextension}s of $K$ are separable. 
+  \begin{proof}
+    Let $K$ is perfect and $P \in K\left[X\right]$ is an irreducible
+    polynomial. Let also
+    \[
+    P\left(X\right) = Q\left(X^{p^r}\right) =
+    \sum_i a_i \left(X^{p^r}\right)^i
+    \]
+    but as soon as my field is perfect then I can extract $p$-root of
+    $a_i$ and do it repeatedly. I.e. $\exists b_i \in K$ such that
+    $b_i^{p^r} = a_i$. Therefore
+    \[
+    P\left(X\right) =
+    \sum_i b_i^{p^r} \left(X^{p^r}\right)^i =
+    \sum_i \left(b_i X^i\right)^{p^r} =
+    \left( \sum_i b_i X^i\right)^{p^r}.
+    \]
+    The polynomial is not irreducible unless $r=0$
+    \footnote{
+      In other case each root will have at least multiplicity $p^r$.
+    } so irreducible means separable.
+
+    If $K$ is not perfect i.e. $\exists a \notin Im\left(F\right)$ then
+    $X^{p^r} - a$ is irreducible and all roots are in $\bar{K}$ are
+    the (???)
+    same $X$ with $X^{p^r} = a$ and of course
+    $X^{p^{r-1}} \notin K$.
+    We have already seen that in the case
+    $\left[K\left(X\right), K\right] = p^r$ so the polynomial is
+    irreducible (???) and this finishes the proof.
+  \end{proof}
+  \label{thm:lec3_4}
+\end{theorem}
