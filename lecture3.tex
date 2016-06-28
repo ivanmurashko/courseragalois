@@ -562,14 +562,14 @@ $a_i = 0$ whenever $p^h \nmid i$
 
 \begin{proposition}[On number of homomorphisms]
   If $\alpha$ is separable on $K$ then the number of
-  \nameref{def:homomorphism}s
+  \nameref{def:homomorphism}s over $K$ from $K$ to $\bar{K}$
   \[
-  \left|Hom_k\left(K\left(\alpha\right), \bar{K}\right)\right| =
+  \left|Hom_K\left(K\left(\alpha\right), \bar{K}\right)\right| =
   \deg P_{min}\left(\alpha, K\right)
   \]
   in general
   \[
-  \left|Hom_k\left(K\left(\alpha\right), \bar{K}\right)\right| =
+  \left|Hom_K\left(K\left(\alpha\right), \bar{K}\right)\right| =
   d_{sep} P_{min}\left(\alpha, K\right)
   \]  
   \begin{proof}
@@ -585,7 +585,7 @@ extension (not necessary $K\left(\alpha\right)$).
 Let $L$ be a finite extension of $K$
 
 \begin{definition}[Separable degree]
-  $\left[L:K\right]_{sep} = \left|Hom_k\left(L, \bar{K}\right)\right|$  
+  $\left[L:K\right]_{sep} = \left|Hom_K\left(L, \bar{K}\right)\right|$  
   \label{def:separabledegree}
 \end{definition}
 
@@ -633,6 +633,7 @@ minimal polynomial $P_{min}\left(\alpha, K\right)$
   \begin{remark}
     That holds if we replace separability with pure inseparability.
   \end{remark}
+  \label{thm:lec3_3}
   \begin{proof}
     About 1st part:
     If we have a \nameref{def:homomorphism} $\phi: L \to \bar{K}$ then
@@ -650,11 +651,11 @@ minimal polynomial $P_{min}\left(\alpha, K\right)$
     equations 
     \begin{eqnarray}
       \left[M:K\right]_{sep} = 
-      \left|Hom_k\left(M, \bar{K}\right)\right| =
-      \left|Hom_k\left(L, \bar{K}\right)\right|
+      \left|Hom_K\left(M, \bar{K}\right)\right| =
+      \left|Hom_K\left(L, \bar{K}\right)\right|
       \left|Hom_L\left(M, \bar{K}\right)\right| =
       \nonumber \\
-      \left|Hom_k\left(L, \bar{K}\right)\right|
+      \left|Hom_K\left(L, \bar{K}\right)\right|
       \left|Hom_L\left(M, \bar{L}\right)\right| =
       \left[M:L\right]_{sep} \left[L:K\right]_{sep}
       \nonumber
@@ -670,7 +671,7 @@ minimal polynomial $P_{min}\left(\alpha, K\right)$
       it's true for $K\left(\alpha\right)$ because from general case
       of proposition \ref{prop:lec3_2} 
       \[
-      \left|Hom_k\left(K\left(\alpha\right), \bar{K}\right)\right| =
+      \left|Hom_K\left(K\left(\alpha\right), \bar{K}\right)\right| =
       d_{sep} P_{min}\left(\alpha, K\right) \le
       \deg P_{min}\left(\alpha, K\right) =
       \left[K\left(\alpha\right): K \right]
@@ -757,7 +758,6 @@ minimal polynomial $P_{min}\left(\alpha, K\right)$
       separable over $K$
     }    
   \end{proof}
-  \label{thm:lec3_3}
 \end{theorem}
 
 What's about not finite extension? For that case we can define
