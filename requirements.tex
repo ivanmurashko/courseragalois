@@ -362,6 +362,51 @@ $I$ is a proper ideal of a ring $R$ if $I \subsetneq R$.
   \label{def:ufd}
 \end{definition}
 
+\section{Modules}
+
+A module over a ring is a generalization of the notion of vector space
+over a field, wherein the corresponding scalars are the elements of an
+arbitrary given ring (with identity) and a multiplication (on the left
+and/or on the right) is defined between elements of the ring and
+elements of the module.
+
+\begin{definition}[Module]
+  Let $R$ is a \nameref{def:ring} and $1_R$ is it's multiplicative
+  identity. A left R-module $M$ consists of an \nameref{def:abeliangroup}
+  $\left(M, +\right)$ and an operation $\cdot: R \times M \to M$ such
+  that $\forall r,s \in R$ and $\forall x,y \in M$ the following
+  relations are hold:
+  \begin{enumerate}
+  \item $r \cdot \left(x+y\right) = r \cdot x + r \cdot y$
+  \item $\left(r + s \right) \cdot x = r \cdot x + s \cdot x$
+  \item $\left(rs\right) \cdot x = r \cdot \left(s \cdot x\right)$
+  \item $1_R \cdot x = x$
+  \end{enumerate}
+  \label{def:module}
+\end{definition}
+
+\begin{example}[Module]
+  If $K$ is a \nameref{def:field} then concepts of
+  K-\nameref{def:vectorspace} and $K$-module are the same
+\end{example}
+
+\begin{definition}[Free module]
+  The \nameref{def:module} that has a basic (i.e. linearly independent
+  generating set) 
+  is called as free module.
+
+  For a $R$-module $M$ the set $E \subseteq M$ is a basic for $M$ if
+  \begin{enumerate}
+  \item $E$ is a generating set for $M$ i.e. $\forall m \in M$
+    $\exists n < \infty$: $\exists e_i \in E, r_i \in R$:
+    $m = \sum_{i = 1}^n r_i e_i$
+  \item $E$ is linearly independent, i.e. if $r_1 e_1 + \dots + r_n
+    e_n = 0_M$ for distinct elements $e_1, \dots, e_n \in E$ then
+    $r_1 = \dots = r_n = 0_R$.
+  \end{enumerate}
+  \label{def:freemodule}
+\end{definition}
+
 \section{Linear algebra}
 
 \begin{definition}[Vector space]
