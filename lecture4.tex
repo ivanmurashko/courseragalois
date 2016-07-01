@@ -95,12 +95,21 @@ $\left(\overline{\phi}, \overline{M \otimes N}\right)$
 like this one then by definition we have mutually inverse
 homomorphisms of $A$-modules between them
 
-Some comments about it. There we have an \nameref{def:isomorphism}
+\begin{lemma}[About uniqueness of object defined by universal
+    property]
+  \footnote{
+    It is out of the lecture video and can be considered as an
+    explanation for the claim about having mutually inverse
+    homomorphisms of $A$-modules
+  }
+There we have an \nameref{def:isomorphism}
 between the pairs: 
 $\left(\phi, M \otimes N\right) \cong \left(\overline{\phi},
 \overline{M \otimes N}\right)$ because two object are isomorphic
 each other if there is an universal property which is the same for
-both. For the proof let $P = \overline{M \otimes N}$ and $f =
+both.
+\begin{proof}
+Let $P = \overline{M \otimes N}$ and $f =
 \overline{\phi}$. In 
 the case we can consider the following diagram
 
@@ -133,6 +142,9 @@ function $g$ is unique due the \nameref{def:universalproperty}.
 %% relation $\phi \to \bar{\phi}$ as soon as
 %% $\tilde{\bar{\phi}}$ is unique. Analogues one can get unique relation
 %% $\bar{\phi} \to \phi$.
+\end{proof}
+\label{lem:universalpropertyuniqueness}
+\end{lemma}
 
 The uniqueness does not mean existence and we should proof that such
 object exists. Lets consider $\mathcal{E}$ the maps (functions) from
