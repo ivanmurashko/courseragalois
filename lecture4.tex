@@ -136,8 +136,8 @@ and
 $\bar{g} :  \overline{M \otimes_A N} \to M \otimes_A N$ moreover
 $g \circ \bar{g} = id_{M \otimes_A N}$
 \footnote{
-  We have that both $g$ and $\bar{g}$ are linear. They also declared
-  to be unique. They combination is also linear and unique. The
+  ???We have that both $g$ and $\bar{g}$ are homomorphisms. They also declared
+  to be unique. They combination is linear and unique. The
   $id_{M \otimes_A N}$ satisfies the linear property and from
   uniqueness there is no any others
 }
@@ -194,10 +194,37 @@ object exists.
     }
     
     It can be shown that $M \times N \to \mathcal{E}/\mathcal{F}$ is
-    bilinear and has the desired \nameref{def:universalproperty}.
+    bilinear
     \footnote{
-      ???
+      Follows from the basis choice
     }
+    and has the desired \nameref{def:universalproperty}.
+
+    Really lets we have the following bilinear map:
+    $f: M \times N \to P$. Then we can consider the following map
+    $f': \mathcal{E} \to P$ that sends $\delta_{m,n}$ to
+    $f(n,m)$. Using the fact that $f$ is bilinear we can get
+    \begin{eqnarray}
+      f'(\delta_{m+m',n}) = f'(\delta_{m,n}) + f'(\delta_{m',n}),
+      \nonumber \\
+      f'(\delta_{m,n+n'}) = f'(\delta_{m,n}) + f'(\delta_{m,n'}),
+      \nonumber \\
+      f'(\delta_{am,n}) =  a f'(\delta_{m,n}),
+      \nonumber \\
+      f'(\delta_{m,an}) = a f'(\delta_{m,n})
+      \nonumber
+    \end{eqnarray}
+    with the $f'$ linearity we have
+    \begin{eqnarray}
+      f'(\delta_{m+m',n}) = f'(\delta_{m,n} + \delta_{m',n}),
+      \nonumber \\
+      f'(\delta_{m,n+n'}) = f'(\delta_{m,n} + \delta_{m,n'}),
+      \nonumber \\
+      f'(\delta_{am,n}) =  a f'(\delta_{m,n}),
+      \nonumber \\
+      f'(\delta_{m,an}) = a f'(\delta_{m,n})
+      \nonumber
+    \end{eqnarray}
   \end{proof}
   \label{lem:tensorproductexistence}
 \end{lemma}
