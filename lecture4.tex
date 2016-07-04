@@ -537,6 +537,31 @@ New $A$-algebra $B \otimes_A C$: is a ring with respect to
 \left(b \cdot b'\right) \otimes \left(c \cdot c'\right)
 \]
 
+\begin{definition}[Universal property]
+  
+  \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+    \matrix (m) [matrix of math nodes, row sep=3em,
+      column sep=2.5em, text height=1.5ex, text depth=0.25ex]
+            { D & & B \otimes C & \\
+              & B & & C & \\
+              & & A & & \\
+            };
+            %\draw[double,double distance=5pt] (m-1-1) – (m-1-3);
+            \path[->]
+            (m-2-2) edge node[description] {$ \phi $} (m-1-3)
+            (m-2-4) edge node[description] {$ \psi $} (m-1-3)
+            (m-3-3) edge node[description] {$ \alpha $} (m-2-2)
+            (m-3-3) edge node[description] {$ \beta $} (m-2-4)
+            (m-1-3) edge [bend right=15] node[description]  {$ h $}
+            (m-1-1);
+            \path[->, dashed]
+            (m-2-2) edge node[description] {$ f $} (m-1-1)
+            (m-2-4) edge node[description] {$ g $} (m-1-1)
+            ;
+  \end{tikzpicture}
+
+\end{definition}
+
 \section{Relatively prime ideals. Chinese remainder theorem}
 
 \section{Structure of finite algebras over a field. Examples}
