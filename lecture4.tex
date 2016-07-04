@@ -388,6 +388,64 @@ b \cdot \left(b' \otimes m \right) = \left( b \cdot b' \right) \otimes m
   \otimes e_n$.
 \end{example}
 
+\begin{proposition}
+In general we have the following. If $M$ - free $A$ - module with
+basis $e_1, \dots, e_n$ then $B \otimes_A M$ is a free $B$ module with
+basis $1_B \otimes e_1, \dots, 1_B \otimes e_n$.
+\begin{proof}
+  The proof is the same as at proposition \ref{prop:lec4_1}. Again we
+  construct certain bilinear maps and say that those factor over the
+  tensor product and this implies that certain families are linearly
+  independent. ???
+\end{proof}
+\label{prop:lec4_Addon}
+\end{proposition}
+
+We have the
+following maps.
+\begin{itemize}
+  \label{item:lec4_maps}
+\item For A - modules: $\alpha: M \to B \otimes_A M$ where
+  $m \in M \to 1_B \otimes_A m$
+\item For B - modules:  $\mu: B \otimes_A N \to N$ where
+  $n \in N, b \in B \to b n$.
+\end{itemize}
+
+\begin{theorem}[Base-change]
+  Let $A$ is a \nameref{def:ring} and $B$ is $A$-algebra. Let also $M$
+  is an $A$-\nameref{def:module} and $N$ is $B$-module.
+  \[
+  Hom_A\left(M, N\right)
+  \leftrightarrow
+  Hom_A\left(B \otimes_A M, N\right)
+  \]
+  I.e. the homomorphisms are the same or in other words the
+  corresponding groups of homomorphisms are isomorphic. 
+  \begin{proof}
+    First of all we have
+    \footnote{
+      One homomorphism from  $Hom_A\left(B \otimes_A M, N\right)$
+    }
+    \nameref{def:homomorphism} $f: B \otimes M \to N$. We also have
+    the following map (see above): $\alpha: M \to B \otimes_A M$.
+    Thus $f \cdot \alpha: M \to N$ i.e.
+    $f \in Hom_A\left(B \otimes_A M, N\right)$ corresponds to
+    $f\cdot \alpha \in Hom_A\left(M, N\right)$.
+
+    In other direction we have $g: M \to N$ thus
+    $id_B \otimes g: B \otimes_A M \to B \otimes_A N$ but ( see also
+    above) we have $\mu: B \otimes_A N \to N$ i.e.
+    $g \in Hom_A\left(M, N\right)$ corresponds to
+    $\mu \cdot (id_B \otimes g) \in Hom_A\left(B \otimes_A M, N\right)$.
+    
+    And then we check that those maps are mutually inverse.
+    \footnote{
+      ???
+    }
+  \end{proof}
+  \label{thm:basechange}
+\end{theorem}
+
 \section{Examples. Tensor product of algebras}
 
 \section{Relatively prime ideals. Chinese remainder theorem}
