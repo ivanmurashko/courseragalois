@@ -684,6 +684,54 @@ has zero divisors.
 \end{lemma}
 
 \begin{theorem}[Chinese remainder theorem]
+  Let $I_1, \dots, I_n$ - ideals and map
+  $\pi: A \to A/I_1 \times \dots \times A/I_n$ defined as follows
+  \[
+  \pi(a) = \left(a \mod I_1, \dots, a \mod I_n\right)
+  \]
+  The kernel $\ker \pi = I_1 \cap \dots \cap I_n$.
+
+  The $\pi$ is \nameref{def:surjection} if and only if $I_1, \dots,
+  I_n$ are pairwise relatively prime.
+
+  In that case
+  \[
+  A/\cup I_k
+  \cong
+  A/\prod I_k
+  \cong
+  \prod \left(A/I_k\right)
+  \]
+  \begin{proof}
+    Let $\pi$ is \nameref{def:surjection}. In the case
+    $\exists a_i \in A$ such that
+    \[
+    \pi(a_i) = \left(0, \dots, 1 (\mbox{ in }i\mbox{-th place }),
+    0, \dots, 0\right)
+    \]
+    i.e.
+    $a_i \mod I_j = 0$ or $a_i \in I_j$ for $i \ne j$. We also have
+    that $1 - a_i \in I_i$.
+    Thus $\forall j, \exists a_i \in I_j, a_k \in I_i$ such that
+    $1 = a_i + a_k$ thus $A = I_j + I_i$ i.e. $I_i$ relatively prime
+    with any $I_j$.
+
+    Conversely if $I_i$ is relatively prime with any $I_j$ where $j
+    \ne i$ then it also relatively prime with the product (see lemma
+    \ref{lem:aboutrelprimeideals}) $\prod_{j \ne i} I_j$. In the case
+    $\exists x_i \in I_i, y_i \in \prod_{j \ne i} I_j$ such that
+    $1 = x_i + y_i$ in the case
+    \[
+    \pi(y_i) = \left(0, \dots, 1 (\mbox{ in }i\mbox{-th place }),
+    0, \dots, 0\right)
+    \]
+    and $\forall b_i \in A/I_i$
+    \[
+    \pi \left(\sum_{i = 1}^n b_i y_i\right) =
+    \left(b_1, \dots, b_n\right)
+    \]
+    i.e. $\pi$ is surjective.
+  \end{proof}
   \label{thm:chineseremainder}
 \end{theorem}
 
