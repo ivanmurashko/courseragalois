@@ -624,8 +624,49 @@ has zero divisors.
 
 \section{Relatively prime ideals. Chinese remainder theorem}
 
+\begin{definition}[Relatively prime ideals]
+  Let $A$ - \nameref{def:ring} and $I,J$ are \nameref{def:ideal}s.
+  $I$ and $J$ are relatively prime if $I + J = A$.
+  \label{def:relprimeideals}
+\end{definition}
+
+\begin{lemma}
+  \begin{enumerate}
+  \item If $I,J$ are relatively prime then $IJ = I \cap J$
+  \item If $I_1, \dots, I_k$ relatively prime with $J$ then
+    $\prod_{i =1}^k I_i = I_1 \cdot \dots \cdot I_k$ is also
+    relatively prime with $J$.
+  \item If $I, J$ relatively prime then $I^k$ and $J^l$ are also
+    relatively prime for any $l$ and $k$.
+  \end{enumerate}
+  \begin{proof}
+    \begin{enumerate}
+    \item
+      The following one  $IJ \subset I \cap J$ is clear
+      \footnote {
+        Assuming that $I$ and $J$ commute we have if
+        $x \in IJ$ then $x \in I$ and if
+        $x \in JI$ then $x \in J$ i.e. $x \in I \cap J$.
+      }
+      If $I$ and $J$ are relatively prime then $1_A = i + j$ for some
+      $i \in I$ and $j \in J$. Thus $\forall x \in I \cap J$ we have the
+      following ones:
+      $x i \in IJ$ and $x j \in IJ$ and as result
+      \[
+      x = x i + x j \in IJ
+      \]
+      i.e. $I \cap J \subset IJ$.
+    \item
+    \end{enumerate}
+  \end{proof}
+  \label{lem:aboutrelprimeideals}
+\end{lemma}
+
 \begin{theorem}[Chinese remainder theorem]
   \label{thm:chineseremainder}
 \end{theorem}
+
+Let $K$ is a field and $A$ is a finite (finite dimensional vector
+space) $K$-algebra.
 
 \section{Structure of finite algebras over a field. Examples}
