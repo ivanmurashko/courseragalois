@@ -590,9 +590,42 @@ The tensor product has the following
             ;
   \end{tikzpicture}
 
-  
+  Thus if we have $h$ then we can define
+  $f = h \cdot \phi$ and $g = h \cdot \psi$. And conversely if I have
+  $f$ and $g$ then I can define $h$ by the following rule:
+  \[
+  h\left(b \otimes c\right) = f(b) \cdot g(c)
+  \]
 \end{definition}
 
+Let consider the following example
+\[
+\mathbb{C} \otimes_\mathbb{R} \mathbb{C}
+\cong
+\mathbb{C} \otimes_\mathbb{R}
+{\mathbb{R}\left[X\right]}/{\left(x^2 + 1\right)}
+\cong
+^{\mathbb{C}\left[X\right]}/_{\left(x^2 + 1\right)}
+\]
+but by \nameref{thm:chineseremainder}
+\[
+^{\mathbb{C}\left[X\right]}/_{\left(x^2 + 1\right)}
+\cong
+^{\mathbb{C}\left[X\right]}/_{\left(x + i\right)}
+\times
+^{\mathbb{C}\left[X\right]}/_{\left(x - i\right)}
+\cong
+\mathbb{C} \times \mathbb{C}
+\]
+As result we have that
+$\mathbb{C} \otimes_\mathbb{R} \mathbb{C}$ is not a field because it
+has zero divisors.
+
+
 \section{Relatively prime ideals. Chinese remainder theorem}
+
+\begin{theorem}[Chinese remainder theorem]
+  \label{thm:chineseremainder}
+\end{theorem}
 
 \section{Structure of finite algebras over a field. Examples}
