@@ -71,7 +71,7 @@ tensor product.
   $\exists! \tilde{f}$ - homomorphism of $A$-modules such that
   $f = \tilde{f} \circ \phi$
   \footnote{
-    That means that the diagram commutes
+    That means that we have a \nameref{def:commutativediagram} there
   }
 
   \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
@@ -531,13 +531,43 @@ structure on $A$:
 \[
 \beta: A \to C
 \]
-New $A$-algebra $B \otimes_A C$: is a ring with respect to
+New $A$-algebra $B \otimes_A C$: is a ring with respect to the
+following operation
+\footnote{
+  that makes it $A$-algebra (see \nameref{def:kalgebra})
+}
 \[
 \left(b \otimes c \right) \cdot \left(b' \otimes c'\right) =
 \left(b \cdot b'\right) \otimes \left(c \cdot c'\right)
 \]
 
+The tensor product has the following 
 \begin{definition}[Universal property]
+  Let we have the following maps
+  \begin{eqnarray}
+    \alpha: A \to B,
+    \nonumber \\
+    \beta: A \to C,
+    \nonumber \\
+    \phi: b \in B \to b \otimes 1 \in B \otimes_A C,
+    \nonumber \\
+    \psi: c \in C \to 1 \otimes c \in B \otimes_A C
+    \nonumber
+  \end{eqnarray}
+
+  Then for any $A$-algebra $D$ one has
+  \[
+  Hom_A\left(B \otimes_A C, D\right)
+  \leftrightarrow
+  Hom_A\left(B, D\right) \times
+  Hom_A\left(C, D\right)
+  \]
+  i.e. if I have some \nameref{def:homomorphism}
+  $h \in Hom_A\left(B \otimes_A C, D\right)$ this is the same as
+  giving 2 homomorphisms
+  $f \in Hom_A\left(B, D\right)$ and
+  $g \in Hom_A\left(C, D\right)$ such that all maps in the following
+  diagram commute (see \nameref{def:commutativediagram}).
   
   \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
     \matrix (m) [matrix of math nodes, row sep=3em,
@@ -555,11 +585,12 @@ New $A$-algebra $B \otimes_A C$: is a ring with respect to
             (m-1-3) edge [bend right=15] node[description]  {$ h $}
             (m-1-1);
             \path[->, dashed]
-            (m-2-2) edge node[description] {$ f $} (m-1-1)
-            (m-2-4) edge node[description] {$ g $} (m-1-1)
+            (m-2-2) edge [bend left=15] node[description] {$ f $} (m-1-1)
+            (m-2-4) edge [bend left=15] node[description] {$ g $} (m-1-1)
             ;
   \end{tikzpicture}
 
+  
 \end{definition}
 
 \section{Relatively prime ideals. Chinese remainder theorem}
