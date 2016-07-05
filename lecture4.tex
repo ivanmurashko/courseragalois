@@ -702,6 +702,10 @@ has zero divisors.
   \cong
   \prod \left(A/I_k\right)
   \]
+  \footnote{
+    ??? no prove about it
+  }
+  
   \begin{proof}
     Let $\pi$ is \nameref{def:surjection}. In the case
     $\exists a_i \in A$ such that
@@ -737,5 +741,36 @@ has zero divisors.
 
 Let $K$ is a field and $A$ is a finite (finite dimensional vector
 space) $K$-algebra.
+
+\begin{proposition}
+  \begin{enumerate}
+    \item If $A$ is an \nameref{def:integraldomain} then $A$ is a
+      field.
+    \item (replacing the first one) Any
+      \nameref{def:primeideal} of $A$ is \nameref{def:maxideal}
+  \end{enumerate}
+  \begin{proof}
+     Well, I shall prove only the first part, the second part is just
+     a consequence of definitions. In fact, a factor over a prime
+     ideal, a quotient over a prime ideal is an integral domain, and a
+     quotient over a maximal ideal is a field. If you don't know this,
+     please look it up in any book.
+
+     Lets prove the first part. \nameref{def:integraldomain} means
+     that there is no zero divisors i.e. $\forall a \in A$
+     \footnote{
+       $a \ne 0_A$
+     }
+     multiplication by $a$ is \nameref{def:injection}. $A$ is finite
+     dimensional \nameref{def:vectorspace} that implies that $\times a$ is an
+     \nameref{def:isomorphism},
+     \footnote{
+       ???
+     }
+     in particular \nameref{def:surjection} i.e. $\exists b \in A$
+     such that $b \times a = 1$ i.e. $a$ is invertible therefore
+     $A$ is field.     
+  \end{proof}
+\end{proposition}
 
 \section{Structure of finite algebras over a field. Examples}
