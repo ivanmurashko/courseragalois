@@ -656,7 +656,28 @@ has zero divisors.
       x = x i + x j \in IJ
       \]
       i.e. $I \cap J \subset IJ$.
-    \item
+    \item Suppose for simplicity that $k = 2$. In the case we have
+      $1 = i_1 + j_1 = i_2 + j_2$ where $i_1 \in I_1, i_2 \in I_2$ and
+      $j_1, j_2 \in J$.
+      we also have
+      \[
+      1 = \left(i_1 + j_1\right) \left(i_2 + j_2\right) =
+      i_1 i_2 + \left(j_1 i_2 + j_2 i_1 + j_1 j_2\right)
+      \in I_1 I_2 + J
+      \]
+      thus $\forall x \in A$ we have
+      \[
+      x = 1 x =
+      i_1 i_2 x + \left(j_1 i_2 + j_2 i_1 + j_1 j_2\right) x
+      \in I_1 I_2 + J
+      \]
+    \item is obvious
+      \footnote{
+        It follows from the 2 because we can assume $I_i = I$ and will
+        get that $\forall k, I^k$ is relatively prime with $J$. From
+        other side we can assume $I_i = J$ and $J = I^k$ and conclude
+        that $J^l$ is relatively prime with $I^k$. 
+      }
     \end{enumerate}
   \end{proof}
   \label{lem:aboutrelprimeideals}
