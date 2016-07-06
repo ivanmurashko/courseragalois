@@ -781,14 +781,37 @@ space) $K$-algebra.
   \begin{enumerate}
   \item There are only finitely many \nameref{def:maxideal}s
     $m_1, \dots, m_r$ in $A$
-  \item Let $J = m_1 \cap \dots \cap m_r = m_1 \dots m_r$. Then
+  \item Let $J = m_1 \cap \dots \cap m_r = m_1 \dots m_r$.
+    \footnote{
+      Since the ideals are relatively prime the intersection is the
+      same as the product of the ideals
+    }
+    Then
     $J^n = 0$ for some $n$
   \item
     $A \cong A/{m_1^{n_1}} \times \dots \times A/{m_r^{n_r}}$ for
     some $n_1, \dots, n_r$.    
   \end{enumerate}
   \begin{proof}
-    
+    Let $m_1, \dots, m_i$ be a several maximal ideals. By
+    \nameref{thm:chineseremainder} we have
+    \footnote{
+      Maximal ideals are relatively prime ???
+    }
+    \[
+    A/m_1 \dots m_i \cong
+    A/m_1 \times \dots \times A/m_i.
+    \]
+    We know that $A$ as well as $A/m_1 \dots m_i$ and $A/m_k$ are
+    finite dimensional $K$-\nameref{def:vectorspace}. Thus we have the
+    following relations
+    \[
+    \dim_K A \ge \dim_K  A/m_1 \dots m_i  =
+    \sum_{j=1}^i dim_K A/m_j \ge i.
+    \]
+    Therefore if $N$ the number of maximal ideals then
+    $\dim_K A \ge N$ i.e. the number of maximal ideal is limited by
+    the vector space dimension. 
   \end{proof}
   \label{thm:structurefinitekalgebra}
 \end{theorem}
