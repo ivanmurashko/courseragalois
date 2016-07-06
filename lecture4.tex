@@ -148,12 +148,12 @@ function $g$ is unique due the \nameref{def:universalproperty}.
 We just prove an isomorphism existence between
 $M \otimes N$ and $\overline{M \otimes N}$ but the tensor product is
 characterized not only by the module $M \otimes N$
-but also a bilinear map $\phi$ for that we can have the following:
-setting $P = \overline{M \otimes N}$ we
-can get that $\bar{\phi} = \tilde{\bar{\phi}} \circ \phi$ is
+but also a bilinear map $\phi$. Let $P = \overline{M \otimes N}$ thus
+we can get that $\bar{\phi} = \tilde{\bar{\phi}} \circ \phi$ is
 determined by the unique
 relation $\phi \to \bar{\phi}$ as soon as
-$\tilde{\bar{\phi}}$ is unique. Analogues one can get unique relation
+$\tilde{\bar{\phi}}$ is unique.
+Analogues one can get the unique relation
 $\bar{\phi} \to \phi$.
 \end{proof}
 \label{lem:universalpropertyuniqueness}
@@ -201,7 +201,8 @@ object exists.
     and has the desired \nameref{def:universalproperty}.
 
     Really lets we have the following bilinear map:
-    $f: M \times N \to P$. Then we can consider the following map
+    $f: M \times N \to P$. Then we can consider the following linear
+    map (\nameref{def:homomorphism})
     $f': \mathcal{E} \to P$ that sends $\delta_{m,n}$ to
     $f(n,m)$. Using the fact that $f$ is bilinear we can get
     \begin{eqnarray}
@@ -255,7 +256,7 @@ $\forall x \in M \otimes_A N$ we have $x = \sum_{i = 1}^k m_i \otimes n_i$
 Now, you can ask  why haven't I just defined the tensor product by
 this construction? Why am I talking of this universal property? 
 And the answer is because it is easier to prove things this way. 
-So advantages of the universal property is as follows: that the proofs
+So advantages of the universal property is as follows: the proofs
 become easy.
 
 \subsection{Several examples of universal property usage}
@@ -322,7 +323,7 @@ More complex fact is the following
 
 In particular for the \nameref{def:vectorspace} the tensor product is
 defined in the same way (as just proved in the proposition
-\ref{prop:lec4_1}): the testnsor product of 2 vector spaces with
+\ref{prop:lec4_1}): the tensor product of 2 vector spaces with
 basises $e_1, e_2, \dots, e_n$ and
 $\epsilon_1, \epsilon_2, \dots, \epsilon_m$ is another vector space
 with the following basis $e_i \otimes \epsilon_j$ i.e. the definition
@@ -455,22 +456,25 @@ following maps.
   A/I \otimes_A M \cong M/IM
   \]
   \begin{proof}
-    We have map $\alpha: M \to A/I \otimes_A M$ (see above section)
-    which sends $m$ to $1 \otimes m$. The map sends $IM$ to $0$
+    We have map $\alpha: M \to B \otimes_A M = A/I \otimes_A M$ (see
+    above section) 
+    which sends $m$ to $\bar{1} \otimes m$.
+    \footnote{
+      $\bar{1} = 1_A + I$
+    }
+    The map sends $IM$ to $0$
     because
-    $\forall i \in I, m \in M : im \to 1 \otimes im = i \otimes m$
+    $\forall i \in I, m \in M : im \to \bar{1} \otimes im = \bar{i} \otimes m$
     because the tensor product is over $A$ and everything is $A$
-    linear and as result $1 \otimes im = i \otimes m$,
-    but $i \otimes m = 0 \otimes m = 0$.
+    linear and as result $\bar{1} \otimes im = \bar{i} \otimes m$,
+    but $\bar{i} \otimes m = \bar{0} \otimes m = 0$.
     \footnote{
       because
-      $i = 0 \mod I$
+      $\bar{i} = 0 \mod I$
     }
     Thus $\alpha$ sends $IM$ to 0. So $\alpha$ induces
-    $\bar{\alpha}: M/IM \to A/I \otimes_A M$
-    \footnote{
-      ???
-    }
+    $\bar{\alpha}: M/IM \to A/I \otimes_A M$ such that
+    $\bar{\alpha}\left(\bar{m}\right) = \bar{1} \otimes m$.
 
     For other direction we apply \nameref{thm:basechange} theorem. The
     following map of $A$-modules
@@ -479,15 +483,20 @@ following maps.
     \]
     gives us the following map of $B$-modules
     \[
-    B \otimes_A M \to M/IM
+    \bar{\beta}: B \otimes_A M \to M/IM
     \]
     i.e.
     \[
-    A/I \otimes_A M \to M/IM
+    \bar{\beta}: A/I \otimes_A M \to M/IM
     \]
+    that sends $\bar{a} \otimes m$ to $\bar{am}$
     Ones check again that this inverse to $\bar{\alpha}$.
     \footnote{
-      ???
+      For example
+      \(
+      \bar{\beta}\left(\bar{\alpha}\left(\bar{m}\right)\right) =
+      \bar{\beta}\left(\bar{1} \otimes m\right) = \overline{1 \cdot m} = \bar{m}
+      \)
     }
   \end{proof}
   \label{prop:lec4_prop2}
@@ -696,14 +705,14 @@ has zero divisors.
 
   In that case
   \[
-  A/\cup I_k
+  A/\cap I_k
   \cong
   A/\prod I_k
   \cong
   \prod \left(A/I_k\right)
   \]
   \footnote{
-    ??? no prove about it
+    see \nameref{thm:firstisomorphism}
   }
   
   \begin{proof}
@@ -765,12 +774,16 @@ space) $K$-algebra.
      dimensional \nameref{def:vectorspace} that implies that $\times a$ is an
      \nameref{def:isomorphism},
      \footnote{
-       ???
+       $\times a$ sends a vector space  into another vector space with
+       the same dimension. But with lemma \nameref{lem:vsisomorphism} one
+       can get that the spaces are isomorphic each others and as
+       result the operation $\times a$ is an \nameref{def:isomorphism}.
      }
      in particular \nameref{def:surjection} i.e. $\exists b \in A$
      such that $b \times a = 1$ i.e. $a$ is invertible therefore
      $A$ is field.     
   \end{proof}
+  \label{prop:lec4_ideals}
 \end{proposition}
 
 \section{Structure of finite algebras over a field. Examples}
@@ -801,7 +814,8 @@ space) $K$-algebra.
         Maximal ideals are relatively prime because
         in a commutative ring with unity, every
         \nameref{def:maxideal} is a
-        \nameref{def:primeideal}. 
+        \nameref{def:primeideal} see also proposition
+        \ref{prop:lec4_ideals}. 
       }
       \[
       A/m_1 \dots m_i \cong
