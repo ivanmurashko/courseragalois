@@ -793,25 +793,126 @@ space) $K$-algebra.
     some $n_1, \dots, n_r$.    
   \end{enumerate}
   \begin{proof}
-    Let $m_1, \dots, m_i$ be a several maximal ideals. By
-    \nameref{thm:chineseremainder} we have
-    \footnote{
-      Maximal ideals are relatively prime ???
-    }
-    \[
-    A/m_1 \dots m_i \cong
-    A/m_1 \times \dots \times A/m_i.
-    \]
-    We know that $A$ as well as $A/m_1 \dots m_i$ and $A/m_k$ are
-    finite dimensional $K$-\nameref{def:vectorspace}. Thus we have the
-    following relations
-    \[
-    \dim_K A \ge \dim_K  A/m_1 \dots m_i  =
-    \sum_{j=1}^i dim_K A/m_j \ge i.
-    \]
-    Therefore if $N$ the number of maximal ideals then
-    $\dim_K A \ge N$ i.e. the number of maximal ideal is limited by
-    the vector space dimension. 
+    \begin{enumerate}
+    \item
+      Let $m_1, \dots, m_i$ be a several maximal ideals. By
+      \nameref{thm:chineseremainder} we have
+      \footnote{
+        Maximal ideals are relatively prime because
+        in a commutative ring with unity, every
+        \nameref{def:maxideal} is a
+        \nameref{def:primeideal}. 
+      }
+      \[
+      A/m_1 \dots m_i \cong
+      A/m_1 \times \dots \times A/m_i.
+      \]
+      We know that $A$ as well as $A/m_1 \dots m_i$ and $A/m_k$ are
+      finite dimensional $K$-\nameref{def:vectorspace}. Thus we have the
+      following relations
+      \[
+      \dim_K A \ge \dim_K  A/m_1 \dots m_i  =
+      \sum_{j=1}^i dim_K A/m_j \ge i.
+      \]
+      Therefore if $N$ the number of maximal ideals then
+      $\dim_K A \ge N$ i.e. the number of maximal ideal is limited by
+      the vector space dimension.
+    \item
+      $J = m_1 \cap \dots \cap m_r = m_1 \dots m_r$ is finite
+      dimensional vector space over $K$ as well as its powers
+      $J^k$. We have the following sequence
+      \footnote {
+        Let $j \in J \subset A$ then $\forall y \in A: j y \in J$.
+        But if $x \in JJ$ then $x = jj = j y$ there $y = i \in A$. and
+        as soon as $j \in J$ then $x = jj$ is also an element of
+        $J$. As result $J^2 \subseteq J$.
+      }
+      \[
+      \dots \subseteq J^k \subseteq \dots \subseteq
+      J^2 \subseteq J.
+      \]
+      and the sequence should stop somewhere i.e.
+      $\exists n$ such that $J^n = J^{n+1}$. We claim that $J^n = 0$
+      in the case. Indeed if not we have the following basis of $J^n$:
+      $e_1, \dots, e_s$. And as soon as $J^n = J J^n$ we can write a
+      vector $e_i \in J^n$ as a vector from $J^n$ multiplied on an
+      object from $J$ i.e.
+      \[
+      e_i = \sum \lambda_{ij} e_j,
+      \]
+      there $e_j \in J^n, \lambda_{ij} \in J$. Thus if
+      $M = Id - \lambda_{ij}$
+      \[
+      M \cdot \left(
+      \begin{array}{c}
+        e_1 \\
+        \vdots \\
+        e_s
+      \end{array}
+      \right) = 0.
+      \]
+      It's possible over ring to find a matrix $\tilde{M}$ such that
+      \[
+      \tilde{M} M = \det M \cdot Id,
+      \]
+      i.e.
+      \[
+      \det M \cdot \left(
+      \begin{array}{c}
+        e_1 \\
+        \vdots \\
+        e_s
+      \end{array}
+      \right) = 0.
+      \]
+      But $\det M = 1 + \lambda$ where $\lambda \in J$.
+      \footnote{
+        ??? Because the $\det$ is just a combination of different
+        $\lambda_{ij} \in J$.
+      }
+      Since  $J = m_1 \cap \dots \cap m_r$ then
+      $\forall i: \lambda \in m_i$
+      so $\nexists i$ such that $1 + \lambda \in m_i$
+      \footnote{
+        ???
+      }
+      thus $1 + \lambda$ is invertable
+      \footnote {
+        ???
+      }
+      therefore $e_1 = \dots = e_s = 0$
+      \footnote{
+        Because $\det M = 1 + \lambda \ne 0$
+      }
+    \item Using part 2
+      $\exists n_1, \dots, n_r$ such that
+      $m_1^{n_1} \dots m_r^{n_r} = 0$ (for example we can assume
+      $n_i = n$). Then by \nameref{thm:chineseremainder}
+      \[
+      A \cong
+      A/{m_1^{n_1}} \times \dots \times A/{m_r^{n_r}}.
+      \]
+      We used the following facts:
+      \begin{itemize}
+      \item $A = A /m_1^{n_1} \dots m_r^{n_r}$
+        \footnote{
+          Because $A = A/\{0\}$. For example if $I = \{0\}$ and
+          $x \in A$ then $\bar{x} \in A/I$ if $\bar{x} = x + I$. In
+          our case $\bar{x} = x + \{0\} = x$ i.e. $\forall x \in A$ we
+          have $x \in A/\{0\}$.
+          (See also \nameref{def:quotientring})
+        }
+      \item $m_i^{n_i}$ are pairwise relatively prime
+        \footnote{
+          As soon as $\{m_i\}$ - \nameref{def:maxideal}s and as result
+          \nameref{def:primeideal}s then with lemma
+          \ref{lem:aboutrelprimeideals} one can get that
+          $\forall i \ne j$ $m_i^{n_i}$ is relatively prime with
+          $m_j^{n_j}$.
+        }
+      \end{itemize}
+    \end{enumerate}
   \end{proof}
   \label{thm:structurefinitekalgebra}
 \end{theorem}
+
