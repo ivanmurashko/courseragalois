@@ -916,3 +916,45 @@ space) $K$-algebra.
   \label{thm:structurefinitekalgebra}
 \end{theorem}
 
+\begin{remark}
+  The $n_i$s are not uniquely defined. For example
+  \[
+  A = ^{K\left[X\right]}/_{\left(X^2 \left(X+1\right)^3\right)}.
+  \]
+  We have 2 ideals there:
+  $m_1 = (X)$ and $m_2 = (X+1)$.
+  We of course have
+  \[
+  A \cong A/m_1^2 \times A/m_2^3
+  \]
+  but also we have
+  \[
+  A \cong A/m_1^3 \times A/m_2^3
+  \]
+  as soon as $m_1^2 = m_1^3$ in $A$:
+  $(X)^2 \subset (X)^3$ but also
+  $(X)^3 \subset (X)^2$
+  \footnote{
+    ??? exercise 
+  }
+\end{remark}
+
+Several examples:
+\[
+\mathbb{C} \otimes_\mathbb{R} \mathbb{C} =
+\mathbb{C} \times \mathbb{C}.
+\]
+
+Another example
+\[
+\mathbb{Q}\left(\sqrt{2}\right)
+\otimes
+\mathbb{Q}\left(\sqrt{3}\right) =
+\mathbb{Q}\left(\sqrt{2}, \sqrt{3}\right)
+\]
+And you see that those algebras are products of fields.
+So all $n_i$'s may be taken equal to 1. In other words, we don't have
+\nameref{def:nilpotent}s in our algebra. So, it is a reduced
+algebras. Reduced, by definition, is without nilpotents.     
+It's general phenomena because the presence of nilpotents is due to the
+inseparability of extensions ome from inseparable extensions.  
