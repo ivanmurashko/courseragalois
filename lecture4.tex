@@ -308,7 +308,24 @@ More complex fact is the following
     so it factors through the tensor product
     $\tilde{f}_{i_0, j_0} : M \otimes_A N \to A$. The map
     $\tilde{f}_{i_0, j_0}$ sends $e_{i_0} \otimes \epsilon_{j_0}$ to 1
-    and all others to 0. So if
+    and all others to 0.
+    \footnote{
+      Because $f = \tilde{f} \phi$ i.e.
+      \begin{eqnarray}
+      a_{j_0} b_{j_0} =
+      f_{i_0,j_0}\left(\sum a_i e_i, \sum b_j\epsilon_j\right) =
+      \nonumber \\
+      =  f_{i_0,j_0}\left(
+      \phi\left(\sum a_i e_i, \sum b_j\epsilon_j\right)\right) = 
+      \nonumber \\
+      =
+      \tilde{f}_{i_0,j_0}\left(\sum a_i e_i \otimes \sum b_j
+      \epsilon_j\right) =
+      \sum_{i,j} a_i b_j \tilde{f}_{i_0,j_0}(e_i \otimes \epsilon_j).
+      \nonumber
+      \end{eqnarray}
+    }
+    So if
     \[
     \sum \alpha_{ij} e_i \otimes \epsilon_j = 0
     \]
@@ -397,7 +414,22 @@ basis $1_B \otimes e_1, \dots, 1_B \otimes e_n$.
   The proof is the same as at proposition \ref{prop:lec4_1}. Again we
   construct certain bilinear maps and say that those factor over the
   tensor product and this implies that certain families are linearly
-  independent. ???
+  independent.
+
+  Really lets define bilinear map $f_{i_0}: B \times M \to A$ such that
+  \[
+  f_{i_0}\left(b, \sum_{i=1}^n m_i e_i\right) = b m_{i_0} e_{i_0}
+  \]
+  so there exists a linear map $\tilde{f}_{i_0}$ such that
+  \[
+  \tilde{f}_{i_0}\left(b \otimes \sum_{i=1}^n m_i e_i\right) =
+  b \tilde{f}_{i_0}\left(1_B \otimes \sum_{i=1}^n m_i e_i \right) =
+  b m_{i_0}
+  \]
+  i.e. it sends $1_B \otimes e_{i_0}$ to 1 and all others $1_B \otimes
+  e_i$ to 0.
+  Thus the following sum $\sum \alpha_i 1_B \otimes e_i$ is equal to 0
+  if all $\alpha_i = 0$ i.e. $\alpha_i 1_B \otimes e_i$ forms a basis.
 \end{proof}
 \label{prop:lec4_Addon}
 \end{proposition}
@@ -406,10 +438,10 @@ basis $1_B \otimes e_1, \dots, 1_B \otimes e_n$.
 We have the following maps.
 \begin{itemize}
   \label{item:lec4_maps}
-\item For A - modules: $\alpha: M \to B \otimes_A M$ where
-  $m \in M \to 1_B \otimes_A m$
-\item For B - modules:  $\mu: B \otimes_A N \to N$ where
-  $n \in N, b \in B \to b n$.
+\item For A - modules: $\alpha: M \to B \otimes_A M$ such that
+  $m  \to 1_B \otimes_A m$
+\item For B - modules:  $\mu: B \otimes_A N \to N$ such that
+  $b \otimes n \to b n$.
 \end{itemize}
 \label{rem:lec4_maps}
 \end{remark}
@@ -895,8 +927,12 @@ space) $K$-algebra.
       \]
       But $\det M = 1 + \lambda$ where $\lambda \in J$.
       \footnote{
-        ??? Because the $\det$ is just a combination of different
-        $\lambda_{ij} \in J$.
+        Because the $\det$ consists of the following 
+        items $\prod (1-\lambda_{ii}) = 1 + (-1)^s\prod \lambda_{ii}$
+        and $\prod \lambda_{ij}$. The sum of the items ($\det$)
+        consists of $1$ and another sum in which all items are from
+        $J$. Thus the second sum is an element of $J$ i.e.
+        $\det M = 1 + \sum \prod \lambda_{ij} = 1 + \lambda$.
       }
       Since  $J = m_1 \cap \dots \cap m_r$ then
       $\forall i: \lambda \in m_i$
