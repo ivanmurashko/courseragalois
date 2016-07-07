@@ -402,8 +402,8 @@ basis $1_B \otimes e_1, \dots, 1_B \otimes e_n$.
 \label{prop:lec4_Addon}
 \end{proposition}
 
-We have the
-following maps.
+\begin{remark}
+We have the following maps.
 \begin{itemize}
   \label{item:lec4_maps}
 \item For A - modules: $\alpha: M \to B \otimes_A M$ where
@@ -411,6 +411,8 @@ following maps.
 \item For B - modules:  $\mu: B \otimes_A N \to N$ where
   $n \in N, b \in B \to b n$.
 \end{itemize}
+\label{rem:lec4_maps}
+\end{remark}
 
 \begin{theorem}[Base-change]
   Let $A$ is a \nameref{def:ring} and $B$ is $A$-algebra. Let also $M$
@@ -427,19 +429,31 @@ following maps.
     \footnote{
       One homomorphism from  $Hom_B\left(B \otimes_A M, N\right)$
     }
-    \nameref{def:homomorphism} $f: B \otimes M \to N$. We also have
-    the following map (see above): $\alpha: M \to B \otimes_A M$.
+    \nameref{def:homomorphism} $f: B \otimes_A M \to N$. We also have
+    the following map (see remark \ref{rem:lec4_maps}):
+    $\alpha: M \to B \otimes_A M$. 
     Thus $f \cdot \alpha: M \to N$ i.e.
-    $f \in Hom_B\left(B \otimes_A M, N\right)$ corresponds to
-    $f\cdot \alpha \in Hom_A\left(M, N\right)$.
+    we can set the following relation
+    \[
+    \hat{f} : Hom_B\left(B \otimes_A M, N\right)
+    \to Hom_A\left(M, N\right)
+    \]
+    such that $\hat{f}\left(f\right) = f \alpha$.
 
     In other direction we have $g: M \to N$ thus
-    $id_B \otimes g: B \otimes_A M \to B \otimes_A N$ but ( see also
-    above) we have $\mu: B \otimes_A N \to N$ i.e.
-    $g \in Hom_A\left(M, N\right)$ corresponds to
-    $\mu \cdot (id_B \otimes g) \in Hom_B\left(B \otimes_A M, N\right)$.
-    
-    And then we check that those maps are mutually inverse.
+    $id_B \otimes g: B \otimes_A M \to B \otimes_A N$ but
+    ( see remark \ref{rem:lec4_maps}) we have
+    $\mu: B \otimes_A N \to N$ i.e. we have the following relation
+    \[
+    \hat{g} : Hom_A\left(M, N\right) \to
+    Hom_B\left(B \otimes_A M, N\right)
+    \]
+    such that
+    \[
+    \hat g(g) = \mu \cdot (id_B \otimes g).
+    \]   
+    And we can check that those maps ($\hat{f}$ and $\hat{g}$) are
+    mutually inverse. 
     \footnote{
       ???
     }
@@ -456,8 +470,8 @@ following maps.
   A/I \otimes_A M \cong M/IM
   \]
   \begin{proof}
-    We have map $\alpha: M \to B \otimes_A M = A/I \otimes_A M$ (see
-    above section) 
+    We have map $\alpha: M \to B \otimes_A M = A/I \otimes_A M$
+    (see remark \ref{rem:lec4_maps}) 
     which sends $m$ to $\bar{1} \otimes m$.
     \footnote{
       $\bar{1} = 1_A + I$
