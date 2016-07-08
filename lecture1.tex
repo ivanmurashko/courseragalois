@@ -276,11 +276,26 @@ the prime fields. Any field is an extension of one of those.
 \subsection{Field $K\left[X\right]/\left(P\right)$}
 Let $K\left[X\right]$ \nameref{def:ring} of polynomials.
 The $P \in K\left[X\right]$ is an irreducible. $\left(P\right)$ is an
-\nameref{def:ideal} formed by the polynomial. The set of residues by
+\nameref{def:ideal} formed by the polynomial.
+\footnote{
+  I.e.
+  \(
+  \left(P\right) = \left\{ Q = G P \right\} 
+  \)
+  where $G \in K\left[X\right]$
+}
+The set of residues by
 the polynomial forms a field that denoted by
 $K\left[X\right]/\left(P\right)$. How we can see it?
 If $Q \in K\left[X\right]$ is a polynomial that $Q \notin
-\left(P\right)$ when $Q$ is prime to $P$. Then with
+\left(P\right)$ when $Q$ is prime to $P$.
+\footnote{
+  As soon as $P$ is irreducible in $K\left[X\right]$ then there is only
+  one possibility for $Q$ and $P$ to have common divisors: if $Q = G P$
+  where $G \in K\left[X\right]$ but this is in contradiction with
+  $Q \notin \left(P\right)$
+}
+Then with
 \nameref{lem:bezout} we can get $\exists A, B \in K\left[X\right]$
 such that
 \[

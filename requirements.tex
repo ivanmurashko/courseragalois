@@ -644,4 +644,19 @@ f = f_0 + f_1 X + f_2 X^2 + \dots + f_n X^n.
   all directed paths in the diagram with the same start and endpoints
   lead to the same result by composition
   \label{def:commutativediagram}
+
+  The following diagram commutes if $f_{AB} = f_{CB} f_{AC}$ or
+  $f_{AB}\left(x\right) = f_{CB} \left(f_{AC}\left(x\right)\right)$.
+  \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+    \matrix (m) [matrix of math nodes, row sep=3em,
+      column sep=2.5em, text height=1.5ex, text depth=0.25ex]
+            { A& & B \\
+              & C & \\ };
+            %\draw[double,double distance=5pt] (m-1-1) – (m-1-3);
+            \path[->]
+            (m-1-1) edge node[description] {$ f_{AB} $} (m-1-3)
+            edge node[description] {$  f_{AC} $} (m-2-2)
+            (m-2-2) edge node[description] {$  f_{CB} $} (m-1-3);
+  \end{tikzpicture}
+
 \end{definition}
