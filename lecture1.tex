@@ -98,6 +98,162 @@ field $K$ is a sub-field for the K-algebra.
   \label{ex:fieldextension}
 \end{example}
 
+\begin{example}[$K$-algebra is not a field]
+  In the example I will show that $K$ algebra is not a field. Consider
+  $K = \mathbb{R}$. \nameref{def:vectorspace} $A = \mathbb{R}^2$ i.e.
+  $A$ consists of vectors of the following form
+  \[
+  x = \left(
+  \begin{array}{c}
+    x_1 \\
+    x_2
+  \end{array}
+  \right),
+  \]
+  where $x_1, x_2 \in \mathbb{R}$.
+  I will define the multiplication for $L$ (our $K$ algebra as
+  follows)
+  \[
+  \left(
+  \begin{array}{c}
+    x_1 \\
+    x_2
+  \end{array}
+  \right)
+  \cdot
+  \left(
+  \begin{array}{c}
+    y_1 \\
+    y_2
+  \end{array}
+  \right) =
+  \left(
+  \begin{array}{c}
+    x_1 \cdot y_1 \\
+    x_2 \cdot y_2
+  \end{array}
+  \right)
+  \]
+
+  It can be seen that all requirements of \nameref{def:kalgebra} are
+  satisfied
+  \begin{eqnarray}
+    (x + y) \cdot z =
+    \left(
+    \left(
+    \begin{array}{c}
+      x_1 \\
+      x_2
+    \end{array}
+    \right)
+    +
+    \left(
+    \begin{array}{c}
+      y_1 \\
+      y_2
+    \end{array}
+    \right)
+    \right)
+    \left(
+    \begin{array}{c}
+      z_1 \\
+      z_2
+    \end{array}
+    \right) =
+    \nonumber \\
+    =
+    \left(
+    \begin{array}{c}
+      (x_1 + y_1)z_1 \\
+      (x_2 + y_2)z_2
+    \end{array}
+    \right) =
+        \left(
+    \begin{array}{c}
+      x_1 z_1 + y_1 z_1 \\
+      x_2 z_2 + y_2 z_2
+    \end{array}
+    \right) =
+    x \cdot z + y \cdot z
+    \nonumber \\
+    z \cdot (x + y) = z \cdot x + z \cdot y
+    \nonumber \\
+    (ax) \cdot (by) =
+    \left(
+    \begin{array}{c}
+      a x_1 \\
+      a x_2
+    \end{array}
+    \right)
+    \left(
+    \begin{array}{c}
+      b y_1 \\
+      b y_2
+    \end{array}
+    \right) =
+    \left(
+    \begin{array}{c}
+      ab x_1 y_1 \\
+      ab x_2 y_2
+    \end{array}
+    \right)
+    (ab) (x \cdot y)
+    \nonumber
+  \end{eqnarray}
+  The multiplication identity element of $L$ is the following
+  \[
+  1_L = 
+  \left(
+    \begin{array}{c}
+      1 \\
+      1
+    \end{array}
+    \right)
+  \]
+  The zero is a standard from vector space
+  \[
+  0_L = 
+  \left(
+  \begin{array}{c}
+    0 \\
+    0
+  \end{array}
+  \right)
+  \]
+
+  We can see that
+  \[
+  \left(
+  \begin{array}{c}
+    1 \\
+    0
+  \end{array}
+  \right)
+    \left(
+  \begin{array}{c}
+    0 \\
+    1
+  \end{array}
+  \right) = 0_L
+  \]
+  i.e. we have 2 divisor of zero which are not zero itself. The
+  elements does not have an invert element and as result the $L$ is
+  not a field.
+
+  From other side if we define $L' \subset L$ as follows
+  $L' = \left\{
+  \left(
+  \begin{array}{c}
+    r \\
+    r
+  \end{array}
+  \right)
+  \right\}$, where $r \in \mathbb{R}$.
+  
+  We have $L'$ is a field and $L' \cong \mathbb{R}$.
+  \label{ex:kalgebranotfield}
+\end{example}
+
 \subsection{Field characteristic}
 \label{sec:fieldcharacteristic}
 If $L$ is a field there are 2 possibilities
