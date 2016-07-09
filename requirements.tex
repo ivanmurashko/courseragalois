@@ -1,5 +1,6 @@
 %% -*- coding:utf-8 -*-
-\chapter*{Requirements}
+\begin{appendices}
+\chapter{Requirements}
 
 There are several prerequisites for the course there. They consists of
 definitions, theorems and examples mostly taken from Wikipedia. 
@@ -384,6 +385,15 @@ $I$ is a proper ideal of a ring $R$ if $I \subsetneq R$.
   \label{def:ufd}
 \end{definition}
 
+\begin{theorem}[About Quotient Ring and Maximal Ideal]
+  Let $\left(R, +, \cdot\right)$ is a commutative \nameref{def:ring}
+  with additive identity $0_R$ and multiplicative identity $1_R$. Let
+  $I$ be an \nameref{def:ideal} of $R$ then $I$ is
+  \nameref{def:maxideal} if and only if \nameref{def:quotientring}
+  $R/I$ is a \nameref{def:field}
+  \label{thm:maxideal}
+\end{theorem}
+
 \section{Modules}
 
 A module over a ring is a generalization of the notion of vector space
@@ -660,3 +670,4 @@ f = f_0 + f_1 X + f_2 X^2 + \dots + f_n X^n.
   \end{tikzpicture}
 
 \end{definition}
+\end{appendices}
