@@ -348,10 +348,26 @@ $I$ is a proper ideal of a ring $R$ if $I \subsetneq R$.
   $a \sim b$ if and only if $a - b \in I$.
   The equivalence class of the element $a$ in $R$ is given by
   \[
-  \bar{a} = \left[a\right] = a + I := \left\{ a + r : r \in I \right\}.
+  \bar{a} = \left\{a\right\} = a + I := \left\{ a + r : r \in I \right\}.
   \]
   This equivalence class is also sometimes written as a mod $I$ and
-  called the "residue class of a modulo I".
+  called the "residue class of a modulo I" (see also example
+  \ref{ex:intmodulo}).
+
+  The special $+$ and $\cdot$ operations are defined as follows
+  \[
+  \forall \bar{x},\bar{y} \in R/I:
+  \bar{x} + \bar{y} = \left(x + I\right) + \left(y + I\right) =
+  \left(x+y\right) + I = \overline{x+y}.
+  \]
+  \[
+  \forall \bar{x},\bar{y} \in R/I:
+  \bar{x} \cdot \bar{y} = \left(x + I\right) \cdot \left(y + I\right) =
+  \left(x \cdot y\right) + I = \overline{x \cdot y}.
+  \]
+
+  As result we will get the following ring $\left(R/I, +,
+  \cdot\right)$ is called the quotient ring of $R$ by $I$.
   \label{def:quotientring}
 \end{definition}
 
