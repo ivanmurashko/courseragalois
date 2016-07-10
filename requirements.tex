@@ -1,11 +1,12 @@
 %% -*- coding:utf-8 -*-
 \begin{appendices}
-\chapter{Requirements}
 
 There are several prerequisites for the course there. They consists of
 definitions, theorems and examples mostly taken from Wikipedia. 
 
-\section{Groups}
+\chapter{Groups}
+
+\section{Gropus}
 
 \begin{definition}[Monoid]
   The set of elements $M$ with defined binary operation $\circ$ we will call
@@ -106,7 +107,7 @@ property.
   \label{def:coset}
 \end{definition}
   
-\subsection{Permutations}
+\section{Permutations}
 
 \begin{example}[$S_n$ group]
   If we a have a permutation of $n$ elements then it's possible to do
@@ -179,7 +180,9 @@ property.
   \label{ex:sngroup}
 \end{example}
 
-\section{Rings, Ideals and Fields}
+\chapter{Rings and Fields}
+
+\section{Rings}
 
 \begin{definition}[Ring]
   Consider a set $R$ with 2 binary operations defined. The first one
@@ -226,6 +229,8 @@ The \nameref{def:ring} is a generalization of integer numbers conception.
   some positive integer, $n$, such that $x^n = 0$.
   \label{def:nilpotent}
 \end{definition}
+
+\section{Ideals}
 
 \begin{definition}[Ideal]
   Lets we have the \nameref{def:ring}
@@ -371,6 +376,8 @@ $I$ is a proper ideal of a ring $R$ if $I \subsetneq R$.
   \label{def:quotientring}
 \end{definition}
 
+\section{Fields}
+
 \begin{definition}[Field]
   The ring $\left(R, \oplus, \odot\right)$ is called as a field if
   $\left(R \setminus \{0\}, \odot\right)$ is an \nameref{def:abeliangroup}.
@@ -409,6 +416,8 @@ $I$ is a proper ideal of a ring $R$ if $I \subsetneq R$.
   $R/I$ is a \nameref{def:field}
   \label{thm:maxideal}
 \end{theorem}
+
+\chapter{Modules and Vector spaces}
 
 \section{Modules}
 
@@ -492,6 +501,8 @@ elements of the module.
   \label{lem:vsisomorphism}
 \end{lemma}
 
+\chapter{Functions aka maps}
+
 \section{Functions}
 
 \begin{definition}[Surjection]
@@ -561,6 +572,33 @@ elements of the module.
   \]
   \label{thm:firstisomorphism}
 \end{theorem}
+
+\section{Category theory}
+
+\begin{definition}[Commutative diagram]
+  A commutative diagram is a diagram of objects (also known as
+  vertices) and morphisms (also known as arrows or edges) such that
+  all directed paths in the diagram with the same start and endpoints
+  lead to the same result by composition
+  \label{def:commutativediagram}
+
+  The following diagram commutes if $f_{AB} = f_{CB} f_{AC}$ or
+  $f_{AB}\left(x\right) = f_{CB} \left(f_{AC}\left(x\right)\right)$.
+  \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+    \matrix (m) [matrix of math nodes, row sep=3em,
+      column sep=2.5em, text height=1.5ex, text depth=0.25ex]
+            { A& & B \\
+              & C & \\ };
+            %\draw[double,double distance=5pt] (m-1-1) – (m-1-3);
+            \path[->]
+            (m-1-1) edge node[description] {$ f_{AB} $} (m-1-3)
+            edge node[description] {$  f_{AC} $} (m-2-2)
+            (m-2-2) edge node[description] {$  f_{CB} $} (m-1-3);
+  \end{tikzpicture}
+
+\end{definition}
+
+\chapter{Polynomials}
 
 \section{Polynomial ring $K\left[X\right]$}
 
@@ -662,28 +700,5 @@ f = f_0 + f_1 X + f_2 X^2 + \dots + f_n X^n.
   \label{thm:irreduciblediv}
 \end{theorem}
 
-\section{Category theory}
 
-\begin{definition}[Commutative diagram]
-  A commutative diagram is a diagram of objects (also known as
-  vertices) and morphisms (also known as arrows or edges) such that
-  all directed paths in the diagram with the same start and endpoints
-  lead to the same result by composition
-  \label{def:commutativediagram}
-
-  The following diagram commutes if $f_{AB} = f_{CB} f_{AC}$ or
-  $f_{AB}\left(x\right) = f_{CB} \left(f_{AC}\left(x\right)\right)$.
-  \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
-    \matrix (m) [matrix of math nodes, row sep=3em,
-      column sep=2.5em, text height=1.5ex, text depth=0.25ex]
-            { A& & B \\
-              & C & \\ };
-            %\draw[double,double distance=5pt] (m-1-1) – (m-1-3);
-            \path[->]
-            (m-1-1) edge node[description] {$ f_{AB} $} (m-1-3)
-            edge node[description] {$  f_{AC} $} (m-2-2)
-            (m-2-2) edge node[description] {$  f_{CB} $} (m-1-3);
-  \end{tikzpicture}
-
-\end{definition}
 \end{appendices}
