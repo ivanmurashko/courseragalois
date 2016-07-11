@@ -1,10 +1,9 @@
 %% -*- coding:utf-8 -*-
 \begin{appendices}
-
+  
+  \chapter{Course prerequisites}
 There are several prerequisites for the course there. They consists of
 definitions, theorems and examples mostly taken from Wikipedia. 
-
-\chapter{Groups}
 
 \section{Gropus}
 
@@ -180,9 +179,9 @@ property.
   \label{ex:sngroup}
 \end{example}
 
-\chapter{Rings and Fields}
+\section{Rings and Fields}
 
-\section{Rings}
+\subsection{Rings}
 
 \begin{definition}[Ring]
   Consider a set $R$ with 2 binary operations defined. The first one
@@ -230,7 +229,7 @@ The \nameref{def:ring} is a generalization of integer numbers conception.
   \label{def:nilpotent}
 \end{definition}
 
-\section{Ideals}
+\subsection{Ideals}
 
 \begin{definition}[Ideal]
   Lets we have the \nameref{def:ring}
@@ -376,231 +375,7 @@ $I$ is a proper ideal of a ring $R$ if $I \subsetneq R$.
   \label{def:quotientring}
 \end{definition}
 
-\section{Fields}
-
-\begin{definition}[Field]
-  The ring $\left(R, \oplus, \odot\right)$ is called as a field if
-  $\left(R \setminus \{0\}, \odot\right)$ is an \nameref{def:abeliangroup}.
-
-  The inverse element to $a$ in
-  $\left(R \setminus\{0\}, \odot\right)$ is denoted as $a^{-1}$
-  \label{def:field}
-\end{definition}
-
-\begin{example}[Field $\mathbb{Q}$]
-  Note that $\mathbb{Z}$ is not a field because not for every integer
-  number an inverse exists. But if we consider a set of fractions
-  $\mathbb{Q} = \left\{a/b \mid a \in \mathbb{Z}, b \in
-  \mathbb{Z}\setminus\{0\}\right\}$ when it will be a field.
-
-  The
-  inverse element to $a/b$  in
-  $\left(\mathbb{Q}\setminus\{0\}, \cdot\right)$  will be $b/a$.
-  \label{ex:field}
-\end{example}
-
-\begin{definition}[Unique factorization domain]
-   Unique factorization domain (UFD) is a commutative ring, which is
-   an \nameref{def:integraldomain}, and in which every non-zero non-unit element
-   can be written as a product of prime elements (or irreducible
-   elements), uniquely up to order and units, analogous to the
-   fundamental theorem of arithmetic for the integers. 
-  \label{def:ufd}
-\end{definition}
-
-\begin{theorem}[About Quotient Ring and Maximal Ideal]
-  Let $\left(R, +, \cdot\right)$ is a commutative \nameref{def:ring}
-  with additive identity $0_R$ and multiplicative identity $1_R$. Let
-  $I$ be an \nameref{def:ideal} of $R$ then $I$ is
-  \nameref{def:maxideal} if and only if \nameref{def:quotientring}
-  $R/I$ is a \nameref{def:field}
-  \label{thm:maxideal}
-\end{theorem}
-
-\chapter{Modules and Vector spaces}
-
-\section{Modules}
-
-A module over a ring is a generalization of the notion of vector space
-over a field, wherein the corresponding scalars are the elements of an
-arbitrary given ring (with identity) and a multiplication (on the left
-and/or on the right) is defined between elements of the ring and
-elements of the module.
-
-\begin{definition}[Module]
-  Let $R$ is a \nameref{def:ring} and $1_R$ is it's multiplicative
-  identity. A left R-module $M$ consists of an \nameref{def:abeliangroup}
-  $\left(M, +\right)$ and an operation $\cdot: R \times M \to M$ such
-  that $\forall r,s \in R$ and $\forall x,y \in M$ the following
-  relations are hold:
-  \begin{enumerate}
-  \item $r \cdot \left(x+y\right) = r \cdot x + r \cdot y$
-  \item $\left(r + s \right) \cdot x = r \cdot x + s \cdot x$
-  \item $\left(rs\right) \cdot x = r \cdot \left(s \cdot x\right)$
-  \item $1_R \cdot x = x$
-  \end{enumerate}
-  \label{def:module}
-\end{definition}
-
-\begin{example}[Module]
-  If $K$ is a \nameref{def:field} then concepts of
-  K-\nameref{def:vectorspace} and $K$-module are the same
-\end{example}
-
-\begin{definition}[Free module]
-  The \nameref{def:module} that has a basic (i.e. linearly independent
-  generating set) 
-  is called as free module.
-
-  For a $R$-module $M$ the set $E \subseteq M$ is a basic for $M$ if
-  \begin{enumerate}
-  \item $E$ is a generating set for $M$ i.e. $\forall m \in M$
-    $\exists n < \infty$: $\exists e_i \in E, r_i \in R$:
-    $m = \sum_{i = 1}^n r_i e_i$
-  \item $E$ is linearly independent, i.e. if $r_1 e_1 + \dots + r_n
-    e_n = 0_M$ for distinct elements $e_1, \dots, e_n \in E$ then
-    $r_1 = \dots = r_n = 0_R$.
-  \end{enumerate}
-  \label{def:freemodule}
-\end{definition}
-
-\section{Linear algebra}
-
-\begin{definition}[Vector space]
-  Let $F$ is a \nameref{def:field}. The set $V$ is called as vector
-  space under $F$ if the following conditions are satisfied
-  \begin{enumerate}
-  \item We have a binary operation $V \times V \rightarrow V$
-    (addition): $(x,y) \rightarrow x + y$ with the following
-    properties:
-    \begin{enumerate}
-    \item $x + y = y + x$
-    \item $(x + y) + z = x + ( y + z )$
-    \item $\exists 0 \in V$ such that $\forall x \in V: x + 0 = x$
-    \item $\forall x \in V \exists -x \in V$ such that $x + (-x) = x -
-      x = 0$ 
-    \end{enumerate}    
-  \item We have a binary operation $F \times V \rightarrow V$ (scalar
-    multiplication) with the following properties
-    \begin{enumerate}
-    \item $1_F \cdot x = x$
-    \item $\forall a,b \in F, x \in V$: $a\cdot\left(b \cdot x\right)
-      = \left(a b\right) \cdot x$.
-    \item $\forall a,b \in F, x \in V$:
-      $(a+b)\cdot x = a \cdot x + b \cdot x$
-    \item $\forall a \in F, x, y \in V$:
-      $a\cdot(x+y) = a\cdot x + a \cdot y$
-    \end{enumerate}        
-  \end{enumerate}
-  \label{def:vectorspace}
-\end{definition}
-
-\begin{lemma}[About vector space isomorphism]
-  2 vector spaces $L$ and $M$ with same dimension $dim L = dim M$ then
-  there exists an \nameref{def:isomorphism} between them
-  \label{lem:vsisomorphism}
-\end{lemma}
-
-\chapter{Functions aka maps}
-
-\section{Functions}
-
-\begin{definition}[Surjection]
-  The function $f: X \rightarrow Y$ is surjective (or onto) if
-  $\forall y \in Y$, $\exists x \in X$ such that
-  $f\left(x\right) = y$.
-  \label{def:surjection}
-\end{definition}
-
-\begin{definition}[Injection]
-  The function $f: X \rightarrow Y$ is injective (or one-to-one function) if
-  $\forall x_1, x_2 \in X$, such that $x_1 \ne x_2$ then
-  $f\left(x_1\right) \ne f\left(x_2\right)$.
-  \label{def:injection}
-\end{definition}
-
-\begin{definition}[Bijection]
-  The function $f: X \rightarrow Y$ is bijective (or one-to-one
-  correspondence) if it is an \nameref{def:injection} and a
-  \nameref{def:surjection}. 
-  \label{def:bijection}
-\end{definition}
-
-\begin{definition}[Homomorphism]
-  The homomorphism is a function (map) between two sets that preserves
-  its algebraic structure. For the case of groups
-  $\left(X, \circ\right)$ and $\left(Y, \odot\right)$ the function
-  $f: X \rightarrow Y$ is called homomorphism if
-  $\forall x_1, x_2 \in X$ it holds
-  $f\left(x_1 \circ x_2\right) = f\left(x_1 \right) \odot f\left( x_2\right)$.
-  \label{def:homomorphism}
-\end{definition}
-
-\begin{definition}[Isomorphism]
-  If a map is \nameref{def:bijection} as well as
-  \nameref{def:homomorphism} when it is called as isomorphism.
-
-  We use the following symbolic notation for isomorphism between $X$
-  and $Y$: $X \cong Y$.
-  \label{def:isomorphism}
-\end{definition}
-
-\begin{definition}[Automorphism]
-  Automorphism is an isomorphism from a mathematical object to itself.
-  \label{def:automorphism}
-\end{definition}
-
-\begin{definition}[Embedding]
-  When some object X is said to be embedded in another object $Y$, the
-  embedding is given by some injective and structure-preserving map
-  $f : X \to Y$. The precise meaning of "structure-preserving" depends on
-  the kind of mathematical structure of which $X$ and $Y$ are
-  instances.
-  
-  The fact that a map $f : X \to Y$ is an embedding is often indicated
-  by the use of a "hooked arrow", thus: $f:X\hookrightarrow Y$. On the
-  other hand, this notation is sometimes reserved for inclusion maps.
-  \label{def:embedding}
-\end{definition}
-
-\begin{theorem}[First isomorphism theorem]
-  Let $G$ is a group and $\phi: G \to H$ is a
-  surjective \nameref{def:homomorphism}. Then if $N = \ker \phi$ we
-  have
-  \[
-  H \cong G/N
-  \]
-  \label{thm:firstisomorphism}
-\end{theorem}
-
-\section{Category theory}
-
-\begin{definition}[Commutative diagram]
-  A commutative diagram is a diagram of objects (also known as
-  vertices) and morphisms (also known as arrows or edges) such that
-  all directed paths in the diagram with the same start and endpoints
-  lead to the same result by composition
-  \label{def:commutativediagram}
-
-  The following diagram commutes if $f_{AB} = f_{CB} f_{AC}$ or
-  $f_{AB}\left(x\right) = f_{CB} \left(f_{AC}\left(x\right)\right)$.
-  \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
-    \matrix (m) [matrix of math nodes, row sep=3em,
-      column sep=2.5em, text height=1.5ex, text depth=0.25ex]
-            { A& & B \\
-              & C & \\ };
-            %\draw[double,double distance=5pt] (m-1-1) – (m-1-3);
-            \path[->]
-            (m-1-1) edge node[description] {$ f_{AB} $} (m-1-3)
-            edge node[description] {$  f_{AC} $} (m-2-2)
-            (m-2-2) edge node[description] {$  f_{CB} $} (m-1-3);
-  \end{tikzpicture}
-
-\end{definition}
-
-\chapter{Polynomials}
-
-\section{Polynomial ring $K\left[X\right]$}
+\subsection{Polynomial ring $K\left[X\right]$}
 
 Let we have a commutative \nameref{def:ring} $K$. Lets create a new
 \nameref{def:ring} $B$ with the following infinite sets as elements:
@@ -700,5 +475,226 @@ f = f_0 + f_1 X + f_2 X^2 + \dots + f_n X^n.
   \label{thm:irreduciblediv}
 \end{theorem}
 
+\subsection{Fields}
+
+\begin{definition}[Field]
+  The ring $\left(R, \oplus, \odot\right)$ is called as a field if
+  $\left(R \setminus \{0\}, \odot\right)$ is an \nameref{def:abeliangroup}.
+
+  The inverse element to $a$ in
+  $\left(R \setminus\{0\}, \odot\right)$ is denoted as $a^{-1}$
+  \label{def:field}
+\end{definition}
+
+\begin{example}[Field $\mathbb{Q}$]
+  Note that $\mathbb{Z}$ is not a field because not for every integer
+  number an inverse exists. But if we consider a set of fractions
+  $\mathbb{Q} = \left\{a/b \mid a \in \mathbb{Z}, b \in
+  \mathbb{Z}\setminus\{0\}\right\}$ when it will be a field.
+
+  The
+  inverse element to $a/b$  in
+  $\left(\mathbb{Q}\setminus\{0\}, \cdot\right)$  will be $b/a$.
+  \label{ex:field}
+\end{example}
+
+\begin{definition}[Unique factorization domain]
+   Unique factorization domain (UFD) is a commutative ring, which is
+   an \nameref{def:integraldomain}, and in which every non-zero non-unit element
+   can be written as a product of prime elements (or irreducible
+   elements), uniquely up to order and units, analogous to the
+   fundamental theorem of arithmetic for the integers. 
+  \label{def:ufd}
+\end{definition}
+
+\begin{theorem}[About Quotient Ring and Maximal Ideal]
+  Let $\left(R, +, \cdot\right)$ is a commutative \nameref{def:ring}
+  with additive identity $0_R$ and multiplicative identity $1_R$. Let
+  $I$ be an \nameref{def:ideal} of $R$ then $I$ is
+  \nameref{def:maxideal} if and only if \nameref{def:quotientring}
+  $R/I$ is a \nameref{def:field}
+  \label{thm:maxideal}
+\end{theorem}
+
+\section{Modules and Vector spaces}
+
+\subsection{Modules}
+
+A module over a ring is a generalization of the notion of vector space
+over a field, wherein the corresponding scalars are the elements of an
+arbitrary given ring (with identity) and a multiplication (on the left
+and/or on the right) is defined between elements of the ring and
+elements of the module.
+
+\begin{definition}[Module]
+  Let $R$ is a \nameref{def:ring} and $1_R$ is it's multiplicative
+  identity. A left R-module $M$ consists of an \nameref{def:abeliangroup}
+  $\left(M, +\right)$ and an operation $\cdot: R \times M \to M$ such
+  that $\forall r,s \in R$ and $\forall x,y \in M$ the following
+  relations are hold:
+  \begin{enumerate}
+  \item $r \cdot \left(x+y\right) = r \cdot x + r \cdot y$
+  \item $\left(r + s \right) \cdot x = r \cdot x + s \cdot x$
+  \item $\left(rs\right) \cdot x = r \cdot \left(s \cdot x\right)$
+  \item $1_R \cdot x = x$
+  \end{enumerate}
+  \label{def:module}
+\end{definition}
+
+\begin{example}[Module]
+  If $K$ is a \nameref{def:field} then concepts of
+  K-\nameref{def:vectorspace} and $K$-module are the same
+\end{example}
+
+\begin{definition}[Free module]
+  The \nameref{def:module} that has a basic (i.e. linearly independent
+  generating set) 
+  is called as free module.
+
+  For a $R$-module $M$ the set $E \subseteq M$ is a basic for $M$ if
+  \begin{enumerate}
+  \item $E$ is a generating set for $M$ i.e. $\forall m \in M$
+    $\exists n < \infty$: $\exists e_i \in E, r_i \in R$:
+    $m = \sum_{i = 1}^n r_i e_i$
+  \item $E$ is linearly independent, i.e. if $r_1 e_1 + \dots + r_n
+    e_n = 0_M$ for distinct elements $e_1, \dots, e_n \in E$ then
+    $r_1 = \dots = r_n = 0_R$.
+  \end{enumerate}
+  \label{def:freemodule}
+\end{definition}
+
+\subsection{Linear algebra}
+
+\begin{definition}[Vector space]
+  Let $F$ is a \nameref{def:field}. The set $V$ is called as vector
+  space under $F$ if the following conditions are satisfied
+  \begin{enumerate}
+  \item We have a binary operation $V \times V \rightarrow V$
+    (addition): $(x,y) \rightarrow x + y$ with the following
+    properties:
+    \begin{enumerate}
+    \item $x + y = y + x$
+    \item $(x + y) + z = x + ( y + z )$
+    \item $\exists 0 \in V$ such that $\forall x \in V: x + 0 = x$
+    \item $\forall x \in V \exists -x \in V$ such that $x + (-x) = x -
+      x = 0$ 
+    \end{enumerate}    
+  \item We have a binary operation $F \times V \rightarrow V$ (scalar
+    multiplication) with the following properties
+    \begin{enumerate}
+    \item $1_F \cdot x = x$
+    \item $\forall a,b \in F, x \in V$: $a\cdot\left(b \cdot x\right)
+      = \left(a b\right) \cdot x$.
+    \item $\forall a,b \in F, x \in V$:
+      $(a+b)\cdot x = a \cdot x + b \cdot x$
+    \item $\forall a \in F, x, y \in V$:
+      $a\cdot(x+y) = a\cdot x + a \cdot y$
+    \end{enumerate}        
+  \end{enumerate}
+  \label{def:vectorspace}
+\end{definition}
+
+\begin{lemma}[About vector space isomorphism]
+  2 vector spaces $L$ and $M$ with same dimension $dim L = dim M$ then
+  there exists an \nameref{def:isomorphism} between them
+  \label{lem:vsisomorphism}
+\end{lemma}
+
+\section{Functions aka maps}
+
+\subsection{Functions}
+
+\begin{definition}[Surjection]
+  The function $f: X \rightarrow Y$ is surjective (or onto) if
+  $\forall y \in Y$, $\exists x \in X$ such that
+  $f\left(x\right) = y$.
+  \label{def:surjection}
+\end{definition}
+
+\begin{definition}[Injection]
+  The function $f: X \rightarrow Y$ is injective (or one-to-one function) if
+  $\forall x_1, x_2 \in X$, such that $x_1 \ne x_2$ then
+  $f\left(x_1\right) \ne f\left(x_2\right)$.
+  \label{def:injection}
+\end{definition}
+
+\begin{definition}[Bijection]
+  The function $f: X \rightarrow Y$ is bijective (or one-to-one
+  correspondence) if it is an \nameref{def:injection} and a
+  \nameref{def:surjection}. 
+  \label{def:bijection}
+\end{definition}
+
+\begin{definition}[Homomorphism]
+  The homomorphism is a function (map) between two sets that preserves
+  its algebraic structure. For the case of groups
+  $\left(X, \circ\right)$ and $\left(Y, \odot\right)$ the function
+  $f: X \rightarrow Y$ is called homomorphism if
+  $\forall x_1, x_2 \in X$ it holds
+  $f\left(x_1 \circ x_2\right) = f\left(x_1 \right) \odot f\left( x_2\right)$.
+  \label{def:homomorphism}
+\end{definition}
+
+\begin{definition}[Isomorphism]
+  If a map is \nameref{def:bijection} as well as
+  \nameref{def:homomorphism} when it is called as isomorphism.
+
+  We use the following symbolic notation for isomorphism between $X$
+  and $Y$: $X \cong Y$.
+  \label{def:isomorphism}
+\end{definition}
+
+\begin{definition}[Automorphism]
+  Automorphism is an isomorphism from a mathematical object to itself.
+  \label{def:automorphism}
+\end{definition}
+
+\begin{definition}[Embedding]
+  When some object X is said to be embedded in another object $Y$, the
+  embedding is given by some injective and structure-preserving map
+  $f : X \to Y$. The precise meaning of "structure-preserving" depends on
+  the kind of mathematical structure of which $X$ and $Y$ are
+  instances.
+  
+  The fact that a map $f : X \to Y$ is an embedding is often indicated
+  by the use of a "hooked arrow", thus: $f:X\hookrightarrow Y$. On the
+  other hand, this notation is sometimes reserved for inclusion maps.
+  \label{def:embedding}
+\end{definition}
+
+\begin{theorem}[First isomorphism theorem]
+  Let $G$ is a group and $\phi: G \to H$ is a
+  surjective \nameref{def:homomorphism}. Then if $N = \ker \phi$ we
+  have
+  \[
+  H \cong G/N
+  \]
+  \label{thm:firstisomorphism}
+\end{theorem}
+
+\subsection{Category theory}
+
+\begin{definition}[Commutative diagram]
+  A commutative diagram is a diagram of objects (also known as
+  vertices) and morphisms (also known as arrows or edges) such that
+  all directed paths in the diagram with the same start and endpoints
+  lead to the same result by composition
+  \label{def:commutativediagram}
+
+  The following diagram commutes if $f_{AB} = f_{CB} f_{AC}$ or
+  $f_{AB}\left(x\right) = f_{CB} \left(f_{AC}\left(x\right)\right)$.
+  \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+    \matrix (m) [matrix of math nodes, row sep=3em,
+      column sep=2.5em, text height=1.5ex, text depth=0.25ex]
+            { A& & B \\
+              & C & \\ };
+            %\draw[double,double distance=5pt] (m-1-1) – (m-1-3);
+            \path[->]
+            (m-1-1) edge node[description] {$ f_{AB} $} (m-1-3)
+            edge node[description] {$  f_{AC} $} (m-2-2)
+            (m-2-2) edge node[description] {$  f_{CB} $} (m-1-3);
+  \end{tikzpicture}
+
+\end{definition}
 
 \end{appendices}
