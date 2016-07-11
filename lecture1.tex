@@ -500,16 +500,24 @@ As soon as $K\left[\alpha\right]$ is a \nameref{def:kalgebra} it is a
     K\left[\alpha\right]$. This is \nameref{def:injection}.
     \footnote{
       If $y, z \in K\left[\alpha\right]$ and
-      $\dim K\left[\alpha\right] = d < \infty$. Then
-      $y = \sum_{i=0}^d y_i \alpha^i$ and
-      $z = \sum_{i=0}^d z_i \alpha^i$ where $y_i, z_i \in K$.
-      Thus if $y \ne z$ (i.e.
-      $\exists i: y_i \ne z_i$) then
+      $\dim K\left[\alpha\right] = d < \infty$ where
+      $d = \deg P_{min}\left(\alpha, K\right)$. Then
+      $y = \sum_{i=0}^{d-1} y_i \alpha^i$ and
+      $z = \sum_{i=0}^{d-1} z_i \alpha^i$ where $y_i, z_i \in K$.
+      We have $y - z = \sum_{i=0}^{d-1} \left(y_i - z_i\right)
+      \alpha^i \ne 0$ if $y \ne z$ (i.e.
+      $\exists i: y_i \ne z_i$)
+      because $y -z$ can be considered as a polynomial of degree
+      $ \le d - 1 < \deg P_{min}\left(\alpha, K\right)$ and cannot be equal
+      to 0 by minimal polynomial definition.
+      Continue we have $x \cdot \left(y - z\right) \ne 0$ because it
+      also can be considered as a product of 2 polynomial of degree
+      $< d$. 
+      Thus
       \[
-      x \cdot y  = \sum_{i=0}^d x \cdot y_i \alpha^i \ne
-      \sum_{i=0}^d x \cdot z_i \alpha^i =
-      x \cdot z
+      x \cdot y  \ne x \cdot z
       \]
+      i.e. \nameref{def:injection} property is satisfied.
     }
     But the $K\left[\alpha\right]$ is finite dimensional
     \nameref{def:vectorspace} and a \nameref{def:homomorphism} between
