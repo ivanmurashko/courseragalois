@@ -11,7 +11,7 @@ basic properties such as the multiplicativity of degree in towers.
   Let $K$ be a field and $A$ be a \nameref{def:vectorspace} over $K$
   equipped with 
   an additional binary operation $A \times A \rightarrow A$ that we
-  denote as $\cdot$ here. The the $A$ is an algebra over $K$ if the
+  denote as $\cdot$ here. The $A$ is an algebra over $K$ if the
   following identities hold $\forall x,y,z \in A$ and for every
   elements (often called as scalar) $a, b \in K$
   \begin{itemize}
@@ -27,7 +27,7 @@ basic properties such as the multiplicativity of degree in towers.
 
 \begin{example}[Field of complex numbers $\mathbb{C}$]
   The field of complex numbers $\mathbb{C}$ can be considered as a
-  K-algebra over field of real numbers $\mathbb{R}$.
+  K-algebra over the field of real numbers $\mathbb{R}$.
   \label{ex:complexnumbers}
 \end{example}
 
@@ -213,7 +213,7 @@ field $K$ is a sub-field for the K-algebra.
     \end{array}
     \right)
   \]
-  The zero is a standard from vector space
+  The zero is the standard one from vector space
   \[
   0_L = 
   \left(
@@ -240,7 +240,7 @@ field $K$ is a sub-field for the K-algebra.
   \right) = 0_L
   \]
   i.e. we have 2 divisor of zero which are not zero itself. The
-  elements do not have an invert element and as result the $L$ is
+  elements do not have invert ones and as result the $L$ is
   not a field.
 
   From other side if we define $L' \subset L$ as follows
@@ -251,8 +251,8 @@ field $K$ is a sub-field for the K-algebra.
     r
   \end{array}
   \right)
-  \right\}$, where $r \in \mathbb{R}$.
-  Then we will have that $L'$ is a field and $L' \cong \mathbb{R}$.
+  \right\}$, where $r \in \mathbb{R}$,
+  then we will have that $L'$ is a field and $L' \cong \mathbb{R}$.
   \label{ex:kalgebranotfield}
 \end{example}
 
@@ -326,10 +326,10 @@ but a quotient by a  \nameref{def:maxideal} is a \nameref{def:field}
 $K\left[X\right]/\left(P\right)$ is an extension of $K$ because it's
 \nameref{def:kalgebra}.
 
-\begin{example}[$K = \mathbb{F}_2/\left(x^2+x+1\right)$]
+\begin{example}[$K = \mathbb{F}_2/\left(X^2+X+1\right)$]
   Lets consider the following field
   $\mathbb{F}_2 = \mathbb{Z}/2\mathbb{Z} = \{0,1\}$ in the
-  field polynomial $x^2+x+1$ is irreducible. It's very easy to verify
+  field polynomial $X^2+X+1$ is irreducible. It's very easy to verify
   it because $\mathbb{F}_2$ has only 2 elements that can be (possible)
   a root:
   \[
@@ -341,45 +341,45 @@ $K\left[X\right]/\left(P\right)$ is an extension of $K$ because it's
   \]
   
   The polynomial has the following
-  residues: $\bar{x} = x + \left(x^2+x+1\right)$ and
-  $\overline{x + 1} = x + 1 + \left(x^2+x+1\right)$. Thus the field
-  $\mathbb{F}_2/\left(x^2+x+1\right)$ consists of 4 elements:
-  $\{0, 1, \bar{x}, \overline{x+1}\}$.
+  residues: $\bar{X} = X + \left(X^2+X+1\right)$ and
+  $\overline{X + 1} = X + 1 + \left(X^2+X+1\right)$. Thus the field
+  $\mathbb{F}_2/\left(X^2+X+1\right)$ consists of 4 elements:
+  $\{0, 1, \bar{X}, \overline{X+1}\}$.
 
-  It's easy to see that the third element ($\bar{x}$) is a root of
-  $P(x) = x^2+x+1$:
+  It's easy to see that the third element ($\bar{X}$) is a root of
+  $P(X) = X^2+X+1$:
   \[
-  \bar{x}^2 + \bar{x} + 1 =
-  P(x) + \left(P(x)\right) = \left(P(x)\right) \equiv 0 \mod P.
+  \bar{X}^2 + \bar{X} + 1 =
+  P(X) + \left(P(X)\right) = \left(P(X)\right) \equiv 0 \mod P.
   \]
   
   \[
-  \bar{x}^2 + \bar{x} + 1 = \bar{0},
+  \bar{X}^2 + \bar{X} + 1 = \bar{0},
   \]
   therefore 
   \[
-  \bar{x}^2 = - \bar{x} - 1 = \bar{x} + 1 = \overline{x+1}.
+  \bar{X}^2 = - \bar{X} - 1 = \bar{X} + 1 = \overline{X+1}.
   \]
   This is because we are in field $\mathbb{F}_2$ where
   \[
-  2 \left(x + 1\right) \mod 2 = 0 
+  2 \left(X + 1\right) \mod 2 = 0 
   \]
   and thus
   \[
-  - \bar{x} - 1 = \bar{x} + 1
+  - \bar{X} - 1 = \bar{x} + 1
   \]
   
   Also
   \[
-  \overline{x+1}^2 = \bar{x},
+  \overline{X+1}^2 = \bar{X},
   \]
   and they are inverse each other
   \[
-  \overline{x+1} \bar{x} = 1,
+  \overline{X+1} \bar{X} = 1,
   \]
 
   So this is the structure of a field of four elements.  The
-  cardinality of $K=\mathbb{F}_2/\left(x^2+x+1\right)$ is 4,  one
+  cardinality of $K=\mathbb{F}_2/\left(X^2+X+1\right)$ is 4,  one
   writes then $K=F_4$. Well, this might be 
   strange at the first sight, because we only know that $K$ has four
   elements and if you write $F_4$  you somehow mean that there is only
