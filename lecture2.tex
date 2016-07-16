@@ -79,7 +79,14 @@ To summarize we have the following
   \item If $\left[E:K\right] = deg P$ and $E$ contains a root of $P$
     then $E$ is a stem field
   \item If $E$ is not a stem field but contains root of $P$ then
-    $\left[E:K\right] > deg P$ (???)
+    $\left[E:K\right] > deg P$
+    \footnote{
+      Let $E'$ is a stem field of $P$. In the case we have
+      $E' \subset E$ as soon as any element of $E'$ is an element of
+      $E$ because $E$ contains a root of $P$.
+      From other side $E \ne E'$ as soon as $E$ is not a stem field.
+      Thus $\deg E > \deg E' = \deg P$.
+    }
   \end{enumerate}
   \label{rem:lec2_1}
 \end{remark}
@@ -88,27 +95,37 @@ To summarize we have the following
 
 \begin{corollary}
   $P \in K\left[X\right]$ is irreducible over $K$ if and only if it
-  does not have a root in \nameref{def:fextension1} $L$ of $K$ of such that
+  does not have a root in \nameref{def:fextension1} $L$ of $K$ such that
   $\left[L:K\right] \le \frac{n}{2}$, where $n = deg P$.
   \label{cor:lec2_1}
   \begin{proof}
     $\Rightarrow$: If $P$ is not irreducible then it has a polynomial $Q$ that
-    divides $P$ and $deg Q \le \frac{n}{2}$ ($P = RQ$ and if
-    $deg Q > \frac{n}{2}$ then we can take $R$ as $Q$). The
+    divides $P$ and $deg Q \le \frac{n}{2}$.
+    \footnote{
+      $P = RQ$ and if
+      $deg Q > \frac{n}{2}$ then we can take $R$ as $Q$
+    }
+    The
     \nameref{def:stemfield} $L$ for $Q$ exists and it's degree is $deg Q
-    \le \frac{n}{2}$. $L$ should have root of $Q$ (as soon as root of
+    \le \frac{n}{2}$. $L$ should have a root of $Q$ (as soon as a root of
     $P$) by definition.
 
     $\Leftarrow$: If $P$ has a root $\alpha$ in $L$ then $\exists
     P_{min}\left(\alpha, K\right)$ with degree
-    $\le \frac{n}{2} < n$ (because $\left[L:K\right] \le \frac{n}{2}$)
+    $\le \frac{n}{2} < n$
+    \footnote{
+      because
+      $\left[L:K\right] \le \frac{n}{2}$
+      (see remark
+      \ref{rem:lec2_1})
+    }
     that divides $P$ (see lemma \ref{lem:minpolynomial}) i.e. $P$
     become reducible. 
   \end{proof}
 \end{corollary}
 
 \begin{corollary}
-  $P \in K\left[X\right]$ irreducible with $deg P = n$. Let $L$ be an
+  $P \in K\left[X\right]$ irreducible with $\deg P = n$. Let $L$ be an
   extension of $K$ such that $\left[L:K\right] = m$.
   If $gcd\left(n,m\right) = 1$ then $P$ is irreducible over $L$.
   \label{cor:lec2_2}
@@ -118,13 +135,27 @@ To summarize we have the following
     over $L$.
 
     So we have $K \subset L \subset M = L\left(\alpha\right)$. $M$ is
-    a stem field that $\left[M:L\right] = deg Q = d < n$. Thus
-    $\left[M:L\right] = m d$
-
+    a stem field of $Q$ therefore $\left[M:L\right] = \deg Q = d < n$. Thus
+    \[
+    \left[M:K\right] = \left[M:L\right] \left[L:K\right]  =
+    m d
+    \]
     Lets $K\left(\alpha\right)$ is a stem field of $P$ over $K$ then
-    $\left[K\left(\alpha\right):K\right] = deg P = n$.
+    $\left[K\left(\alpha\right):K\right] = \deg P = n$.
 
-    $K\left(\alpha\right) \subseteq M$ and therefore $n \mid md$ thus
+    $K\left(\alpha\right) \subseteq M$ and therefore $n \mid md$
+    \footnote{
+      $K \subset K\left( \alpha \right) \subset M$ and with
+      \nameref{thm:mulformuladegrees} we have
+      \[
+      md = \left[M : L \right] \left[L : K \right] =
+      \left[M : K \right] =
+      \left[M : K\left( \alpha \right) \right]
+      \left[K\left( \alpha \right) : K \right] =
+      \left[M : K\left( \alpha \right) \right] \cdot n
+      \]
+    }
+    thus
     using $gcd(m,n)=1$ one can get that $n \mid d$ but this is
     impossible because $d < n$.
   \end{proof}
