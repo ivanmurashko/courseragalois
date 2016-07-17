@@ -486,13 +486,16 @@ To summarize we have the following
     that is impossible.
 
     Fact: Any \nameref{def:properideal} $I \subset A$ is contained in
-    the \nameref{def:maxideal} $m$ and $A/m$ is a field.
+    the \nameref{def:maxideal} $m$ (see proposition
+    \ref{prop:propermaxideal} below) and $A/m$ is a field (see theorem
+    \ref{thm:maxideal}).
 
     Thus I can take $K_1 = A/m$ and continue in the same way to
     construct $K_2, K_3, \dots, K_n, \dots$.
   \end{proof}
   \label{thm:lec2_2}
 \end{theorem}
+
 
 \subsection{Ideals in a ring}
 The ring is commutative, associative with unity. Any
@@ -515,28 +518,33 @@ consequence of what one calls Zorn's lemma
   \label{lem:zorn}
 \end{lemma}
 
-We can use \nameref{lem:zorn} lemma to prove that any proper ideal is
-in a \nameref{def:maxideal}.
-
-Let $\mathcal{P}$ is the set of proper ideals in $A$ containing
-$I$. The set is not empty because it has at least one element $I$. Any
-\nameref{def:chain} $\mathcal{C} = \left\{I_\alpha\right\}$
-\footnote{
-  The order is the following $I_\alpha \le I_\beta$ if
-  $I_\alpha \subset I_\beta$
-}
-has an upper bound: it's $\cup_\alpha I_\alpha$ (exercise that the
-union is an ideal). So $\mathcal{P}$ has a maximal element $m$ and $I
-\subset m$.
-
-If we take a \nameref{def:quotientring} by maximal ideal it's always a
-field otherwise 
-it will have a proper ideal: $\exists a \in A/m$ such that $(a)$ is a
-proper ideal and it pre-image in $\pi: A \to A/m$ should strictly
-contain $m$
-\footnote{ ??? i.e. $m$ is not a maximal ideal in the case.
-}.
-
+\begin{proposition}
+  Any \nameref{def:properideal} is in a \nameref{def:maxideal}
+  \begin{proof}
+    We can use \nameref{lem:zorn} lemma to prove that any proper ideal is
+    in a \nameref{def:maxideal}.
+    
+    Let $\mathcal{P}$ is the set of proper ideals in $A$ containing
+    $I$. The set is not empty because it has at least one element $I$. Any
+    \nameref{def:chain} $\mathcal{C} = \left\{I_\alpha\right\}$
+    \footnote{
+      The order is the following $I_\alpha \le I_\beta$ if
+      $I_\alpha \subset I_\beta$
+    }
+    has an upper bound: it's $\cup_\alpha I_\alpha$ (exercise that the
+    union is an ideal). So $\mathcal{P}$ has a maximal element $m$ and $I
+    \subset m$.
+    
+    If we take a \nameref{def:quotientring} by maximal ideal it's always a
+    field otherwise 
+    it will have a proper ideal: $\exists a \in A/m$ such that $(a)$ is a
+    proper ideal and it pre-image in $\pi: A \to A/m$ should strictly
+    contain $m$
+    \footnote{ ??? i.e. $m$ is not a maximal ideal in the case.
+    }.
+  \end{proof}
+  \label{prop:propermaxideal}
+\end{proposition}
 \section{Extension of homomorphisms. Uniqueness of algebraic closure}
 
 Some summary about just proved existence of algebraic closure. There
