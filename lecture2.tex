@@ -47,13 +47,29 @@ To summarize we have the following
     Uniquest of the \nameref{def:isomorphism} is easy because it is
     defined by it's value on argument $\alpha$:
     \footnote{
-      In our case $\forall \beta \in E = K\left[\alpha\right]$ we have
-      $\beta = \sum_i l_i \alpha^i$ and
-      $f\left( \beta \right) = \sum_i l_i f \left( \alpha\right)^i =
-      \sum_i l_i \alpha'^i$.
+      First of all if we have an isomorphism $f$ between two $K$ algebras
+      $K\left[\alpha \right]$ and $K\left[\alpha' \right]$ it should
+      preserve the $K$-algebra structure, especially $\forall k \in K:
+      k 1_{K\left[\alpha \right]} \to_f k 1_{K\left[\alpha' \right]}$
+      i.e.
+      \(
+      f\left(k 1_{K\left[\alpha \right]}\right) = 
+      f\left(k\right)
+      f\left(1_{K\left[\alpha \right]}\right) =
+      f\left(k\right)
+      1_{K\left[\alpha'
+          \right]} = 
+      k 1_{K\left[\alpha'
+          \right]}
+      \) or
+      \(\forall k \in K: f = id\).
+      Thus in our case $\forall \beta \in E = K\left[\alpha\right]$ we have
+      $\beta = \sum_i k_i \alpha^i$ where $k_i \in K$ and
+      $f\left( \beta \right) = \sum_i k_i f \left( \alpha\right)^i =
+      \sum_i k_i \alpha'^i$.
       Thus if $\exists f'$ isomorphism such that $f'\left(\alpha \right) =
       \alpha'$ then
-      $f'\left( \beta \right) = \sum_i l_i \alpha'^i = f \left( \beta
+      $f'\left( \beta \right) = \sum_i k_i \alpha'^i = f \left( \beta
       \right)$ i.e. the isomorphisms are the same.
     }
     \begin{eqnarray}
