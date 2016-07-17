@@ -227,13 +227,13 @@ To summarize we have the following
     $M_1 = K\left(\beta\right)$. Proposition \ref{prop:stemfield} says
     as that
     \[
-    \exists \phi: L_1 = K\left(\alpha\right) \cong
+    L_1 = K\left(\alpha\right) \cong
     K\left(\beta\right) = M_1, 
     \]
-    such that $\phi(\alpha) = \beta$.
+    i.e. $\exists \phi$ - isomorphism such that $\phi(\alpha) = \beta$. 
 
     Over $M_1$ we have $P = (x - \beta) S$, where
-    $S = \phi\left(R\right)$
+    $S = \phi\left(R\right)$.
     \footnote{
       We have $\phi: K\left(\alpha\right) \to
       K\left(\beta\right)$. The $\phi: K \to K = id$ (see note
@@ -249,14 +249,22 @@ To summarize we have the following
       and $S = \phi\left(R\right)$.
     }
     $M$ is a splitting field for $S$ over $K\left[\beta\right]$
-    i.e. it is a $K\left[\beta\right]$-algebra but it's is also (via
-    \nameref{def:isomorphism}) $K\left[\alpha\right]$-algebra and as
+    i.e. it is a $K\left[\beta\right]$-algebra but it's is also
+    a $K\left[\alpha\right]$-algebra
+    \footnote{
+      via
+      the existent \nameref{def:isomorphism}
+      between $K\left[\alpha\right]$ and $K\left[\beta\right]$
+    }
+    and as 
     result it's a splitting field for $R$ over $K\left[\alpha\right]$
     and by induction
     \footnote{
       Induction steps are the following: we have a polynomial $P$ with
-      $\deg P = n$. We suppose that the isomorphism is proved for
-      polynomial with degree $n-1$
+      $\deg P = n$. For $n=1$ the isomorphism exists by proposition
+      \ref{prop:stemfield}.
+      We suppose that the isomorphism is proved for
+      polynomial with degree $n-1$.
     }
     we have $K\left[\alpha\right]$ isomorphism $L \cong M$ and as
     result $K$ isomorphism $L \cong M$.
