@@ -298,7 +298,8 @@ To summarize we have the following
 \end{theorem}
 
 \begin{remark}
-  The \nameref{def:isomorphism} is not unique. A splitting field  can
+  The \nameref{def:isomorphism} considered in theorem \ref{thm:lec2_1}
+  is not unique. A splitting field  can 
   have many \nameref{def:automorphism} and this is in fact the subject
   of Galois theory.
 \end{remark}
@@ -313,7 +314,13 @@ To summarize we have the following
   $j^2\sqrt[3]{2}$, where $j = e^{\frac{2 \pi i}{3}}$. Splitting field
   is the following $L = \mathbb{Q}\left(\sqrt[3]{2}, j\right)$. Lets
   find \nameref{def:automorphism}s of the field.
-
+  $P_{min}\left(j, \mathbb{Q}\right) = X^2 + X + 1$ thus using remark
+  \ref{rem:lec2_1} 
+  $\left[\mathbb{Q}\left(j\right) : \mathbb{Q}\right] = 2$.
+  Using the same arguments one can get that
+  $\left[\mathbb{Q}\left(\sqrt[3]{2}\right) : \mathbb{Q}\right] = 3$.
+  As result the following picture can be got
+  
   \begin{tikzpicture}[descr/.style={fill=white,inner sep=2.5pt}]
     \matrix (m) [matrix of math nodes, row sep=3em,
       column sep=3em]
@@ -327,6 +334,7 @@ To summarize we have the following
             (m-3-2) edge node[descr] {$ 2 $} (m-2-3);
   \end{tikzpicture}
 
+  
   As soon as $L$ is a stem field for $\mathbb{Q}\left(j\right)$ 
   and for $\mathbb{Q}\left(\sqrt[3]{2}\right)$ then 2 types of
   automorphism exist:
@@ -341,7 +349,11 @@ To summarize we have the following
       \item $\mathbb{Q}\left(j\right)$ \nameref{def:automorphism}. In
         this case the automorphism of exchanging $\sqrt[3]{2}$ and
         $j \sqrt[3]{2}$. \footnote{
-          ??? The minimal polynomial is $x^3 - 2$ there and thus we
+          $\sqrt[3]{2} \to j \sqrt[3]{2}$ produces
+          $j\sqrt[3]{2} \to j^2 \sqrt[3]{2}$ and
+          $j^2 \sqrt[3]{2} \to - \sqrt[3]{2}$. This statement
+          corresponds the fact that
+          the minimal polynomial is $x^3 - 2$ there and thus we
           have 3 roots: $\sqrt[3]{2}$, $j \sqrt[3]{2}$ and $j^2
           \sqrt[3]{2}$ 
         }. Lets call it $\sigma$
