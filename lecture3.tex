@@ -103,9 +103,21 @@ fields.
 
 \begin{remark}[Frobenius homomorphism]
   If $char K = p$, then exists a \nameref{def:homomorphism}
-  $F_p: K \to K$ such that $x \in K \to x^p \to K$.
+  $F_p: K \to K$ such that $F_p\left(x\right) = x^p$.
   Really if we consider $\left(x+y\right)^p$ and $\left(xy\right)^p$
-  then we can get $\left(x+y\right)^p = x^p + y^p$ and
+  then we can get $\left(x+y\right)^p = x^p + y^p$
+  \footnote{
+    \[
+    \left(x+y\right)^p = \sum_{k=0}^p {p \choose k} x^k y^{p-k}  =
+    x^p + y^p + p \cdot \left( \sum_{k=1}^{p-1} a_k x^k y^{p-k} \right),
+    \]
+    where $a_k \in \mathbb{Z}$. I.e.
+    \[
+    \left(x+y\right)^p \equiv    
+    \left(x^p + y^p\right)  \mod p
+    \]    
+  }
+  and
   $\left(xy\right)^p = x^p y^p$. The second property is the truth in
   the all fields (of course) but the first one is the special property
   of $\mathbb{F}_p$ fields.
