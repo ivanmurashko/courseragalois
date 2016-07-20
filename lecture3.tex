@@ -20,7 +20,7 @@ fields.
 \end{corollary}
 
 \begin{corollary}
-  Any \nameref{def:algebraicextension} of $K$ is embedded (see
+  Any \nameref{def:algebraicextension} of $K$ embeds  (see
   definition \ref{def:embedding}) into the
   \nameref{def:algebraicclosure} \footnote{
     i.e. $\forall E$ - algebraic extension of $K$,
@@ -45,7 +45,8 @@ fields.
   L = \mathbb{Q}\left(\sqrt{2}\right) =
   \mathbb{Q}\left[X\right]/\left(X^2 - 2\right),
   \]
-  $\alpha$ is a class of $X$ in $L$. $L$ has 2 \nameref{def:embedding}s into
+  $\alpha$ is a \nameref{def:class} of $X$ in $L$. $L$ has 2
+  \nameref{def:embedding}s into 
   $\overline{\mathbb{Q}}$
   \begin{enumerate}
   \item $\phi_1: \alpha \to \sqrt{2}$
@@ -57,7 +58,8 @@ fields.
   M = \mathbb{Q}\left(\sqrt[4]{2}\right) =
   \mathbb{Q}\left[Y\right]/\left(Y^4 - 2\right),
   \]
-  $\beta$ is a class of $Y$ in $M$. $M$ has 4 \nameref{def:embedding}s into
+  $\beta$ is a \nameref{def:class} of $Y$ in $M$. $M$ has 4
+  \nameref{def:embedding}s into 
   $\overline{\mathbb{Q}}$
   \begin{enumerate}
   \item $\psi_1: \beta \to \sqrt[4]{2}$ (extends $\phi_1$)
@@ -66,9 +68,16 @@ fields.
   \item $\psi_4: \beta \to -i\sqrt[4]{2}$ (extends $\phi_2$)
   \end{enumerate}
   This (``extends'') is because
+  \footnote{
+    I.e. in our case we have $\mathbb{Q} \subset L \subset M$. We have
+    $\phi_{1,2} : L \to \overline{\mathbb{Q}}$ which can be extended
+    (accordingly theorem \ref{thm:lec2_3}) to
+    $\psi_{1,2,3,4} : M \to \overline{\mathbb{Q}}$
+  }
   \[
   M = L\left[Y\right]/\left(Y^2 - \alpha\right) 
   \]
+  \label{ex:homomorphismext}
 \end{example}
 
 \subsection{Finite fields}
