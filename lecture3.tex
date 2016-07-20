@@ -148,9 +148,13 @@ fields.
     x \mid F_{p^n}\left(x\right) = x
     \}$ is a sub-field containing $\mathbb{F}_p$
     \footnote{
-      For $x \in \mathbb{F}_p$ we have that $x^{p-1} = 1$ (see theorem
-      \ref{thm:abelianelement}) and therefore
-      $\forall x \in \mathbb{F}_p: x^p = x$ i. e.
+      For $x \in \mathbb{F}_p^{*} = \mathbb{F}_p \setminus \{0\}$ we
+      have that (see theorem \ref{thm:abelianelement})
+      \[
+      x^{\left|\mathbb{F}_p^{*}\right|} = x^{p-1} = 1
+      \]
+      and therefore $\forall x \in \mathbb{F}_p: x^p = x$ ($x = 0$
+      also satisfied the equation) i. e.
       $F_{p^n}\left(x\right) = x$.
     }
     Lets $Q_n\left(X\right) = X^{p^n} - X$ thus the considered set
