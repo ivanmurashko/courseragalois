@@ -90,7 +90,11 @@ fields.
 \end{definition}
 
 \begin{remark}[$\mathbb{F}_{p^n}$]
-  If $K$ is a finite extension of $\mathbb{F}_p$ and
+  If $K$ is a finite extension of $\mathbb{F}_p$
+  \footnote{
+    i.e. $\left[K:\mathbb{F}_p\right] < \infty$
+  }
+  and
   $n = \left[K:\mathbb{F}_p\right]$ then number of elements of $K$:
   $\left|K\right| = p^n$. The following notation is also used for a
   finite extension of a finite field: $\mathbb{F}_{p^n}$
@@ -117,13 +121,13 @@ fields.
 \section{Properties of finite fields}
 
 \begin{theorem}
-  Lets fix $\mathbb{F}_P$ and it's \nameref{def:algebraicclosure}
-  $\overline{\mathbb{F}_P}$.
+  Lets fix $\mathbb{F}_p$ and it's \nameref{def:algebraicclosure}
+  $\overline{\mathbb{F}_p}$.
 
   The \nameref{def:splittingfield} of $x^{p^n} - x$ has $p^n$
   elements. Conversely any field of $p^n$ elements is a splitting
   field of $x^{p^n} - x$. Moreover there is an unique sub extension of
-  $\overline{\mathbb{F}_P}$ with $p^n$ elements.
+  $\overline{\mathbb{F}_p}$ with $p^n$ elements.
   \begin{proof}
     Note that $F_{p^n} : x \to x^{p^n}$ is a
     \nameref{def:homomorphism} (see remark
