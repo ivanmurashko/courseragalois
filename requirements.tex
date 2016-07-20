@@ -87,6 +87,13 @@ property.
   \label{def:grouporder}
 \end{definition}
 
+\begin{theorem}[Lagrange]
+  For any finite group $G$, the order (number of elements) of every
+  subgroup $H$ of $G$ divides the order of $G$. 
+  \label{thm:lagrange}
+\end{theorem}
+
+
 \begin{definition}[Subgroup]
   Let we have a \nameref{def:group} $\left(G, \circ\right)$. The
   subset $S \subset G$ is called as subgroup if $\left(S,
@@ -94,12 +101,43 @@ property.
   \label{def:subgroup}
 \end{definition}
 
+\subsection{Abelian group}
+
 \begin{definition}[Abelian group]
   Let we have a \nameref{def:group} $\left(G, \circ\right)$.
   The group is called an Abelian or commutative if
   $\forall a, b \in G$ it holds $a \circ b = b \circ a$.
   \label{def:abeliangroup}
 \end{definition}
+
+\begin{theorem}[About order of element of an Abelian group]
+  If $G$ is a finite \nameref{def:abeliangroup} and $m$ is the maximal
+  order of the elements of $G$ then the order of every element of $G$
+  divides $m$ 
+  \label{thm:abelianelementorder}
+\end{theorem}
+
+\begin{theorem}
+  Let $G$ is an \nameref{def:abeliangroup}. Let $n = \left|G\right|$
+  the group order (number of elements) then $\forall g \in G$ the
+  following statement holds
+  \[
+  g^n = e,
+  \]
+  there $e$ is the group identity.
+  \begin{proof}
+    Let $m$ is the maximal order of group $G$. In this case by
+    \nameref{thm:lagrange} $m \mid n$ i. e. $n = k_1 n$ where $k_1 \in
+    \mathbb{Z}$. Let $l$ is the order of $g$ i.e. $g^l = e$. By the
+    theorem \ref{thm:abelianelementorder} $l \mid m$ i.e. $m = k_2
+    l$. Thus
+    \[
+    g^n = \left(g^m\right)^{k_1} = 
+    \left(g^l\right)^{k_2 k_1} = e.
+    \]
+  \end{proof}
+  \label{thm:abelianelement}
+\end{theorem}
 
 \begin{definition}[Coset]
   If $G$ is a group, and $H$ is a subgroup of $G$, and $g$ is an
