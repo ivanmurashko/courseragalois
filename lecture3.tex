@@ -314,14 +314,16 @@ fields.
     and $Q_n$ have no multiple roots (as result no multiple factors) 
     then
     \[
-    \prod_{d \mid n} \prod_{P \in \mathcal{P}_d} P \mid Q_n
+    \left(\prod_{d \mid n} \prod_{P \in \mathcal{P}_d} P \right)\mid Q_n
     \]
 
     From other side let $R$ is an irreducible factor of $Q_n$.
     $\alpha$ is a root of $R$ then $Q_n\left(\alpha\right) = 0$ thus
     $\mathbb{F}_p\left(\alpha\right) \subset \mathbb{F}_{p^n}$
-    therefore $\mathbb{F}_p\left(\alpha\right) = \mathbb{F}_{p^d}$
-    where $d \mid n$ and as result, $deg R \mid n$. Thus the
+    therefore $\exists d$ such that $\mathbb{F}_p\left(\alpha\right) =
+    \mathbb{F}_{p^d}$ 
+    for a $d$ that divides $n$ ($d \mid n$) and as result,
+    $\deg R = d \mid n$ i.e. $R \in \mathcal{P}_d$. Thus the 
     polynomial should be in the product
     $\prod_{d \mid n} \prod_{P \in \mathcal{P}_d} P$.
   \end{proof}
