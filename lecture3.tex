@@ -319,11 +319,16 @@ fields.
 
     From other side let $R$ is an irreducible factor of $Q_n$.
     $\alpha$ is a root of $R$ then $Q_n\left(\alpha\right) = 0$ thus
-    $\mathbb{F}_p\left(\alpha\right) \subset \mathbb{F}_{p^n}$
-    therefore $\exists d$ such that $\mathbb{F}_p\left(\alpha\right) =
-    \mathbb{F}_{p^d}$ 
-    for a $d$ that divides $n$ ($d \mid n$) and as result,
-    $\deg R = d \mid n$ i.e. $R \in \mathcal{P}_d$. Thus the 
+    $\mathbb{F}_p\left(\alpha\right) \subset \mathbb{F}_{p^n}$.
+    From remark \ref{rem:lec2_1} we have
+    \[
+    \left[\mathbb{F}_p\left(\alpha\right) : \mathbb{F}_p\right] = \deg
+    R = d.
+    \]
+    From remark \ref{rem:fpn}
+    $\mathbb{F}_p\left(\alpha\right) = \mathbb{F}_{p^d}$.
+    Theorem \ref{thm:lec3_1_2} says that $d \mid n$.
+    As result $R \in \mathcal{P}_d$. Thus the 
     polynomial should be in the product
     $\prod_{d \mid n} \prod_{P \in \mathcal{P}_d} P$.
   \end{proof}
