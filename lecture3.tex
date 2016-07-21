@@ -404,7 +404,8 @@ fields.
     If no element of order $d$ in $G$ then $\psi\left(d\right) = 0$
     otherwise if $x \in G$ has order $d$ then $x^d = 1$ or $x$ is a
     root of the following polynomial $x^d - 1$. The roots of the
-    polynomial forms a cyclic subgroup of $G$.
+    polynomial forms a cyclic subgroup of $G$ (by
+    \nameref{def:cyclicgroup} definition).
     So $G$ as well as
     $\mathbb{Z}/N\mathbb{Z}$ has a single cyclic subgroup of order
     $d$ (which is cyclic) or no such group at all.
@@ -458,15 +459,21 @@ fields.
   \begin{proof}
     We can take $\alpha = \mbox{ generator of } K^*$
     \footnote{
-      This is because
+      This is because from theorem \ref{thm:lec3_2}
       $K^* = \left<\alpha\right>$ i.e. any element of $K$ except $0$
-      can be got as a power of $\alpha$ i.e. we really got
+      can be got as a power of $\alpha$. Moreover $\alpha \notin
+      \mathbb{F}_p$ (in other case we will got $K = \mathbb{F}_p$)
+      i.e. we really got  
       $K = \mathbb{F}_p\left(\alpha\right)$.
-
-      ??? The irreducible
-      polynomial we can get if consider $1, \alpha, \dots,
-      \alpha^{n-1}$ as a basis and $\alpha^n$ can be represented via
-      the basis.
+      $\alpha$ is an \nameref{def:algebraicelement} because we can
+      consider
+      $1, \alpha, \dots, \alpha^{n-1}$
+      as a basis and $\alpha^n$ can be represented via
+      the basis. I.e. $\exists P \in \mathbb{F}_p\left[X\right]$ such
+      that $P\left(\alpha\right) = 0$.
+      By lemma \ref{lem:minpolynomial} 
+      there exists an irreducible polynomial
+      $P_{min}\left(\alpha, \mathbb{F}_p\right)$.
       }
   \end{proof}
   \label{cor:lec3_1}
