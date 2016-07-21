@@ -146,7 +146,7 @@ fields.
     \ref{rem:frobeniuspowerhomomorphism}) as result the following set
     $\{
     x \mid F_{p^n}\left(x\right) = x
-    \}$ is a sub-field containing $\mathbb{F}_p$
+    \}$ is a field containing $\mathbb{F}_p$
     \footnote{
       For $x \in \mathbb{F}_p^{*} = \mathbb{F}_p \setminus \{0\}$ we
       have that (see theorem \ref{thm:abelianelement})
@@ -154,10 +154,35 @@ fields.
       x^{\left|\mathbb{F}_p^{*}\right|} = x^{p-1} = 1
       \]
       and therefore $\forall x \in \mathbb{F}_p: x^p = x$ ($x = 0$
-      also satisfied the equation) i. e.
+      also satisfied the equation). We can continue as follows
+      \begin{eqnarray}
+        x^{p^2} = \left(x^p\right)^p = x^p = x,
+        \nonumber \\
+        x^{p^3} = \left(x^{p^2}\right)^p = x^p = x
+        \nonumber \\
+        \dots
+        \nonumber \\
+        x^{p^n} = \left(x^{p^{n-1}}\right)^p = x^p = x
+        \nonumber
+      \end{eqnarray}
+      and finally get
       $F_{p^n}\left(x\right) = x$.
+      Thus $\forall x \in \mathbb{F}_p$ we also have
+      $x \in \{
+      x \mid F_{p^n}\left(x\right) = x
+      \}$
     }
-    Lets $Q_n\left(X\right) = X^{p^n} - X$ thus the considered set
+    i.e.
+    \[
+    \mathbb{F}_p \subset
+    \left\{
+    x \mid F_{p^n}\left(x\right) = x
+    \right\}
+    \]
+    or, in other words, the considered set is a \nameref{def:fextension1} of
+    $\mathbb{F}_p$.
+    
+    If $Q_n\left(X\right) = X^{p^n} - X$ then the considered set
     consists of the root of the polynomial $Q_n$. The polynomial has
     no multiple roots because $gcd(Q_n, Q_n') = 1$.
     \footnote{
@@ -182,11 +207,16 @@ fields.
       $K^* = K \setminus \{0\}$
     }
     as result the multiplication of all the elements should give us
-    $1$: $\alpha^{p^n-1} = 1$ or $\alpha^{p^n} - \alpha = 0$.
+    $1$: $\alpha^{p^n-1} = 1$ or $\alpha^{p^n} - \alpha = 0$
+    (see theorem \ref{thm:abelianelement}).
     Therefore $\alpha$ is a root of $Q_n$. Thus the splitting field of
     $Q_n$ consists of elements of $K$.
 
-    The uniqueness of sub-extension of
+    The uniqueness
+    \footnote{
+      up to \nameref{def:isomorphism}
+    }
+    of sub-extension of
     $\mathbb{F}_p$ with $p^n$ elements is a result of uniqueness of
     the splitting field (see theorem \ref{thm:lec2_1}). 
   \end{proof}
