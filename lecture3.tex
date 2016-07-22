@@ -787,10 +787,6 @@ minimal polynomial $P_{min}\left(\alpha, K\right)$
     \end{eqnarray}
 
     We have the following inequality
-    \begin{equation}
-      \left[E:K\right]_{sep} \le \left[E:K\right]
-      \label{eq:sepineq}
-    \end{equation}
     \footnote{
       The inequality can be proved by induction using the fact that
       it's true for $K\left(\alpha\right)$ because from general case
@@ -808,6 +804,10 @@ minimal polynomial $P_{min}\left(\alpha, K\right)$
       It's easy because $\bar{E} = \bar{K}$  and we can use the same
       approach as for the first induction step.
     }
+    \begin{equation}
+      \left[E:K\right]_{sep} \le \left[E:K\right].
+      \label{eq:sepineq}
+    \end{equation}
 
     With the inequality (\ref{eq:sepineq}) we also have
     \begin{eqnarray}
@@ -893,7 +893,10 @@ separable extension as follows.
   \[
   L^{sep} = \left\{x \vert x \mbox{ separable over } K \right\}
   \]
-  $L^{sep}$ is a sub extension (??? from theorem \ref{thm:lec3_3})
+  $L^{sep}$ is a sub extension
+  \footnote{
+    $K \subset L^{sep} \subset L$
+  }
   called separable closure of $K$ over
   $L$
   \label{def:separableclosure}
@@ -922,11 +925,11 @@ $L$ is pure inseparable over $L^{sep}$.
     \item Finite field is perfect because an \nameref{def:injection}
       of a set into itself is always a \nameref{def:surjection}
     \item Algebraically closed fields are perfect because
-      $x^p - a$ has a root for any $a$ particularly
+      $X^p - a$ has a root $\alpha$ for any $a$ particularly
       $a = F_p\left(\alpha\right)$
       \footnote{
-        As a polynomial in $Y=X^p$ has a root then it also have a root
-        for $X$ variable.
+        $\alpha^p -a =0$ as soon as $\alpha$ is a root of $X^p - a$.
+        Thus $a = \alpha^p = F_p\left(\alpha\right)$.
       }
     \item Not perfect field example. Let
       $K=\mathbb{F}_p\left(X\right)$ be a field of rational fractions
@@ -951,7 +954,12 @@ $L$ is pure inseparable over $L^{sep}$.
     \sum_i a_i \left(X^{p^r}\right)^i
     \]
     but as soon as my field is perfect then I can extract $p$-root of
-    $a_i$ and do it repeatedly. I.e. $\exists b_i \in K$ such that
+    $a_i$
+    \footnote {
+      The root $b_i$ is a root of the following equation $X^p - a_i$
+      i.e. $b_i^p -a_i = 0$ or $a_i = F_p\left(b_i\right)$.      
+    }
+    and do it repeatedly. I.e. $\exists b_i \in K$ such that
     $b_i^{p^r} = a_i$. Therefore
     \[
     P\left(X\right) =
