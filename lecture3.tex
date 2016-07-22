@@ -560,8 +560,8 @@ that is also extended to an \nameref{def:automorphism} on $E$
 (see theorem \ref{thm:isomorphismextension}).
 
 There is one problem with it: is that truth that an irreducible
-polynomial of degree $n$ has ``many'' (no more than $n$ and not
-single) roots.
+polynomial of degree $n$ has ``many'' i.e. exactly $n$ ( it cannot
+have more than $n$) roots.
 
 The answer is yes if $char K = 0$, but not always if $char K = p$
 (where $p$ is a prime number). $P$ can have multiple roots in the case
@@ -581,20 +581,45 @@ polynomial)
 
 But for $char K = p$ there can be a case when $P' = 0$ for a non
 constant polynomial thus $P \mid P'$ and as result $gcd(P, P') = P$.
-The $P' = 0$ i.e. is vanish if
-$P = \sum a_i x^i$ and $p \mid i$ or $a_i = 0$.
+The $P' = 0$ i.e. it vanishes $P$ is a polynomial in $X^p$. I.e. if
+$P = \sum a_i x^i$ and $p \mid i$ or $a_i = 0$. In that case ($P' =
+0$) let $r = \max h$ such that $P$ is a polynomial in $X^{p^h}$ that
+is $a_i = 0$ whenever $p^h \nmid i$. See the following example
+\footnote{
+  The example is not a part of the video lectures.
+}
+\begin{example}
+  Let $p = 2$. The polynomial $P\left(X\right) = X^{16} + 1$ has the
+  required property ($P' = 0$). The polynomial can be present in the
+  following form
+  \[
+  P\left(X\right) = X^{2^4} + 1 = Q(Y)
+  \]
+  where $Y = X^{16}$ and $Q(Y) = Y + 1$. In the case
+  $r=4, p^r = 16 \mid 16$.
 
-Let $r = \max h$ such that $P$ is a polynomial in $x^{p^h}$ that is
-$a_i = 0$ whenever $p^h \nmid i$
+  For polynomial $P\left(X\right) = X^{12} + 1$ we have
+  \[
+  P\left(X\right) = \left(X^{2^2}\right)^3 + 1 = Q(Y)
+  \]
+  where $Y = X^4$ and $Q(Y) = Y^3 + 1$. In the case
+  $r=2, p^2 = 4 \mid 12$ because $h = 3$ does not fit into
+  the requirements: $p^h = 2^3 = 8 \nmid 12$.
+\end{example}
 
 \begin{proposition}
-  Let $P\left(X\right) = Q\left(x^{p^r}\right)$ and $Q' \ne 0$ i.e.
-  $gcd(Q, Q') = 1$ and $Q$ does not have multiple roots but
+  Let $P\left(X\right) = Q\left(X^{p^r}\right)$ and $Q' \ne 0$ i.e.
+  $gcd(Q, Q') = 1$ then $Q$ does not have multiple roots but
   all roots of $P$ have multiplicity $p^r$.
   \begin{proof}
     If $\lambda$ is a root of $P$ then $\lambda$:
     $P(X) = (X - \lambda)R$
-    Thus $\mu = \lambda^{p^r}$ is the root of $Q$:
+    Thus $\mu = \lambda^{p^r}$ is the root of $Q$
+    \footnote{
+      $Q\left(\mu\right) = Q\left(\lambda^{p^r}\right) =
+      P\left(\lambda\right) = 0$
+    }
+    as result
     $Q(Y) = (Y - \lambda^{p^r}) S(Y)$ therefore
     \[
     P(X) =
