@@ -269,9 +269,37 @@ become easy.
   $(m,n)$ is mapped to $n \otimes m$. Thus from
   \nameref{def:universalproperty} we have that there is a linear map
   (homomorphism)
-  $\alpha: M \otimes_A N \to N \otimes_A M$. With the same
-  construction we can get also and the inverse map that sends
-  $N \otimes_A M$ to $M \otimes_A N$.
+  $\alpha: M \otimes_A N \to N \otimes_A M$:
+  
+  \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+    \matrix (m) [matrix of math nodes, row sep=3em,
+      column sep=2.5em, text height=1.5ex, text depth=0.25ex]
+            { M \times N & & N \otimes_A M \\
+              & M \otimes_A N & \\ };
+            %\draw[double,double distance=5pt] (m-1-1) – (m-1-3);
+            \path[->]
+            (m-1-1) edge node[auto] {$ (m,n) \to n \otimes m $} (m-1-3)
+            (m-1-1) edge node[description] {$ (m,n) \to m \otimes n $} (m-2-2)
+            (m-2-2) edge node[description] {$ \alpha $} (m-1-3);
+  \end{tikzpicture}
+
+  
+  With the same
+  construction we can get also and the inverse map $a^{-1}$ that sends
+  $N \otimes_A M$ to $M \otimes_A N$:
+  
+  \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+    \matrix (m) [matrix of math nodes, row sep=3em,
+      column sep=2.5em, text height=1.5ex, text depth=0.25ex]
+            { M \times N & & M \otimes_A N \\
+              & N \otimes_A M & \\ };
+            %\draw[double,double distance=5pt] (m-1-1) – (m-1-3);
+            \path[->]
+            (m-1-1) edge node[auto] {$ (m,n) \to m \otimes n $} (m-1-3)
+            (m-1-1) edge node[description] {$ (m,n) \to n \otimes m $} (m-2-2)
+            (m-2-2) edge node[description] {$ \alpha^{-1} $} (m-1-3);
+  \end{tikzpicture}
+  
 \end{example}
 
 Also
