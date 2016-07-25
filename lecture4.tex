@@ -53,18 +53,12 @@ tensor product.
   i.e.
   \(
   \forall m, f_m:
-  \begin{array}{c}
-    N \to P \\
-    n \to f(m,n)
-    \end{array}
+  N \xrightarrow[n \to f(m,n)]{} P
   \)
   and
   \(
   \forall n, f_n:
-  \begin{array}{c}
-    M \to P \\
-    m \to f(m,n)
-    \end{array}
+  M \xrightarrow[m \to f(m,n)]{} P
   \)
   are \nameref{def:homomorphism}s of $A$-modules
   ), then
@@ -130,18 +124,21 @@ the case we can consider the following diagram
           (m-2-3) edge node[auto] {$ \bar{g} = \tilde{\phi} $} (m-3-3);
 \end{tikzpicture}
 
-Thus we have that there are 2 homomorphisms
+As soon as we fixed $\overline{ M \otimes_A N}$
+we 2 unique homomorphisms (which are defined by the fixed
+$\overline{ M \otimes_A N}$) - 
 $g :  M \otimes_A N \to \overline{ M \otimes_A N}$
 and
-$\bar{g} :  \overline{M \otimes_A N} \to M \otimes_A N$ moreover
-$g \circ \bar{g} = id_{M \otimes_A N}$
-\footnote{
-  We have that both $g$ and $\bar{g}$ are linear. They also declared
-  to be unique. They combination is also linear and ??? unique. The
-  $id_{M \otimes_A N}$ satisfies the linear property and from
-  uniqueness there is no any others
-}
-i.e. $\bar{g} = g^{-1}$ i.e. we have an
+$\bar{g} :  \overline{M \otimes_A N} \to M \otimes_A N$.
+Both $g$ and $\bar{g}$ are linear as mentioned above the pair is
+unique (if we fix $g$ we will have only one $\bar{g}$ that corresponds
+to $g$). The composition $g \circ \bar{g}$ maps $M \otimes_A N$ to
+itself. Thus if we fix $g$ and choose $\bar{g} = g^{-1}$ we will get
+$g \circ \bar{g} = id_{M \otimes_A N}$ that satisfied all
+requirements. The choice is final because we don't have a possibility
+to choose any other $\bar{g}$ (it should be unique).
+
+Thus we have an
 \nameref{def:isomorphism} and the isomorphism is unique as soon as the
 function $g$ is unique due the \nameref{def:universalproperty}.
 
