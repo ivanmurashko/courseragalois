@@ -3,7 +3,9 @@ all: pdf ps
 ps: galois.tex 
 	latex galois.tex
 
-pdf: galois.tex 
+pdf: galois.tex
+	pdflatex galois.tex
+	bibtex galois
 	pdflatex galois.tex
 
 clean:
