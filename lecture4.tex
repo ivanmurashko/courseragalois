@@ -94,7 +94,8 @@ homomorphisms of $A$-modules between them
   \footnote{
     It is out of the lecture video and can be considered as an
     explanation for the claim about having mutually inverse
-    homomorphisms of $A$-modules
+    homomorphisms of $A$-modules. The proof was taken from
+    \cite{bib:KeithConradTensorProduct1}.
   }
   If we have two objects $\left(\phi, M \otimes N\right)$
   and $\left(\overline{\phi},\overline{M \otimes N}\right)$
@@ -301,7 +302,7 @@ become easy.
 
   
   With the same
-  construction we can get also and the inverse map $a^{-1}$ that sends
+  construction we can also get the inverse map $a^{-1}$ that sends
   $N \otimes_A M$ to $M \otimes_A N$:
   
   \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
@@ -381,7 +382,7 @@ More complex fact is the following
     Lets define
     $f_{i_0,j_0}: M \times N \to A$ as a map that sends
     $\left(\sum a_i e_i, \sum b_j \epsilon_j\right)$ to
-    $a_{j_0} b_{j_0}$. It's bilinear
+    $a_{i_0} b_{j_0}$. It's bilinear
     \footnote{
       for example
       $\left(\sum (a_i + a_i') e_i, \sum b_j \epsilon_j\right)$ is
@@ -394,7 +395,7 @@ More complex fact is the following
     \footnote{
       Because $f = \tilde{f} \phi$ i.e.
       \begin{eqnarray}
-      a_{j_0} b_{j_0} =
+      a_{i_0} b_{j_0} =
       f_{i_0,j_0}\left(\sum a_i e_i, \sum b_j\epsilon_j\right) =
       \nonumber \\
       =  f_{i_0,j_0}\left(
@@ -412,7 +413,7 @@ More complex fact is the following
     \sum \alpha_{ij} e_i \otimes \epsilon_j = 0
     \]
     then applying $\tilde{f}_{i_0, j_0}$ for all indices one can get
-    $\forall i,j: \alpha_{ij} = 0$.
+    that $\forall i,j: \alpha_{ij} = 0$.
     \footnote{
       because $\tilde{f}$ should be linear.
     }
@@ -483,9 +484,29 @@ b \cdot \left(b' \otimes m \right) = \left( b \cdot b' \right) \otimes m
   \mathbb{R}^{2n}
   \]
   for the $\mathbb{C}^n$ basis we have
-  $1 \otimes e_1, \dots, 1 \otimes e_n$ and for $\mathbb{R}^{2n}$ -
+  $1_{\mathbb{C}} \otimes e_1, \dots, 1_{\mathbb{C}} \otimes e_n$ and
+  for
+  $\mathbb{R}^{2n}$ -
   $1 \otimes e_1, \dots, 1 \otimes e_n, i \otimes e_1, \dots, i
   \otimes e_n$.
+  \footnote{
+    some additional clarification:
+    $\forall x \in \mathbb{C} \otimes \mathbb{R}^n$ we have
+    \[
+    x = \sum_{i=1}^n c_i \otimes r_i e_i =
+    \sum_{i=1}^n c_i r_i 1_{\mathbb{C}} \otimes e_i,
+    \]
+    where $c_i \in \mathbb{C}, r_i \in \mathbb{R}$. We can write $c_i$
+    as follows: $c_i = a_i + i b_i$, where $a_i, b_i \in \mathbb{R}$.
+    Therefore
+    \[
+    x = \sum_{i=1}^n a_i r_i 1 \otimes e_i + \sum_{i=1}^n b_i r_i i \otimes e_i.
+    \]
+    I.e. $x \in \mathbb{R}^{2n}$ and the basis in $\mathbb{R}^{2n}$ is
+    formed by $1 \otimes e_1, \dots, 1 \otimes e_n, i \otimes e_1,
+    \dots, i \otimes e_n$.
+  }
+
 \end{example}
 
 \begin{proposition}
@@ -503,15 +524,23 @@ basis $1_B \otimes e_1, \dots, 1_B \otimes e_n$.
   f_{i_0}\left(b, \sum_{i=1}^n m_i e_i\right) = b m_{i_0} e_{i_0}
   \]
   so there exists a linear map $\tilde{f}_{i_0}$ such that
-  \[
-  \tilde{f}_{i_0}\left(b \otimes \sum_{i=1}^n m_i e_i\right) =
-  b \tilde{f}_{i_0}\left(1_B \otimes \sum_{i=1}^n m_i e_i \right) =
-  b m_{i_0}
-  \]
+  $f_{i_0} = \tilde{f}_{i_0} \phi$ or
+  \begin{eqnarray}
+    f_{i_0}\left(b, \sum_{i=1}^n m_i e_i\right) =
+    \tilde{f}_{i_0} \left(
+    \phi\left(b, \sum_{i=1}^n m_i e_i\right)
+    \right)
+    \nonumber \\
+    =
+    \tilde{f}_{i_0}\left(b \otimes \sum_{i=1}^n m_i e_i\right) =
+    b \tilde{f}_{i_0}\left(1_B \otimes \sum_{i=1}^n m_i e_i \right) =
+    b m_{i_0}
+    \nonumber
+  \end{eqnarray}
   i.e. it sends $1_B \otimes e_{i_0}$ to 1 and all others $1_B \otimes
   e_i$ to 0.
   Thus the following sum $\sum \alpha_i 1_B \otimes e_i$ is equal to 0
-  if all $\alpha_i = 0$ i.e. $\alpha_i 1_B \otimes e_i$ forms a basis.
+  if and only if $\alpha_i = 0$ i.e. $\alpha_i 1_B \otimes e_i$ forms a basis.
 \end{proof}
 \label{prop:lec4_Addon}
 \end{proposition}
@@ -520,10 +549,10 @@ basis $1_B \otimes e_1, \dots, 1_B \otimes e_n$.
 We have the following maps.
 \begin{itemize}
   \label{item:lec4_maps}
-\item For A - modules: $\alpha: M \to B \otimes_A M$ such that
-  $m  \to 1_B \otimes_A m$
-\item For B - modules:  $\mu: B \otimes_A N \to N$ such that
-  $b \otimes n \to b n$.
+\item For A - modules:
+  $\alpha: M \xrightarrow[m  \to 1_B \otimes_A m]{} B \otimes_A M$.
+\item For B - modules:
+  $\mu: B \otimes_A N \xrightarrow[b \otimes n \to b n]{} N$.
 \end{itemize}
 \label{rem:lec4_maps}
 \end{remark}
