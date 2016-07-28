@@ -494,9 +494,12 @@ b \cdot \left(b' \otimes m \right) = \left( b \cdot b' \right) \otimes m
     $\forall x \in \mathbb{C} \otimes \mathbb{R}^n$ we have
     \[
     x = \sum_{i=1}^n c_i \otimes r_i e_i =
-    \sum_{i=1}^n c_i r_i 1_{\mathbb{C}} \otimes e_i,
+    \sum_{i=1}^n c_i r_i 1_{\mathbb{C}} \otimes e_i =
+    \sum_{i=1}^n c_i' 1_{\mathbb{C}} \otimes e_i,
     \]
-    where $c_i \in \mathbb{C}, r_i \in \mathbb{R}$. We can write $c_i$
+    where $c_i,c_i'=c_i r_i \in \mathbb{C}, r_i \in \mathbb{R}$. Thus
+    we just got $\mathbb{C}^n$. 
+    From other side we can write $c_i$
     as follows: $c_i = a_i + i b_i$, where $a_i, b_i \in \mathbb{R}$.
     Therefore
     \[
@@ -550,7 +553,8 @@ We have the following maps.
 \begin{itemize}
   \label{item:lec4_maps}
 \item For A - modules:
-  $\alpha: M \xrightarrow[m  \to 1_B \otimes_A m]{} B \otimes_A M$.
+  $\alpha: M \xrightarrow[m  \to 1_B \otimes_A m]{} B \otimes_A M$
+  which makes a $B$-module from an $A$-module.
 \item For B - modules:
   $\mu: B \otimes_A N \xrightarrow[b \otimes n \to b n]{} N$.
 \end{itemize}
@@ -596,10 +600,38 @@ We have the following maps.
     \hat g(g) = \mu \cdot (id_B \otimes g).
     \]   
     And we can check that those maps ($\hat{f}$ and $\hat{g}$) are
-    mutually inverse. 
+    mutually inverse. For the proof
     \footnote{
-      ???
+      It's missed in the lectures
     }
+    the fact consider the following diagram
+    
+    \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+      \matrix (m) [matrix of math nodes, row sep=3em,
+        column sep=2.5em, text height=1.5ex, text depth=0.25ex]
+              { M  & &  N \\
+                & B \otimes_A M & & B \otimes_A N \\ };
+              %\draw[double,double distance=5pt] (m-1-1) – (m-1-3);
+              \path[->]
+              ([yshift=1ex]m-1-1.east) edge node[description] {$ f \alpha $}
+              ([yshift=1ex]m-1-3.west); 
+              \path[->]
+              ([yshift=-1ex]m-1-1.east) edge node[description] {$ g $}
+              ([yshift=-1ex]m-1-3.west);
+              \path[->]
+              (m-1-1) edge node[description] {$ \alpha $} (m-2-2)
+              (m-2-2) edge node[description] {$ f $} (m-1-3)
+              (m-2-2) edge node[description] {$ id_B \otimes g $}
+              (m-2-4)
+              (m-2-4) edge node[description] {$ \mu $} (m-1-3)
+              ;
+    \end{tikzpicture}
+    
+    One can conclude (as soon as the diagram commutes)
+    \[
+    \hat{f}\left(\hat{g}\left(g\right)\right) =
+    \mu \cdot (id_B \otimes g) \alpha = g.
+    \]
   \end{proof}
   \label{thm:basechange}
 \end{theorem}
