@@ -999,13 +999,17 @@ space) $K$-algebra.
     \item If $A$ is an \nameref{def:integraldomain} then $A$ is a
       field.
     \item (replacing the first one) Any
-      \nameref{def:primeideal} of $A$ is \nameref{def:maxideal}
+      \nameref{def:primeideal} of $A$ is a \nameref{def:maxideal}
   \end{enumerate}
   \begin{proof}
      Well, I shall prove only the first part, the second part is just
      a consequence of definitions. In fact, a factor over a prime
      ideal, a quotient over a prime ideal is an integral domain, and a
-     quotient over a maximal ideal is a field. If you don't know this,
+     quotient over a maximal ideal is a field.
+     \footnote{
+       i.e. prime ideal is a maximal ideal 
+     }
+     If you don't know this,
      please look it up in any book.
 
      Lets prove the first part. \nameref{def:integraldomain} means
@@ -1014,7 +1018,8 @@ space) $K$-algebra.
        $a \ne 0_A$
      }
      multiplication by $a$ is \nameref{def:injection}. $A$ is finite
-     dimensional \nameref{def:vectorspace} that implies that $\times a$ is an
+     dimensional \nameref{def:vectorspace} (see above) that implies
+     that $\times a$ is an 
      \nameref{def:isomorphism},
      \footnote{
        $\times a$ sends a vector space  into another vector space with
@@ -1051,7 +1056,7 @@ space) $K$-algebra.
   \begin{proof}
     \begin{enumerate}
     \item
-      Let $m_1, \dots, m_i$ be a several maximal ideals. By
+      Let $m_1, \dots, m_i$ are maximal ideals. By
       \nameref{thm:chineseremainder} we have
       \footnote{
         Maximal ideals are relatively prime because
@@ -1065,7 +1070,13 @@ space) $K$-algebra.
       A/m_1 \times \dots \times A/m_i.
       \]
       We know that $A$ as well as $A/m_1 \dots m_i$ and $A/m_k$ are
-      finite dimensional $K$-\nameref{def:vectorspace}. Thus we have the
+      finite dimensional $K$-\nameref{def:vectorspace}
+      \footnote {
+        The theorem statement (see above) says that
+        $\dim_K A < \infty$. $A/m_1$ is a projection i.e.
+        $\dim_K A/m_1 < \dim_K A < \infty$.
+      }
+      thus we have the
       following relations
       \[
       \dim_K A \ge \dim_K  A/m_1 \dots m_i  =
@@ -1079,16 +1090,22 @@ space) $K$-algebra.
       dimensional vector space over $K$ as well as its powers
       $J^k$. We have the following sequence
       \footnote {
-        Let $j \in J \subset A$ then $\forall y \in A: j y \in J$.
-        But if $x \in JJ$ then $x = jj = j y$ there $y = i \in A$. and
-        as soon as $j \in J$ then $x = jj$ is also an element of
-        $J$. As result $J^2 \subseteq J$.
+        Let $j \in J \subset A$ and $x \in JJ$.
+        Then $\exists j \in J$ such that $x = j j$
+        but $j j \in J$ because $\forall y \in J: j y \in J$.
+        As result $J^2 \subseteq J$.
       }
       \[
       \dots \subseteq J^k \subseteq \dots \subseteq
       J^2 \subseteq J.
       \]
-      and the sequence should stop somewhere i.e.
+      and the sequence should stop somewhere
+      \footnote {
+        On each step we should decrease the dimension if we don't
+        stop. The dimension is limited and as result the sequence
+        should stop.
+      }
+      i.e.
       $\exists n$ such that $J^n = J^{n+1}$. We claim that $J^n = 0$
       in the case. Indeed if not we have the following basis of $J^n$:
       $e_1, \dots, e_s$. And as soon as $J^n = J J^n$ we can write a
@@ -1098,7 +1115,7 @@ space) $K$-algebra.
       e_i = \sum \lambda_{ij} e_j,
       \]
       there $e_j \in J^n, \lambda_{ij} \in J$. Thus if
-      $M = Id - \lambda_{ij}$
+      $M = id - \lambda_{ij}$
       \[
       M \cdot \left(
       \begin{array}{c}
@@ -1108,9 +1125,13 @@ space) $K$-algebra.
       \end{array}
       \right) = 0.
       \]
-      It's possible over ring to find a matrix $\tilde{M}$ such that
+      It's possible over ring
+      \footnote{
+        ???
+      }
+      to find a matrix $\tilde{M}$ such that
       \[
-      \tilde{M} M = \det M \cdot Id,
+      \tilde{M} M = \det M \cdot id,
       \]
       i.e.
       \[
@@ -1135,11 +1156,16 @@ space) $K$-algebra.
       $\forall i: \lambda \in m_i$
       so $\nexists i$ such that $1 + \lambda \in m_i$
       \footnote{
-        ???
+        We have that $m_i$ is a \nameref{def:maxideal} and therefore (by
+        its definition) it is a \nameref{def:properideal} i.e.
+        $1 \notin m_i$. From other side if $1 + \lambda \in m_i$ then
+        $1 + \lambda - \lambda \in m_i$ as soon as $\lambda \in
+        m_i$. I.e. we have a contradiction.  
       }
       thus $1 + \lambda$ is invertable
       \footnote {
-        ???
+        $0 \in m_i$ thus if $1 + \lambda \notin m_i$ then
+        $1 + \lambda \ne 0$.
       }
       therefore $e_1 = \dots = e_s = 0$
       \footnote{
@@ -1209,7 +1235,7 @@ Several examples:
 Another example
 \[
 \mathbb{Q}\left(\sqrt{2}\right)
-\otimes
+\otimes_{\mathbb{Q}}
 \mathbb{Q}\left(\sqrt{3}\right) =
 \mathbb{Q}\left(\sqrt{2}, \sqrt{3}\right)
 \]
@@ -1218,4 +1244,4 @@ So all $n_i$'s may be taken equal to 1. In other words, we don't have
 \nameref{def:nilpotent}s in our algebra. So, it is a reduced
 algebras. Reduced, by definition, is without nilpotents.     
 It's general phenomena because the presence of nilpotents is due to the
-inseparability of extensions ome from inseparable extensions.  
+inseparability of extensions come from inseparable extensions.  
