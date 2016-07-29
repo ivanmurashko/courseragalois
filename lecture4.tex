@@ -1222,7 +1222,26 @@ space) $K$-algebra.
   $(X)^2 \subset (X)^3$ but also
   $(X)^3 \subset (X)^2$
   \footnote{
-    ??? exercise 
+    $(X)^3 \subset (X)^2$ - this is true for any polynomial
+    $P\left(X\right)$ because if
+    $P\left(X\right) \in (X)^3$ then
+    $P\left(X\right) = X^3 P'\left(X\right) =
+    X^2 \bar{P}\left(X\right) \in (X)^2$ where
+    $\bar{P}\left(X\right) = X P'\left(X\right)$
+
+    $(X)^2 \subset (X)^3$ is the more complex one and it does not true
+    for any polynomial ring but this is true for our $A$.
+    Let $P\left(X\right) \in \left(X\right)^2 \subset
+    K\left[X\right]$ then
+    $P\left(X\right) = X^2 P'\left(X\right)$ but
+    $X^2 P'\left(X\right) \equiv 0 \mod X^2$.
+    From other side
+    $X^4 P'\left(X\right) \equiv 0 \mod X^2$
+    therefore
+    \[
+    P\left(X\right) \equiv X^3 X P'\left(X\right) \mod X^2
+    \]
+    i.e. $P\left(X\right) \in (X)^3$.
   }
 \end{remark}
 
@@ -1239,8 +1258,12 @@ Another example
 \mathbb{Q}\left(\sqrt{3}\right) =
 \mathbb{Q}\left(\sqrt{2}, \sqrt{3}\right)
 \]
-And you see that those algebras are products of fields.
-So all $n_i$'s may be taken equal to 1. In other words, we don't have
+And you see that those algebras are Cartesian products of fields.
+So all $n_i$'s may be taken equal to 1
+\footnote{
+  Because $A/m^n$ (where $m$ is a maximal ideal) is a field if $n=1$
+}.
+In other words, we don't have
 \nameref{def:nilpotent}s in our algebra. So, it is a reduced
 algebras. Reduced, by definition, is without nilpotents.     
 It's general phenomena because the presence of nilpotents is due to the
