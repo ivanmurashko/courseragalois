@@ -877,7 +877,7 @@ because
   \begin{enumerate}
   \item If $I,J$ are relatively prime then $IJ = I \cap J$
   \item If $I_1, \dots, I_k$ relatively prime with $J$ then
-    $\prod_{i =1}^k I_i = I_1 \cdot \dots \cdot I_k$ is also
+    $\prod_{i =1}^k I_i = I_1 \dots I_k$ is also
     relatively prime with $J$.
   \item If $I, J$ relatively prime then $I^k$ and $J^l$ are also
     relatively prime for any $l$ and $k$.
@@ -900,20 +900,22 @@ because
       \]
       i.e. $I \cap J \subset IJ$.
     \item Suppose for simplicity that $k = 2$. In the case we have
-      $1 = i_1 + j_1 = i_2 + j_2$ where $i_1 \in I_1, i_2 \in I_2$ and
+      $1_A = i_1 + j_1 = i_2 + j_2$ where $i_1 \in I_1, i_2 \in I_2$ and
       $j_1, j_2 \in J$.
       we also have
       \[
-      1 = \left(i_1 + j_1\right) \left(i_2 + j_2\right) =
+      1_A = \left(i_1 + j_1\right) \left(i_2 + j_2\right) =
       i_1 i_2 + \left(j_1 i_2 + j_2 i_1 + j_1 j_2\right)
       \in I_1 I_2 + J
       \]
       thus $\forall x \in A$ we have
       \[
-      x = 1 x =
+      x = 1_A x =
       i_1 i_2 x + \left(j_1 i_2 + j_2 i_1 + j_1 j_2\right) x
-      \in I_1 I_2 + J
+      \in I_1 I_2 + J,
       \]
+      i.e. $I_1 I_2 + J = A$ therefore $I_1 I_2$ and $J$ are
+      relatively prime. 
     \item is obvious
       \footnote{
         It follows from the 2 because we can assume $I_i = I$ and will
@@ -946,7 +948,14 @@ because
   \prod \left(A/I_k\right)
   \]
   \footnote{
-    see \nameref{thm:firstisomorphism}
+    See \nameref{thm:firstisomorphism} where 
+    $G = A$,
+    $H = A/I_1 \times \dots \times A/I_n$, $\phi = \pi$ and  with
+    lemma \ref{lem:aboutrelprimeideals} (as soon as $I_k$ pairwise
+    relatively prime)
+    \[
+    \ker \phi = \ker \pi = I_1 \cap \dots \cap I_n = I_1 \dots I_n.
+    \]
   }
   
   \begin{proof}
@@ -958,7 +967,7 @@ because
     \]
     i.e.
     $a_i \mod I_j = 0$ or $a_i \in I_j$ for $i \ne j$. We also have
-    that $1 - a_i \in I_i$.
+    $a_i \mod I_i = 1$ thus $1 - a_i = k I_i$ i.e. $1 - a_i \in I_i$. 
     Thus $\forall j, \exists a_i \in I_j, a_k \in I_i$ such that
     $1 = a_i + a_k$ thus $A = I_j + I_i$ i.e. $I_i$ relatively prime
     with any $I_j$.
