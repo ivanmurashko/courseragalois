@@ -37,7 +37,7 @@ This is a general for of \nameref{thm:chineseremainder}.
 \end{example}
 
 \begin{definition}[Nilpotent element]
-  Let $A$ is a ring than $x \in A$ is nilpotent if $x \ne 0$ but
+  Let $A$ is a \nameref{def:ring} than $x \in A$ is nilpotent if $x \ne 0$ but
   $\exists k: x^k = 0$.
   \footnote{
     Alternative definition from \cite{wiki:nilpotent}: An element,
@@ -48,7 +48,7 @@ This is a general for of \nameref{thm:chineseremainder}.
 \end{definition}
 
 \begin{definition}[reduced]
-  \nameref{def:ring} $A$ is reduced if it has no \nameref{def:nilpotent}s.
+  $K$-algebra $A$ is reduced if it has no \nameref{def:nilpotent}s.
   Or in other words
   \footnote{
     ??? require proof
@@ -76,6 +76,65 @@ If $A$ is local then all elements of $A$ are nilpotents
 \footnote{
   ???
 } i.e. any element of $A$ is a identity,zero or nilpotent.
+
+Most of our last examples were examples of reduced $K$-algebras such
+as
+\[
+\mathbb{C} \otimes_{\mathbb{R}} \mathbb{C} =
+\mathbb{C} \times \mathbb{C}
+\]
+or
+\[
+\mathbb{Q}\left(\sqrt{2}\right) \otimes_{\mathbb{Q}}
+\mathbb{Q}\left(i\right) =
+\mathbb{Q}\left(i, sqrt{2}\right)
+\]
+that is a field and if we start producing similar examples then mostly
+they are reduced. Well, why? Because in fact the presence of
+nilpotents has to do with inseparability. The presence of nilpotents
+reflects inseparability.
+
+So let me give you one more example. Finally of tensor product of
+extensions which is not reduced. Let $K$ be a field of characteristic
+$p$, for instance $\mathbb{F}_p$. Consider a field of rational
+functions over $K$: $K\left(X\right)$. We will consider
+$K\left(X\right)$ as an extension of $K\left(X^p\right)$ (or with new
+variable $Y = X^p$ - $K\left(Y\right)$. We will be interested in
+\(
+K\left(X\right)
+\otimes_{K\left(Y\right)}
+K\left(X\right)
+\) where $X$ is a $p$th root of $Y$ so
+\footnote{
+  as soon as
+  $K\left(X\right) = K\left[T\right]/\left(T^p - Y\right)$
+}
+\begin{eqnarray}
+K\left(X\right)
+\otimes_{K\left(Y\right)}
+K\left(X\right)
+\cong
+\nonumber \\
+\cong
+K\left(X\right)
+\otimes_{K\left(Y\right)}
+K\left[T\right]/\left(T^p - Y\right)
+\cong
+\nonumber \\
+\cong
+K\left(X\right)\left[T\right]/\left(T^p - Y\right) =
+\nonumber \\
+=
+K\left(X\right)\left[T\right]/\left(T^p - X^p\right) =
+K\left(X\right)\left[T\right]/\left(T - X\right)^p
+\nonumber
+\end{eqnarray}
+where $T$ is another variable. As result we have got a ring with
+nilpotents for example $T - X$ and of course the reason is that our
+extension $K\left(X\right)$ is pure inseparable extension (see
+definition \ref{def:inseparabledegree}) of $K\left(Y\right)$.  
+
+
 
 \section{Separability and base change}
 \section{Separability and base change (cont'd). Primitive element theorem}
