@@ -8,6 +8,75 @@ nilpotents. As our next subject, we introduce normal and Galois
 extensions and prove Artin's theorem on invariants.
 
 \section{Structure of finite K-algebras, examples (cont'd)}
+
+Last time we have seen that a finite $K$-algebra $A$
+($\left[A:K\right] < \infty$) has only finitely many maximal ideals
+$m_1, \dots, m_r$ and the following equation holds (see theorem
+\ref{thm:structurefinitekalgebra}):
+\[
+A \cong A/m_1^{k_1} \times \dots \times A/m_r^{k_r}
+\]
+This is a general for of \nameref{thm:chineseremainder}.
+
+\begin{example}
+  Let
+  \[
+  A = K\left[X\right]/\left(F\right)
+  \]
+  And the polynomial $F = P_1^{k_1} \dots P_r^{k_r}$ is not necessary
+  reducible then by the  \nameref{thm:chineseremainder}
+  \footnote{
+    and theorem \ref{thm:structurefinitekalgebra}
+  }
+  one can get
+  \[
+  A \cong
+  K\left[X\right]/\left(P_1 \mod F \right)^{k_1} \times \dots
+  \times K\left[X\right]/\left(P_r \mod F \right)^{k_r}
+  \]
+\end{example}
+
+\begin{definition}[Nilpotent element]
+  Let $A$ is a ring than $x \in A$ is nilpotent if $x \ne 0$ but
+  $\exists k: x^k = 0$.
+  \footnote{
+    Alternative definition from \cite{wiki:nilpotent}: An element,
+    $x$, of a ring, $R$, is called nilpotent if there exists 
+    some positive integer, $n$, such that $x^n = 0$.
+  }
+  \label{def:nilpotent}
+\end{definition}
+
+\begin{definition}[reduced]
+  \nameref{def:ring} $A$ is reduced if it has no \nameref{def:nilpotent}s.
+  Or in other words
+  \footnote{
+    ??? require proof
+  }
+  if in the decomposition
+  \[
+  A \cong A/m_1^{k_1} \times \dots \times A/m_r^{k_r}
+  \]
+  $\forall i: k_i = 1$.
+  Or 
+  \footnote{
+    $A/m_i$ is a field as soon as $m_i$ is a \nameref{def:maxideal}
+  }
+  if $A$ is a product of fields. 
+  \label{def:reduced}
+\end{definition}
+
+\begin{definition}[local]
+  \nameref{def:ring} $A$ is called local if it has only one
+  \nameref{def:maxideal} i.e. $A \cong A/m^k$. 
+  \label{def:local}
+\end{definition}
+
+If $A$ is local then all elements of $A$ are nilpotents
+\footnote{
+  ???
+} i.e. any element of $A$ is a identity,zero or nilpotent.
+
 \section{Separability and base change}
 \section{Separability and base change (cont'd). Primitive element theorem}
 \section{Examples. Normal extensions}
