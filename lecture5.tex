@@ -192,6 +192,72 @@ not reduced, then the dimension
 \[
 \left[A_{red}, E\right] < \left[A, E\right]
 \].  
+So the maximal number of homomorphisms, so let's say the slogan
+``Maximal number of homomorphisms'' is attained when $A$ is reduced
+and all quotients $A/m_i \cong E$.
+Because those quotients are of course extensions of $E$. In general,   
+those quotients are extensions of $E$. We also have
+\[
+A \cong A/m_1 \times \dots \times A/m_r
+\]
+but $Hom\left(A/m_i, E\right) = \{0\}$ if $\left[A/m_i, E\right] > 1$.  
+This is because a field homomorphism is always injective. A field
+homomorphism a homomorphism of fields which are extensions of $E$  an
+$E$-homomorphism is injective. So you cannot map an $E$-vector space of
+dimension greater than 1 into an $E$-vector space of dimension 1.
+
+Lets take $E = \bar{K}$ then automatically we will get
+$A/m_i \cong E$ because an algebraically closed field does not have a
+non trivial finite extension.
+
+So what have we had?
+\[
+A = L \otimes_K \bar{K},
+\]
+\[
+A_{red} = \prod_{i=1}^r \bar{K}.
+\]
+The following one $A = A_{red}$ is the same to $r$ is maximal and
+equal to $\left[L:K\right] = \left[A: \bar{K}\right]$. In the case
+\[
+r = \left|Hom_{\bar{K}}\left(A, \bar{K}\right)\right|
+\left|Hom_K\left(L, \bar{K}\right)\right|
+\]
+So this explains why seperability is the same thing as the absence of
+nilpotents. So let me formulate it as a theorem.
+
+\begin{theorem}
+  Let $L$ is a finite extension over $K$ then
+  \begin{enumerate}
+  \item $L$ is separable if and only if $L \otimes_K \bar{K}$
+    is \nameref{def:reduced}.
+    $L$ is pure inseparable if and only if $L \otimes_K \bar{K}$
+    is \nameref{def:local}
+  \item $L$ is separable if and only if for all algebraic extension
+    $\Omega$, $L \otimes_K \Omega$ is reduced.
+    $L$ is pure inseparable if and only if for all algebraic extension
+    $\Omega$, $L \otimes_K \Omega$ is local.
+  \item If $L$ is separable then the map
+    \[
+    \phi: L \otimes_K \bar{K} \to \bar{K}^n
+    \]
+    which sends
+    \[
+    \phi\left(l \otimes k\right) =
+    \left(
+    k \phi_1\left(l\right),
+    \dots,
+    k \phi_n\left(l\right)
+    \right)
+    \]
+    where $\phi_i$ are distinct homomorphisms from $L$ to $\bar{K}$, 
+    is an isomorphism.
+  \end{enumerate}
+  \begin{proof}
+    
+  \end{proof}
+  \label{thm:lec5_1}
+\end{theorem}
 
 \section{Separability and base change (cont'd). Primitive element theorem}
 \section{Examples. Normal extensions}
