@@ -134,9 +134,65 @@ nilpotents for example $T - X$ and of course the reason is that our
 extension $K\left(X\right)$ is pure inseparable extension (see
 definition \ref{def:inseparabledegree}) of $K\left(Y\right)$.  
 
-
-
 \section{Separability and base change}
+What is the reason for such a mysterious connection between 
+presence of nilpotents and separability? If $L$ is separable over $K$
+then the number of \nameref{def:homomorphism}s
+$\left|Hom_K\left(L, \bar{K}\right)\right|$ is maximal and equal to
+degree $\left[L : K\right]$ but in general it is less or equal to the
+degree.  This is of course clear, because  if we have a polynomial
+with distinct roots, then it's stem field for instance  has exactly
+this number of  homomorphisms into the-algebraic closure and this
+number is equal to the number of roots. So if some roots coincide,  
+then the number of homomorphisms diminishes. 
+
+Lets also recall \nameref{thm:basechange}. If $L$ and $E$ are
+extensions of $K$ and $L$ is finite over $K$ then
+\[
+Hom_K\left(L, E\right) \cong
+Hom_E\left(
+L \otimes_K E, E
+\right).
+\]
+In the formula, $L \otimes_K E$ is a finite $E$-algebra denoted as $A$
+below.
+
+\begin{definition}
+  With \nameref{thm:chineseremainder} theorem we have
+  \[
+  A \cong A/m_1^{k_1} \times \dots \times A/m_r^{k_r}
+  \]
+  Reduced algebra $A_{red}$ is defined by the following equation
+  \[
+  A_{red} = A/m_1 \times \dots \times A/m_r
+  \]
+  \label{def:reducedalgebra}
+\end{definition}
+
+We have that
+\footnote{
+  ???
+}
+\[
+A_{red} = A /\eta\left(A\right)
+\]
+where $\eta\left(A\right)$ is an \nameref{def:ideal} of
+nilpotents in $A$.
+
+It is clear that
+\[
+Hom_E\left(A, E\right) =
+Hom_E\left(A_{red}, E\right)
+\]
+because all homomorphism into a field must be zero on all nilpotents. 
+
+So again, we see that if there are nilpotents in the tensor product,
+then there is somehow fewer space for homomorphisms. Because if A is
+not reduced, then the dimension
+\[
+\left[A_{red}, E\right] < \left[A, E\right]
+\].  
+
 \section{Separability and base change (cont'd). Primitive element theorem}
 \section{Examples. Normal extensions}
 \section{Galois extensions}
