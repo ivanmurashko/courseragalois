@@ -418,7 +418,42 @@ true for arbitrary modules over a ring.
     homomorphisms $Hom_K\left(L, \bar{K}\right)$.
   \end{enumerate}
   \begin{proof}
-    \end{proof}
+    1 implies 2: Take
+    $\left(P_i\right)_{i \in I} = \left\{P_{min}\left(x, K\right) \mid
+    x \in L\right\}$ - the set of polynomials.
+    $L$ will be a splitting field of the set $\left(P_i\right)_{i \in I}$.
+
+    2 implies 3: Let
+    $S = \left\{\mbox{roots of } P_i, i \in I \mbox{ in } L\right\}$
+    and
+    $S' = \left\{\mbox{roots of } P_i, i \in I \mbox{ in }
+    \bar{K}\right\}$ then any homomorphism
+    $\phi: L \to \bar{K}$ sends $S$ to $S'$, but $S$ generates $L$
+    over $K$, so $\phi\left(S\right)$ determines $\phi\left(L\right)$.
+
+    3 implies 4: Let $j, j' \in Hom_K\left(L, \bar{K}\right)$ then
+    they send $L$ isomorphically to its image. So, these are
+    isomorphisms from $L$ to $L'$. So
+    \[
+    L \xrightarrow[j']{} L' \xrightarrow[j^{-1}]{} L,
+    \]
+    take $j^{-1} \cdot j' \in Aut \left(L/K\right)$ and it sends $j$
+    to $j'$.
+
+    4 implies 1:  I have this transitive action and I have to prove
+    that any minimal polynomial splits. Consider
+    $P_{min}\left(x, K\right)$. $\alpha_1, \dots, \alpha_n$ - roots in
+    $\bar{K}$. Then I have map $K\left(x\right) \to
+    K\left(\alpha_i\right)$ that extends to
+    $j_i: L \xrightarrow[x \to \alpha_i]{} \bar{K}$. This is by
+    theorem \nameref{thm:lec2_3}.
+    $\exists \theta_i \in Aut\left(L/K\right)$ such that
+    $j_1 \theta_i = j_i$ thus
+    $\alpha_i \in j_1\left(L\right)$ or all roots are in
+    $j_1\left(L\right)$ and the polynomial
+    $P_{min}\left(x, \bar{K}\right)$ splits over $j_1\left(L\right)$
+    but this means that it splits over $L$    
+  \end{proof}
   \label{thm:lec5_3}
 \end{theorem}
 
