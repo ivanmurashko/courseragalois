@@ -481,8 +481,28 @@ theory
     We know that the group of automorphisms $Aut\left(L/k\right)$ acts
     freely on $Hom_K\left(L, \bar{K}\right)$, so the number of
     automorphisms $\left|Aut\left(L/K\right)\right|$ is equal to the
-    number of \nameref{def:orbit} of this action
-    
+    number of \nameref{def:orbit} of this action which is less or
+    equal to the cardinality of the set it self:
+    $\left|Hom_K\left(L, \bar{K}\right)\right|$. The equality holds
+    whenever (if and only if) \nameref{def:action} is transitive. We
+    just seen in 
+    theorem \ref{thm:lec5_3} that this means that $L$ is normal over
+    $K$. So we have
+    \[
+    \left|Aut\left(L/K\right)\right| \le
+    \left|Hom_K\left(L, \bar{K}\right)\right| \le
+    \left[L:K\right].
+    \]
+    The first inequality become equality if $L$ is normal and the
+    second one if $L$ is separable
+    \footnote{
+      see definitions \ref{def:separabledegree} and \ref{def:separableextension}.
+    }, thus
+    \[
+    \left|Aut\left(L/K\right)\right| \le \left[L:K\right]
+    \]
+    and equality holds if $L$ is both normal and separable i.e. if
+    it's \nameref{def:galoisextension}.
   \end{proof}
   \label{thm:lec5_4}
 \end{theorem}
