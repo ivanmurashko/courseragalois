@@ -507,4 +507,44 @@ theory
   \label{thm:lec5_4}
 \end{theorem}
 
+\begin{remark}[on normal extensions]
+  If $L$ is normal over $K$ then
+  \begin{enumerate}
+  \item If we have an \nameref{def:isomorphism} of sub-extensions
+    ($K \subset L_1, L_2 \subset L$)
+    $\phi: L_1 \cong L_2$ then it extends to an
+    \nameref{def:automorphism} of $L$.  To see this, we embed $L$ into
+    an algebraic closure $\bar{K}$. And remark that $\phi$ extends to a
+    map from $L_1$ to $\bar{K}$, but all those maps have the same image,
+    namely $L$.  
+  \item The group of automorphisms $Aut\left(L/K\right)$ acts
+    transitively on the roots of any irreducible polynomial $P \in
+    K\left[X\right]$. Again, an isomorphism of stem fields extends to
+    an automorphism of $L$.
+  \item If the group $Aut\left(L/K\right)$ fixes (see definition
+    \ref{def:fixedpoint}) some element $x 
+    \notin K$ then $x$ is pure inseparable (see definition
+    \ref{def:degsepelem}). Indeed $P_{min}\left(x, K\right)$ has a
+    single root $x$. In particular if $L$ is
+    \nameref{def:galoisextension} (i.e. is separable) then
+      the set of elements which are fixed  by the automorphisms  of $L$
+      over K is just K itself: 
+      $L^{Aut\left(L/K\right)} = L$.
+      Notation: if group $G$ acts on a set $X$ then $X^G = \left\{x
+      \in X \mbox{ such that } gx = x \forall g \in G\right\}$ - the
+      set of invariants.
+  \end{enumerate}
+\end{remark}
+
+\begin{definition}[Galois group]
+  If $L$ is \nameref{def:galoisextension} then Galois group $G =
+  Gal\left(L/K\right)$ is the group of automorphisms $Aut\left(L/K\right)$. 
+  \label{def:galoisgroup}
+\end{definition}
+
+Thus we can write
+\[
+L^{Gal\left(L/K\right)} = K.
+\]
+
 \section{Artin's theorem}
