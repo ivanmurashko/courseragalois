@@ -553,6 +553,34 @@ Thus we can write
 Motivated by (\ref{eq:lec5_1}) let formulate and proof the important
 theorem
 \begin{theorem}[Artin]
+  $L$ is a field and $G \subset Aut\left(L\right)$
+  \begin{enumerate}
+  \item If $G$ acts with finite orbits,  so, I mean all orbits of G
+    are finite, then $L$ is a \nameref{def:galoisextension} of $L^G$.
+  \item If $\left|G\right| = n < \infty$ then
+    $\left[L : L^G\right] = n$ and $G$ is a \nameref{def:galoisgroup}
+  \end{enumerate}
+
+  \begin{remark}
+    Well notice, that acting with finite orbits  and being finite is not
+    the same thing. So, a short remark before giving a proof: notice
+    that finite orbits does not mean finiteness because it's typical for
+    Galois groups to act with finite orbits.  If we have some G, which
+    is Galois of $L$ over $K$: $G = Gal\left(L/K\right)$, and
+    $x \in L$, then $x$ is a root of a 
+    polynomial of some finite degree  and it's splitting field is
+    finite over $K$, so, the orbit of $x$ is also finite 
+    because it's always sent to another root of the
+    same polynomial and so consists of roots of  the
+    $P_{min}\left(x, K\right)$. But of course the Galois group itself
+    $Gal\left(L/K\right)$ can be infinite when $L$ is not finite over $K$. For
+    instance, if  $K  = \mathbb{F}_p$ and $L = \overline{\mathbb{F}_p}$. It is
+    very easy to compute all the Galois groups, and in fact we shall see
+    shortly what is exactly this Galois group of $L$ over $K$.
+    \footnote{
+      ??? provide the proof
+    }
+  \end{remark}
   \begin{proof}
   \end{proof}
   \label{thm:artin}
