@@ -102,10 +102,10 @@ property.
 \end{definition}
 
 \begin{definition}[Action]
-  An action \cite{wiki:groupaction} of a group is a way of
+  An action of a group is a way of
   interpreting the elements of the 
   group as "acting" on some space in a way that preserves the structure
-  of that space.
+  of that space. See also \cite{wiki:groupaction}.
   \label{def:action}
 \end{definition}
 
@@ -113,12 +113,7 @@ property.
   Consider \cite{wiki:groupaction} a group $G$ acting on a set
   $X$. The orbit of an element $x \in X$ 
   is the set of elements in $X$ to which $x$ can be moved by the elements
-  of $G$. The orbit of $x$ is denoted by $G.x$: 
-  \[
-  G.x=\left\{g.x\mid g\in G\right\}.
-  \]
-
-  Another definition
+  of $G$:
   \[
   Orb\left(x\right) = \left\{y \in X: \exists g \in G: y = g \cdot x \right\}
   \]
@@ -126,8 +121,14 @@ property.
 \end{definition}
 
 \begin{definition}[Fixed point]
-  Given $g \in G$ and $x \in X$ with $g.x = x$, we say $x$ is a fixed point of $g$
-  and $g$ fixes $x$ \cite{wiki:groupaction}. 
+  The set of points of $X$ fixed by a group action are called the
+  group's set of fixed points, defined by
+  \[
+  \left\{
+  x: g x = x, \forall g \in G
+  \right\}.
+  \]
+  see also \cite{mathworld:groupfixedpoint}. 
   \label{def:fixedpoint}
 \end{definition}
 
