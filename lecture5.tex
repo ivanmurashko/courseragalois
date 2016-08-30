@@ -23,18 +23,28 @@ This is a general form of \nameref{thm:chineseremainder}.
   \[
   A = K\left[X\right]/\left(F\right)
   \]
-  And the polynomial $F = P_1^{k_1} \dots P_r^{k_r}$ is not necessary
-  reducible then by the  \nameref{thm:chineseremainder}
+  And the polynomial $F$ is not necessary
+  irreducible so let's decompose into a product of irreducible
+  factors:  $F= P_1^{k_1} \dots P_r^{k_r}$.
+  Then by the  \nameref{thm:chineseremainder}
   \footnote{
+    ???
+    We have $\left(P_i\right)$ is a \nameref{def:maxideal} for $A$ and
+    \[
+    A/\left(P_i\right)^{k_i} =
+    K\left[X\right]/\left(P_i \mod F \right)^{k_i}.
+    \]
     See also remark \ref{rem:lec5_4} and theorem
-    \ref{thm:structurefinitekalgebra} 
+    \ref{thm:structurefinitekalgebra}
   }
   one can get
   \[
   A \cong
-  K\left[X\right]/\left(P_1 \mod F \right)^{k_1} \times \dots
-  \times K\left[X\right]/\left(P_r \mod F \right)^{k_r}
+  K\left[X\right]/P_1^{k_1} \times \dots
+  \times K\left[X\right]/P_r^{k_r},
   \]
+  where $K\left[X\right]/P_i^{k_i} = A/m_i^{k_i}$ and
+  $m_i = \left( P_i \mod F \right)$ - an ideal.
 \end{example}
 
 \begin{definition}[Nilpotent element]
