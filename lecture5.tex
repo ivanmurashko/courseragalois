@@ -28,12 +28,6 @@ This is a general form of \nameref{thm:chineseremainder}.
   factors:  $F= P_1^{k_1} \dots P_r^{k_r}$.
   Then by the  \nameref{thm:chineseremainder}
   \footnote{
-    ???
-    We have $\left(P_i\right)$ is a \nameref{def:maxideal} for $A$ and
-    \[
-    A/\left(P_i\right)^{k_i} =
-    K\left[X\right]/\left(P_i \mod F \right)^{k_i}.
-    \]
     See also remark \ref{rem:lec5_4} and theorem
     \ref{thm:structurefinitekalgebra}
   }
@@ -44,7 +38,19 @@ This is a general form of \nameref{thm:chineseremainder}.
   \times K\left[X\right]/P_r^{k_r},
   \]
   where $K\left[X\right]/P_i^{k_i} = A/m_i^{k_i}$ and
-  $m_i = \left( P_i \mod F \right)$ - an ideal.
+  $m_i = \left( P_i \mod F \right)$
+  \footnote{
+    Using definition \ref{def:quotientring} one can get that
+    $P_i \in K\left[X\right]$ corresponds to
+    $P_i \mod F$ in $A = K\left[X\right]/\left(F\right)$ therefore 
+    we have $\left(P_i\right)$ is a \nameref{def:maxideal} for
+    $K\left[X\right]$ and 
+    \[
+    A/\left(P_i\right)^{k_i} =
+    K\left[X\right]/\left(P_i \mod F \right)^{k_i}.
+    \]
+  }
+  - an ideal.
 \end{example}
 
 \begin{definition}[Nilpotent element]
