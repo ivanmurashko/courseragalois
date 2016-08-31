@@ -34,10 +34,10 @@ This is a general form of \nameref{thm:chineseremainder}.
   one can get
   \[
   A \cong
-  K\left[X\right]/P_1^{k_1} \times \dots
-  \times K\left[X\right]/P_r^{k_r},
+  K\left[X\right]/\left(P_1\right)^{k_1} \times \dots
+  \times K\left[X\right]/\left(P_r\right)^{k_r},
   \]
-  where $K\left[X\right]/P_i^{k_i} = A/m_i^{k_i}$ and
+  where $K\left[X\right]/\left(P_i\right)^{k_i} = A/m_i^{k_i}$ and
   $m_i = \left( P_i \mod F \right)$
   \footnote{
     Using definition \ref{def:quotientring} one can get that
@@ -49,8 +49,15 @@ This is a general form of \nameref{thm:chineseremainder}.
     A/\left(P_i\right)^{k_i} =
     K\left[X\right]/\left(P_i \mod F \right)^{k_i}.
     \]
+    but $P_i \mod F  = P_i$ and as result
+    \[
+    K\left[X\right]/\left(F\right) \cong
+    K\left[X\right]/\left(P_1\right)^{k_1} \times \dots
+    \times K\left[X\right]/\left(P_r\right)^{k_r}.
+    \]
   }
   - an ideal.
+  \label{ex:lec5_1}
 \end{example}
 
 \begin{definition}[Nilpotent element]
@@ -111,10 +118,16 @@ they are reduced. Well, why? Because in fact the presence of
 nilpotents has to do with inseparability. The presence of nilpotents
 reflects inseparability.
 
-So let me give you one more example. Finally of tensor product of
+So let me give you one more example: tensor product of
 extensions which is not reduced. Let $K$ be a field of characteristic
 $p$, for instance $\mathbb{F}_p$. Consider a field of rational
-functions over $K$: $K\left(X\right)$. We will consider
+functions over $K$
+\footnote{
+  As it was shown in example \ref{ex:lec3_1} (part
+  \ref{ex:lec3_notperfect}) it's not a  \nameref{def:perfectfield} and
+  as result of theorem \ref{thm:lec3_4} is not separable.
+}
+: $K\left(X\right)$. We will consider
 $K\left(X\right)$ as an extension of $K\left(X^p\right)$ (or with new
 variable $Y = X^p$ - $K\left(Y\right)$. We will be interested in
 \(
