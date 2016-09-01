@@ -853,7 +853,8 @@ but by \nameref{thm:chineseremainder}
 \mathbb{C} \times \mathbb{C}
 \]
 As result we have that
-$\mathbb{C} \otimes_\mathbb{R} \mathbb{C}$ is not a field because it
+$\mathbb{C} \otimes_\mathbb{R} \mathbb{C}$ is not a field
+because it
 has zero divisors. How we can get the zero divisors? 
 The element $\overline{X + i}$ is a zero divisor
 in
@@ -862,8 +863,24 @@ in
 \)
 because
 \[
-\left(X + i\right) \left(X + i\right) \equiv 0 \mod {\left(X^2 + 1\right)}
+\left(X + i\right) \left(X - i\right) \equiv 0 \mod {\left(X^2 + 1\right)}
+\].
+
+Another proof (not a part of the lecture) of the fact that $\mathbb{C}
+\otimes_\mathbb{R} \mathbb{C}$ is not a field consider the following
+one
+\[
+\mathbb{C}
+\otimes_\mathbb{R} \mathbb{C}
+\cong
+^{\mathbb{C}\left[X\right]}/_{\left(X^2 + 1\right)}
 \]
+but the polynomial $X^2 + 1 = \left(X + i\right)\left(X - i \right)$
+is reducible in $\mathbb{C}\left[X\right]$ i.e. is not a
+\nameref{def:maxideal} (see theorem \ref{thm:irreducibleideal}) and
+with the theorem \ref{thm:maxideal} the quotient by the polynomial is
+not a field (see also section \ref{lec1_sec14}).  
+
 
 \section{Relatively prime ideals. Chinese remainder theorem}
 
