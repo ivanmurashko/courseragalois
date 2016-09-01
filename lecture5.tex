@@ -230,7 +230,7 @@ those quotients are extensions of $E$. We also have
 \[
 A \cong A/m_1 \times \dots \times A/m_r
 \]
-but $Hom\left(A/m_i, E\right) = \{0\}$ if $\left[A/m_i, E\right] > 1$.  
+but $Hom\left(A/m_i, E\right) = \{0\}$ if $\left[A/m_i: E\right] > 1$.  
 This is because a field homomorphism is always injective. A field
 homomorphism a homomorphism of fields which are extensions of $E$  an
 $E$-homomorphism is injective. So you cannot map an $E$-vector space of
@@ -240,7 +240,7 @@ Lets take $E = \bar{K}$ then automatically we will get
 $A/m_i \cong E$ because an algebraically closed field does not have a
 non trivial finite extension.
 
-So what have we had?
+So what have we had (see also example \ref{ex:lec5_conrad})?
 \[
 A = L \otimes_K \bar{K},
 \]
@@ -323,6 +323,41 @@ remains an extension, but  you should not think that the same thing is
 true for arbitrary modules over a ring.  
 \end{remark}
 
+\begin{example}
+  The example is not a part of lectures and was taken from
+  \cite{bib:KeithConradSeparability2}.
+  Consider extension $\mathbb{Q}\left(\sqrt{2}\right)$ over
+  $\mathbb{Q}$. Since
+  \[
+  \mathbb{Q}\left(\sqrt{2}\right) \cong
+  \mathbb{Q}\left[X\right]/\left(X^2 - 2\right)
+  \]
+  tensoring with $\mathbb{Q}$ gives
+  \begin{eqnarray}
+    \mathbb{Q}\left(\sqrt{2}\right) \otimes_{\mathbb{Q}}
+    \bar{\mathbb{Q}} \cong
+    \bar{\mathbb{Q}} \otimes_{\mathbb{Q}}
+    \mathbb{Q}\left(\sqrt{2}\right)
+    \cong
+    \nonumber \\
+    \cong
+    \bar{\mathbb{Q}} \otimes_{\mathbb{Q}}
+    \mathbb{Q}\left[X\right]/\left(X^2 - 2\right)
+    \cong
+    \nonumber \\
+    \cong
+    \bar{\mathbb{Q}}\left[X\right]/
+    \left(
+    \left(X - \sqrt{2}\right)
+    \left(X + \sqrt{2}\right)
+    \right)
+    \cong
+    \bar{\mathbb{Q}} \times \bar{\mathbb{Q}}
+    \nonumber
+  \end{eqnarray}
+  \label{ex:lec5_conrad}
+\end{example}
+
 \section{Primitive element theorem}
 
 \begin{definition}[Idempotent]
@@ -344,7 +379,7 @@ true for arbitrary modules over a ring.
     E \otimes_{K} \bar{K} \hookrightarrow
     L \otimes_{K} \bar{K}
     \].
-    We also have
+    We also have (see also example \ref{ex:lec5_conrad})
     \[
     E \otimes_{K} \bar{K} \cong \bar{K}^m
     \]
