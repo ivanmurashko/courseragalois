@@ -317,6 +317,62 @@ B Q \equiv 1 \mod P,
 \]
 thus $B$ is $Q^{-1}$ in $K\left[X\right]/\left(P\right)$.
 
+\begin{example}
+  The example is not a part of the lectures but it's very usefully in
+  future lectures.
+
+  Let $K$ is a field and $a \in K$ then $K\left[X\right]/\left(X -
+  a\right)$ is also a field and there exists an
+  \nameref{def:isomorphism} between the field and $K$ i.e.
+  \begin{equation}
+    K\left[X\right]/\left(X - a\right) \cong K
+    \label{eq:lec1_ex1_1}
+  \end{equation}
+
+  The $K\left[X\right]/\left(X - a\right)$ is a field just because
+  $X-a$ is
+  \nameref{def:irreducible} (see example \ref{ex:irreducible}).
+
+  For the proof the main statement (\ref{eq:lec1_ex1_1}) lets consider a
+  polynomial $P \in  K\left[X\right]$ and 
+  define the following \nameref{def:homomorphism}:
+  \begin{equation}
+  \phi: K\left[X\right]/\left(X - a\right)
+  \xrightarrow[P(X) \to P(a)]{} K
+  \label{eq:lec1_ex1_2}
+  \end{equation}
+
+  The $\phi$ defined by (\ref{eq:lec1_ex1_2}) is
+  \nameref{def:homomorphism}. For the proof of the claim lets take
+  $P_1, P_2 \in K\left[X\right]/\left(X - a\right)$. Clear that
+  $\phi\left(P_1 + P_2\right) = P_1\left(a\right) + P_2\left(a\right)
+  = \phi\left(P_1\right) + \phi\left(P_1\right)$. The same holds with
+  the multiplication. Division is more complex but also can be
+  shown: if $P_2 \ne 0$ when there exists $P_2^{-1}$ as soon as
+  $K\left[X\right]/\left(X - a\right)$ is the field then
+  with $\phi\left(P_2^{-1}\right) = P_2^{-1}\left(a\right) =
+  \frac{1}{\phi\left(P_2\right)}$ one can get
+  \[
+  \phi\left(\frac{P_1}{P_2}\right) =
+  \phi\left(P_1 P_2^{-1}\right) =
+  \phi\left(P_1\right) \phi\left(P_2^{-1}\right) =
+  \frac{\phi\left(P_1\right)}{\phi\left(P_2\right)}
+  \]
+
+  We have $\ker{\phi} = \left(X - a\right)$ because for any polynomial
+  $P$ that is in the ideal $\left(X - a\right)$ has $P(a) = 0$ i.e. in
+  the kernel of $\phi$.
+
+  Next we should show that $\phi$ is \nameref{def:surjection} it's
+  easy because $\forall k \in K$ we can consider constant polynomial
+  $P = k$ from $K\left[X\right]$. For the polynomial we will have
+  $\phi\left(k\right) = k$.
+
+  Now (\ref{eq:lec1_ex1_1}) follows from the
+  \nameref{thm:firstisomorphism}. 
+  
+  \label{ex:lec1_fieldquotionisomorphism}
+\end{example}
 
 \section{Algebraic elements. Minimal polynomial}
 
