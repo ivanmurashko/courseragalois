@@ -203,6 +203,7 @@ below.
   \[
   A \cong A/m_1^{k_1} \times \dots \times A/m_r^{k_r}
   \]
+  \label{rem:lec5_own1}
 \end{remark}
 
 \begin{definition}
@@ -245,7 +246,11 @@ not reduced, then the dimension
 \]
 So the maximal number of homomorphisms, so let's say the slogan
 ``Maximal number of homomorphisms'' is attained when $A$ is reduced
-and all quotients $A/m_i \cong E$
+and all quotients
+\begin{equation}
+  A/m_i \cong E
+  \label{eq:lec5_1}
+\end{equation}
 \footnote{
   ???
 }
@@ -325,7 +330,21 @@ nilpotents. So let me formulate it as a theorem.
     \item $L$ separable is the same thing that the algebra
       $A = L\otimes_K \bar{K}$ has $\left[L:K\right]$ factors
       \footnote{
-        ???
+        ??? If we have $L = K\left(\alpha\right)$ then
+        there exists a minimal polynomial $P_{min}\left(\alpha,
+        K\right)$ of degree $r = \left[L:K\right]$. The polynomial
+        splits and has $r$ roots: $\alpha_1, \dots, \alpha_r$. Thus we
+        have $r$ maximal ideals
+        \(
+        m_1 = \left(X - \alpha_1\right), \dots,
+        m_r = \left(X - \alpha_r\right)
+        \).
+        For each maximal ideal we have $A/m_i \cong A$ (see example
+        \ref{ex:lec1_fieldquotionisomorphism}) thus with theorem
+        \ref{thm:structurefinitekalgebra} and (\ref{eq:lec5_1}) we have
+        \[
+        A \cong \prod_{i=1}^r \bar{K}
+        \]
       }
       $\bar{K}$ which is the same as $A$ is \nameref{def:reduced}
       since $\dim_{\bar{K}} A = \left[L:K\right]$.
@@ -672,12 +691,12 @@ theory
 Thus we can write
 \begin{equation}
   L^{Gal\left(L/K\right)} = K.
-  \label{eq:lec5_1}
+  \label{eq:lec5_2}
 \end{equation}
 
 \section{Artin's theorem}
 
-Motivated by (\ref{eq:lec5_1}) let formulate and proof the important
+Motivated by (\ref{eq:lec5_2}) let formulate and proof the important
 theorem
 \begin{theorem}[Artin]
   $L$ is a field and $G \subset Aut\left(L\right)$
