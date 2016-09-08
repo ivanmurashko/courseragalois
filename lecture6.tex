@@ -4,8 +4,127 @@ We state and prove the main theorem of these lectures: the Galois
 correspondence. Then we start doing examples (low degree,
 discriminant, finite fields, roots of unity).
 
-
 \section{Some further remarks on normal extension. Fixed field}
+
+Some definitions from previous lecture. $L$ over $K$ is
+\nameref{def:galoisextension} if and only if it is a
+\nameref{def:separableextension} and \nameref{def:normalextension} or
+in other words $L$ is a \nameref{def:splittingfield} of a family of
+separable irreducible polynomial over $K$. We also seen (see theorem
+\ref{thm:lec5_4}) that in the case of finite extension
+$\left[L:K\right] < \infty$ the number of automorphisms
+$\left|Aut\left(L/K\right)\right| = \left[L:K\right]$.
+
+There are several remarks on \nameref{def:normalextension}s which show
+that the extensions behave sometimes differently compare to other
+types of extensions. Especially we have seen for that an extension 
+$L$ over $M$ over $K$ was finite or algebraic or separable or purely
+inseparable if, and only if, it was true for $L$ over $M$ and $M$ over
+$K$. So, for a normal extensions, this is not the case anymore.
+
+\begin{remark}
+  Let we have a tower of extensions $K \subset L \subset M$. If $M$ is
+  normal over $K$ then of course the $M$ is normal over $L$. It is
+  clear because if $M$ is a splitting field of a family of polynomials
+  over $K$ the one can just consider them as being polynomials over
+  $L$ and say that $M$ is a splitting field of ephemeral polynomials
+  over $L$.
+
+  But $L$ does not have to be normal over $K$ (see example
+  \ref{ex:lec6_1}). 
+\end{remark}
+
+\begin{example}
+  Consider
+  \[
+  \mathbb{Q} \subset
+  \mathbb{Q}\left(\sqrt[4]{2}\right)
+  \subset
+  \mathbb{Q}\left(\sqrt[4]{2}, i\right)
+  \]
+
+  We have $\mathbb{Q}\left(\sqrt[4]{2}, i\right)$ to be a splitting
+  field for polynomial $X^4 -2$ but
+  $\mathbb{Q}\left(\sqrt[4]{2}\right)$ is just a
+  \nameref{def:stemfield} (not \nameref{def:splittingfield}) for this
+  polynomial. And as result $\mathbb{Q}\left(\sqrt[4]{2}\right)$ is
+  not a normal over $\mathbb{Q}$.  
+  \label{ex:lec6_1}
+\end{example}
+
+\begin{remark}
+  A quadratic extension is normal. This is by formula for roots of a
+  quadratic equation.
+  \footnote {
+    ??? Extensions with degree 2. 
+  }
+
+  If $P$ quadratic over $K$ has 1 root in $L$ then its another root is
+  also in $L$.
+\end{remark}
+
+\begin{remark}
+  One often has $K \subset L \subset M$ with $L$ normal over $K$, $M$
+  normal over $L$ but $M$ not normal over $K$ (see example
+  \ref{ex:lec6_2}). 
+\end{remark}
+
+\begin{example}
+  Consider
+  \[
+  \mathbb{Q} \subset
+  \mathbb{Q}\left(\sqrt{2}\right)
+  \subset
+  \mathbb{Q}\left(\sqrt[4]{2}\right)
+  \]
+
+  We have $\mathbb{Q}\left(\sqrt{2}\right)$ normal over $\mathbb{Q}$
+  as well as $\mathbb{Q}\left(\sqrt[4]{2}\right)$ normal over
+  $\mathbb{Q}\left(\sqrt{2}\right)$ because they both are quadratic
+  extensions. But 
+  $\mathbb{Q}\left(\sqrt[4]{2}\right)$ is not normal over $\mathbb{Q}$
+  (as it was mentioned in example \ref{ex:lec6_2})
+  \label{ex:lec6_2}
+\end{example}
+
+We also seen at last lecture the following definition:
+\begin{definition}[Fixed field]
+  If $L$ is a field and $G \subset Aut\left(L\right)$ then
+  \[
+  L^G = \left\{
+  x \in L \mid \forall g \in G: g x = x 
+  \right\}
+  \]  
+  is a fixed field
+  \label{def:fixedfield}
+\end{definition}
+
+If we have a sub-field $K \subset L$ then we can consider the
+following group of automorphisms of $L$ over $K$:
+$Aut\left(L/K\right)$ in the case if $L$ is normal.
+Because otherwise the group will be too small to give information
+about $L$. But in the normal case it makes sense to consider  
+the group of automorphisms of $L$ over $K$.
+
+We have seen (see (\ref{eq:lec5_2})) that if $L$ is separable over $K$
+then 
+\[
+L^{Aut\left(L/K\right)} = K
+\]
+This is because of the group of automorphisms was permuting the roots
+over the minimal polynomial of $x$ over $K$. So, if it was fix and $x$
+was on it, was meaning that $x$ was the only root over its minimal
+polynomial. So this was meaning that $x$ was purely inseparable over
+$K$.  
+
+We also have seen (see theorem \ref{thm:artin}) that if $G$ is finite
+the $L$ is \nameref{def:galoisextension} over $L^G$ and
+$\left[L:L^G\right] = \left|G\right|$.
+
+And now we are going to summarize all these in a theorem which is in
+fact the main subject of this lecture course and this theorem is
+called the Galois correspondence. 
+
 \section{The Galois correspondence}
 \section{Galois correspondence (cont'd). First examples (polynomials
   of degree 2 and 3)} 
