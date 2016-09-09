@@ -154,7 +154,52 @@ group automorphisms $Aut\left(L/K\right)$ is called
     $Gal\left(L/K\right) \twoheadrightarrow Gal\left(L/F\right)$
   \end{enumerate}
   \begin{proof}
-    
+    \begin{enumerate}
+    \item Most work have been done before. What have we got by now?
+      $L^{Gal\left(L/F\right)} = F$ (see (\ref{eq:lec5_2})). By
+      the theorem definition we have $H \subset Gal\left(L/K\right)$.
+      \nameref{thm:artin} theorem gives us
+      $\left[L:L^H\right] = \left|H\right|$ but with theorem
+      \ref{thm:lec5_4} we also have
+      $\left[L:L^H\right] = \left|Gal\left(L/L^H\right)\right|$ so one
+      must have $H = Gal\left(L/L^H\right)$.
+
+      This means that the maps that we have in the theorem :
+      $F \rightarrow Gal\left(L/F\right)$ and
+      $L^H \leftarrow H$ are mutually inverse
+      \footnote{
+        ???
+      }
+      and if a map is invert able it is \nameref{def:bijection}.
+    \item We should proof equivalence of the following statements:
+      \begin{enumerate}
+      \item $F$ is Galois over $K$ \label{item:galoiscorrespondence1}
+      \item $\forall g \in Gal\left(L/K\right) g\left(F\right) = F$
+        \label{item:galoiscorrespondence2}
+      \item $Gal\left(L/F\right) \triangleleft Gal\left(L/K\right)$
+        \label{item:galoiscorrespondence3}
+      \end{enumerate}      
+    \end{enumerate}
+
+    Lets show that \ref{item:galoiscorrespondence1} implies
+    \ref{item:galoiscorrespondence2}. Fix $x \in F$ the minimal
+    polynomial $P_{min}\left(x, K\right)$ splits in $L$ but it has a
+    root in $F$ thus it should have all roots in $F$ by normality
+    i.e. as soon as $F$ is \nameref{def:normalextension}
+    $P_{min}\left(x, K\right)$ splits in $F$. This means, of course,
+    that any map from Galois group preserves $F$ since it premutes the
+    roots: $\forall g \in Gal\left(L/K\right)$ $g$ permutes the roots
+    of $P_{min}\left(x, K\right)$ and that is the true for any $x \in
+    F$ therefore $g\left(F\right) \subset F$ since $F$ is generated
+    (consists of) such roots.
+
+    Lets show that \ref{item:galoiscorrespondence2} implies
+    \ref{item:galoiscorrespondence1}. If $g\left(F\right) \subset F$
+    then all roots of $P_{min}\left(x, K\right)$, $x \in F$ are in $F$
+    since $g$ permutes those roots or, in other words, since Galois
+    group acts transitively (??? see theorem \ref{thm:lec5_3}) on
+    roots of an irreducible polynomial therefore $F$ is normal by
+    definition. 
   \end{proof}
   \label{thm:galoiscorrespondence}
 \end{theorem}
