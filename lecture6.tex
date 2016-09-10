@@ -199,13 +199,53 @@ group automorphisms $Aut\left(L/K\right)$ is called
     since $g$ permutes those roots or, in other words, since Galois
     group acts transitively (??? see theorem \ref{thm:lec5_3}) on
     roots of an irreducible polynomial therefore $F$ is normal by
-    definition. 
+    definition.
+
+    Lets show that \ref{item:galoiscorrespondence1} and
+    \ref{item:galoiscorrespondence2} are equivalent to
+    \ref{item:galoiscorrespondence3} i.e. let $g \in G$,
+    $g\left(F\right) \subset L$ then if
+    $h \in Gal\left(L/F\right)$ is such that $\left.h\right|_F = id$
+    then $\left.g h g^{-1}\right|_{g\left(F\right)} = id$. This means
+    that $g h g^{-1} \in Gal\left(L/g\left(F\right)\right)$ so the
+    statement $g\left(F\right) = F$ is the same to say
+    \[
+    g Gal\left(L/F\right) g^{-1} = Gal\left(L/F\right)
+    \]
+    So apply this to all $g \in Gal\left(L/K\right)$ one can get that
+    $Gal\left(L/F\right)$ is a \nameref{def:normalsubgroup} of
+    $Gal\left(L/K\right)$
+
+    Finally if all this statements
+    (\ref{item:galoiscorrespondence1}
+    $\Longleftrightarrow$
+    \ref{item:galoiscorrespondence2}
+    $\Longleftrightarrow$
+    \ref{item:galoiscorrespondence3}
+    ) are true then we can consider map (make sense by
+    \ref{item:galoiscorrespondence2}) 
+    \[
+    \phi: Gal\left(L/K\right)
+    \xrightarrow[g \to \left.g\right|_F]{}
+    Gal\left(L/F\right).
+    \]
+    This is a \nameref{def:surjection} by theorem \ref{thm:lec2_3}
+    (???) and the kernel $\ker \phi = Gal\left(L/F\right)$ by
+    definition because the kernel consists of things which are identity on $F$. 
   \end{proof}
   \label{thm:galoiscorrespondence}
 \end{theorem}
 
-\section{Galois correspondence (cont'd). First examples (polynomials
-  of degree 2 and 3)} 
+\begin{remark}
+  If $L$ over $K$ is not finite then Galois correspondence is not
+  \nameref{def:bijection} i.e. the maps which are in the theorem still
+  make sense, but they will not be mutually inverse bijections and we
+  shall see an example (??? add link).  
+\end{remark}
+
+\section{First examples (polynomials of degree 2 and 3)}
+
+
 \section{Discriminant. Degree 3 (cont'd). Finite fields}
 \section{An infinite degree example. Roots of unity: cyclotomic polynomials}
 \section{Irreducibility of cyclotomic polynomial.The Galois group}
