@@ -286,10 +286,30 @@ group automorphisms $Aut\left(L/K\right)$ is called
     \end{enumerate}
 
     If you see a cubic polynomial how will you decide is its Galois
-    group is cyclic or $S_3$? This is determined by a discriminant of
-    polynomial which is a subject of next section.
+    group is cyclic or $S_3$? This is determined by a
+    \nameref{def:discriminant} of polynomial which is a subject of
+    next section. 
 \end{example}
 
 \section{Discriminant. Degree 3 (cont'd). Finite fields}
+
+\subsection{Discriminant}
+
+\begin{definition}[discriminant]
+  Let $P \in K\left[X\right]$. The polynomial has the following roots
+  in $\bar{K}$: $x_1, x_2, \dots, x_n$. The following product is
+  called discriminant:
+  \[
+  \Delta = \prod_{i < j} \left(x_i - x_j\right)^2
+  \]
+  \label{def:discriminant}
+\end{definition}
+
+If we take group $G = Gal\left(P\right)$ then
+$G \subset S_n$ and any permutation preserves $\Delta$ and as result
+we have $\Delta \in K$ (see (\ref{eq:lec5_2})).
+
+\subsection{Finite fields}
+
 \section{An infinite degree example. Roots of unity: cyclotomic polynomials}
 \section{Irreducibility of cyclotomic polynomial.The Galois group}
