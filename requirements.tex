@@ -1,7 +1,7 @@
 %% -*- coding:utf-8 -*-
 \begin{appendices}
   
-  \chapter{Course prerequisites}
+\chapter{Course prerequisites}
 There are several prerequisites for the course there. They consists of
 definitions, theorems and examples mostly taken from Wikipedia. 
 
@@ -864,5 +864,32 @@ elements of the module.
   \end{tikzpicture}
 
 \end{definition}
+
+\section{Number theory}
+
+\begin{definition}[Euler's totient function]
+  In number theory, Euler's totient function counts the positive
+  integers up to a given integer n that are relatively prime to $n$. It
+  is written using the Greek letter phi as $\phi\left(n\right)$, and
+  may also be called Euler's phi function. It can be defined more formally as
+  the number of integers $k$ in the range $1 \le k \le n$ for which the
+  greatest common divisor $gcd\left(n, k\right)$ = 1. The integers $k$ of this
+  form are sometimes referred to as totatives of $n$.
+
+  The definition was taken from \cite{wiki:eulerfunction}
+  \label{def:eulerfuction}
+\end{definition}
+
+\begin{example}[Euler's totient function]
+  For example \cite{wiki:eulerfunction}, the totatives of $n = 9$ are
+  the six numbers 1, 2, 4, 5, 
+  7 and 8. They are all relatively prime to 9, but the other three
+  numbers in this range, 3, 6, and 9 are not, because
+  $gcd\left(9, 3\right)$ =
+  $gcd\left(9, 6\right) = 3$ and $gcd\left(9, 9\right) = 9$.
+  Therefore, $\phi\left(9\right) = 6$. As another
+  example, $\phi\left(1\right) = 1$ since for $n = 1$ the only integer in the range from
+  1 to n is 1 itself, and $gcd\left(1, 1\right) = 1$. 
+\end{example}
 
 \end{appendices}
