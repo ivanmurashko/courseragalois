@@ -445,4 +445,73 @@ of the Galois group and sub-extensions. Indeed the fixed field of the
 $F_p$ and and the whole Galois group coincide.  
 
 \section{ Roots of unity: cyclotomic polynomials}
+Consider a number $n$ that is prime to characteristic (see section
+\ref{sec:fieldcharacteristic}) of $K$:
+$\left(n, char\left(K\right)\right) = 1$ and consider the polynomial
+$P_n = X^n - 1$ (if $\left(n, char\left(K\right)\right) = 1$ then the
+polynomial has no multiple roots). Thus the polynomial has exactly $n$
+roots which form a cyclic multiplicative subgroup of $\bar{K}^*$
+denoted by $\mu_n$. So $\mu_n$ is just the group of $n$ roots of unity
+in $\bar{K}^*$.
+
+\begin{definition}[Primitive roots of unity]
+  There are root of unity of degree $n$ such that not root of unity of
+  degree $d < n$.
+  \label{def:primitiverootsofunity}
+\end{definition}
+
+The set of \nameref{def:primitiverootsofunity} is denoted as
+$\mu_n^*$. All elements of $\mu_n$ are powers of a single one:
+$\forall x \in \nu_n \exists a \in \mathbb{N}: x = \zeta^a$ for some
+$\zeta \in \mu_n$. And primitive roots of unity form the following set
+$\left\{\zeta^a\right\}$ where $\left(a, n\right) = 1$. The number of
+such primitive roots is determined by \nameref{def:eulerfuction}:
+$\left|\mu_n^*\right| = \phi\left(n\right)$.
+
+\begin{definition}[$n$-th cyclotomic polynomial]
+  The polynomial
+  \[
+  \Phi_n = \prod_{\alpha \in \mu_n^*}\left(X - \alpha\right) \in \bar{K}\left[X\right]
+  \]
+  is called $n$-th cyclotomic polynomial.
+  \label{def:cyclotomicpolynomial}
+\end{definition}
+
+\begin{example}[$n$-th cyclotomic polynomial]
+  \[
+  \Phi_1 = X - 1
+  \]
+  \[
+  \Phi_2 = \frac{X^2 - 1}{X-1} = X + 1
+  \]
+  \[
+  \Phi_3 = \frac{X^3 - 1}{X-1} = X^2 + X + 1
+  \]
+  \[
+  \Phi_4 = \frac{X^4 - 1}{\left(X-1\right)\left(X + 1\right)} = X^2 + 1
+  \]
+  \[
+  \Phi_5 = X^4 + X^3 + X^2 + 1
+  \]  
+\end{example}
+
+\begin{proposition}
+  \begin{enumerate}
+    \item 
+      \(
+      P_n = \prod_{d \mid n} \Phi_d
+      \)
+    \item $\Phi_n$ has coefficients in prime fields (see section
+      \ref{sec:fieldcharacteristic}): $\mathbb{Q}$ if $char K = 0$ or
+      $\mathbb{F}_p$ if $char K = p$
+    \item If $char K = 0$ then $\Phi_n \in
+      \mathbb{Z}\left[X\right]$. If $char K = p$ then $\Phi_n$ is the
+      reduction $\mod{p}$ of the \nameref{def:cyclotomicpolynomial}
+      over $\mathbb{Z}$.
+  \end{enumerate}
+  \begin{proof}
+    (??? exercise)
+  \end{proof}
+\end{proposition}
+
 \section{Irreducibility of cyclotomic polynomial.The Galois group}
