@@ -515,3 +515,82 @@ $\left|\mu_n^*\right| = \phi\left(n\right)$.
 \end{proposition}
 
 \section{Irreducibility of cyclotomic polynomial.The Galois group}
+
+\begin{theorem}
+  $\Phi_n$ is irreducible in $\mathbb{Q}\left[X\right]$.
+  \begin{proof}
+    We have to prove that all \nameref{def:primitiverootsofunity} have
+    the same minimal polynomial over $\mathbb{Q}$. It must be $\Phi_n$
+    by degree reason (minimal polynomial degree should be $n$).
+
+    Let fix one primitive root $\zeta$ and all others have the form
+    $\zeta^a$ where $a$ is prime to $n$: $\left(a,n\right)=1$. We may
+    assume that $a$ is a prime number $l$ and suppose
+    \[
+    P_{min}\left(\zeta, \mathbb{Q}\right)
+    \ne
+    P_{min}\left(\zeta^l, \mathbb{Q}\right).
+    \]
+    Then $\Phi_n = f \cdot g$ where $f$ has $\zeta$ as a root and $g$
+    has $\zeta^l$ as a root. This is true in
+    $\mathbb{Q}\left[X\right]$ but also as we seen (??? add a link) in
+    $\mathbb{Z}\left[X\right]$. So we have $g\left(\zeta^l\right) = 0$
+    thus we can define $g_l\left(X\right) = g\left(X^l\right)$ then
+    $g_l$ will have $\zeta$ as a root. But $g_l = g^l \mod l$ thus in
+    modulo $l$ $\Phi_n$ has $\zeta$ as a multiple root. This is
+    impossible because $\Phi_n$ divides $P_n$ and this does not have
+    multiple roots whenever $l$ prime to $n$. 
+  \end{proof}
+  \label{thm:lec6_2}
+\end{theorem}
+
+\begin{remark}
+  Statements of theorem \ref{thm:lec6_2} are not true if $char K >
+  0$. I.e. over $\mathbb{F}_p$ $\Phi_n$ is not always irreducible.
+
+  For instance $\Phi_8 = X^4 + 1$ is reducible over $\mathbb{F}_p$ for
+  any $p$.
+  \footnote{
+    ??? explain proof provided below
+  }
+  In fact it splits in $\mathbb{F}_{p^2}$.
+  \footnote{
+    ???
+  }
+  If $p$ is odd then $8\mid p^2-1$ so the multiplicative group
+  $\mathbb{F}_{p^2}^*$ contains a cyclic subgroup of order 8 which is
+  exactly the group of 8 roots of unity.
+\end{remark}
+
+\begin{theorem}
+  The splitting field $L$ of $P_n$ over $K$ is $K\left(\zeta\right)$,
+  where $\zeta$ is a root of $\Phi_n$.
+
+  $\forall g \in Gal\left(L/K\right)$ acts by $g: \zeta \to
+  \zeta^{a_g}$ where $\left(a_g, n\right) = 1$.
+
+  $Gal\left(L/K\right)  \hookrightarrow
+  \left(\mathbb{Z}/n\mathbb{Z}\right)^*$ and this is an isomorphism
+  whenever $\Phi_n$ is irreducible over $K$ (for example $K =\mathbb{Q}$.
+  \begin{proof}
+    \begin{enumerate}
+      \item All $n$-th roots of unity are powers of $\zeta$ so the lie
+        in  $K\left(\zeta\right)$.
+      \item Thus any $g \in Gal\left(L/K\right)$ induces an
+        automorphism of $\mu_n \subset L$ and all such automorphisms
+        are raising a root to a power that is prime to $n$.
+      \item $Gal\left(L/K\right)  \hookrightarrow
+        Aut\left(\mu_n\right) \cong 
+        \left(\mathbb{Z}/n\mathbb{Z}\right)^*$. That is because (???)
+         if is here one if $g$ is identity on $L$ since generates $L$
+         over $K$ (???)
+       \item If $\Phi_n$ is irreducible then there is an isomorphism
+         because of cardinality: $\left[L:K\right] = \deg \Phi_n =
+         \phi\left(n\right)$. But
+         $\phi\left(n\right) =
+         \left|\left(\mathbb{Z}/n\mathbb{Z}\right)^*\right|$. So in
+         the case the embedding must be isomorphism. 
+    \end{enumerate}    
+  \end{proof}
+  \label{thm:lec6_3}
+\end{theorem}
