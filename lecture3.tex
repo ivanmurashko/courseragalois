@@ -156,10 +156,10 @@ fields.
     x \mid F_{p^n}\left(x\right) = x
     \}$ is a field containing $\mathbb{F}_p$
     \footnote{
-      For $x \in \mathbb{F}_p^{*} = \mathbb{F}_p \setminus \{0\}$ we
+      For $x \in \mathbb{F}_p^{\times} = \mathbb{F}_p \setminus \{0\}$ we
       have that (see theorem \ref{thm:abelianelement})
       \[
-      x^{\left|\mathbb{F}_p^{*}\right|} = x^{p-1} = 1
+      x^{\left|\mathbb{F}_p^{\times}\right|} = x^{p-1} = 1
       \]
       and therefore $\forall x \in \mathbb{F}_p: x^p = x$ ($x = 0$
       also satisfied the equation). We can continue as follows
@@ -212,9 +212,9 @@ fields.
     Conversely lets $\left|K\right| = p^n$ and
     $\alpha \ne 0 \in K$.
     Using the fact that the multiplication group of $K$ has $p^n - 1$
-    elements: $\left|K^*\right| = p^n - 1$
+    elements: $\left|K^\times\right| = p^n - 1$
     \footnote{
-      $K^* = K \setminus \{0\}$
+      $K^\times = K \setminus \{0\}$
     }
     as result the multiplication of all the elements should give us
     $1$: $\alpha^{p^n-1} = 1$ or $\alpha^{p^n} - \alpha = 0$
@@ -387,7 +387,8 @@ Just another example \cite{bib:KeithConradFiniteFields}
   field}
 \begin{theorem}
   Let $K$ be a field and and $G$ be a finite \nameref{def:subgroup} of
-  $K^*$ then $G$ is a \nameref{def:cyclicgroup}
+  $K^\times$ (see definition \ref{def:multiplicativegroup}) then $G$
+  is a \nameref{def:cyclicgroup} 
   \begin{proof}
     Idea is to compare $G$ and the \nameref{def:cyclicgroup}
     $\mathbb{Z}/N\mathbb{Z}$ where $N = \left|G\right|$.
@@ -494,10 +495,10 @@ Just another example \cite{bib:KeithConradFiniteFields}
     irreducible polynomial of degree $n$ exists.
   }
   \begin{proof}
-    We can take $\alpha = \mbox{ generator of } K^*$
+    We can take $\alpha = \mbox{ generator of } K^\times$
     \footnote{
       This is because from theorem \ref{thm:lec3_2}
-      $K^* = \left<\alpha\right>$ i.e. any element of $K$ except $0$
+      $K^\times = \left<\alpha\right>$ i.e. any element of $K$ except $0$
       can be got as a power of $\alpha$. Moreover $\alpha \notin
       \mathbb{F}_p$ (in other case we will got $K = \mathbb{F}_p$)
       i.e. we really got  

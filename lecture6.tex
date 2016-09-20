@@ -450,9 +450,10 @@ Consider a number $n$ that is prime to characteristic (see section
 $\left(n, char\left(K\right)\right) = 1$ and consider the polynomial
 $P_n = X^n - 1$ (if $\left(n, char\left(K\right)\right) = 1$ then the
 polynomial has no multiple roots). Thus the polynomial has exactly $n$
-roots which form a cyclic multiplicative subgroup of $\bar{K}^*$
+roots which form a cyclic multiplicative subgroup of $\bar{K}^\times$
+(see definition \ref{def:multiplicativegroup})
 denoted by $\mu_n$. So $\mu_n$ is just the group of $n$ roots of unity
-in $\bar{K}^*$.
+in $\bar{K}^\times$.
 
 \begin{definition}[Primitive roots of unity]
   There are root of unity of degree $n$ such that not root of unity of
@@ -557,8 +558,8 @@ $\left|\mu_n^*\right| = \phi\left(n\right)$.
   \footnote{
     ???
   }
-  If $p$ is odd then $8\mid p^2-1$ so the multiplicative group
-  $\mathbb{F}_{p^2}^*$ contains a cyclic subgroup of order 8 which is
+  If $p$ is odd then $8\mid p^2-1$ so the \nameref{def:multiplicativegroup}
+  $\mathbb{F}_{p^2}^\times$ contains a cyclic subgroup of order 8 which is
   exactly the group of 8 roots of unity.
 \end{remark}
 
@@ -570,7 +571,7 @@ $\left|\mu_n^*\right| = \phi\left(n\right)$.
   \zeta^{a_g}$ where $\left(a_g, n\right) = 1$.
 
   $Gal\left(L/K\right)  \hookrightarrow
-  \left(\mathbb{Z}/n\mathbb{Z}\right)^*$ and this is an isomorphism
+  \left(\mathbb{Z}/n\mathbb{Z}\right)^\times$ and this is an isomorphism
   whenever $\Phi_n$ is irreducible over $K$ (for example $K =\mathbb{Q}$.
   \begin{proof}
     \begin{enumerate}
@@ -581,14 +582,14 @@ $\left|\mu_n^*\right| = \phi\left(n\right)$.
         are raising a root to a power that is prime to $n$.
       \item $Gal\left(L/K\right)  \hookrightarrow
         Aut\left(\mu_n\right) \cong 
-        \left(\mathbb{Z}/n\mathbb{Z}\right)^*$. That is because (???)
+        \left(\mathbb{Z}/n\mathbb{Z}\right)^\times$. That is because (???)
          if is here one if $g$ is identity on $L$ since generates $L$
          over $K$ (???)
        \item If $\Phi_n$ is irreducible then there is an isomorphism
          because of cardinality: $\left[L:K\right] = \deg \Phi_n =
          \phi\left(n\right)$. But
          $\phi\left(n\right) =
-         \left|\left(\mathbb{Z}/n\mathbb{Z}\right)^*\right|$. So in
+         \left|\left(\mathbb{Z}/n\mathbb{Z}\right)^\times\right|$. So in
          the case the embedding must be isomorphism. 
     \end{enumerate}    
   \end{proof}
