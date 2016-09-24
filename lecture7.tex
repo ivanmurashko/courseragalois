@@ -339,6 +339,29 @@ its fraction field (to obtain a field from a ring (an algebra)).
   \label{property:lec7_1}
 \end{property}
 
+\begin{property}
+  If $L_1, L_2$ are separable (pure inseparable, normal, finite of
+  degree $n$ and $m$) over $K$ then $L_1 L_2$ is also separable (pure
+  inseparable, normal, finite of degree $ \le n m $) over $K$
+  \begin{proof}
+    We have the following towers:
+    \[
+    K \hookrightarrow L_1 \hookrightarrow L_1 L_2
+    \]
+    and all properties except normality are preserved in the towers so
+    follows from property \ref{property:lec7_1}.
+
+    Normality is obvious because if $L_1$ is a splitting field of the
+    family polynomials $\left\{P_i\right\}_{i \in I}$
+    and $L_2$ is a splitting field of the
+    family polynomials $\left\{Q_j\right\}_{j \in J}$ then
+    $L_1 L_2$ is a splitting field of the union of those families
+    $\left\{P_i, Q_j\right\}_{i \in I, j \in J}$
+  \end{proof}
+  \label{property:lec7_2}
+\end{property}
+
+
 \section{Linearly disjoint extensions. Examples}
 \section{Linearly disjoint extensions in the Galois case}
 \section{On the Galois group of the composite}
