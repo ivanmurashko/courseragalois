@@ -364,5 +364,41 @@ its fraction field (to obtain a field from a ring (an algebra)).
 
 
 \section{Linearly disjoint extensions. Examples}
+
+\begin{theorem}
+  The following statements are equivalent (for algebraic extensions)
+  \begin{enumerate}
+  \item $L_1 \otimes_k L_2$ is a field \label{thm:lec7_2_a}
+  \item $j$ is \nameref{def:injection} \label{thm:lec7_2_b}
+  \item if we have $x_1, x_2, \dots, x_n \in L_1$ linearly independent
+    over $K$ then they are linearly independent
+    over $L_2$ \label{thm:lec7_2_c}
+  \item if we have two families: $x_1, x_2, \dots, x_n \in L_1$ linearly independent
+    over $K$ and  $y_1, y_2, \dots, y_m \in L_2$ linearly independent
+    over $K$ then $x_i y_j$ linearly independent over $K$
+    \label{thm:lec7_2_d}
+  \end{enumerate}
+  When $L_1$ finite over $K$ then all the statements are equivalent to
+  $\left[L_1 L_2 : L_2\right] = \left[L_1 : K\right]$ or in other
+  words
+  $\left[L_1 L_2 : K\right] = \left[L_1 : K\right] \left[L_2 :
+    K\right]$
+  \begin{definition}[Linearly disjoint extensions]
+    In the case $L_1$ and $L_2$ are called linearly disjoint extensions
+    \label{def:linearlydisjoint}
+  \end{definition}
+  \begin{proof}
+    Equivalence \ref{thm:lec7_2_a} and \ref{thm:lec7_2_b} is clear
+    because we have that $L_1 L_2 = \Ima j$.
+
+    Then \ref{thm:lec7_2_b} implies \ref{thm:lec7_2_c}: we have
+    $x_1 \otimes 1, \dots, x_n \otimes 1$ are linearly independent
+    over $L_2$ by \nameref{thm:basechange} property (??? is the link
+    correct). If $j$ is injective then their images $x_1, \dots, x_n$
+    are also linearly independent over $L_2$.
+  \end{proof}
+  \label{thm:lec7_2}
+\end{theorem}
+
 \section{Linearly disjoint extensions in the Galois case}
 \section{On the Galois group of the composite}
