@@ -261,7 +261,21 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
     be included into \nameref{def:image}: $K = \ker f \subset im f$
     because otherwise $L = \ker f \oplus im f$ ($L$ is a
     \nameref{def:directsum} of 
-    kernel and image) and $f^k$ is never zero (but we have $f^p = 0$).
+    kernel and image) and $f^k$ is never zero (but we have $f^p = 0$)
+    \footnote{
+      ??? needs a proof or a ref
+    }.
+
+    So as soon as $K$ is an image of $f$ then $\exists \alpha \in L$
+    such that $f\left(\alpha\right) = 1$ but this means that
+    $\sigma\left(\alpha\right) = \alpha + 1$. Now consider
+    $\sigma\left(\alpha^p - \alpha\right) =
+    \left(\alpha + 1\right)^p - \left(\alpha + 1\right) = \alpha^p -
+    \alpha$ (because we are in the field of characteristic $p$). This
+    means that $\alpha^p - \alpha \in K$ because the field is fixed by
+    Galois group (see (\ref{eq:lec5_2})). So
+    $\alpha^p - \alpha =  a \in K$ and $\alpha$ is a root of $X^p - X
+    - a$ and this finished the proof of the theorem.
   \end{proof}
   \label{thm:lec7_1}
 \end{theorem}
