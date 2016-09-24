@@ -224,7 +224,44 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
     \in \mathbb{F}_p$ ($k$ is an element of prime field).
 
     If $P$ is irreducible then \nameref{def:galoisgroup} should be
-    transitive on the roots (??? see theorem \ref{thm:lec5_3})  
+    transitive on the roots (??? see theorem \ref{thm:lec5_3})  then
+    $\exists \sigma \in Gal\left(K\left(\alpha\right)/K\right)$ such that
+    $\sigma\left(\alpha\right) = \alpha + 1$ (because roots of $P$ are
+    $\alpha + k$). The \nameref{def:grouporder} for $\sigma$ is
+    $p = \left[K\left(\alpha\right):K\right]$ so the $\sigma$ must
+    generate the \nameref{def:galoisgroup}:
+    $Gal\left(K\left(\alpha\right)/K\right) = \left<\sigma\right>$.
+
+    We have to show that if $P$ is not irreducible then $P$ splits
+    i.e. $\alpha \in K$. Leave it for an exercise
+    \footnote{
+      ??? proof
+    }
+
+    Now we will prove the converse statement. Let $L$ is a
+    \nameref{def:cyclicextension} of $K$ of degree $p$. We want to
+    find $\alpha$ such that $\sigma\left(\alpha\right) = \alpha + 1$
+    where $\sigma$ is a generator of $Gal\left(L/K\right)$ (we know
+    that the Galois group is cyclic i.e. must have the following form
+    $Gal\left(L/K\right) = \left<\sigma\right>$).
+
+    Set $f = \sigma -id$, $K = \ker f$
+    \footnote{
+      this is because
+      $\forall x \in K: \sigma\left(x\right) = x$ (see
+      (\ref{eq:lec5_2})).
+    }
+    and the \nameref{def:rank} $rk f = p -1$
+    \footnote{
+      ??? in lectures we can hear about range (\nameref{def:image}) not a
+      \nameref{def:rank} but by future content we spoke about the rank
+      but not about range (image)
+    }
+    $\left(\sigma - id\right)^p = 0$ so the \nameref{def:kernel} must
+    be included into \nameref{def:image}: $K = \ker f \subset im f$
+    because otherwise $L = \ker f \oplus im f$ ($L$ is a
+    \nameref{def:directsum} of 
+    kernel and image) and $f^k$ is never zero (but we have $f^p = 0$).
   \end{proof}
   \label{thm:lec7_1}
 \end{theorem}
