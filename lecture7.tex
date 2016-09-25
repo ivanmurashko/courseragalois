@@ -398,6 +398,22 @@ its fraction field (to obtain a field from a ring (an algebra)).
     are also linearly independent over $L_2$. This is because an
     injective map transforms a linearly independent set of vectors
     into a linearly independent set.
+
+    \ref{thm:lec7_2_c} implies \ref{thm:lec7_2_d}: if we have some
+    relation $\sum a_{ij} x_i y_j = 0, a_{ij} \in K$ then since $x_i$
+    linearly independent over $K$ one can get $\sum a_{ij} y_j = 0$
+    but as soon as $y_j$ linearly independent we will get $a_{ij} =
+    0$.
+
+    Next \ref{thm:lec7_2_d} implies \ref{thm:lec7_2_b} (remember that
+    \ref{thm:lec7_2_b} is injectivity of $j$). Take
+    $z \in L_1 \otimes_K L_2$ such that $j\left(z\right) = 0$. We have
+    $z = \sum a_{ij} x_i \otimes y_j$ and
+    $j\left(z\right) = \sum a_{ij} x_i y_j = 0$ i.e. $a_{ij} = 0$ and
+    therefore $z = 0$. I.e. $j$ is \nameref{def:injection}.
+
+    The part about finite degrees follows from the 4 properties (???
+    need a proof)
   \end{proof}
   \label{thm:lec7_2}
 \end{theorem}
