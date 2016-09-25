@@ -528,7 +528,24 @@ From the theorem \ref{thm:lec7_3} follows the following proposition
     $Gal\left(L/K\right) = G_1 \times G_2$ then $L = L^{G_1} L^{G_2}$
     which are linearly disjoint over the intersection.
     \begin{proof}
-      ??? Follows from the theorem \ref{thm:lec7_3}.
+      The first part Is very sure because the interjectivity of this
+      map is clear: if something is trivial both on $L_1$ and $L_2$,
+      then  it's trivial on the composite, so I only have to prove the
+      subjectivity.  I will use the same trick as before:
+      $L_1 \otimes_K L_2 \cong_j L_1 L_2$ then
+      $j \cdot \left(g_1 \otimes g_2\right) \cdot j^{-1}$ goes to
+      $\left(g_1, g_2\right)$.
+
+      The second part. $L^{G_1}$ and $L^{G_2}$ are both Galois because
+      $G_1$ and $G_2$ are normal in the product:
+      $G_1, G_2 \triangleleft G_1 \times G_2$. What I mean is $G_1$
+      embedded to the product by identifying it with $G_1 \times e$
+      where $e$ is the neutral element of $G_2$.
+
+      The intersection $L^{G_1} \cap L^{G_2}$ is fixed by $G$ so
+      $L^{G_1} \cap L^{G_2} = K$. Linear disjoint follows from
+      $L^{G_1} \cap L^{G_2} = K$ since we are in the Galois case
+      (???). 
     \end{proof}
   \end{enumerate}
   \label{prop:lec7_3}
@@ -536,3 +553,7 @@ From the theorem \ref{thm:lec7_3} follows the following proposition
 
 
 \section{On the Galois group of the composite}
+
+Let me give you a small example:
+\begin{example}
+\end{example}
