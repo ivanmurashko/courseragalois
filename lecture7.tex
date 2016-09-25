@@ -556,4 +556,31 @@ From the theorem \ref{thm:lec7_3} follows the following proposition
 
 Let me give you a small example:
 \begin{example}
+  We have a \nameref{def:compositeextension}
+  $\mathbb{Q}\left(\zeta_n\right) \mathbb{Q}\left(\zeta_m\right) =
+  \mathbb{Q}\left(\zeta_n, \zeta_m\right)$ where
+  $\zeta_n = e^{\frac{2 \pi i}{n}}$.
+  $\mathbb{Q}\left(\zeta_n, \zeta_m\right) =
+  \mathbb{Q}\left(\zeta_{LCM\left(n,m\right)}\right)$
+  \footnote{
+    LCM - least common multiple. For instance multiples for 4 are
+    $4,8,12, \dots$. Multiples for 6 are $6,12,18, \dots$. Thus
+    $LCM\left(4,6\right) = 12$.
+  } therefore if $\left(n,m\right) = 1$ then
+  $\mathbb{Q}\left(\zeta_n\right)$ and
+  $\mathbb{Q}\left(\zeta_m\right)$ are linearly disjoint. It can be
+  seen as follows: we can apply proposition \ref{prop:lec7_3} to our
+  Galois groups then
+  $\mathbb{Q}\left(\zeta_n, \zeta_m\right) =
+  \mathbb{Q}\left(\zeta_{nm}\right)$ but by the
+  \nameref{thm:chineseremainder}
+  \[
+  \left(\mathbb{Z}/nm\mathbb{Z}\right)^\times \cong
+  \left(\mathbb{Z}/n\mathbb{Z}\right)^\times \times
+  \left(\mathbb{Z}/m\mathbb{Z}\right)^\times. 
+  \]
+  Thus $Gal\left(\mathbb{Q}\left(\zeta_{nm}\right)\right) =
+  Gal\left(\mathbb{Q}\left(\zeta_{n}\right)\right) \times
+  Gal\left(\mathbb{Q}\left(\zeta_{m}\right)\right)$. So the linear
+  disjoint is just got from the proposition \ref{prop:lec7_3}.
 \end{example}
