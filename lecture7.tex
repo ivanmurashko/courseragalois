@@ -260,7 +260,11 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
     $\left(\sigma - id\right)^p = 0$ so the \nameref{def:kernel} must
     be included into \nameref{def:image}: $K = \ker f \subset \Ima f$
     because otherwise $L = \ker f \oplus \Ima f$ ($L$ is a
-    \nameref{def:directsum} of 
+    \nameref{def:directsum}
+    \footnote{
+      see also definition \ref{def:directsummodules}
+    }
+    of 
     kernel and image) and $f^k$ is never zero (but we have $f^p = 0$)
     \footnote{
       ??? needs a proof or a ref
@@ -417,6 +421,11 @@ its fraction field (to obtain a field from a ring (an algebra)).
   \end{proof}
   \label{thm:lec7_2}
 \end{theorem}
+
+\begin{example}
+  First of all, the extensions which have relatively prime degrees are
+  always linearly disjoint. 
+\end{example}
 
 \section{Linearly disjoint extensions in the Galois case}
 \section{On the Galois group of the composite}
