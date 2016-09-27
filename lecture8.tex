@@ -12,6 +12,8 @@ relations to representation theory and to topological coverings.
 
 \section{Extensions solvable by radicals. Solvable groups. Example} 
 
+\subsection{Extensions solvable by radicals}
+
 Let $K$ is a field of characteristic 0: $char K = 0$. It is embedded
 into its \nameref{def:algebraicclosure}.
 
@@ -20,6 +22,57 @@ into its \nameref{def:algebraicclosure}.
   $\exists \alpha_1, \dots, \alpha_r$ generating $E$ such that
   $\alpha_i^{n_i} \in K\left(\alpha_1, \dots, \alpha_{i-1}\right)$ for
   some $n_i \in \mathbb{N}$.
+  \label{def:solvableextension}
+\end{definition}
+
+\begin{example}
+  Let $K = \mathbb{Q}$, $E = \mathbb{Q}\left(\sqrt[3]{2 + 3
+    \sqrt{7}}, \sqrt[5]{4 + 5 \sqrt{11}}\right)$. We have
+    $\alpha_1 = \sqrt{7}, \alpha_2 = \sqrt{11},
+    \alpha_3 = \sqrt[3]{2 + 3\sqrt{7}}, \alpha_4 = \sqrt[5]{4 + 5
+      \sqrt{11}}$. 
+\end{example}
+
+\begin{definition}[Polynomial solvable by radicals]
+  $P \in K\left[X\right]$ is called solvable by radicals if exists a
+  $E$ - \nameref{def:solvableextension} and containing all roots of
+  $P$. 
+  \label{def:solvablepolynomial}
+\end{definition}
+So more precisely, it would say that the equation, $P = 0$ is solvable
+by radicals.
+
+\begin{property}
+  \begin{enumerate}
+  \item \nameref{def:compositeextension} of solvable by radicals is itself
+    solvable by radicals
+  \item If $L$ extension of $K$ is solvable by radicals (by definition
+    $L$ should be finite extension of $K$) then exists a finite
+    \nameref{def:galoisextension} $E$ containing $L$ and solvable by
+    radicals.    
+  \end{enumerate}
+  \begin{proof}
+    For the first property: ???
+    
+    For the second property: Indeed take a composite of all images of $L$ in
+    $\bar{K}$. Or those are the same as images of $L$ by
+    $Gal\left(\bar{K}/K\right)$ 
+  \end{proof}
+  \label{property:solvable}
+\end{property}
+
+\subsection{Solvable groups}
+This shall be a brief reminder since this is not a course on group
+theory, you are supposed to know some group theory already. So I
+somehow I presume that you are familiar with this definition but I
+will recall the definition of basic properties.
+
+\begin{definition}[Solvable group]
+  $G$ is called solvable if it has a filtration 
+  i. e. $G = G_0 \supset G_1 \supset \dots \supset G_{r-1} \supset G_r
+  = \left\{e\right\}$, such that $G_i$ is a normal subgroup of
+  $G_{i-1}$ and the \nameref{def:quotientgroup} $G_{i-1}/G_i$ is abelian.
+  \label{def:solvablegroup}
 \end{definition}
 
 \section{Properties of solvable groups. Symmetric group}

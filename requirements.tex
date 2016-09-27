@@ -119,6 +119,40 @@ property.
   \label{def:normalsubgroup}
 \end{definition}
 
+\begin{definition}[Quotient group]
+  A quotient group or factor group is a mathematical group obtained by
+  aggregating similar elements of a larger group using an equivalence
+  relation that preserves the group structure. For example, the cyclic
+  group of addition modulo n can be obtained from the integers by
+  identifying elements that differ by a multiple of n and defining a
+  group structure that operates on each such class (known as a
+  congruence class) as a single entity. It is part of the mathematical
+  field known as group theory \cite{wiki:quotientgroup}. 
+
+  In a quotient of a group, the equivalence class of the identity
+  element is always a normal subgroup of the original group, and the
+  other equivalence classes are precisely the cosets of that normal
+  subgroup. The resulting quotient is written $G / N$, where $G$ is the
+  original group and $N$ is the normal subgroup. 
+  \label{def:quotientgroup}
+\end{definition}
+
+\begin{example}[Quotient group]
+  Consider \cite{wiki:quotientgroup} a group of integers $\mathbb{Z}$
+  (under addition) and the 
+  subgroup $2\mathbb{Z}$ of all even integers. This is a normal
+  subgroup, because $\mathbb{Z}$ is \nameref{def:abeliangroup}. There
+  are only two \nameref{def:coset}s: the set 
+  of even integers and the set of odd integers; therefore, the
+  quotient group $\mathbb{Z}/2\mathbb{Z}$ is the cyclic group with two
+  elements. This 
+  quotient group is isomorphic with the set $\left\{ 0, 1 \right\}$
+  with addition modulo 2; informally, it is sometimes said that
+  $\mathbb{Z}/2\mathbb{Z}$
+  equals the set $\left\{ 0, 1 \right\}$ with addition modulo 2. 
+  \label{ex:quotientgroup}
+\end{example}
+
 \begin{definition}[Action]
   An action of a group is a way of
   interpreting the elements of the 
@@ -514,6 +548,8 @@ $I$ is a proper ideal of a ring $R$ if $I \subsetneq R$.
 
   As result we will get the following ring $\left(R/I, +,
   \cdot\right)$ is called the quotient ring of $R$ by $I$.
+
+  See also \nameref{def:quotientgroup}
   \label{def:quotientring}
 \end{definition}
 
