@@ -75,7 +75,7 @@ will recall the definition of basic properties.
   \label{def:solvablegroup}
 \end{definition}
 
-\begin{example}[Group of permutations is solvable]
+\begin{example}[Group of permutations $S_3$]
   Consider $S_3$ - the group of permutations (see also example
   \ref{ex:sngroup}). It's solvable because 
   $S_3 \supset A_3 \supset \left\{e\right\}$.
@@ -84,6 +84,34 @@ will recall the definition of basic properties.
   2. $\left|A_3\right|$ i.e. $A_3$ - cyclic of order 3.
   \label{ex:lec8_s3}
 \end{example}
+
+\begin{example}[Group of permutations $S_4$]
+  Consider $S_4$ - the group of permutations (see also example
+  \ref{ex:sngroup}). It's solvable because 
+  $S_4 \supset A_4 \supset K \supset \left\{e\right\}$, where $K$ -
+  is a subgroup of double transpositions:
+  \[
+  K = \left\{
+  e, (12)(34), (13)(24), (14)(23)
+  \right\}.
+  \]
+  A double transposition is a product of two transpositions with
+  distinct support, right, which permute the distinct elements.
+
+  $A_4 \triangleleft S_4$, $\left|S_4/A_4\right| = 2$, i.e.
+  $S_4/A_4$ is cyclic of order 2.
+
+  $K \triangleleft A_4$, $\left|A_4/K\right| = 3$, i.e.
+  $A_4/K$ is cyclic of order 3.
+
+  $K$ is \nameref{def:abeliangroup} and
+  $K \cong \mathbb{Z}/2\mathbb{Z} \times \mathbb{Z}/2 \mathbb{Z}$.
+
+  So this shows that $S_4$ is solvable.
+  \label{ex:lec8_s4}
+\end{example}
+
+
 
 \section{Properties of solvable groups. Symmetric group}
 \section{Galois theorem on solvability by radicals}
