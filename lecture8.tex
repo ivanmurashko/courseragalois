@@ -113,9 +113,44 @@ will recall the definition of basic properties.
   \label{ex:lec8_s4}
 \end{example}
 
-
-
 \section{Properties of solvable groups. Symmetric group}
+
+\begin{property}
+  If $G$ is solvable and $H \subset G$ is a subgroup of $G$ then $H$
+  is solvable.
+  \begin{proof}
+    Indeed $G_i \cap H$ gives a filtration with required property.
+  \end{proof}
+  \label{property:lec8_solvable1}
+\end{property}
+
+\begin{property}
+  If $G$ is solvable and $H \triangleleft G$ is a normal subgroup of
+  $G$ then $G/H$ is solvable.
+  \begin{proof}
+    Indeed consider a projection map
+    \begin{equation}
+      \pi: G \to G/H
+      \label{eq:lec8_solvable_pi}
+    \end{equation}
+    then $\pi\left(G_i\right)$ gives a filtration $\left(G/H\right)_i$
+    on $G/H$ with required properties.
+  \end{proof}
+  \label{property:lec8_solvable2}
+\end{property}
+
+\begin{property}
+  If $H \triangleleft G$, $H$ and $G/H$ are solvable then $G$ is
+  solvable. 
+  \begin{proof}
+    Put togeter the filtration $H_i$ and
+    $\pi^{-1}\left(\left(G/H\right)_j\right)$ (see
+    (\ref{eq:lec8_solvable_pi}) for $\pi$ definition).
+  \end{proof}
+  \label{property:lec8_solvable3}
+\end{property}
+
+
 \section{Galois theorem on solvability by radicals}
 \section{Examples of equations not solvable by radicals."General equation"}
 \section{Galois action as a representation. Normal base theorem}
