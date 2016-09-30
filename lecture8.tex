@@ -249,8 +249,41 @@ Lets also look at another definition of solvable group
     $\forall g \in Gal\left(M/K\right)$ leaves $F$ invariant.
     If $g\mid_F = id$ then $g = id$. Then the image in fact of this
     map is of the Galois group of $F$ over the intersection of $F$ and
-    $L$.  So $G = Gal\left(M/K\right)$ is solvable.
-    
+    $L$.  So $G = Gal\left(M/K\right)$ is solvable i.e.
+    \[
+    G = G_0 \supset G_1 \supset \dots \supset G_r = \left\{e\right\}
+    \]
+    and $G_i/G_{i+1}$ - cyclic of order $n_i \mid n$. And as soon as
+    $n_i \mid n$ (very important), all $n$-th roots of 1 are in $M$
+    (this is why we adjoin the $L$).
+
+    Let $M_i = M^{G_i}$. We know $M_i \hookrightarrow M_{i+1}$ is a
+    cyclic Galois extension of order $n_i \mid n$ and roots of 1 are
+    in it therefore there is Kummer extension (see section
+    \ref{sec:kummerextension}). So
+    $M_{i+1} = M_i\left(\sqrt[n_i]{a_i}\right)$ (see proposition
+    \ref{prop:lec7_2}).
+    So $M = K\left(\zeta_n, \alpha_1, \dots, \alpha_r\right)$ where
+    $\alpha_i = \sqrt[n_i]{a_i}$. Therefore $M$ is solvable by
+    radicals.
+
+    For another direction: if $P$ is solvable then $G$ is
+    solvable. Let $E$ is solvable extension containing $F$. We may
+    suppose that this is Galois. Then write
+    $E = K\left(\alpha_1, \dots, \alpha_r\right)$ where
+    $\alpha_i^{n_i} \in K\left(\alpha_1, \dots,
+    \alpha_{i-1}\right)$. Then let $L = K\left(\zeta_n\right)$
+    where $n = LCM\left(\left\{n_i\right\}\right)$ so
+    $\forall n_i: n_i \mid n$. And
+    take $M = LE$. We have
+    $K\left(\alpha_1, \dots, \alpha_{i-1}\right) \hookrightarrow
+    K\left(\alpha_1, \dots, \alpha_i\right)$ - cyclic extension of
+    order $n_i$. We have $Gal\left(M/L\right)$ is solvable by this
+    cyclic subgroups. $Gal\left(M/K\right)$ is also solvable since
+    $Gal\left(M/L\right)$ subgroup and the quotient
+    $\cong Gal\left(L/K\right)$ which is abelian.
+    $Gal\left(F/K\right)$ is a quotient of $Gal\left(M/K\right)$ thus
+    is solvable too.    
   \end{proof}
   \label{thm:lec8_1}
 \end{theorem}
