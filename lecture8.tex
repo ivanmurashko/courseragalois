@@ -230,6 +230,31 @@ Lets also look at another definition of solvable group
 \end{theorem}
 
 \section{Galois theorem on solvability by radicals}
+
+\begin{theorem}
+  Let $P \in K\left[X\right]$. $P$ is a
+  \nameref{def:solvablepolynomial} if and only if
+  $Gal\left(P\right)$ is solvable. There
+  $Gal\left(P\right)$ is (by definition) $Gal\left(F/K\right)$ where
+  $F$ is a \nameref{def:splittingfield} of $P$ over $K$.
+  \begin{proof}
+    First of all lets proof that if $Gal\left(P\right)$ is solvable
+    then $P$ is solvable. Let $n - \left[F:K\right]$ and consider
+    $L = K\left(\zeta_n\right)$ where $\zeta_n$ - $n$-th root of 1.
+    Let $M = FL$ - a \nameref{def:compositeextension}. So this is the
+    splitting and field of $P$ of which we have adjoined all the
+    $n$-th roots of unity.  Then $M$ is a
+    \nameref{def:galoisextension} and
+    $Gal\left(M/K\right) \hookrightarrow Gal\left(F/K\right)$.
+    $\forall g \in Gal\left(M/K\right)$ leaves $F$ invariant.
+    If $g\mid_F = id$ then $g = id$. Then the image in fact of this
+    map is of the Galois group of $F$ over the intersection of $F$ and
+    $L$.  So $G = Gal\left(M/K\right)$ is solvable.
+    
+  \end{proof}
+  \label{thm:lec8_1}
+\end{theorem}
+
 \section{Examples of equations not solvable by radicals."General equation"}
 \section{Galois action as a representation. Normal base theorem}
 \section{Normal base theorem (cont'd). Relation with coverings}
