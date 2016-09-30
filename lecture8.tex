@@ -150,6 +150,31 @@ will recall the definition of basic properties.
   \label{property:lec8_solvable3}
 \end{property}
 
+\begin{property}
+  If $G$ is finite than $G$ is solvable (i.e. has a finite filtration with
+  Abelian quotients) if and only if there exists a
+  finite filtration with cyclic quotients.
+  \begin{proof}
+    This is just because a finite \nameref{def:abeliangroup} is just a
+    product of cyclic groups.
+  \end{proof}
+  \label{property:lec8_solvable4}
+\end{property}
+
+Lets also look at another definition of solvable group
+\begin{definition}[Solvable group]
+  $G$ is called solvable if the following sequence is finite:
+  \[
+  G
+  \supseteq \left[G, G\right] = G^{(1)}
+  \supseteq \left[G^{(1)}, G^{(1)}\right] = G^{(2)}
+  \supseteq \dots \supseteq
+  \left[G^{(n-1)}, G^{(n-1)}\right] = G^{(n)} = \left\{e\right\}
+  \]
+  where $G^{(i)} = \left[G^{(i-1)}, G^{(i-1)}\right]$ is the
+  \nameref{def:commutatorsubgroup}.
+  \label{def:solvablegroupadd}
+\end{definition}
 
 \section{Galois theorem on solvability by radicals}
 \section{Examples of equations not solvable by radicals."General equation"}
