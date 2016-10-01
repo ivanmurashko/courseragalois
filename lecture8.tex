@@ -288,6 +288,48 @@ Lets also look at another definition of solvable group
   \label{thm:lec8_1}
 \end{theorem}
 
-\section{Examples of equations not solvable by radicals."General equation"}
+\section{Examples of equations not solvable by radicals."General
+  equation"}
+As we can see there exist equations which are not solvable in
+radicals.
+
+\begin{example}[Not solvable polynomial of degree 5]
+  Let $P \in \mathbb{Q}\left[X\right]$ is an irreducible polynomial
+  with rational 
+  coefficients of degree 5. It has 3 real roots (and 2 complex
+  conjugate roots) as it shown on the picture.
+  \begin{tikzpicture}
+    \draw[->] (-1.5,0) -- (3,0) node[right] {$x$};
+    \draw[->] (0,-1.5) -- (0,1.5) node[above] {$y$};
+    \draw[scale=0.5,domain=-2.5:4.2,smooth,variable=\x,blue] plot
+    ({\x},{0.01*(\x-1)*(\x-1)*(\x-1)*(\x-1)*(\x-1) - 0.5*(\x-1) + 0.01});
+  \end{tikzpicture}
+
+  We claim that $Gal\left(P\right) = S_5$. This is because
+  \begin{enumerate}
+    \item $Gal\left(P\right)$ contains the complex conjugation (we
+      have 2 complex conjugated roots but \nameref{def:galoisgroup} is
+      the group of automorphisms which exchange roots and the complex
+      conjugation will exchange the 2 complex roots).
+      The complex conjugation is the transposition of roots
+    \item As soon as $P$ is irreducible then $Gal\left(P\right)$
+      should act transitively (see definition \ref{def:transitive}) on
+      roots. We have an irreducible polynomial. We can always send
+      one of its roots to another of its roots. We have this
+      isomorphism of stem fields which extends to an automorphism of
+      the splitting field. But, what is the subgroup of $S_5$, which adds
+      transitively?
+
+      $Gal\left(P\right) \subset S_5$ acts transitively. This means
+      that $5 \mid \left|Gal\left(P\right)\right|$. That is because
+      $\left|G\right| = \left|orbit x\right| \left|stabilizer
+      x\right|$ but the orbit has 5 elements and therefore 5 divides
+      the cardinality of $G$. This means, by \nameref{cor:sylow} 
+      theorems, that our group contains something of order 5. 
+  \end{enumerate}
+  
+  \label{ex:lec8_notsolvable1}
+\end{example}
+
 \section{Galois action as a representation. Normal base theorem}
 \section{Normal base theorem (cont'd). Relation with coverings}
