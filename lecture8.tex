@@ -461,11 +461,52 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
     has non rules over algebraic closure. 
     And so, it also has to have rules, well non rules over $K$. So, there
     exists a point $x \in L$ (not anymore in $L \otimes_K \bar{K}$)
-    such that $det(\dots) \ne 0$ at $x$ so $g_i\left(x\right)$ form a basis.  
+    such that $det(\dots) \ne 0$ at $x$ so $g_i\left(x\right)$ form a
+    basis.
 
-    
+    If $K$ is finite then the argument with roots of a polynomial does
+    not apply any more. But in the case \nameref{def:galoisgroup}s are
+    cyclic i.e. $G = \left<\sigma\right>$. We have $id, \sigma, \dots,
+    \sigma^{n-1}$ are linearly independent since this is the case over
+    $\bar{K}$. Then the minimal polynomial of $\sigma$ as an
+    \nameref{def:endomorphism} of $L$ over $K$ is $X^n - 1$. Thus
+    \[
+    L \cong K\left[X\right]/\left(X^n - 1\right)
+    \]
+    as a $K$-module with $X$ acting by $\sigma$. This is a cyclic
+    module and any generator $x$ shall do i.e. $x, \sigma x, \dots,
+    \sigma^{n-1} x$ form a basis.
   \end{proof}
   \label{thm:normalbase}
 \end{theorem}
 
 \section{Relation with coverings}
+
+\begin{remark}
+  If $L$ is a finite \nameref{def:galoisextension} of $K$ then
+  $L \otimes_K L$ is a \nameref{def:directsum} of fields which are
+  isomorphic to $L$. Sums are permuted by $G = Gal\left(L/k\right)$.
+  \begin{proof}
+  So if $L = K\left(\alpha\right)$ is a splitting field of the
+  polynomial $P = \left(X - \alpha_1\right) \cdot \dots \cdot \left(X
+  - \alpha_n\right)$ (where $\alpha \in \{\alpha_1, \dots,
+  \alpha_n\}$) that is isomorphic to $K\left[X\right]/(P)$. If 
+  we tensor it to $L$ we will get
+  \[
+  L\left[X\right]/\left(X - \alpha_1\right) \cdot \dots \cdot \left(X
+  - \alpha_n\right) \cong
+  L\left[X\right]/\left(X - \alpha_1\right) \times
+  \dots \times
+  L\left[X\right]/\left(X - \alpha_n\right)
+  \]
+  that is a product of copies of $L$ permuted by Galois action
+  \end{proof}
+  \label{rem:lec8_1}
+\end{remark}
+
+In topology one has Galois covering $Y \to X$. $G$ acts on $Y$, $X$
+quotient. The covering is characterized by the property that $Y
+\times_X Y = \sqcup_{g \in G} Y_g$, $Y_g = \{\left(y, gy\right)\}$.
+\footnote{
+  ??? add an explanation
+}
