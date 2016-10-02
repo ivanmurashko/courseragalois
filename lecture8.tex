@@ -343,17 +343,34 @@ radicals.
   X^n - T_1 X^{n-1} + T_2 X^{n-2} + \dots + \left(-1\right)^n T_n,
   \]
   where $T_i$ is a variable. Where does it come from? Let
-  $x_1, \dots, x_n$ are roots of a polynomial of degree $n$ when the
+  $X_1, \dots, X_n$ are roots of a polynomial of degree $n$ when the
   polynomial itself is
   \begin{eqnarray}
-  \left(X - x_1\right) \cdot \dots \cdot \left(X - x_n\right) =
-  X^n - \left(\sum_i x_i \right) X^{n-1} +
+  \left(X - X_1\right) \cdot \dots \cdot \left(X - X_n\right) =
+  X^n - \left(\sum_i X_i \right) X^{n-1} +
   \nonumber \\
   +
-  \left(\sum_{i,j} x_i x_j \right) X^{n-2} + \dots +
-  \left(-1\right)^n \prod_i x_i
+  \left(\sum_{i,j} X_i X_j \right) X^{n-2} + \dots +
+  \left(-1\right)^n \prod_i X_i,
   \nonumber
   \end{eqnarray}
+  i.e.
+  $T_1 = \sum_i X_i, T_2 = \sum_{i,j} X_i X_j, \dots, T_n = \prod_i
+  X_i$.
+
+  One has $K\left[T_1, \dots, T_n\right] \subset K\left[X_1, \dots,
+    X_n\right]$ (multi-variable polynomial rings). We have the same
+  also for field extensions:
+  $K\left(T_1, \dots, T_n\right) \subset K\left(X_1, \dots,
+  X_n\right)$. The $K\left(X_1, \dots, X_n\right)$ is algebraic and a
+  splitting field for our general polynomial. So it has degree at most
+  $n!$. On the other hand
+  $K\left(T_1, \dots, T_n\right) \subset K\left(X_1, \dots,
+  X_n\right)^{S_n}$ so degree of the extension is $n!$ and
+  $K\left(T_1, \dots, T_n\right) = K\left(X_1, \dots,
+  X_n\right)^{S_n}$. In particular the Galois group is $S_n$ and our
+  general polynomial is not solvable by radicals if $n \ge 5$.
+  This is known as Abel theorem
   \label{ex:lec8_generalequation}
 \end{example}
 
