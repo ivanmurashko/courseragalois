@@ -384,8 +384,73 @@ Connection with group representations.
   Let $G$ is a finite group. $V$ is a \nameref{def:vectorspace} over
   $K$. Representation of $G$ is a \nameref{def:homomorphism}
   $\rho: G \to GL\left(V\right)$
-  (where $GL\left(V\right)$ is the \nameref{def:glv})
-  \label{def:groprepresentation}
+  (where $GL\left(V\right)$ is the \nameref{def:glv} i.e. the group of
+  \nameref{def:automorphism}s of the vector space $V$).
+  \label{def:grouprepresentation}
 \end{definition}
+
+If $L$ is a finite extension of $K$ we can talk about it as about
+$K$-vector space. So we have a representation of $G$ as
+\nameref{def:galoisgroup} $Gal\left(L/K\right)$:
+$\rho: G \to GL_K\left(L\right)$ - this is something that we have as
+the definition because we define the Galois group as the group of
+automorphisms of $L$ over $K$.
+
+We can ask the question: what's kind of representation is the
+$\rho$. We claim that $\rho$ is something that is called as
+\nameref{def:regularrepresentation}.
+\begin{definition}[Regular representation]
+  Let a vector space $V$ has a basis indexed by elements of group $G$:
+  $e_g$ where $g \in G$. $\rho_{reg}\left(h\right)$ acts by
+  permutations:
+  \[
+  \rho_{reg}\left(h\right) e_g = e_{hg}.
+  \]
+  \label{def:regularrepresentation}
+\end{definition}
+
+We claim that the representation of Galois group is the regular
+representation. We have seen that (see proof of the theorem
+\ref{thm:primitiveelement}) 
+\[
+L \otimes_K \bar{K} \cong \bar{K}^n.
+\]
+The sum $\bar{K}^n$ of $n$ ($n = \left|G = Gal\left(L/K\right)\right|$)
+copies of $\bar{K}$ is indexed by the embeddings of $L$ into
+$\bar{K}$. Pick one $j: L \hookrightarrow \bar{K}$ and all others can
+be obtained by group \nameref{def:action} $j \circ g, g \in G$. So
+$\bar{K}^n$ has a basis indexed by $G$ and the \nameref{def:action} of
+$G$ permutes the basis vectors. So $L \otimes_K \bar{K} \cong
+\bar{K}^n \cong$ \nameref{def:regularrepresentation} of $G$ over
+$\bar{K}$. In particular $\exists x$ such that $gx \mid_{g \in G}$
+form a basis of $L \otimes_K \bar{K}$ over $\bar{K}$.
+
+Elements of $G$ are linearly independent in in the space of
+\nameref{def:endomorphism}s
+$End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
+
+\begin{theorem}[Normal base]
+  $\exists x \in L$ such that
+  $\left\{gx \mid g \in G\right\}$ is a $K$ basis of $L$.
+  \begin{proof}
+    First of all consider a case when $K$ is infinite. Let pick some
+    basis $e_1, \dots, e_n$ - $K$-basis in $L$. $g_1, \dots, g_n \in
+    G$. Let $x \in L$ then $g_1\left(x\right), \dots,
+    g_n\left(x\right)$ is a basis if and only if matrix formed by
+    $g_i\left(x\right)$ in the basis $e_j$ has non zero
+    determinant. But this determinant is a polynomial in the
+    coefficient, which is not identically zero. Well, why? Because if
+    it was identically zero, it would remain identically zero also
+    after the base changed to $\bar{K}$. Since it has a $\bar{K}$
+    point where it does not vanish.
+
+    There are many $x \in L \otimes_K \bar{K}$ such that
+    $g_i\left(x\right)$ form a basis. And over an infinite field, a
+    polynomial which is not identically zero cannot vanish
+    identically. And over an infinite field, only a polynomial which
+    is identically 0 can vanish at every point.  
+  \end{proof}
+  \label{thm:normalbase}
+\end{theorem}
 
 \section{Normal base theorem (cont'd). Relation with coverings}
