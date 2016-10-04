@@ -42,7 +42,74 @@ the quotient is the Galois group of cyclotomic extension, so this is
 $\left(\mathbb{Z}/5\mathbb{Z}\right)^\times$. So this is a group of
 order 20. You can show that this 
 is noncommutative, and from this exact sequence, you have some
-information about it.   
+information about it. But what will we do if we don't know the
+roots. One of the tool that we will use is the reduction of modulo
+prime and this will be the subject of the lecture.
+
+\subsection{Ring extensions}
+\begin{definition}[Integral element]
+  Let $A$ be an \nameref{def:integraldomain}, i.e. a ring without zero
+  divisors. And let $B$ is an extension of $A$. The element $\alpha
+  \in B$ is called integral over $A$ if $\alpha$ is a root of a
+  \nameref{def:monicpolynomial} $P \in A\left[X\right]$.
+
+  So one can write the following relation
+  \[
+  \alpha^n + a_{n-1}\alpha^{n-1} + \dots + a_1 \alpha + a_0 = 0, a_i
+  \in A.
+  \]
+  \label{def:integralelement}
+\end{definition}
+
+\begin{example}
+  $\frac{1}{2}$ is not integral element over $\mathbb{Z}$ but
+  $\sqrt{2}$ is an \nameref{def:integralelement} over $\mathbb{Z}$.
+
+  This is because the polynomial in the definition
+  \ref{def:integralelement} is monic i.e. the leading coefficient is
+  1. 
+\end{example}
+
+\begin{lemma}
+  The following conditions are equvivalent
+  \begin{enumerate}
+  \item $\alpha$ is integral over $A$.
+  \item $A\left[\alpha\right]$ is a finitely generated $A$-module.
+  \item $A \subset C \subset B$ where $C$ is a a finitely generated
+    $A$-module. I.e. $A$ is contained in a finitely generated $A$-module.
+  \end{enumerate}
+  \begin{proof}
+    $1 \to 2 \to 3$ is easy
+    \footnote{
+      ??? provide an explanation
+    } and we will concentrate on $3 \to 1$.
+
+    Let $x_1, \dots, x_r$ generate $C$ as $A$-module then we can write
+    \[
+    \alpha x_i = \sum \lambda_{ij}x_j,
+    \]
+    where $\lambda_{ij} \in A$. Consider the matrix
+    $\Lambda = \{\lambda_{ij}\}$ and let $M = \alpha \cdot id -
+    \Lambda$. Then
+    \[
+    M \cdot
+    \begin{pmatrix}
+      x_1 \\ \vdots \\ x_r
+    \end{pmatrix} = 0.
+    \]
+    Thus
+    \[
+    \det M \cdot
+    \begin{pmatrix}
+      x_1 \\ \vdots \\ x_r
+    \end{pmatrix} = 0.
+    \]
+    Therefore $det M \cdot C = 0$ but $1 \in C$ thus $\det M = 0$.
+    The equation $\det M = 0$ can be considered as a polynomial with
+    $\alpha$ as a root.
+  \end{proof}
+  \label{lem:lec9_1}
+\end{lemma}
 
 \section{Integral extensions, integral closure, ring of integers of a number field}
 \section{Norm and trace}
