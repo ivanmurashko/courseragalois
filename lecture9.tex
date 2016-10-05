@@ -74,9 +74,10 @@ prime and this will be the subject of the lecture.
   The following conditions are equvivalent
   \begin{enumerate}
   \item $\alpha$ is integral over $A$.
-  \item $A\left[\alpha\right]$ is a finitely generated $A$-module.
+  \item $A\left[\alpha\right]$ is a finitely generated $A$-module
+    (see definition \ref{def:fgmodule}).
   \item $A \subset C \subset B$ where $C$ is a a finitely generated
-    $A$-module. I.e. $A$ is contained in a finitely generated $A$-module.
+    $A$-module (see definition \ref{def:fgmodule}). I.e. $A$ is contained in a finitely generated $A$-module.
   \end{enumerate}
   \begin{proof}
     $1 \to 2 \to 3$ is easy
@@ -111,7 +112,54 @@ prime and this will be the subject of the lecture.
   \label{lem:lec9_1}
 \end{lemma}
 
-\section{Integral extensions, integral closure, ring of integers of a number field}
+\section{Integral extensions, integral closure, ring of integers of a
+  number field}
+
+\begin{definition}[Integral extension]
+  Let $A \subset B$. $B$ is integral over $A$ if $\forall \alpha \in
+  B$, $\alpha$ is an \nameref{def:integralelement} over $A$.  
+  \label{def:integralextension}
+\end{definition}
+
+\begin{proposition}
+  Let $A \subset B \subset C$. $B$ integral over $A$, $C$ integral
+  over $B$ then $C$ is an \nameref{def:integralextension} over $A$.
+  \begin{proof}
+    Proof is left as an exercise
+    \footnote{
+      ??? provide the proof
+    }
+  \end{proof}
+  \label{prop:lec9_1}
+\end{proposition}
+
+\begin{proposition}
+  Let $B$ is a finitely generated over $A$ as a module (see definition
+  \ref{def:fgmodule}) if and only if
+  $B=A\left[\alpha_1, \dots, \alpha_r\right]$ where each $\alpha_i$ is
+  an \nameref{def:integralelement} over $A$.
+  \begin{proof}
+    Proof is left as an exercise
+    \footnote{
+      ??? provide the proof
+    }
+  \end{proof}
+  \label{prop:lec9_2}
+\end{proposition}
+
+\begin{proposition}
+  Let $A \subset B$. I.e. $B$ is an arbitrary extension of $A$. The
+  elements of $B$ which are integral over $A$ form a subring of $B$
+  (one calls it as the integral closure of $A$ in $B$).
+  \begin{proof}
+    Let $\alpha, \beta$ are integral over $A$ then $A\left[\alpha,
+      \beta\right]$ - finitely generated $A$-module (see definition
+    \ref{def:fgmodule}) 
+  \end{proof}
+  \label{prop:lec9_3}
+\end{proposition}
+
+
 \section{Norm and trace}
 \section{Norm and trace (cont'd). Ring of integers is a free module}
 \section{Reduction modulo a prime}

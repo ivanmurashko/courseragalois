@@ -916,6 +916,13 @@ elements of the module.
   K-\nameref{def:vectorspace} and $K$-module are the same
 \end{example}
 
+\begin{definition}[Generating set of a module]
+  A generating set $G$ of a module $M$ over a ring $R$ is a subset of
+  $M$ such that the smallest submodule of $M$ containing $G$ is $M$
+  itself \cite{wiki:gsmodule}
+  \label{def:gsmodule}
+\end{definition}
+
 \begin{definition}[Free module]
   The \nameref{def:module} that has a basis (i.e. linearly independent
   generating set) 
@@ -923,7 +930,8 @@ elements of the module.
 
   For a $R$-module $M$ the set $E \subseteq M$ is a basic for $M$ if
   \begin{enumerate}
-  \item $E$ is a generating set for $M$ i.e. $\forall m \in M$
+  \item $E$ is a generating set (see definition \ref{def:gsmodule})
+    for $M$ i.e. $\forall m \in M$ 
     $\exists n < \infty$: $\exists e_i \in E, r_i \in R$:
     $m = \sum_{i = 1}^n r_i e_i$
   \item $E$ is linearly independent, i.e. if $r_1 e_1 + \dots + r_n
@@ -951,6 +959,11 @@ elements of the module.
   \label{ex:directsummodules}
 \end{example}
 
+\begin{definition}[Finitely generated module]
+  Finitely generated module is a module that has a finite generating
+  set (see also definition \ref{def:gsmodule}) \cite{wiki:fgmodule}.
+  \label{def:fgmodule}
+\end{definition}
 
 \subsection{Linear algebra}
 
