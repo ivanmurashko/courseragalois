@@ -203,6 +203,60 @@ prime and this will be the subject of the lecture.
 
 \subsection{Ring of integers in a number field}
 
+\begin{definition}[Number field]
+  Let $K$ is a finite extension of $\mathbb{Q}$ i.e.
+  $\left[K:\mathbb{Q}\right] < \infty$. In the case $K$ is a number
+  field. 
+  \label{def:numberfield}
+\end{definition}
+
+Let $K$ is a \nameref{def:numberfield} and $\left[K:\mathbb{Q}\right]
+= N$.
+\begin{definition}[Ring of integers]
+  Let $K$ is a \nameref{def:numberfield}. The ring of integers
+  $O_K \subset K$ is the integral closure of $\mathbb{Z}$
+  in $K$. 
+
+  Note: We know that integral closure of $\mathbb{Z}$ in $\mathbb{Q}$
+  is $\mathbb{Z}$ but now we consider the closure in $K$ but not in
+  $\mathbb{Q}$. 
+  \label{def:ringintegers}
+\end{definition}
+
+\begin{property}
+  \begin{enumerate}
+  \item $\forall \alpha \in K, \exists d \in \mathbb{Z} \setminus
+    \{0\}$ such that $d\alpha \in O_K$.
+  \item If $\alpha \in O_K$ then $P_{min}\left(\alpha,
+    \mathbb{Q}\right) \in \mathbb{Z}\left[X\right]$.
+  \end{enumerate}
+  \begin{proof}
+    For the first part lets
+    $P_{min}\left(\alpha,
+    \mathbb{Q}\right) = X^m + a_{m-1}X^{m-1} + \dots + a_1 X + a_0
+    \in \mathbb{Q}\left[X\right]$.
+
+    $\exists d \in \mathbb{Z}$ (the common denominator) such that
+    $\forall i: d a_i \in \mathbb{Z}$. So
+    $b_i = d^{m-i}a_i \in \mathbb{Z}$ for any $i$. Therefore
+    \[
+    \left(d \alpha\right)^m + b_{m-1} \left(d \alpha\right)^{m-1} +
+    \dots + b_0 = 0.
+    \]
+    Thus $d \alpha \in O_K$.
+
+    The second part is also easy. If we have such
+    $\alpha \in O_K$, it is a
+    root of some \nameref{def:monicpolynomial}
+    $Q \in \mathbb{Z}\left[X\right]$.
+    Then the $P_{min} \mid Q$. So $Q = P_{min} R$.
+    If we pick $P_{min}$ to be monic, then by an
+    argument very similar to that of the \nameref{lem:gauss} lemma,
+    we conclude  that both $P_{min}, R \in \mathbb{Z}\left[X\right]$.  
+  \end{proof}
+  \label{property:lec9_2}
+\end{property}
+
 
 \section{Norm and trace}
 \section{Norm and trace (cont'd). Ring of integers is a free module}
