@@ -115,6 +115,8 @@ prime and this will be the subject of the lecture.
 \section{Integral extensions, integral closure, ring of integers of a
   number field}
 
+\subsection{Integral extensions and integral closure}
+
 \begin{definition}[Integral extension]
   Let $A \subset B$. $B$ is integral over $A$ if $\forall \alpha \in
   B$, $\alpha$ is an \nameref{def:integralelement} over $A$.  
@@ -171,6 +173,36 @@ prime and this will be the subject of the lecture.
   integrally closed in \nameref{def:fractionfield} $\mathrm {Frac}(A)$.
   \label{def:integrallyclosed}
 \end{definition}
+
+\begin{example}
+  $\mathbb{Z}$ is \nameref{def:integrallyclosed}. 
+\end{example}
+
+\begin{remark}
+  More generally any
+  \nameref{def:ufd} is \nameref{def:integrallyclosed}.
+  \begin{proof}
+    Let $A$ be a \nameref{def:ufd} and $x \in \mathrm {Frac}(A)$ such
+    that $x \ne 0$. So
+    $x = \frac{p}{q}$ such that $p,q \in A, \left(p, q\right) = 1$
+    (this means no common prime divisor). If $x$ integral over $A$
+    then
+    \[
+    \left(\frac{p}{q}\right)^n + a_{n-1}\left(\frac{p}{q}\right)^{n-1}
+    + \dots + a_1 \frac{p}{q} + a_0 = 0.
+    \]
+    Thus
+    \[
+    \frac{p^n + q a_n p^{n-1} + q^2 a_{n-1} p^{n-2} + \dots + q^{n-1}
+      a_1 p + q^n a_0}{q^n} = 0
+    \]
+    therefore $q \mid p^n$ which is in contradiction with
+    $\left(p, q\right) = 1$. Unless $q$ is invertable that is $x \in A$.
+    \end{proof}
+\end{remark}
+
+\subsection{Ring of integers in a number field}
+
 
 \section{Norm and trace}
 \section{Norm and trace (cont'd). Ring of integers is a free module}
