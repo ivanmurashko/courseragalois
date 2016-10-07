@@ -1096,9 +1096,28 @@ elements of the module.
   \label{def:glv}
 \end{definition}
 
+\begin{definition}[Dual space]
+  Given any vector space $V$ over a field $F$, the dual space $V^\ast$
+  is defined as the set of all linear maps $\phi: V \to F$ (linear
+  functionals). The dual space $V^\ast$ itself becomes a vector space
+  over $F$ when equipped with an addition and scalar multiplication
+  satisfying: 
+  \begin{eqnarray}
+    (\varphi +\psi )(x)=\varphi (x)+\psi (x)
+    \nonumber \\
+    (a\varphi )(x)=a\left(\varphi (x)\right)
+    \nonumber
+  \end{eqnarray}
+  for all $\phi, \psi \in V^\ast$, $x \in V$, and $a \in F$.
+
+  This is also named as algebraic dual space at \cite{wiki:dualspace}.
+  \label{def:dualspace}
+\end{definition}
+
 \begin{definition}[Degenerate bilinear form]
   A degenerate bilinear form $f(x, y)$ on a vector space $V$ is a
-  bilinear form such that the map from $V$ to $V^\ast$ (the dual space
+  bilinear form such that the map from $V$ to $V^\ast$ (the
+  \nameref{def:dualspace} 
   of $V$) given by $v \to (x \to f(x, v) )$ is not an isomorphism
   \cite{wiki:dbf}. 
 
@@ -1113,7 +1132,7 @@ elements of the module.
 
 \begin{definition}[Non-degenerate bilinear form]
   A nondegenerate or nonsingular form is one that is not degenerate,
-  meaning that the map from $V$ to $V^\ast$ (the dual space
+  meaning that the map from $V$ to $V^\ast$ (the \nameref{def:dualspace}
   of $V$) given by $v \to (x \to f(x, v) )$ is an isomorphism
   \cite{wiki:dbf} or equivalently when $V$ is finite-dimensional if
   and only if
