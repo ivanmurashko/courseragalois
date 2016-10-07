@@ -263,9 +263,99 @@ Let $K$ is a \nameref{def:numberfield} and $\left[K:\mathbb{Q}\right]
 (The material was given inside the proof of theorem \ref{thm:lec9_1}
 and can be considered as a recall)
 The \nameref{def:fgagroup} is the same as
-finitely generated $\mathbb{Z}$-module.
+finitely generated $\mathbb{Z}$-module. Any such group is isomorphic
+to (see theorem \ref{thm:fgagroup})
+\[
+\mathbb{Z}^n \oplus A,
+\]
+where $A$ is a finite group (torsion part). A subgroup of
+$\mathbb{Z}^n$ is itself a free ($\cong \mathbb{Z}^m$) of rank
+$m \le n$.
 
+\subsection{Norms and traces}
+(The material was given inside the proof of theorem \ref{thm:lec9_1}
+and can be considered as a recall)
+\begin{definition}[Norm]
+  Let $K \hookrightarrow E$ - finite separable field extension. Let $\alpha \in
+  E$.   Define the norm of alpha with respect to this extension as
+  \[
+  \mathrm {N}_{E/K}\left(\alpha\right) =
+  \prod_{\sigma_i: E \hookrightarrow \bar{K}} \sigma_i\left(\alpha\right)
+  \]
+  i.e. we took a product by all $K$ embeddings of $E$ into the
+  algebraic closure of $K$. And we also assume that the product is
+  finite i.e. $i = 1, \dots, r$.
+  \label{def:norm}
+\end{definition}
 
+\begin{definition}[Trace]
+  Let $K \hookrightarrow E$ - finite separable field extension. Let $\alpha \in
+  E$.   Define the norm of alpha with respect to this extension as
+  \[
+  \mathrm {Tr}_{E/K}\left(\alpha\right) =
+  \sum_{\sigma_i: E \hookrightarrow \bar{K}} \sigma_i\left(\alpha\right)
+  \]
+  i.e. we took a sum by all $K$ embeddings of $E$ into the
+  algebraic closure of $K$. And we also assume that the sum is
+  finite i.e. $i = 1, \dots, r$.
+  \label{def:trace}
+\end{definition}
+
+In the definitions \ref{def:trace} and \ref{def:trace} we assume that
+the extension $E$ is \nameref{def:separableextension}. If you're
+extension is not separable then you won't have to take it to the power
+equal to the pure inseparable degree of $E/K$, but for simplicity,
+we shall suppose that everything is separate.
+
+\begin{property}
+  \begin{enumerate}
+  \item $\mathrm{N}_{E/K}: E^\times \to K^\times$
+    \footnote{
+      $E^\times = E \setminus \{0\}$ and
+      $K^\times = K \setminus \{0\}$
+    }
+    is multiplicative
+    i.e. homomorphism of groups.
+    $\mathrm{Tr}_{E/K}: E \to K$ is additive, $K$-linear
+    i.e. homomorphism of $K$-vector spaces.
+    \footnote{
+      ??? May be there should be $\bar{K}$ instead of $K$.
+    }    
+  \item If $E=K\left(\alpha\right)$, $n = \left[E:K\right]$ and
+    $P_{min}\left(\alpha, K\right) = X^n + a_1 X^{n-1} + \dots +
+    a_{n-1} X + a_{n}$ then $\mathrm{N}_{E/K}\left(\alpha\right) = (-1)^n
+    a_n$ and $\mathrm{Tr}_{E/K}\left(\alpha\right) = -a_1$.
+  \item If we have the tower of extensions $K \subset F \subset E$
+    then
+    \[
+    \mathrm{N}_{E/K}\left(\alpha\right) =
+    \mathrm{N}_{F/K}\left(\alpha\right) \circ
+    \mathrm{N}_{E/F}\left(\alpha\right)
+    \]
+    and the same for trace
+    \[
+    \mathrm{Tr}_{E/K}\left(\alpha\right) =
+    \mathrm{Tr}_{F/K}\left(\alpha\right) \circ
+    \mathrm{Tr}_{E/F}\left(\alpha\right)
+    \]
+  \end{enumerate}
+  \begin{proof}
+    The first property is obvious from the definition.
+
+    The second one uses the following fact:
+    $\sigma_i\left(\alpha\right)$ are roots of $P_{min}\left(\alpha,
+    K\right)$. The \nameref{def:norm} is a product and it's assigned
+    to its constant term ($a_n$) and the sum is the first coefficient 
+    term ($a_1$) (see also example \ref{ex:lec8_generalequation}).
+
+    The third property is somewhat less trivial, so this follows from,
+    the fact that if $\tau_1, \dots, \tau_k$ are $K$ embeddings of $F$
+    into $\bar{K}$ and, $\mu_1, \dots, \mu_s$ are $F$ embeddings of
+    $E$ into $\bar{K}$ then the embedings of $E$ into $\bar{K}$ are
+    just the compositions $\{\tau_j \mu_i\}$. 
+  \end{proof}
+  \label{property:lec9_norm_trace}
+\end{property}
 
 \subsection{Theorem about rings of integers}
 \begin{theorem}
@@ -287,7 +377,10 @@ finitely generated $\mathbb{Z}$-module.
 
     What is the $\mathbb{Z}$-module this is a finitely generated
     \nameref{def:fgagroup} and we know a lot of things about such
-    groups. 
+    groups (see above).
+
+    We have to show that $O_K \subset A$ where $A$ is a free
+    $\mathbb{Z}$-submodule of rank $N$.
   \end{proof}
   \label{thm:lec9_1}
 \end{theorem}

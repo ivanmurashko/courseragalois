@@ -289,12 +289,32 @@ property.
   with $n_i \in \mathbb{Z}$. In this case we say that $\{x_1, \dots,
   x_s\}$ is a generating set of $G$.
 
-  In the (\ref{eq:fgagroup}) we have the folowing:
+  In the (\ref{eq:fgagroup}) we have the following:
   \[
   n_i x_i = \underbrace{x_i + \dots x_i}_{n_i \text{ times}}
   \]
   \label{def:fgagroup}
 \end{definition}
+
+\begin{theorem}[The fundamental theorem of finitely generated abelian
+    groups]
+  Every \nameref{def:fgagroup} $G$ is isomorphic to a
+  \nameref{def:directsum} of primary cyclic groups and infinite cyclic
+  groups. A primary cyclic group is one whose order is a power of a
+  prime. That is, every finitely generated abelian group is isomorphic
+  to a group of the form
+  \[
+  \mathbb{Z}^n \oplus \mathbb{Z}_{q_1} \oplus
+  \dots \oplus \mathbb{Z}_{q_t}
+  \]
+  where the rank $n \ge 0$, and the numbers $q_1, \dots , q_t$ are
+  powers of (not 
+  necessarily distinct) prime numbers. In particular, $G$ is finite if
+  and only if $n = 0$. The values of $n, q_1, \dots , q_t$ are (up to
+  rearranging the indices) uniquely determined by $G$. 
+  The statement was took from \cite{wiki:fgagroup}.
+  \label{thm:fgagroup}
+\end{theorem}
 
 \section{Permutations}
 
