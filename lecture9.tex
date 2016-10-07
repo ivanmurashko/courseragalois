@@ -265,6 +265,16 @@ Let $K$ is a \nameref{def:numberfield} and $\left[K:\mathbb{Q}\right]
   rank (see definition \ref{def:rankfreemodule}) $N$, where $N=
   \left[K:\mathbb{Q}\right]$. 
   \begin{proof}
+    If $e_1, \dots, e_n$ is a $\mathbb{Q}$-basis of $K$ then
+    $\forall i \exists d_i \in \mathbb{Z} \setminus
+    \{0\}$ such that $d_i e_i \in O_K$ (see property
+    \ref{property:lec9_2}). Therefore $O_K$ contains a free
+    $\mathbb{Z}$-submodule of rank $N$
+    \footnote{
+      This is because $d_1 e_1, \dots, d_n e_n$ are linearly
+      independent and form a basis of a free $\mathbb{Z}$-module. The
+      number of the cardinality of the basis $n = N$.
+    }.
   \end{proof}
   \label{thm:lec9_1}
 \end{theorem}
