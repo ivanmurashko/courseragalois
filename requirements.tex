@@ -276,7 +276,26 @@ property.
   $\left(a, b\right)$ where $a \in A$ and $b \in B$ \cite{wiki:directsum}
   \label{def:directsum}
 \end{definition}
-  
+
+\begin{definition}[Finitely generated abelian group]
+  An \nameref{def:abeliangroup} $(G, +)$ is called finitely generated
+  \cite{wiki:fgagroup} 
+  if there exist finitely many elements $x_1, \dots, x_s$ in $G$ such that
+  $\forall x \in G$:
+  \begin{equation}
+    x = n_1 x_1 + \dots + n_s x_s
+    \label{eq:fgagroup}
+  \end{equation}
+  with $n_i \in \mathbb{Z}$. In this case we say that $\{x_1, \dots,
+  x_s\}$ is a generating set of $G$.
+
+  In the (\ref{eq:fgagroup}) we have the folowing:
+  \[
+  n_i x_i = \underbrace{x_i + \dots x_i}_{n_i \text{ times}}
+  \]
+  \label{def:fgagroup}
+\end{definition}
+
 \section{Permutations}
 
 \begin{example}[Permutation]
