@@ -338,6 +338,12 @@ we shall suppose that everything is separate.
     \mathrm{Tr}_{F/K}\left(\alpha\right) \circ
     \mathrm{Tr}_{E/F}\left(\alpha\right)
     \]
+    \item Consider $T: E \times E \xrightarrow[(x, y) \to
+      \mathrm{Tr}_{E/K}\left(xy\right)  ]{} K$. This is a
+      non-degenerate $K$-bilinear form
+    \item $\alpha$ integral over $\mathbb{Z}$, $K = \mathbb{Q}$. Then
+      $\mathrm{N}_{E/\mathbb{Q}}\left(\alpha\right),
+      \mathrm{Tr}_{E/\mathbb{Q}}\left(\alpha\right)$ are integers.
   \end{enumerate}
   \begin{proof}
     The first property is obvious from the definition.
@@ -352,7 +358,44 @@ we shall suppose that everything is separate.
     the fact that if $\tau_1, \dots, \tau_k$ are $K$ embeddings of $F$
     into $\bar{K}$ and, $\mu_1, \dots, \mu_s$ are $F$ embeddings of
     $E$ into $\bar{K}$ then the embedings of $E$ into $\bar{K}$ are
-    just the compositions $\{\tau_j \mu_i\}$. 
+    just the compositions $\{\tau_j \mu_i\}$.
+
+    For the 4th property. Indeed if $x \in \ker T$ then
+    $\mathrm{Tr}_{E/K}\left(xy\right) = 0, \forall y \in E$. But this
+    can't be a case when $xy \in K \setminus \{0\}$ by definition
+    \ref{def:trace} $\mathrm{Tr}_{E/K}\left(xy\right) =
+    \left[E:K\right] xy$.
+
+    For the 5th property we know that
+    \begin{eqnarray}
+    \mathrm{Tr}_{E/\mathbb{Q}}\left(\alpha\right) =
+    \mathrm{Tr}_{\mathbb{Q}(\alpha)/\mathbb{Q}}\left(
+    \mathrm{Tr}_{K/\mathbb{Q}(\alpha)}\left(\alpha\right)
+    \right) =
+    \nonumber \\
+    =
+    \mathrm{Tr}_{\mathbb{Q}(\alpha)/\mathbb{Q}}\left(
+    \left[K:\mathbb{Q}(\alpha)\right] \alpha
+    \right) =
+    \left[K:\mathbb{Q}(\alpha)\right]
+    \mathrm{Tr}_{\mathbb{Q}(\alpha)/\mathbb{Q}}\left(
+     \alpha
+    \right)
+    \nonumber
+    \end{eqnarray}
+    but
+    \(
+    \mathrm{Tr}_{\mathbb{Q}(\alpha)/\mathbb{Q}}\left(
+    \alpha
+    \right) \in \mathbb{Z}
+    \)
+    because
+    \(
+    \mathrm{Tr}_{\mathbb{Q}(\alpha)/\mathbb{Q}}\left(
+    \alpha
+    \right)
+    \) is a coefficient of $P_{min}\left(\alpha, \mathbb{Q}\right) \in
+    \mathbb{Z}\left[X\right]$ (see property \ref{property:lec9_2}).     
   \end{proof}
   \label{property:lec9_norm_trace}
 \end{property}
