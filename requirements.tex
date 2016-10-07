@@ -1096,6 +1096,35 @@ elements of the module.
   \label{def:glv}
 \end{definition}
 
+\begin{definition}[Degenerate bilinear form]
+  A degenerate bilinear form $f(x, y)$ on a vector space $V$ is a
+  bilinear form such that the map from $V$ to $V^\ast$ (the dual space
+  of $V$) given by $v \to (x \to f(x, v) )$ is not an isomorphism
+  \cite{wiki:dbf}. 
+
+  An equivalent definition when $V$ is finite-dimensional is that it
+  has a non-trivial kernel: there exist some non-zero $x \in V$ such
+  that 
+  \(
+  \forall y \in V f(x,y) = 0
+  \)
+  \label{def:degeneratebf}
+\end{definition}
+
+\begin{definition}[Non-degenerate bilinear form]
+  A nondegenerate or nonsingular form is one that is not degenerate,
+  meaning that the map from $V$ to $V^\ast$ (the dual space
+  of $V$) given by $v \to (x \to f(x, v) )$ is an isomorphism
+  \cite{wiki:dbf} or equivalently when $V$ is finite-dimensional if
+  and only if
+  \(
+  \forall y \in V f(x,y) = 0
+  \)
+  implies $x = 0$.
+  \label{def:nondegeneratebf}
+\end{definition}
+
+
 \section{Functions aka maps}
 
 \subsection{Functions}
