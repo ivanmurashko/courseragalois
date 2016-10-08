@@ -542,9 +542,66 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
     Gal\left(k_i/\mathbb{F}_p\right)$ i.e. that there is a
     \nameref{def:surjection}. We may assume that $i=1$. By the
     \nameref{thm:primitiveelement} theorem $\exists z \in
-    \mathbb{F}_p$ such that $k_1 = \mathbb{F}_p\left(z\right)$.
+    \mathbb{F}_p$ such that $k_1 = \mathbb{F}_p\left(z\right)$. 
+    By \nameref{thm:chineseremainder}
+    theorem $\exists y \in A$ such that
+    $y \in J_i, i \ne 1,  y \equiv z (\mod J_1)$. Consider polynomial
+    $Q = \prod_{g \in G} \left(X - g\left(y\right)\right)$. There is a
+    polynomial with integral coefficients i.e.
+    $Q \in \mathbb{Z}\left[X\right]$. This is because we know that
+    coefficients are $G$ invariant i.e. in $\mathbb{Q}$ moreover they
+    are integral over $\mathbb{Z}$ and are in $\mathbb{Z}$ as soon as
+    $\mathbb{Z}$ is integrally closed.
+
+    Lets study $\bar{Q} = Q \mod J_1$. If $g \notin D_1$ then $\exists
+    i$ such that $g\left(J_i\right) = J_1$ and particularly $g(y) \in
+    J_1$. Therefore for such $g$ we have
+    \[
+    \overline{X -g\left(y\right)} = X -g\left(y\right) \mod J_1 = X. 
+    \]
+    So we have for $\bar{Q} \in \mathbb{F}_p\left[X\right]$
+    \[
+    \bar{Q} = \prod_{g \in G \setminus D_1} X \prod_{g \in D_1}
+    \left(X - \overline{g\left(y\right)}\right),
+    \]
+    but
+    \(
+    \prod_{g \in D_1}
+    \left(X - \overline{g\left(y\right)}\right)
+    \) has $z$ as a root and $D_1$ acts transitively on its roots.
+
+    Now recall that $z$ generates $k_1$. Thus an element of
+    $Gal\left(k_1/\mathbb{F}_p\right)$ is determined by the image of
+    $z$. And we have an element of $D_1$ which sends $z$ to any
+    possible image of it. But this means that
+    \(
+    D_1 \twoheadrightarrow
+    Gal\left(k_1/\mathbb{F}_p\right)
+    \)
+
+    For the second part of the theorem we assume that $\bar{P}$ has no
+    multiple roots. So $\alpha_1, \dots, \alpha_n$ -roots of $P$ and
+    $\bar{\alpha}_1, \dots, \bar{\alpha}_n$ -roots of $\bar{P}$ where
+    $\bar{\alpha}_i = \alpha_i \mod J_1$ (??? may be $\mod p$).
+
+    Lets $g \in D_1$ acts as $id$ on $k_1$. Then, of course,
+    $g\left(\bar{\alpha}_i\right) = \bar{\alpha}_i$.
+    But $g\left(\alpha_i\right) \in \{\alpha_1, \dots, \alpha_n\}$ and
+    it can not be different from $\alpha_i$ since they will have
+    diffeent reduction $\mod J_1$. So
+    $\forall i,  g\left(\alpha_i\right) = \alpha_i$ and therefore $g =
+    id$. Thus conclusion that $D_1 \cong
+    Gal\left(k_1/\mathbb{F}_p\right)$. By the same argument
+    \[
+    Gal\left(k_1/\mathbb{F}_p\left[\bar{\alpha}_1,
+      \dots, \bar{\alpha}_n\right]\right) = id
+    \]
+    therefore
+    $k_1 = \mathbb{F}_p\left[\bar{\alpha}_1,
+      \dots, \bar{\alpha}_n\right]$.
   \end{proof}
   \label{thm:lec9_2}
 \end{theorem}
 
 \section{Reduction modulo a prime and finding elements in Galois groups}
+ How can we apply the above material to study Galois groups?
