@@ -185,6 +185,7 @@ property.
   \[
   Orb\left(x\right) = \left\{y \in X: \exists g \in G: y = g \cdot x \right\}
   \]
+  The orbit of element $x$  is also denoted as $G\left(x\right)$.
   \label{def:orbit}
 \end{definition}
 
@@ -211,6 +212,20 @@ property.
   \label{def:stabilizersubgroup}
 \end{definition}
 
+\begin{theorem}[Orbit-stabilizer theorem]
+  If group $G$ and the set the group acting $X$ are finite then
+
+  \[
+  \left|G\right| = \left|G\left(x\right)\right|\left|G_x\right|
+  \]
+  where $x \in X$, $G\left(x\right)$ - is the \nameref{def:orbit},
+  $G_x$ - \nameref{def:stabilizersubgroup}.
+  
+  Note: the result was got from \cite{wiki:groupaction} as
+  orbit-stabilizer theorem + \nameref{thm:lagrange} theorem
+  \label{thm:orbitstabilizertheorem}
+\end{theorem}
+
 \begin{definition}[Transitive group action]
   The action of $G$ on $X$ is called \cite{wiki:groupaction}
   transitive if $X$ is non-empty and if for each pair $x, y \in X$ there
@@ -219,7 +234,6 @@ property.
 \end{definition}
 
 \subsection{Sylow theorems}
-
 
 \begin{corollary}[Sylow]
   Given a finite group $G$ and a prime number $p$ dividing the order of $G$,
