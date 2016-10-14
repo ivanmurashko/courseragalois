@@ -451,8 +451,12 @@ Let $A$ is a \nameref{def:ring} and $B$ is $A$-algebra. Let also $M$
 is an $A$-\nameref{def:module} and $N$ is $B$-module.
 
 I can of course make $N$ into $A$-module (just forgetting the
-additional $A$-algebra structure). But we can also make $B$-module of
-$M$, that is not a trivial thing, by considering $B \otimes_A M$.
+additional $A$-algebra structure). But we can also make $B$-module on
+$M$ (that is not a trivial thing) by considering $B \otimes_A M$
+\footnote{
+  In other words we can make a $B$-module from $A$-module $M$
+}
+.
 We can introduce $B$-module structure on $B \otimes_A M$ by
 \footnote{
   I.e. we introduced $B$-algebra operations for objects from
@@ -645,6 +649,14 @@ We have the following maps.
     \hat{f}\left(\hat{g}\left(g\right)\right) =
     \mu \cdot (id_B \otimes g) \cdot \alpha = g.
     \]
+    I. e. $\hat{f}\circ\hat{g} = id$
+    \footnote {
+      Operation $\circ$ is defined as follows $(\hat{a} \circ \hat{b})(x) =
+      \hat{a}(\hat{b}(x))$ where $\hat{a}, \hat{b}$ are 2 maps acting
+      on a set $X$ and $x \in X$.
+    }
+    or in other words $\hat{f}$ and
+    $\hat{g}$ are mutually inverse. 
   \end{proof}
   \label{thm:basechange}
 \end{theorem}
