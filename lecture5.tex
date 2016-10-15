@@ -102,13 +102,13 @@ This is a general form of \nameref{thm:chineseremainder}.
 If $A$ is local then all elements of $A$ are nilpotents
 i.e. any element of $A$ is a identity,zero or nilpotent
 \footnote{
-  ??? As it was mentioned on \cite{wiki:localring}, a nonzero ring in
+  ??? As it was mentioned in \cite{wiki:localring}, a nonzero ring in
   which every element is either a unit or nilpotent is a local
-  ring. But not reverse as it was mentioned on the lectures. There is
-  also example $A \cong A/\{0\}$ where $A$ is a \nameref{def:field}
+  ring, but not reverse, as it was pointed on the lectures. There is
+  also an example $A \cong A/\{0\}$ where $A$ is a \nameref{def:field}
   and $\{0\}$ is the only maximal ideal for the fields (see example
   \ref{ex:maxideal}). In this case there are many non nilpotents
-  different from identity and zero. 
+  different from identity and zero but the ring ($K$-algebra) is local. 
 }
 .
 
@@ -237,14 +237,25 @@ where $\eta\left(A\right)$ is an \nameref{def:ideal} of
 nilpotents in $A$.
 
 It is clear that
-\footnote{
-  ???
-}
 \[
 Hom_E\left(A, E\right) =
 Hom_E\left(A_{red}, E\right)
 \]
-because all homomorphism into a field must be zero on all nilpotents. 
+because all homomorphism into a field must be zero on all nilpotents
+\footnote{
+  It requires some clarification. Consider a homomorphism
+  $\phi \in Hom_E\left(A, E\right)$. $\forall x,y \in A, \phi(xy) =
+  \phi(x)\phi(y)$. Let $x \in \eta\left(A\right)$ i.e. $x$ is a
+  nilpotent then $x \ne 0_A, x^k = 0_A$. We have
+  \[
+  0_E = \phi(x^k) = \phi(x)^k
+  \]
+  i.e. $\phi(x) =  0_E$. Therefore all nilpotents go to zero and,
+  instead of $A$ (as the set the $\phi$ acts on), we can consider
+  $A_{red}$. As result, we will get that $\phi(0_{A_{red}}) = 0_E$ and all
+  other properties of homomorphism are also hold, for instance
+  $\forall x,y \in A_{red}: \phi(x+y) = \phi(x) + \phi(y)$. 
+}. 
 
 So again, we see that if there are nilpotents in the tensor product,
 then there is somehow fewer space for homomorphisms. Because if A is
