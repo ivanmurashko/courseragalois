@@ -535,23 +535,30 @@ true for arbitrary modules over a ring.
       found the primitive element. If not then let
       $\beta \in L \setminus K\left(\alpha\right)$. Consider the
       following element $\gamma_a = \alpha + a \beta$ where $a \in
-      K$. For any $a \in K$ exists $K \subset K\left(\gamma_a\right)
-      \subset L$ and as soon as $\left|K\right| = \infty$ but the
+      K$. For any $a \in K$ exists $K\left(\gamma_a\right)$ such that
+      $K \subset K\left(\gamma_a\right) \subset L$. We have
+      $\left|K\right| = \infty$ but the 
       number of sub-extensions is limited by theorem
-      \ref{thm:primitiveelement} then $\exists a, b \in K$ such that
+      \ref{thm:primitiveelement} therefore $\exists a, b \in K$ such that
       $a \ne b$ and $K\left(\gamma_a\right) =
-      K\left(\gamma_b\right) = K'$.
+      K\left(\gamma_b\right) = K\left(\gamma\right)$ where $\gamma =
+      \gamma_a$. 
 
-      We have $\gamma_a - \gamma_b = (a-b) \beta \in K'$, i.e.
-      $\beta \in K'$. Therefore $\alpha = \gamma_a -a \beta \in
-      K'$. We also have (as soon as $\beta \notin
+      We have $\gamma_a - \gamma_b = (a-b) \beta \in K\left(\gamma\right)$, i.e.
+      $\beta \in K\left(\gamma\right)$. Therefore
+      $\alpha = \gamma_a -a \beta = \gamma -a \beta \in
+      K\left(\gamma\right)$. We also 
+      have (as soon as $\beta \notin 
       K\left(\alpha\right)$) $K \subset K\left(\alpha\right)
-      \subsetneq K' 
-      \subset L$. Therefore $\left[K':K\right] >
-      \left[K\left(\alpha\right):K\right]$. As soon as $K' =
-      K\left(\gamma_a\right)$ then
-      $P_{min}\left(\gamma_a, K\right) > P_{min}\left(\alpha,
-      K\right)$ that is in contradiction with $\alpha$ choose.
+      \subsetneq K\left(\gamma\right) 
+      \subset L$. Thus $\left[K\left(\gamma\right):K\right] >
+      \left[K\left(\alpha\right):K\right]$. Therefore
+      (see proposition \ref{prop:dimextension})
+      \[
+      \deg\left(P_{min}\left(\gamma, K\right)\right) >
+      \deg\left(P_{min}\left(\alpha, K\right)\right)
+      \]
+      that is in contradiction with $\alpha$ choose.
 
       Note that \cite{bib:KenBrownPrimitiveElementTheorem} has another,
       more known, proof for the fact and prove that if
