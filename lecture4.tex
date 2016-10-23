@@ -1096,9 +1096,10 @@ space) $K$-algebra.
     i.e. $\forall x,y \in K$ such that $x \ne y$ we will have $f(x)
     \ne f(y)$. In other cases (if $f(x) = f(y)$) we will have
     $f(x - y) = 0$ i.e. $x - y \in m$. As soon as $x,y \in K$ then $x
-    - y \in K$ moreover $x - y \in m_K$ where $m_K$ is a maximal ideal
-    in $K$. But the only possible maximal ideal for the field is
-    $\{0_K\}$. Therefore $x - y = 0_K$ i.e. $x = y$.
+    - y \in K$ moreover $x - y \in m$. If $x \ne y$ then
+    $\exists (x-y)^{-1} \in K$ and $(x-y)(x-y)^{-1} = 1_k \in m$ i.e.
+    $m$ is not a \nameref{def:properideal} and as result is not a
+    maximal ideal.
   \end{proof} 
   \label{rem:lec5_quotientkalgebra}
 \end{remark}
