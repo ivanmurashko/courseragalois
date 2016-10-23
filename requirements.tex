@@ -967,6 +967,37 @@ f = f_0 + f_1 X + f_2 X^2 + \dots + f_n X^n.
   \label{def:fractionfield}
 \end{definition}
 
+\subsection{Characters}
+
+\begin{definition}[Character]
+  For an abelian group $G$, finite or infinite, a character of $G$ is
+  a group homomorphism $\phi: G \to F^\times$ where $F$ is a field.
+
+  The definition was taken from \cite{bib:KeithConradLinearchar}
+  \label{def:character}
+\end{definition}
+
+\begin{example}[Character]
+  A field homomorphism $K \to F$ is a character by restricting it to the
+  non- zero elements of $K$ (that is, using $G = K^\times$) and ignoring the
+  additive aspect of a field homomorphism.  
+
+  The example was taken from \cite{bib:KeithConradLinearchar}
+  \label{ex:character}
+\end{example}
+
+\begin{theorem}[Dedekind]
+  If we have $n$ distinct \nameref{def:character}s $\phi_1, \dots,
+  \phi_n: G \to F^\times$ then they are linearly independent i.e. if
+  $c_1, \dots, c_n \in F$ satisfy
+  \[
+  c_1 \phi_1(g) + \dots + c_n \phi_n(g) = 0
+  \]
+  for all $g \in G$ then $c_1 = \dots = c_n = 0$
+  (see also \cite{bib:KeithConradLinearchar}).
+  \label{thm:dedekind}
+\end{theorem}
+
 \section{Modules and Vector spaces}
 
 \subsection{Modules}
