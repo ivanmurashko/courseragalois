@@ -330,12 +330,29 @@ A_{red} = \prod_{i=1}^r \bar{K}.
 The following one $A = A_{red}$ is the same to $r$ is maximal and
 equal to $\left[L:K\right] = \left[A: \bar{K}\right]$.
 \footnote{
-  It is because there are $\left[L:K\right]$ roots of a
+  It is because there are $\left[L:K\right] = r$ roots of a
   polynomial and all the roots are in $\bar{K}$. Each root $\alpha_i$
   forms a polynomial $X - \alpha_i$ which creates an ideal $m_i =
-  \left(X - \alpha_i\right)$. See also comments to theorem
-  \ref{thm:lec5_1} proof below (\ref{footnote:lec5_productexpl}). They  
-  will describe the situation more precisely. 
+  \left(X - \alpha_i\right)$. We also have
+  $L = K\left(\alpha_1, \dots, \alpha_r\right)$ and
+  \[
+  A = L \otimes_K \bar{K} \cong \bar{K} \otimes_K L =
+  \bar{K} \otimes_K K\left(\alpha_1, \dots, \alpha_r\right).
+  \]
+  It expands to (see example \ref{ex:lec4_1})
+  \begin{eqnarray}
+    A \cong \bar{K} \otimes_K \frac{K\left[X\right]}{(X-\alpha_1)
+      \dots (X-\alpha_r)} \cong
+    \nonumber \\
+    \cong
+    \frac{\bar{K}\left[X\right]}{\left(X - \alpha_1\right)}
+    \times
+    \dots
+    \times
+    \frac{\bar{K}\left[X\right]}{\left(X - \alpha_r\right)} 
+    \cong \bar{K} \times \dots \times \bar{K}.
+    \nonumber
+  \end{eqnarray}
 }
 In the case
 \[
@@ -377,8 +394,7 @@ nilpotents. So let me formulate it as a theorem.
     \item $L$ separable is the same thing that the algebra
       $A = L\otimes_K \bar{K}$ has $\left[L:K\right]$ factors
       \footnote{
-        \label{footnote:lec5_productexpl}
-        ??? If we have $L = K\left(\alpha\right)$
+        If we have $L = K\left(\alpha\right)$
         (see theorem \ref{thm:lec3_3}) then
         there exists a minimal polynomial $P_{min}\left(\alpha,
         K\right)$ of degree $r = \left[L:K\right]$. The polynomial
