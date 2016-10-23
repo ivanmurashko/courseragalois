@@ -1078,6 +1078,31 @@ space) $K$-algebra.
 
 \section{Structure of finite algebras over a field. Examples}
 
+\begin{remark}
+  The remark is not a part of the lectures but it is important to
+  understand the below content.
+
+  Let $A$ is a $K$-algebra. By definition of $K$-algebra (see
+  definition \ref{def:kalgebra}) $K$ is a field. A field $K$ has only one
+  \nameref{def:maxideal}: $\{0_k\}$ (see example \ref{ex:maxideal}).
+
+  Let $m$ is a maximal ideal of $A$ then the
+  \nameref{def:quotientring} $A/m$ is a $K$-algebra.
+
+  \begin{proof}
+    For applying lemma \ref{lem:lec1_homkalgebra} we have to establish
+    a ring \nameref{def:homomorphism} $f$ between $K$ and $A/m$. It
+    will be enough proof that $f$ is \nameref{def:injection} 
+    i.e. $\forall x,y \in K$ such that $x \ne y$ we will have $f(x)
+    \ne f(y)$. In other cases (if $f(x) = f(y)$) we will have
+    $f(x - y) = 0$ i.e. $x - y \in m$. As soon as $x,y \in K$ then $x
+    - y \in K$ moreover $x - y \in m_K$ where $m_K$ is a maximal ideal
+    in $K$. But the only possible maximal ideal for the field is
+    $\{0_K\}$. Therefore $x - y = 0_K$ i.e. $x = y$.
+  \end{proof} 
+  \label{rem:lec5_quotientkalgebra}
+\end{remark}
+
 \begin{theorem}[Structure of finite $K$-algebra]
   Let $A$ be a finite $K$-algebra i.e.
   $\dim_K A < \infty$. Then
@@ -1114,7 +1139,9 @@ space) $K$-algebra.
       We know that $A$ as well as $A/m_1 \dots m_i$ and $A/m_k$ are
       finite dimensional $K$-\nameref{def:vectorspace}
       \footnote {
-        The theorem statement (see above) says that
+        See remark \ref{rem:lec5_quotientkalgebra} and take into
+        consideration  
+        the theorem statement (see above) that says 
         $\dim_K A < \infty$. $A/m_1$ is a projection i.e.
         $\dim_K A/m_1 < \dim_K A < \infty$.
       }
