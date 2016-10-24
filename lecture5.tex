@@ -433,11 +433,28 @@ nilpotents. So let me formulate it as a theorem.
       a reduced algebra is reduced and same for local.  
     \item Leave as an excises
       \footnote{
-        $\{\phi_i\}$ - distinct homomorphisms and can be considered as
-        distinct \nameref{def:character}s. Therefore by theorem
-        \ref{thm:dedekind} the homomorphisms are linearly
-        independent i.e. form a basis in $\bar{K}^n$ that prove the
-        required isomorphism.
+        We have that
+        $\forall l \otimes k \in L \otimes_K \bar{K}, \exists
+        \bar{k}^n = \left(
+        k \phi_1\left(l\right),
+        \dots,
+        k \phi_n\left(l\right)
+        \right) \in \bar{K}^n$.
+
+        From other side $\{\phi_i\}$ - distinct homomorphisms and can
+        be considered as distinct \nameref{def:character}s. Therefore
+        by theorem \ref{thm:dedekind} the homomorphisms are linearly
+        independent i.e. form a basis in $\bar{K}^n$. I.e.
+        any $\bar{k}^n \in \bar{K}^n$ can be represented as
+        \[
+        \bar{k}^n = k
+        \left(
+        \phi_1\left(l\right),
+        \dots,
+        \phi_n\left(l\right)
+        \right)
+        \]
+        where $k \in \bar{K}$ and $l \in L$.
       }
     \end{enumerate}
   \end{proof}
