@@ -717,10 +717,12 @@ true for arbitrary modules over a ring.
   A normal extension of $K$ is a \nameref{def:splittingfield} of a
   family of polynomials in $K\left[X\right]$.
   \footnote{
-    Another good definition of a normal extension is from
-    \cite{wiki:normalextrus}. Normal extension $E/K$ is such algebraic
-    extension in which every irreducible polynomial $P(X)$ that has a
-    single root in $E$ splits in $E$. 
+    There is a question what is the family???
+    May be another good definition of a normal extension
+    \cite{wiki:normalextrus} can be used. Normal extension $E/K$ is
+    such algebraic extension in which every irreducible polynomial
+    $P(X) \in K\left[X\right]$ that has a single root in $E$ splits in
+    $E$.   
   }
   \label{def:normalextension}
 \end{definition}
@@ -747,7 +749,8 @@ true for arbitrary modules over a ring.
   \begin{proof}
     1 implies 2: Take
     $\left(P_i\right)_{i \in I} = \left\{P_{min}\left(x, K\right) \mid
-    x \in L\right\}$ - the set of polynomials.
+    x \in L\right\}$ - the set of polynomials
+    (i.e. the family of polynomials).
     $L$ will be a splitting field of the set $\left(P_i\right)_{i \in
       I}$ and therefore (by definition) $L$ is normal.
 
@@ -755,18 +758,41 @@ true for arbitrary modules over a ring.
     $S = \left\{\mbox{roots of } P_i, i \in I \mbox{ in } L\right\}$
     and
     $S' = \left\{\mbox{roots of } P_i, i \in I \mbox{ in }
-    \bar{K}\right\}$ then any homomorphism
+    \bar{K}\right\}$
+    \footnote{
+      $S$ and $S'$ are 2 sets of roots
+    }
+    then any homomorphism
     $\phi: L \to \bar{K}$ sends $S$ to $S'$, but $S$ generates $L$
-    over $K$, so $\phi\left(S\right)$ determines $\phi\left(L\right)$.
+    over $K$, so $\phi\left(S\right)$ determines $\phi\left(L\right)$
+    \footnote{
+      As soon as $\phi(S) = S'$ then we have one set of roots and as
+      result one image for homomorphisms.
+    }
+    .
 
-    3 implies 4: Let $j, j' \in Hom_K\left(L, \bar{K}\right)$ then
-    they send $L$ isomorphically to its image. So, these are
+    3 implies 4: Let $j, j' \in Hom_K\left(L, \bar{K}\right)$
+    (i.e. we took 2 homomorphisms)
+    then
+    they send $L$ isomorphically to its image $L'$. So, these are
     isomorphisms from $L$ to $L'$. So
     \[
     L \xrightarrow[j']{} L' \xrightarrow[j^{-1}]{} L,
     \]
+    and
+    \[
+    L \xrightarrow[j^{-1}j']{} L
+    \]
     take $j^{-1} \cdot j' \in Aut \left(L/K\right)$ and it sends $j$
-    to $j'$.
+    to $j'$
+    \footnote{
+      We have got that $\forall j, j' \in Hom_K\left(L,
+      \bar{K}\right), \exists g \in Aut\left(L/K\right)$
+      such that $g(j) = j'$, for instance $g = j^{-1}j'$ and
+      $g(j) \equiv j g = j j^{-1} j' = j'$. Therefore group
+      automorphisms acts transitively by the definition
+      \ref{def:transitive} 
+    }.
 
     4 implies 1:  I have this \nameref{def:transitive} and I have to prove
     that any minimal polynomial splits. Consider
