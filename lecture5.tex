@@ -715,11 +715,23 @@ true for arbitrary modules over a ring.
 
 \begin{definition}[Normal extension]
   A normal extension of $K$ is a \nameref{def:splittingfield} of a
-  family of polynomials in $K\left[X\right]$.
+  family of polynomials
+  \footnote {
+    There is a set of polynomials (can be only one polynomial in the
+    set) and the polynomials not necessary to be irreducible. Example
+    $\mathbb{Q}/\mathbb{Q}$ - is a normal 
+    extension because there is a set of polynomials split in it :
+    $\left\{X-1, X^2-1\right\}$. Note that any irreducible polynomial
+    (another definition below) that has a root in it also splits, for
+    instance $X - a$, where $a \in \mathbb{Q}$ is an irreducible, has
+    a root $a \in \mathbb{Q}$ and splits in it. From other side an
+    irreducible polynomial ( for example $X^3-1$ ) can have a root in
+    $\mathbb{Q}$ but does not necessary split in it. 
+  }
+  in $K\left[X\right]$.
   \footnote{
-    There is a question what is the family???
-    May be another good definition of a normal extension
-    \cite{wiki:normalextrus} can be used. Normal extension $E/K$ is
+    Another good definition of a normal extension
+    \cite{wiki:normalextrus} can also be used. Normal extension $E/K$ is
     such algebraic extension in which every irreducible polynomial
     $P(X) \in K\left[X\right]$ that has a single root in $E$ splits in
     $E$.   
