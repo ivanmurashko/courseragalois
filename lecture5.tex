@@ -911,26 +911,37 @@ theory
     $\phi: L_1 \cong L_2$ then it extends to an
     \nameref{def:automorphism} of $L$.  To see this, we embed $L$ into
     an algebraic closure $\bar{K}$. And remark that $\phi$ extends to a
-    map from $L_1$ to $\bar{K}$, but all those maps have the same image,
-    namely $L$.  
+    map from $L_1$ to $\bar{K}$, but all those maps have the same
+    image (see theorem \ref{thm:lec5_3}), namely $L$
+    \footnote{
+      ???
+    }.  
   \item The group of automorphisms $Aut\left(L/K\right)$ acts
     transitively on the roots of any irreducible polynomial $P \in
     K\left[X\right]$. Again, an isomorphism of stem fields extends to
-    an automorphism of $L$.
+    an automorphism of $L$
+    \footnote{
+      ???
+    }.
   \item If the group $Aut\left(L/K\right)$ fixes (see definition
     \ref{def:fixedpoint}) some element $x 
-    \notin K$ then $x$ is pure inseparable (see definition
-    \ref{def:degsepelem}). Indeed $P_{min}\left(x, K\right)$ has a
-    single root $x$. In particular if $L$ is
+    \notin K$ then $x$ is pure inseparable (see definitions
+    \ref {def:deginseppol} and \ref{def:degsepelem}) i.e.
+    $P_{min}\left(x, K\right)$ has a 
+    single root $x$. Thus if $L$ is
     \nameref{def:galoisextension} (i.e. is separable) then
       the set of elements which are fixed  by the automorphisms  of $L$
       over K is just K itself: 
-      $L^{Aut\left(L/K\right)} = L$.
-      Notation: if group $G$ acts on a set $X$ then $X^G = \left\{x
-      \in X \mbox{ such that } gx = x \forall g \in G\right\}$ - the
-      set of invariants.
+      $L^{Aut\left(L/K\right)} = L$ (see definition \ref{def:setinvariants}).
   \end{enumerate}
 \end{remark}
+
+\begin{definition}[Set of invariants]
+  If group $G$ acts on a set $X$ then $X^G = \left\{x
+  \in X \mbox{ such that } gx = x, \forall g \in G\right\}$ - the
+  set of invariants.
+  \label{def:setinvariants}
+\end{definition}
 
 \begin{definition}[Galois group]
   If $L$ is \nameref{def:galoisextension} then Galois group $G =
