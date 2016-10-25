@@ -1082,26 +1082,23 @@ space) $K$-algebra.
   The remark is not a part of the lectures but it is important to
   understand the below content.
 
-  Let $A$ is a $K$-algebra. By definition of $K$-algebra (see
-  definition \ref{def:kalgebra}) $K$ is a field. A field $K$ has only one
-  \nameref{def:maxideal}: $\{0_k\}$ (see example \ref{ex:maxideal}).
-
-  Let $m$ is a maximal ideal of $A$ then the
-  \nameref{def:quotientring} $A/m$ is a $K$-algebra.
+  Let $A$ is a $K$-algebra and $m$ is a maximal ideal of $A$. Then
+  $A/m$ is also $K$-algebra.
 
   \begin{proof}
-    For applying lemma \ref{lem:lec1_homkalgebra} we have to establish
-    a ring \nameref{def:homomorphism} $f$ between $K$ and $A/m$. It
-    will be enough proof that $f$ is \nameref{def:injection} 
-    i.e. $\forall x,y \in K$ such that $x \ne y$ we will have $f(x)
-    \ne f(y)$. In other cases (if $f(x) = f(y)$) we will have
-    $f(x - y) = 0$ i.e. $x - y \in m$. As soon as $x,y \in K$ then $x
-    - y \in K$ moreover $x - y \in m$. If $x \ne y$ then
-    $\exists (x-y)^{-1} \in K$ and $(x-y)(x-y)^{-1} = 1_k \in m$ (as
-    soon as $m$ is an ideal) i.e.
-    $m$ is not a \nameref{def:properideal} and as result is not a
-    maximal ideal.
-  \end{proof} 
+    Lemma \ref{lem:lec1_homkalgebra} says that there is a ring homomorphism
+    between $K$ and $A$: $f_K: K \to A$. There is also a canonical
+    homomorphism $f_A: A \xrightarrow[a \to \bar{a}]{} A/m$. Therefore
+    we can define $f = f_A f_K: K \to A/m$ and therefore with
+    lemma\ref{lem:lec1_homkalgebra} can conclude that $A/m$ is a
+    $K$-algebra.
+    \footnote{
+      Thanks Zonglin Jiang for the proof.
+    }
+
+    Note that if $A$ is a field then $f_A$ is injection, $m=\{0_K\}$
+    and $A = A/m$. 
+  \end{proof}
   \label{rem:lec5_quotientkalgebra}
 \end{remark}
 
