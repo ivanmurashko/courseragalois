@@ -967,7 +967,8 @@ theorem
   $L$ is a field and $G \subset Aut\left(L\right)$
   \begin{enumerate}
   \item If $G$ acts with finite orbits,  so, I mean all orbits of G
-    are finite, then $L$ is a \nameref{def:galoisextension} of $L^G$.
+    are finite (i.e. $\forall x \in L: \left|Orb(x)\right| < \infty$),
+    then $L$ is a \nameref{def:galoisextension} of $L^G$. 
   \item If $\left|G\right| = n < \infty$ then
     $\left[L : L^G\right] = n$ and $G$ is a \nameref{def:galoisgroup}
   \end{enumerate}
@@ -989,7 +990,11 @@ theorem
     very easy to compute all the Galois groups, and in fact we shall see
     shortly what is exactly this Galois group of $L$ over $K$.
     \footnote{
-      ??? provide the proof
+      Section \ref{sec:lec6_finitefield} shows that
+      $Gal\left(\bar{\mathbb{F}}_p/\mathbb{F}_p\right)$ is not cyclic,
+      but theorem \ref{thm:lec3_2} says that if $G$ is finite than it
+      should be cyclic. Thus we can conclude that
+      $Gal\left(\bar{\mathbb{F}}_p/\mathbb{F}_p\right)$ is not finite
     }
   \end{remark}
   \begin{proof}
