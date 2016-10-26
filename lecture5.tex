@@ -1001,19 +1001,28 @@ theorem
     \begin{enumerate}
     \item  Let me take $x$, well say, $x_1 \in L$ which is not
       $G$-invariant: $x_1 \in L \setminus L^G$ and
-      $x_1, x_2, \dots, x_k$ - the $G$-\nameref{def:orbit} of $x$. The
+      $G$-\nameref{def:orbit} of $x$ 
+      $Orb(x) = \{x_1, x_2, \dots, x_k\}$. The
       polynomial $P\left(X\right) = \prod_{i=1}^k\left(X - x_i\right)$
-      is $G$-invariant. So, this is of course the $G$ orbit, $G$ just
-      permutes  the $x_i$, it permutes the factors of these polynomial,
-      so the polynomial is $G$-invariant. Its coefficients are
-      $G$-invariant then $P \in L^G\left[X\right]$ by definition. $L^G$
-      is a field of $G$ invariants, and it is separable. $P$ is separable,
+      is $G$-invariant
+      \footnote{
+        I.e. $\forall g \in G: g\left(P\left(X\right)\right) =
+        P\left(X\right)$
+      }
+      . $G$ just permutes  the $x_i$, it permutes the factors of these
+      polynomial, 
+      so the polynomial is $G$-invariant. Therefore its coefficients are
+      $G$-invariant and as result $P \in L^G\left[X\right]$ by
+      definition \ref{def:setinvariants}. $L^G$ is a field of $G$
+      invariants, and it is 
+      separable. $P$ is separable, 
       because all $x_i$ are distinct ( there are distinct elements of the
       orbit ). And $L$ is splitting field of $P$, therefore $L$ is a
-      \nameref{def:galoisextension} over $L^G$ 
+      \nameref{def:galoisextension} over $L^G$ by the
+      \nameref{def:galoisextension} definition.
     \item We have $\left|G\right| = n$ then
       $\forall y \in L: \left|Orb\left(y\right)\right| \le n$. Take
-      $x$ as above
+      $x$ as above ($x \in L \setminus L^G$)
       $\left[L^G\left(x\right): L^G\right] \le n$. Claim that this
       implies $\left[L:L^G\right] \le n$. If I knew already, that $L$ is
       finite over $L^G$, this would be very easy, this would be just a
