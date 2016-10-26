@@ -10,7 +10,7 @@ Some definitions from previous lecture. $L$ over $K$ is
 \nameref{def:galoisextension} if and only if it is a
 \nameref{def:separableextension} and \nameref{def:normalextension} or
 in other words $L$ is a \nameref{def:splittingfield} of a family of
-separable irreducible polynomial over $K$. We also seen (see theorem
+separable irreducible polynomials over $K$. We also seen (see theorem
 \ref{thm:lec5_4}) that in the case of finite extension
 $\left[L:K\right] < \infty$ the number of automorphisms
 $\left|Aut\left(L/K\right)\right| = \left[L:K\right]$.
@@ -27,7 +27,7 @@ $K$. So, for a normal extensions, this is not the case anymore.
   normal over $K$ then of course the $M$ is normal over $L$. It is
   clear because if $M$ is a splitting field of a family of polynomials
   over $K$ the one can just consider them as being polynomials over
-  $L$ and say that $M$ is a splitting field of ephemeral polynomials
+  $L$ and say that $M$ is a splitting field of a family of polynomials
   over $L$.
 
   But $L$ does not have to be normal over $K$ (see example
@@ -53,10 +53,17 @@ $K$. So, for a normal extensions, this is not the case anymore.
 \end{example}
 
 \begin{remark}
-  A quadratic extension is normal. This is by formula for roots of a
+  A quadratic extension
+  \footnote {
+    Extensions with degree 2. 
+  }
+  is normal. This is by formula for roots of a
   quadratic equation.
   \footnote {
-    ??? Extensions with degree 2. 
+    Because a if we have 2 roots $x_1, x_2 \in L \supset K$ then there
+    exists the following relation $x_2 = k_1 + k_2 x_1$ where $k_1,
+    k_2 \in K$. I.e. if we know one root then the other is easy
+    computed and located in the same extension as the first one. 
   }
 
   If $P$ quadratic over $K$ has 1 root in $L$ then its another root is
