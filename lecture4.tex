@@ -134,10 +134,19 @@ $\bar{g} :  \overline{M \otimes_A N} \to M \otimes_A N$.
 Both $g$ and $\bar{g}$ are linear and, as mentioned above, the pair is
 unique (if we fix $g$ we will have only one $\bar{g}$ that corresponds
 to $g$). The composition $g \circ \bar{g}$ maps $M \otimes_A N$ to
-itself. Thus if we fix $g$ and choose $\bar{g} = g^{-1}$ we will get
-$g \circ \bar{g} = id_{M \otimes_A N}$ that satisfied all
-requirements. The choice is final because we don't have a possibility
-to choose any other $\bar{g}$ (it should be unique).
+itself. I.e. $\forall x \in M \times N$ we have
+$\bar{g}\left(g\left(\phi\left(x\right)\right)\right) =
+\phi\left(x\right)$. If $y = \phi\left(x\right)$ then
+$\bar{g}\left(g\left(y\right)\right) = y$. The last equation holds
+$\forall y \in Im\left(\phi\right)$ i.e. $\forall y \in M \otimes_A
+N$. Therefore $\bar{g} = g^{-1}$. 
+\footnote {
+  Another explanation is the following: thus if we fix $g$ and choose
+  $\bar{g} = g^{-1}$ we will get $g \circ \bar{g} = id_{M \otimes_A
+    N}$ that satisfied all requirements. The choice is final because
+  we don't have a possibility to choose any other $\bar{g}$ (it should
+  be unique).
+}
 
 Thus we have an
 \nameref{def:isomorphism} and the isomorphism is unique as soon as the
