@@ -634,14 +634,14 @@ is $a_i = 0$ whenever $p^h \nmid i$. See the following example
   P\left(X\right) = X^{2^4} + 1 = Q(Y)
   \]
   where $Y = X^{16}$ and $Q(Y) = Y + 1$. In the case
-  $r=4, p^r = 16 \mid 16$.
+  $r=4, p^r = 16 \mid 16$
 
   For polynomial $P\left(X\right) = X^{12} + 1$ we have
   \[
   P\left(X\right) = \left(X^{2^2}\right)^3 + 1 = Q(Y)
   \]
   where $Y = X^4$ and $Q(Y) = Y^3 + 1$. In the case
-  $r=2, p^2 = 4 \mid 12$ because $h = 3$ does not fit into
+  $r=2, p^2 = 4 \mid 12$ because $h = 3 > 2$ does not fit into
   the requirements: $p^h = 2^3 = 8 \nmid 12$.
 \end{example}
 
@@ -892,8 +892,8 @@ minimal polynomial $P_{min}\left(\alpha, K\right)$
       $P_{min}\left(\alpha_i, K\right) \in L\left[ X \right]$
       From other side $P_{min}\left(\alpha_i, L\right)$ is the minimal
       irreducible polynomial  in $L\left[X\right]$ and any other
-      polynomial with $\alpha_i$ as root has to by divisible by it.
-      see also lemma \ref{lem:minpolynomial}
+      polynomial with $\alpha_i$ as root has to by divisible by it
+      (see also lemma \ref{lem:minpolynomial}).
     }
     Thus if 
     $P_{min}\left(\alpha_i, K\right)$ is separable (i.e. have distinct
