@@ -402,12 +402,12 @@ More complex fact is the following
     $\tilde{f}_{i_0, j_0}$ sends $e_{i_0} \otimes \epsilon_{j_0}$ to 1
     and all others to 0.
     \footnote{
-      Because $f = \tilde{f} \phi$ i.e.
+      Because $f_{i_0, j_0} = \tilde{f}_{i_0, j_0} \phi$ i.e.
       \begin{eqnarray}
       a_{i_0} b_{j_0} =
       f_{i_0,j_0}\left(\sum a_i e_i, \sum b_j\epsilon_j\right) =
       \nonumber \\
-      =  f_{i_0,j_0}\left(
+      =  \tilde{f}_{i_0,j_0}\left(
       \phi\left(\sum a_i e_i, \sum b_j\epsilon_j\right)\right) = 
       \nonumber \\
       =
@@ -481,7 +481,7 @@ b \cdot \left(b' \otimes m \right) = \left( b \cdot b' \right) \otimes m
   \footnote{
     In the case we have ring $A = \mathbb{R}$ and $B = \mathbb{C}$ -
     $A$ algebra. $A$ - module is the following vector space
-    $M = \mathbb{R}^{2n}$ and $B$ - module is $N = \mathbb{C}^n$.
+    $M = \mathbb{R}^{n}$ and $B$ - module is $N = \mathbb{C}^n$.
   }
   The $\mathbb{C}^n$ has the following basis $e_1, \dots, e_n$.
   The $\mathbb{R}^{2n}$ has the following one
@@ -539,8 +539,8 @@ basis $1_B \otimes e_1, \dots, 1_B \otimes e_n$.
   \[
   f_{i_0}\left(b, \sum_{i=1}^n m_i e_i\right) = b m_{i_0} e_{i_0}
   \]
-  so there exists a linear map $\tilde{f}_{i_0}$ such that
-  $f_{i_0} = \tilde{f}_{i_0} \phi$ or
+  so there exists a linear map $\tilde{f}_{i_0}$ (homomorphism) such
+  that $f_{i_0} = \tilde{f}_{i_0} \phi$ or
   \begin{eqnarray}
     f_{i_0}\left(b, \sum_{i=1}^n m_i e_i\right) =
     \tilde{f}_{i_0} \left(
@@ -653,7 +653,26 @@ We have the following maps.
               ;
     \end{tikzpicture}
     
-    One can conclude (as soon as the diagram commutes)
+    One can conclude, as soon as the diagram commutes
+    
+        \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+      \matrix (m) [matrix of math nodes, row sep=3em,
+        column sep=2.5em, text height=1.5ex, text depth=0.25ex]
+              { M  & &  N \\
+                & B \otimes_A M & & B \otimes_A N \\ };
+              %\draw[double,double distance=5pt] (m-1-1) – (m-1-3);
+              \path[->]
+              ([yshift=-1ex]m-1-1.east) edge node[description] {$ g $}
+              ([yshift=-1ex]m-1-3.west);
+              \path[->]
+              (m-1-1) edge node[description] {$ \alpha $} (m-2-2)
+              (m-2-2) edge node[description] {$ id_B \otimes g $}
+              (m-2-4)
+              (m-2-4) edge node[description] {$ \mu $} (m-1-3)
+              ;
+    \end{tikzpicture}
+
+    
     \[
     \hat{f}\left(\hat{g}\left(g\right)\right) =
     \mu \cdot (id_B \otimes g) \cdot \alpha = g.
