@@ -697,6 +697,7 @@ We have the following maps.
   \[
   A/I \otimes_A M \cong M/IM
   \]
+  where $IM$ is a sub-module of $M$.
   \begin{proof}
     We have map $\alpha: M \to B \otimes_A M = A/I \otimes_A M$
     (see remark \ref{rem:lec4_maps}) 
@@ -725,7 +726,11 @@ We have the following maps.
     \]
     gives us the following map of $B$-modules
     \footnote{
-      just ignore $B$:
+      the \nameref{thm:basechange} theorem says that homomorphism of
+      $A$-modules $M \to N$ is isomorphic to homomorphism of $B$
+      modules $B\otimes_A M \to N$. Using $N = M/IM$ we can get that
+      $B\otimes_A M \to M/IM$ is isomorphic to
+      $M \to M/IM$. We also can get the same result just ignore $B$:
       $B \otimes_A M \to M \to M/IM$.
     }
     \[
