@@ -324,9 +324,10 @@ So what have we had (see also example \ref{ex:lec5_conrad})?
 \[
 A = L \otimes_K \bar{K},
 \]
-\[
-A_{red} = \prod_{i=1}^r \bar{K}.
-\]
+\begin{equation}
+  A_{red} = \prod_{i=1}^r \bar{K}.
+  \label{eq:lec5_AredIsProd}
+\end{equation}
 The following one $A = A_{red}$ is the same to $r$ is maximal and
 equal to $\left[L:K\right] = \left[A: \bar{K}\right]$.
 \footnote{
@@ -414,7 +415,9 @@ nilpotents. So let me formulate it as a theorem.
       $\bar{K}$ which is the same as $A$ is \nameref{def:reduced}
       since $\dim_{\bar{K}} A = \left[L:K\right]$.
       \footnote{
-        see example \ref{ex:lec1_fieldquotionisomorphism}.
+        From (\ref{eq:lec5_AredIsProd}), if $A = A_{red}$, one can get
+        $\dim_{\bar{K}} A = \dim_{\bar{K}} A_{red} = \dim_{\bar{K}}
+        \prod_{i = 1}^r \bar{K} = r = \left[L:K\right]$.
       }
 
       $L$ is pure inseparable: this means that exists only one
