@@ -777,6 +777,10 @@ true for arbitrary modules over a ring.
   \item $L$ is \nameref{def:normalextension}
   \item All \nameref{def:homomorphism}s from $L$ to $\bar{K}$ have the
     same image.
+    \footnote{
+      And the image is $L$ because $id$ is also a
+      \nameref{def:homomorphism} 
+    }
   \item The \nameref{def:group} of \nameref{def:automorphism}s
     $Aut\left(L/K\right)$ acts transitively (see definition
     \ref{def:transitive}) on this set of 
@@ -899,7 +903,7 @@ theory
     freely (see definition \ref{def:freeaction}) on the set
     $Hom_K\left(L, \bar{K}\right)$,
     \footnote{
-      ??? Note that the number of distinct roots is equal to the number of
+      Note that the number of distinct roots is equal to the number of
       distinct homomorphisms (see proposition \ref{prop:lec3_2}). Thus
       we can set an association between 
       roots and homomorphisms. Proposition \ref{prop:stemfield}
@@ -923,8 +927,15 @@ theory
     }
     to the cardinality of the set it self:
     $\left|Hom_K\left(L, \bar{K}\right)\right|$. The equality holds
-    whenever (if and only if) \nameref{def:action} is \nameref{def:transitive}. We
-    just seen in 
+    whenever (if and only if) \nameref{def:action} is
+    \nameref{def:transitive}.
+    \footnote{
+      This follows directly from the definition of
+      \nameref{def:transitive} i.e. $\forall h_1, h_2 \in
+      Hom_K\left(L, \bar{K}\right)$ $\exists a \in
+      Aut\left(L/K\right)$  such that $a(h_1) = h_2$.
+    }
+    We just seen in 
     theorem \ref{thm:lec5_3} that this means that $L$ is normal over
     $K$. So we have
     \[
