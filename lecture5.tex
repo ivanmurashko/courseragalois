@@ -1123,7 +1123,13 @@ theorem
       don't know yet that $L$ is finite so I have to do some trick. So,
       proof of the claim:  take $x$ such that
       $\left[L^G\left(x\right):L^G\right]$ is maximal then take $y \in
-      L$. $L^G\left(x,y\right)$ is finite over $L$ and I can apply
+      L$. $L^G\left(x,y\right)$ is finite over $L$
+      \footnote{
+        because $x,y$ are algebraic elements and using theorem
+        \ref{thm:lec1_2} and proposition \ref{prop:lec1_1} we can
+        conclude that $L^G\left(x,y\right)$ is finite over $L$.
+      }
+      and I can apply
       \nameref{thm:primitiveelement} theorem. Therefore
       $L^G\left(x,y\right) = L^G\left(z\right)$. But
       \[
@@ -1137,7 +1143,7 @@ theorem
       strictly less than $n$, then $L$ cannot have $n$ automorphisms
       over $L^G$ but $G \subset Aut\left(L/L^G\right)$ so this is a
       contradiction. Therefore $\left[L: L^G\right] = n$ and
-      $G = Aut\left(L/L^G\right)$
+      $G = Aut\left(L/L^G\right)$ (see theorem \ref{thm:lec5_4}).
     \end{enumerate}
   \end{proof}
   \label{thm:artin}
