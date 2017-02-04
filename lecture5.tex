@@ -972,23 +972,36 @@ theory
     $\phi: L_1 \cong L_2$ then it extends to an
     \nameref{def:automorphism} of $L$.  To see this, we embed $L$ into
     an algebraic closure $\bar{K}$. And remark that $\phi$ extends to a
-    map from $L_1$ to $\bar{K}$, but all those maps have the same
+    map from $L_1$ to $\bar{K}$,
+    \footnote{
+      Ekaterina really said that but may be more better to say that
+      $\phi$ extends to a map from $L$ to $\bar{K}$ ???
+    }
+    but all those maps have the same
     image (see theorem \ref{thm:lec5_3}), namely $L$
     \footnote{
-      Consider $L_1 \subset L_2 \subset \bar{K}$ we have a
-      homomorphism $\phi: L_1 \to L_2$ (our isomorphism) it,
+      Consider $L_1 \subset L_2 \subset L \subset \bar{K}$ we have a
+      homomorphism $\phi_1: L_1 \to L_2$ (our isomorphism) that
       accordingly theorem \ref{thm:lec2_3}, can be extended to
-      homomorphism $\tilde{\phi}: L_1 \to \bar{K}$.  
-      ??? using normality of $L$ ??? we can conclude that all such
-      homomorphisms have the same image. If the image is $L$ then we
-      have an \nameref{def:automorphism}.
+      homomorphism $L_1 \to \bar{K}$ and the last one can be extended
+      to $\tilde{\phi_1}: L \to \bar{K}$. We can also consider
+      $L_2 \subset L_1 \subset L \subset \bar{K}$ and homomorphism
+      $\phi_2: L_2 \to L_1$ that can extended (using the same
+      approach) to  $\tilde{\phi_2}: L \to \bar{K}$. Both
+      $\tilde{\phi_{1,2}}$ has the same image $L$ as soon as $L$ -
+      normal extension (see theorem \ref{thm:lec5_3}). Thus we have an
+      \nameref{def:automorphism}. 
     }.  
   \item The group of automorphisms $Aut\left(L/K\right)$ acts
     transitively on the roots of any irreducible polynomial $P \in
     K\left[X\right]$. Again, an isomorphism of stem fields extends to
     an automorphism of $L$
     \footnote{
-      ??? 
+      In the case we have \nameref{def:transitive} i.e. for any roots
+      $x,y$ we have an isomorphism of stem fields $\phi$ such that
+      $\phi(x) = y$ (see proposition \ref{prop:stemfield}). This
+      isomorphism extends to an automorphism accordingly the
+      prev. remark.  
     }.
   \item If the group $Aut\left(L/K\right)$ fixes (see definition
     \label{rem:item:lec5_onnormalext_3}
@@ -1057,7 +1070,7 @@ theorem
     $Gal\left(L/K\right)$ can be infinite when $L$ is not finite over $K$. For
     instance, if  $K  = \mathbb{F}_p$ and $L = \overline{\mathbb{F}_p}$. It is
     very easy to compute all the Galois groups, and in fact we shall see
-    shortly what is exactly this Galois group of $L$ over $K$.
+    shortly what is exactly this Galois group of $L$ over $K$ is infinite.
     \footnote{
       Section \ref{sec:lec6_finitefield} shows that
       $Gal\left(\bar{\mathbb{F}}_p/\mathbb{F}_p\right)$ is not cyclic,
@@ -1092,7 +1105,16 @@ theorem
     \item We have $\left|G\right| = n$ then
       $\forall y \in L: \left|Orb\left(y\right)\right| \le n$. Take
       $x$ as above ($x \in L \setminus L^G$)
-      $\left[L^G\left(x\right): L^G\right] \le n$. Claim that this
+      $\left[L^G\left(x\right): L^G\right] \le n$.
+      \footnote{
+        $x$ is a root of the following polynomial $P\left(X\right) =
+        \prod_{i=1}^k\left(X - x_i\right)$, where $x_i \in
+        Orb(x)$. The polynomial has degree $\deg P =
+        \left|Orb(x)\right| \le n$ and
+        $\deg P_{min}\left(x, L^G\right) \le \deg P \le n$ therefore
+        $\left[L^G\left(x\right): L^G\right] \le n$.
+      }
+      Claim that this
       implies $\left[L:L^G\right] \le n$. If I knew already, that $L$ is
       finite over $L^G$, this would be very easy, this would be just a
       direct consequence of \nameref{thm:primitiveelement} theorem. I
