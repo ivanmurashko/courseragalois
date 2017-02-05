@@ -206,8 +206,11 @@ group automorphisms $Aut\left(L/K\right)$ is called
     \item We should proof equivalence of the following statements:
       \begin{enumerate}
       \item $F$ is Galois over $K$ \label{item:galoiscorrespondence1}
-      \item $\forall g \in Gal\left(L/K\right) g\left(F\right) = F$
+      \item $\forall g \in Gal\left(L/K\right), g\left(F\right) = F$
         \label{item:galoiscorrespondence2}
+        \footnote{
+          $g \in Gal\left(L/K\right)$ operates on $L \supset F$.
+        }
       \item $Gal\left(L/F\right) \triangleleft Gal\left(L/K\right)$
         \label{item:galoiscorrespondence3}
       \end{enumerate}      
@@ -218,7 +221,8 @@ group automorphisms $Aut\left(L/K\right)$ is called
     polynomial $P_{min}\left(x, K\right)$ splits in $L$ but it has a
     root in $F$, thus it should have all roots in $F$ by normality.
     I. e. as soon as $F$ is a \nameref{def:normalextension},
-    $P_{min}\left(x, K\right)$ splits in $F$. This means, of course,
+    $P_{min}\left(x, K\right)$ splits in $F$ (see theorem
+    \ref{thm:lec5_3}). This means, of course, 
     that any map from Galois group preserves $F$ since it premutes the
     roots: $\forall g \in Gal\left(L/K\right)$ $g$ permutes the roots
     of $P_{min}\left(x, K\right)$ and that is the true for any $x \in
