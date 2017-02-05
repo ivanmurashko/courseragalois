@@ -388,7 +388,19 @@ Just another example \cite{bib:KeithConradFiniteFields}
 \begin{theorem}
   Let $K$ be a field and and $G$ be a finite \nameref{def:subgroup} of
   $K^\times$ (see definition \ref{def:multiplicativegroup}) then $G$
-  is a \nameref{def:cyclicgroup} 
+  is a \nameref{def:cyclicgroup}
+  \footnote{
+    Not every finite group is cyclic. For instance the non-abelian
+    group $S_3$ (see example \ref{ex:s3group}) consists of 6 elements
+    but not it is not cyclic.
+
+    If we want to have a cyclic group it should be
+    \nameref{def:abeliangroup} in the case it can be represented in
+    the form of a cyclic group or a direct sum of cyclic groups
+    accordingly the fundamental theorem of finite abelian groups
+    \cite{wiki:abeliangroup}. It seems that a direct sum of cyclic
+    group considered as a cyclic group in the course.
+  }
   \begin{proof}
     Idea is to compare $G$ and the \nameref{def:cyclicgroup}
     $\mathbb{Z}/N\mathbb{Z}$ where $N = \left|G\right|$.
