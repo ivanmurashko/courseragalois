@@ -268,15 +268,28 @@ group automorphisms $Aut\left(L/K\right)$ is called
     \ref{item:galoiscorrespondence3} i.e. let $g \in G$,
     $g\left(F\right) \subset L$ then if
     $h \in Gal\left(L/F\right)$ is such that $\left.h\right|_F = id$
-    then $\left.g h g^{-1}\right|_{g\left(F\right)} = id$. This means
-    that $g h g^{-1} \in Gal\left(L/g\left(F\right)\right)$ so the
+    then $\left.g h g^{-1}\right|_{g\left(F\right)} = id$.
+    \footnote{
+      The map $g^{-1}$ acts as follows $g^{-1}: g(F) \to F$ i.e. $h$
+      in $\left.g h g^{-1}\right|_{g\left(F\right)}$ operates on $F$
+      only therefore
+      \[
+      \left.g h g^{-1}\right|_{g\left(F\right)} =
+      \left.g h_F g^{-1}\right|_{g\left(F\right)}  =
+      \left.g g^{-1}\right|_{g\left(F\right)} = id
+      \]
+    }
+    This means
+    that $g h g^{-1} \in Gal\left(L/g\left(F\right)\right)$ (see
+    (\ref{eq:lec5_2})) so the 
     statement $g\left(F\right) = F$ is the same to say
     \[
     g Gal\left(L/F\right) g^{-1} = Gal\left(L/F\right)
     \]
     So apply this to all $g \in Gal\left(L/K\right)$ one can get that
     $Gal\left(L/F\right)$ is a \nameref{def:normalsubgroup} of
-    $Gal\left(L/K\right)$
+    $Gal\left(L/K\right)$ by the definition of
+    \nameref{def:normalsubgroup}. 
 
     Finally if all this statements
     (\ref{item:galoiscorrespondence1}
@@ -292,7 +305,16 @@ group automorphisms $Aut\left(L/K\right)$ is called
     Gal\left(L/F\right).
     \]
     This is a \nameref{def:surjection} by theorem \ref{thm:lec2_3}
-    (???) and the kernel $\ker \phi = Gal\left(L/F\right)$ by
+    \footnote{
+      We have that $\forall g_F \in Gal\left(L/F\right)$ $g_F$ is a
+      homomorphism that operates as follows $g_F: F \to F \subset
+      \bar{K}$ and therefore it can be extended (by theorem
+      \ref{thm:lec2_3}) to homomorphism $g: L \to L \subset \bar{K}$
+      i.e. $\forall g_F \in  Gal\left(L/F\right), \exists g \in
+      Gal\left(L/K\right)$ such that $\phi(g) = g_F$. Or in other
+      words $\phi$ is a \nameref{def:surjection}.
+    }
+    and the kernel $\ker \phi = Gal\left(L/F\right)$ by
     definition because the kernel consists of things which are identity on $F$. 
   \end{proof}
   \label{thm:galoiscorrespondence}
