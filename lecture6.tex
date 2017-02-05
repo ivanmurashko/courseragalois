@@ -161,23 +161,33 @@ group automorphisms $Aut\left(L/K\right)$ is called
     $Gal\left(L/K\right) \twoheadrightarrow Gal\left(F/K\right)$ and
     the kernel is $Gal\left(L/F\right)$.
     \footnote{
-      ??? is there an reformulation of \nameref{thm:firstisomorphism}
+      It looks like a reformulation of \nameref{thm:firstisomorphism}
       or just an application from \cite{wiki:normalsubgroup} that the
       normality $N \triangleleft G$ is equivalent to the following
       statement. There is some homomorphism on $G$ for which $N$ is
-      the kernel: $\exists \phi \in Hom(G) \mid \ker{\phi} =N$.
+      the kernel: $\exists \phi \in Hom(G) \mid \ker{\phi} =N$. Note:
+      the proof of the fact is at the end of the proof of the theorem. 
     }
   \end{enumerate}
   \begin{proof}
     \begin{enumerate}
     \item Most work have been done before. What have we got by now?
-      $L^{Gal\left(L/F\right)} = F$ (see (\ref{eq:lec5_2})). By
-      the theorem definition we have $H \subset Gal\left(L/K\right)$.
+      $L^{Gal\left(L/F\right)} = F$ (see (\ref{eq:lec5_2})). We also
+      have $H \subset Gal\left(L/L^H\right)$.
+      \footnote{
+        Ekaterina called the fact obvious but let try to explain it.
+        From (\ref{eq:lec5_2}) we have
+        $L^{Gal\left(L/L^H\right)} = L^H$ thus
+        $\forall h \in H$ it should also satisfy $h \in
+        Gal\left(L/L^H\right)$ therefore $H \subset
+        Gal\left(L/L^H\right)$. 
+      }
       \nameref{thm:artin} theorem gives us
       $\left[L:L^H\right] = \left|H\right|$ but with theorem
       \ref{thm:lec5_4} we also have
       $\left[L:L^H\right] = \left|Gal\left(L/L^H\right)\right|$ so one
-      must have $H = Gal\left(L/L^H\right)$.
+      must have $H = Gal\left(L/L^H\right)$ as soon as the subset $H$
+      has the same cardinality as the set $Gal\left(L/L^H\right)$ itself.
 
       This means that the maps that we have in the theorem :
       $F \rightarrow Gal\left(L/F\right)$ and
