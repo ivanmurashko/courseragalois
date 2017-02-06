@@ -415,7 +415,16 @@ for this operation) then
 \[
 \sqrt{\Delta} = \prod_{i < j} \left(x_i - x_j\right)
 \]
-this quantity is preserved by even (and not by odd) permutations.
+this quantity is preserved only by even
+\footnote{
+  You can see from definition \ref{def:paritypermutation} and example
+  \ref{ex:paritypermutation} that for even permutations each insertion
+  is equivalent to a root exchange. If the number of such exchange is
+  even then we can return the changed root of a discriminant to its original
+  form with event steps. Each step changes the sign and as result the
+  even steps will not change the sign.
+}
+(and not by odd) permutations.
 
 \begin{proposition}
   Let $G = Gal\left(P\right)$ - \nameref{def:galoisgroup} then $G
@@ -492,17 +501,42 @@ following one
   . If not then $Gal\left(P\right) \cong S_3$ (non
   commutative group of 6 elements).
 
-  What can we say about sub-extensions for the two cases? If $M$ is a
+  What can we say about sub-extensions for the two cases? Let $M$ is a
   splitting field of $P$ over $K$ then for the first case there is no
   any sub-extension. For the second case there are several
   sub-extensions (they are determined by sub-groups of the Galois
   group: $S_3$ for our case). Especially we have 3 sub-extension of
-  degree 3: $K\left(x_1\right)$, $K\left(x_2\right)$ and
-  $K\left(x_3\right)$ (fixed by non-normal sub-groups of order 2 -
-  because $M$ is degree 2 over $K\left(x_{1,2,3}\right)$ -
-  transpositions roots ???). And we have one quadratic sub-extension
+  degree 3:
+  \footnote{
+    because $x_1, x_2, x_3$ are roots of a cubic polynomial
+  }
+  $K\left(x_1\right)$, $K\left(x_2\right)$ and
+  $K\left(x_3\right)$, fixed by non-normal sub-groups of order 2 -
+  because $M$ is degree 2 over $K\left(x_{1,2,3}\right)$.
+  \footnote{
+    $K\left(x_i\right) = M^{Gal\left(M/K\left(x_i\right)\right)}$ and
+    $Gal\left(M/K\left(x_i\right)\right)$ has order 2, as soon as
+    $\left[M:K\left(x_i\right)\right] = 2$,
+    i.e.
+    $Gal\left(M/K\left(x_i\right)\right) \cong \mathbb{Z}/2\mathbb{Z}$
+    - transposition of roots
+  }
+  And we have
+  one quadratic sub-extension 
   (of degree 2) fixed by $A_3 \subset S_3$ this is
   $K\left(\sqrt{\Delta}\right)$.
+  \footnote{
+    The extension should be $K\left(\alpha\right)$ where $\alpha$ is a
+    root of a quadratic polynomial and $\alpha \notin
+    K$ but $\alpha \in M$. $\sqrt{\Delta}$ is a good choice for the
+    sub-extension 
+    generator because $\sqrt{\Delta} \notin K$ but $\sqrt{\Delta} \in
+    M$ and $\sqrt{\Delta}$ - is a root of a quadratic polynomial
+    i.e. it generates a quadratic extension. In the case
+    $K\left(\sqrt{\Delta}\right) =
+    M^{Gal\left(M/K\left(\sqrt{\Delta}\right)\right)} = M^{A_3}$ i.e.
+    $Gal\left(M/K\left(\sqrt{\Delta}\right)\right) = A_3$.
+  }
 
   \nameref{thm:galoiscorrespondence} says us that there are no other
   sub-extensions. Because those sub extensions correspond objectively
