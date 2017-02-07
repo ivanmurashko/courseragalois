@@ -693,10 +693,22 @@ $F_p$ and and the whole Galois group coincide.
 Consider a number $n$ that is prime to characteristic (see section
 \ref{sec:fieldcharacteristic}) of $K$:
 $\left(n, char\left(K\right)\right) = 1$ and consider the polynomial
-$P_n = X^n - 1$ (if $\left(n, char\left(K\right)\right) = 1$ then the
-polynomial has no multiple roots). Thus the polynomial has exactly $n$
-roots which form a cyclic multiplicative subgroup of $\bar{K}^\times$
+$P_n = X^n - 1$ (if $\left(n, char\left(K\right)\right) = 1$
+then the
+polynomial has no multiple roots)
+\footnote{
+ if $\left(n, char\left(K\right)\right) = 1$ then $P_n' = n X^{n-1}
+ \not \equiv 0 \mod char\left(K\right)$ and as result
+ $gcd\left(P_n, P_n'\right) = 1$ i.e. $P_n$ does not have multiple
+ roots. 
+}
+. Thus the polynomial has exactly $n$
+roots which form a cyclic (see definition\ref{def:cyclicgroup})
+multiplicative subgroup of $\bar{K}^\times$ 
 (see definition \ref{def:multiplicativegroup})
+\footnote{
+  $\exists x \in \mu_n$ such that $x^n = 1$ i.e. $x$ is a root of $P_n$.
+}
 denoted by $\mu_n$. So $\mu_n$ is just the group of $n$ roots of unity
 in $\bar{K}^\times$.
 
@@ -708,11 +720,16 @@ in $\bar{K}^\times$.
 
 The set of \nameref{def:primitiverootsofunity} is denoted as
 $\mu_n^*$. All elements of $\mu_n$ are powers of a single one:
-$\forall x \in \nu_n \exists a \in \mathbb{N}: x = \zeta^a$ for some
+$\forall x \in \mu_n, \exists a \in \mathbb{N}: x = \zeta^a$ for some
 $\zeta \in \mu_n$. And primitive roots of unity form the following set
 $\left\{\zeta^a\right\}$ where $\left(a, n\right) = 1$. The number of
 such primitive roots is determined by \nameref{def:eulerfuction}:
 $\left|\mu_n^*\right| = \phi\left(n\right)$.
+\footnote{
+  That is by definition of \nameref{def:eulerfuction} that counts the
+  positive integers up to a given integer $n$ that are relatively
+  prime to $n$  
+}
 
 \begin{definition}[$n$-th cyclotomic polynomial]
   The polynomial
