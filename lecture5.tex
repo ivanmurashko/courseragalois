@@ -779,7 +779,30 @@ true for arbitrary modules over a ring.
     same image.
     \footnote{
       And the image is $L$ because $id$ is also a
-      \nameref{def:homomorphism} 
+      \nameref{def:homomorphism}
+      ??? There are 2 staff's comments about the claim:
+      \begin{itemize}
+      \item You can't naturally identify $L$ with a particular
+        subfield of $\overline{K}$ (unless $L$ is given as a
+        subfield of $\overline{K}$ a priori). But from the lecture
+        2.5 we know, that there exists an embedding $L
+        \hookrightarrow \overline{K}$ since $L$ is algebraic
+        over $K$. And the theorem says that images of all such
+        embeddings are equal if $L$ is normal over $K$. 
+      \item My previous answer was a little bit misleading. I meant,
+        if you have an arbitrary algebraic extension of $K$, there
+        is no canonical embedding into $\overline{K}$. Consider, for
+        example, a field $\mathbb{Q}/(x^3-2)$. It has several
+        embeddings into $\overline{\mathbb{Q}}$,
+        namely, $\mathbb{Q}(\sqrt[3]{2})$, $\mathbb{Q}(e^{2\pi
+          i/3}\sqrt[3]{2})$ and $\mathbb{Q}(e^{2\pi
+          i/3}\sqrt[3]{2})$. But if we consider the splitting field
+        of $x^3-2$, then it's image in $\overline{\mathbb{Q}}$
+        is $\mathbb{Q}(\sqrt[3]{2}, e^{2\pi i/3})$. So, yes, if we
+        identify roots of polynomials which define $L$ with some
+        elements of $\overline{K}$ (up to a permutation for each
+        polynomial), then the image is $L$ itself. 
+      \end{itemize}
     }
   \item The \nameref{def:group} of \nameref{def:automorphism}s
     $Aut\left(L/K\right)$ acts transitively (see definition
@@ -946,7 +969,8 @@ theory
     The first inequality become equality if $L$ is normal and the
     second one if $L$ is separable
     \footnote{
-      see definitions \ref{def:separabledegree} and \ref{def:separableextension}.
+      see definitions \ref{def:separabledegree} and
+      \ref{def:separableextension}. 
     }, thus
     \[
     \left|Aut\left(L/K\right)\right| \le \left[L:K\right]
