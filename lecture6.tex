@@ -611,9 +611,39 @@ We claim that $Gal\left(L/\mathbb{F}_p\right)$ is not cyclic. Consider
 the following number $a_n = 1+ 2 + 4 + \dots + 2^n$ then $\forall x
 \in \mathbb{F}_{p^{2^n}}$
 $F_p^{a_n}\left(x\right) = F_p^{a_m}\left(x\right)$ for any $m >
-n$. This is because the Frobenius map $F_p$ sends $x$ to $x^p$ is an
+n$.
+\footnote{
+  If $F_p^{2^{n+l}} = id$ (see below in the text) then
+  \begin{eqnarray} 
+  F_p^{a_m}\left(x\right) = F_p^{a_n + 2^{n + 1} + 2^{n+2} + \dots +
+    2^m}\left(x\right) =
+  \nonumber \\
+  = F_p^{a_n}\left(F_p^{2^{n + 1} + 2^{n+2} + \dots +
+    2^m}\left(x\right)\right) =
+  F_p^{a_n}\left(id\left(x\right)\right) =
+  F_p^{a_n}\left(x\right).
+  \nonumber
+  \end{eqnarray}
+}
+This is because the Frobenius map $F_p$ sends $x$ to $x^p$ is an
 identity on $\mathbb{F}_p$ therefore $F_p^{2^{n+l}}$ is identity on
-$\mathbb{F}_{p^{2^n}}$ $\forall l \ge 0$. This implies that
+$\mathbb{F}_{p^{2^n}}$ $\forall l \ge 0$.
+\footnote{
+  For example consider $F_p^{2^{n+1}}$ and let $x \in x
+  \in \mathbb{F}_{p^{2^n}}$. We have
+  \begin{eqnarray}
+  F_p^{2^{n+1}}\left(x\right) =
+  F_p^{2^n \cdot 2}\left(x\right) =
+  F_p^{2^n + 2^n}\left(x\right) =
+  \nonumber \\
+  =
+  F_p^{2^n}\left(F_p^{2^n}\left(x\right)\right) =
+  F_p^{2^n}\left(x^{2^n}\right) =
+  F_p^{2^n}\left(x\right) = x^{2^n} = x.
+  \nonumber
+  \end{eqnarray}
+}
+This implies that
 there exists an automorphism $\phi: L \to L$ such that $\forall n
 \ge 0$
 \[
