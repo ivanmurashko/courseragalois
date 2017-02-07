@@ -608,10 +608,13 @@ and let
 L = \cup \mathbb{F}_{p^{2^n}}
 \]
 We claim that $Gal\left(L/\mathbb{F}_p\right)$ is not cyclic. Consider
-the following number $a_n = 1+ 2 + 4 + \dots + 2^n$ then $\forall x
-\in \mathbb{F}_{p^{2^n}}$
-$F_p^{a_n}\left(x\right) = F_p^{a_m}\left(x\right)$ for any $m >
-n$.
+the following number $a_n = 1+ 2 + 4 + \dots + 2^n$ then
+$\forall x \in \mathbb{F}_{p^{2^n}}$
+\begin{equation}
+  F_p^{a_n}\left(x\right) = F_p^{a_m}\left(x\right)
+  \label{eq:lec6_finitefieldinfinite1}
+\end{equation}
+for any $m > n$.
 \footnote{
   If $F_p^{2^{n+l}} = id$ (see below in the text) then
   \begin{eqnarray} 
@@ -644,12 +647,17 @@ $\mathbb{F}_{p^{2^n}}$ $\forall l \ge 0$.
   \end{eqnarray}
 }
 This implies
-\footnote{
-  ???
-}
 that
-there exists an automorphism $\phi: L \to L$ such that $\forall n
-\ge 0$
+there exists an automorphism $\phi: L \to L$ such that
+$\forall n \ge 0$
+\footnote{
+  ??? We can say that $\phi$ maps $L$ to $L$. If equation
+  (\ref{eq:lec6_finitefieldinfinite}) holds for an arbitrary large $N$
+  (i.e. informally $\mathbb{F}_{p^{2^N}}$ very
+  close  to $L$)
+  then it also holds $\forall n < N$ because
+  (\ref{eq:lec6_finitefieldinfinite1})
+}
 \begin{equation}
   \left.\phi\right|_{\mathbb{F}_{p^{2^n}}} = F^{a_n}
   \label{eq:lec6_finitefieldinfinite}
