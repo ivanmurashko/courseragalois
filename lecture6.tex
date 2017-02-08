@@ -724,9 +724,17 @@ $\forall x \in \mu_n, \exists a \in \mathbb{N}: x = \zeta^a$ for some
 $\zeta \in \mu_n$. And primitive roots of unity form the following set
 $\left\{\zeta^a\right\}$ where $\left(a, n\right) = 1$.
 \footnote{
-  The fact require a proof. ??? Consider case $\left(a, n\right) = k >
-  1$. In the case $a k = n$ and $\zeta^a - 1 =0$ and as soon as
-  $a < n$ then $\zeta \notin \mu_n^\ast$
+  The fact require a proof. Consider case $\left(a, n\right) = k >
+  1$. Thus $\frac{n}{k}, \frac{a}{k} \in \mathbb{Z}$ and we can
+  get 
+  \[
+  \left(\zeta^a\right)^{\frac{n}{k}} =
+  \left(\zeta^{\frac{a}{k}}\right)^n = 1
+  \]
+  therefore $\zeta^a$ is a root of $X^{\frac{n}{k}} - 1$ and as soon
+  as $\frac{n}{k} < n$ we conclude that $\zeta^a \notin \mu_n^\ast$
+  (but $\zeta^a \notin \mu_n$) i.e. $\zeta^a$ is not a
+  \nameref{def:primitiverootsofunity}.
 }
 The number of
 such primitive roots is determined by \nameref{def:eulerfuction}:
