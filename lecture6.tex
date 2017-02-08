@@ -774,22 +774,49 @@ $\left|\mu_n^*\right| = \phi\left(n\right)$.
   \end{enumerate}
   \begin{proof}
     The proof was marked as an exercise in the lectures
-    \begin{enumerate}
-    \item The $X^n - 1$ has $n$ roots and lets $\zeta$ is one of the
-      root. Let $d=ord\left(\zeta\right)$ i.e. $\zeta^d = 1$ from other side
-      $\zeta^n = 1$ i.e. $d \mid n$. Therefore $\zeta \in \mu_d^\ast$
-      i.e. $\zeta$ is a root of $\Phi_d$. Thus any root $X^n - 1$ will
-      also be a root of $\prod_{d \mid n} \Phi_d$.
-      From other side for any root $\zeta'$ of $\prod_{d \mid n}
-      \Phi_d$ exists $d$ such that $\zeta'$ will be a root of $\Phi_d$
-      and as soon as $d \mid n$ then $\exists l \in \mathbb{Z}: n = d
-      \cdot l$ therefore $\left(\zeta'\right)^n =
-      \left(\left(\zeta'\right)^d\right)^l = 1$ i.e. $\zeta'$ is also
-      a root of $X^n - 1$. The both polynomial
-      are \nameref{def:monicpolynomial}s and therefore are the same.
-    \item ???
-    \item ???
-    \end{enumerate}
+    
+    The first item proof is the following. The $X^n - 1$ has $n$ roots and
+    lets $\zeta$ is one of the 
+    root. Let $d=ord\left(\zeta\right)$ i.e. $\zeta^d = 1$ from other side
+    $\zeta^n = 1$ i.e. $d \mid n$. Therefore $\zeta \in \mu_d^\ast$
+    i.e. $\zeta$ is a root of $\Phi_d$. Thus any root $X^n - 1$ will
+    also be a root of $\prod_{d \mid n} \Phi_d$.
+    From other side for any root $\zeta'$ of $\prod_{d \mid n}
+    \Phi_d$ exists $d$ such that $\zeta'$ will be a root of $\Phi_d$
+    and as soon as $d \mid n$ then $\exists l \in \mathbb{Z}: n = d
+    \cdot l$ therefore $\left(\zeta'\right)^n =
+    \left(\left(\zeta'\right)^d\right)^l = 1$ i.e. $\zeta'$ is also
+    a root of $X^n - 1$. The both polynomial
+    are \nameref{def:monicpolynomial}s and therefore are the same.
+    
+    Lets consider case
+    $char(K) = 0$ (for the second and third parts) and lets proof that
+    in the case $\Phi_d$ has coefficients in 
+    $\mathbb{Z}$. Lets proof by induction. The case $n$ is trivial
+    because 
+    $\Phi_1 = X - 1$. Let for any $d < n$ we have that $\Phi_d$ has
+    integer coefficients. Then using
+    \[
+    P_n = \prod_{d \mid n} \Phi_d
+    \]
+    we can get
+    \[
+    \Phi_n = \frac{X^n-1}{\prod_{d \mid n, d \ne n} \Phi_d}
+    \]
+    using the fact that $\prod_{d \mid n, d \ne n} \Phi_d$ has integer
+    coefficients (by induction hypothesis) we can conclude that
+    $\Phi_n$ has coefficients in $\mathbb{Q}$. Then using
+    \nameref{lem:gauss} lemma we can conclude that $\Phi_n \in
+    \mathbb{Z}\left[X\right]$.
+
+    Finally using
+    \[
+    P_n = X^n - 1 = P_n \mod p = \prod_{d \mid n} \left(\Phi_d \mod p\right)
+    \]
+    one can conclude that if $char K = p$ then $\Phi_n$ is the
+    reduction $\mod{p}$ of the \nameref{def:cyclotomicpolynomial}
+    over $\mathbb{Z}$.
+    
   \end{proof}
 \end{proposition}
 
