@@ -818,20 +818,27 @@ $\left|\mu_n^*\right| = \phi\left(n\right)$.
     over $\mathbb{Z}$.
     
   \end{proof}
+  \label{prop:lec6_cyclotomic}
 \end{proposition}
 
 \section{Irreducibility of cyclotomic polynomial.The Galois group}
 
 \begin{theorem}
-  $\Phi_n$ is irreducible in $\mathbb{Q}\left[X\right]$.
+  Let $char(K) = 0$, then $\Phi_n$ is irreducible in
+  $\mathbb{Q}\left[X\right]$
+  (it amounts to the same to say that this is irreducible in
+  $\mathbb{Z}\left[X\right]$ as we know).
   \begin{proof}
     We have to prove that all \nameref{def:primitiverootsofunity} have
     the same minimal polynomial over $\mathbb{Q}$. It must be $\Phi_n$
-    by degree reason (minimal polynomial degree should be $n$).
+    by degree reason.
 
     Let fix one primitive root $\zeta$ and all others have the form
-    $\zeta^a$ where $a$ is prime to $n$: $\left(a,n\right)=1$. We may
-    assume that $a$ is a prime number $l$ and suppose
+    $\zeta^a$ where $a$ is prime to $n$: $\left(a,n\right)=1$. If we
+    can show these for $a$ 
+    prime then we can also show this for all $a$. Thus we may
+    assume that $a$ is a prime number $l$
+    and suppose
     \[
     P_{min}\left(\zeta, \mathbb{Q}\right)
     \ne
@@ -839,7 +846,14 @@ $\left|\mu_n^*\right| = \phi\left(n\right)$.
     \]
     Then $\Phi_n = f \cdot g$ where $f$ has $\zeta$ as a root and $g$
     has $\zeta^l$ as a root. This is true in
-    $\mathbb{Q}\left[X\right]$ but also as we seen (??? add a link) in
+    $\mathbb{Q}\left[X\right]$ but also as we seen
+    \footnote{
+      $\Phi_n \in \mathbb{Z}\left[X\right]$ (see proposition
+      \ref{prop:lec6_cyclotomic}). \nameref{lem:gauss} lemma says that
+      if $\Phi_n$ is reducible than they factors are also in
+      $\mathbb{Z}\left[X\right]$.
+    }
+    in
     $\mathbb{Z}\left[X\right]$. So we have $g\left(\zeta^l\right) = 0$
     thus we can define $g_l\left(X\right) = g\left(X^l\right)$ then
     $g_l$ will have $\zeta$ as a root. But $g_l = g^l \mod l$ thus in
