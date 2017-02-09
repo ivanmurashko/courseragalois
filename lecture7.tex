@@ -45,7 +45,14 @@ Lets consider several examples
   1,3,5,7
   \right\}.
   \]
-  So our Galois group also has 4 elements:
+  So our Galois group also has 4 elements
+  \footnote{
+    There is a well known Klein four group \cite{wiki:klein4group} -
+    the only non-cyclic group of order 4 (really there are 2 groups of
+    order 2: the first one is the Klein four group, the second one is
+    the cyclic group of order 4). 
+  }
+  :
   \[
   Gal: \left\{
   id, \zeta_8 \to \zeta_8^3,
@@ -61,7 +68,24 @@ Lets consider several examples
   \nameref{def:fixedfield} $\mathbb{Q}\left(\zeta_8\right)^{\sigma_7}$
   is determined by the following expression
   \footnote{
-    ??? need a proof
+    We want to find a \nameref{ex:lec5_primitiveelement} $\nu$ such
+    that $\nu \notin \mathbb{Q}$, $\nu \in
+    \mathbb{Q}\left(\zeta_8\right)$ and $\sigma_7\left(\nu\right) =
+    \nu$ (i.e. $\sigma_7$ fixes $\mathbb{Q}\left(\nu\right)$).
+    Using the fact that $\bar{\zeta}_8 = \zeta_8^7$, it can
+    be easy to check that
+    \begin{eqnarray}
+      \sigma_7\left(\zeta_8 + \bar{\zeta}_8\right) =
+      \sigma_7\left(\zeta_8 + \zeta_8^7\right) =
+      \nonumber \\
+      =
+      \zeta_8^7 + \zeta_8^{49} =
+      \zeta_8^7 + \zeta_8^{6 \cdot 8 + 1} =
+      \zeta_8^7 + \zeta_8 = \bar{\zeta}_8 + \zeta_8,
+      \nonumber
+    \end{eqnarray}
+    i.e. we can take $\nu = \zeta_8 + \bar{\zeta}_8$ as an element
+    that generates the required extension.
   }
   \[
   \mathbb{Q}\left(\zeta_8\right)^{\sigma_7} =
