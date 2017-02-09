@@ -690,7 +690,6 @@ of the Galois group and sub-extensions. Indeed the fixed field of the
 $F_p$ and and the whole Galois group coincide.  
 
 \section{ Roots of unity: cyclotomic polynomials}
-\label{sec:lec6_5}
 Consider a number $n$ that is prime to characteristic (see section
 \ref{sec:fieldcharacteristic}) of $K$:
 $\left(n, char\left(K\right)\right) = 1$ and consider the polynomial
@@ -724,6 +723,7 @@ $\mu_n^*$. All elements of $\mu_n$ are powers of a single one:
 $\forall x \in \mu_n, \exists a \in \mathbb{N}: x = \zeta^a$ for some
 $\zeta \in \mu_n$. And primitive roots of unity form the following set
 $\left\{\zeta^a\right\}$ where $\left(a, n\right) = 1$.
+\label{sec:lec6_5_primitiveroot}
 \footnote{
   The fact require a proof. Consider case $\left(a, n\right) = k >
   1$. Thus $\frac{n}{k}, \frac{a}{k} \in \mathbb{Z}$ and we can
@@ -851,11 +851,20 @@ $\left|\mu_n^*\right| = \phi\left(n\right)$.
     Let fix one primitive root $\zeta$ and all others have the form
     $\zeta^a$ where $a$ is prime to $n$: $\left(a,n\right)=1$.
     \footnote{
-      as it was mentioned at the section \ref{sec:lec6_5}.
+      as it was mentioned at the section \ref{sec:lec6_5_primitiveroot}.
     }
     If we
     can show these for $a$ 
-    prime then we can also show this for all $a$. Thus we may
+    prime then we can also show this for all $a$.
+    \footnote{
+      Let $a = l \cdot k$ where $l$ and $k$ are prime. We have (as it
+      will be proved later) that $\nu = \zeta^l$ and $\zeta$ are roots of the
+      same minimal polynomial. $\nu^k$ will also be a root of that
+      minimal polynomial (if $\nu$ is a root and $k$ is prime than
+      $\nu^k$ will also be a root of the same polynomial), but
+      $\nu^k = \zeta^{k \cdot l} = \zeta^a$.
+    }
+    Thus we may
     assume that $a$ is a prime number $l$
     and suppose
     \[
@@ -875,7 +884,11 @@ $\left|\mu_n^*\right| = \phi\left(n\right)$.
     in
     $\mathbb{Z}\left[X\right]$. So we have $g\left(\zeta^l\right) = 0$
     thus we can define $g_l\left(X\right) = g\left(X^l\right)$ then
-    $g_l$ will have $\zeta$ as a root. But $g_l = g^l \mod l$ thus in
+    $g_l$ will have $\zeta$ as a root. But $g_l = g^l \mod l$.
+    \footnote{
+      ???
+    }
+    Thus in
     modulo $l$ $\Phi_n$ has $\zeta$ as a multiple root. This is
     impossible because $\Phi_n$ divides $P_n$ and this does not have
     multiple roots whenever $l$ prime to $n$. 
