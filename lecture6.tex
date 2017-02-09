@@ -884,9 +884,17 @@ $\left|\mu_n^*\right| = \phi\left(n\right)$.
     in
     $\mathbb{Z}\left[X\right]$. So we have $g\left(\zeta^l\right) = 0$
     thus we can define $g_l\left(X\right) = g\left(X^l\right)$ then
-    $g_l$ will have $\zeta$ as a root. But $g_l = g^l \mod l$.
+    $g_l$ will have $\zeta$ as a root. But $g_l \equiv g^l \mod l$.
     \footnote{
-      ???
+      Using $g\left(X\right) = a_n X^n + \cdots + a_1 X + a_0$ we can get
+      \begin{eqnarray}
+        g^l\left(X\right) = \left(a_n X^n + \cdots + a_1 X +
+        a_0\right)^l =
+        \nonumber \\
+        = a_n {X^l}^n + \cdots + a_1 {X^l} +
+        a_0 + l \cdot \left( \dots \right) \equiv g_l \mod l
+        \nonumber
+      \end{eqnarray}
     }
     Thus in
     modulo $l$ $\Phi_n$ has $\zeta$ as a multiple root. This is
@@ -897,19 +905,18 @@ $\left|\mu_n^*\right| = \phi\left(n\right)$.
 \end{theorem}
 
 \begin{remark}
-  Statements of theorem \ref{thm:lec6_2} are not true if $char K >
+  Statements of theorem \ref{thm:lec6_2} are not true if $char(K) >
   0$. I.e. over $\mathbb{F}_p$ $\Phi_n$ is not always irreducible.
 
   For instance $\Phi_8 = X^4 + 1$ is reducible over $\mathbb{F}_p$ for
-  any $p$.
+  any $p$. For instance $p = 2$
   \footnote{
-    ??? explain proof provided below
+    $1$ is a root because $1^4 + 1 = 2 \equiv 0 \mod 2$. Therefore
+    $\Phi_8 = X^4 + 1$ is reducible over $\mathbb{F}_2$
   }
   In fact it splits in $\mathbb{F}_{p^2}$.
-  \footnote{
-    ???
-  }
-  If $p$ is odd then $8\mid p^2-1$ so the \nameref{def:multiplicativegroup}
+  This is because if $p$ is odd then $8\mid p^2-1$ so the
+  \nameref{def:multiplicativegroup} 
   $\mathbb{F}_{p^2}^\times$ contains a cyclic subgroup of order 8 which is
   exactly the group of 8 roots of unity.
 \end{remark}
