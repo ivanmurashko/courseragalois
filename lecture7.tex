@@ -177,9 +177,9 @@ Lets consider several examples
   has only one sub-field different from $\mathbb{Q}$ of course and
   this going to be a real part all of the complex conjugation which
   are part of Galois group. Now this is the same as the real part
-  $\mathbb{Q}\left(\zeta_5\right) \cap \mathbb{R} =
+  \(\mathbb{Q}\left(\zeta_5\right) \cap \mathbb{R} =
   \mathbb{Q}\left(\zeta_5 + \bar{\zeta}_5\right) =
-  \mathbb{Q}\left(cos \frac{2 \pi}{5}\right)$.
+  \mathbb{Q}\left(cos \frac{2 \pi}{5}\right)\).
 \end{example}
 So these were the examples of cyclotomic extensions of $\mathbb{Q}$
 and of course the picture is exactly the same as long as the
@@ -190,7 +190,7 @@ can happen as we have seen, the Galois group becomes smaller.
 \label{sec:kummerextension}
 
 Consider a field $K$ such that the characteristics of $K$ is prime to
-a certain number $n$: $\left(char K, n\right) = 1$ and such that $X^n
+a certain number $n$: $\left(char(K), n\right) = 1$ and such that $X^n
 - 1$ splits in $K$. So $K$ contains all roots of unity. Consider an
 element $a$ of $K$ : $a \in K$ and let $\alpha = \sqrt[n]{a}$ (i.e. a
 root of $X^n - a$). Take $d = \min{\left\{ i \mid \alpha^i \in
@@ -203,10 +203,31 @@ root of $X^n - a$). Take $d = \min{\left\{ i \mid \alpha^i \in
   \begin{proof}
     It's clear that $K\left(\alpha\right)$ is Galois because all the
     n-th roots of unity are in $K$. So $K\left(\alpha\right)$
-    contains all roots of $X^n - a$. Therefore $K\left(\alpha\right)$
-    is a \nameref{def:splittingfield} of $X^n - a$. So it's normal and
-    separable because it is a separable polynomial because $\left(char
-    K, n\right) = 1$.
+    contains all roots of $X^n - a$.
+    \footnote{
+      Consider $\alpha_k = \alpha \zeta^k$ where
+      $k = 0,1, \dots, n - 1$. All such $\alpha_k$ are roots of
+      $X^n - a$ because
+      \[
+      \alpha_k^n - a = \alpha^n \left(\zeta^n\right)^k - a = a - a =0.
+      \]
+      We also have that $\forall k_1 \ne k_2: \alpha_{k_1} \ne
+      \alpha_{k_2}$ because $\zeta^{k_1} \ne \zeta^{k_2}$. Therefore
+      we have $n$ distinct roots i.e. all roots are in
+      $K\left(\alpha\right)$
+    }
+    Therefore $K\left(\alpha\right)$
+    is a splitting field of $X^n - a$ thus it's
+    normal. The extension is also separable because
+    $\left(char(K), n\right) = 1$.
+    \footnote{
+      If $P_n = X^n - a$ then $P_n' = n X^{n-1} \ne 0$ as soon as
+      $\left(char(K), n\right) = 1$ and as result $(P_n, P_n') = 1$
+      and $P_n$ does not have multiple roots and therefore
+      separable. As result the extension $K\left(\alpha\right)$ is
+      also separable.
+    }
+    Thus $K\left(\alpha\right)$ is \nameref{def:galoisextension}.
 
     Lets define a \nameref{def:homomorphism}
     $f: Gal\left(K\left(\alpha\right)/K\right) \xrightarrow[g \to
