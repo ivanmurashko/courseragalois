@@ -68,7 +68,21 @@ Lets consider several examples
   \nameref{def:fixedfield} $\mathbb{Q}\left(\zeta_8\right)^{\sigma_7}$
   is determined by the following expression
   \footnote{
-    We want to find a \nameref{ex:lec5_primitiveelement} $\nu$ such
+    First of all by the \nameref{thm:galoiscorrespondence} theorem for
+    any normal subgroup of the \nameref{def:galoisgroup} ($V_4$ in our
+    case) there exists a sub-extension that is fixed by the normal
+    sub-group. For our $V_4$ we have 3 normal subgroups:
+    $\{id, \sigma_3\}, \{id, \sigma_5\}, \{id, \sigma_7\}$. Lets
+    consider the last one i.e. lets find the extension that corresponds
+    to $\{id, \sigma_7\}$. The extension has the following form (we
+    are using triviality of $id$: $L^{id} = L$)
+    \[
+    \mathbb{Q}\left(\zeta_8\right)^{\{id, \sigma_7\}} =
+    \mathbb{Q}\left(\zeta_8\right)^{\sigma_7}
+    \]
+
+    To calculate $\mathbb{Q}\left(\zeta_8\right)^{\sigma_7}$ we have
+    to find a \nameref{ex:lec5_primitiveelement} $\nu$ such
     that $\nu \notin \mathbb{Q}$, $\nu \in
     \mathbb{Q}\left(\zeta_8\right)$ and $\sigma_7\left(\nu\right) =
     \nu$ (i.e. $\sigma_7$ fixes $\mathbb{Q}\left(\nu\right)$).
