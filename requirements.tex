@@ -1223,6 +1223,39 @@ elements of the module.
   \label{def:nondegeneratebf}
 \end{definition}
 
+\begin{definition}[Diagonalizable map]
+  If $V$ is a finite-dimensional vector space, then a linear map
+  $T: V \to V$ is called diagonalizable if there exists an ordered
+  basis of $V$ with respect to which $T$ is represented by a diagonal
+  matrix.
+
+  A linear map $T: V \to V$ is diagonalizable if and only if the sum
+  of the dimensions of its 
+  eigenspaces is equal to $n = dim(V)$, which is the case if and only if
+  there exists a basis of $V$ consisting of eigenvectors of $T$. With
+  respect to such a basis, $T$ will be represented by a diagonal
+  matrix. The diagonal entries of this matrix are the eigenvalues of
+  $T$ \cite{wiki:diagonalizable_matrix}.
+  \label{def:diagonalizable_map}
+\end{definition}
+
+\begin{theorem}[About eigenvalues of a diagonalizable linear map]
+  A linear map $T: V \to V$ with $n = dim(V)$ is diagonalizable if it
+  has $n$ distinct eigenvalues \cite{wiki:diagonalizable_matrix}.
+  \label{thm:diagonalizable_map_eigenvalues}
+\end{theorem}
+
+\begin{theorem}[About invertible matrix]
+  Let $A$ be a matrix over $F$. If $A$ is diagonalizable, then so is
+  any power of it. Conversely, if $A$ is invertible, $F$ is
+  algebraically closed, and $A^n$ is diagonalizable for some $n$ that
+  is not an integer multiple of the characteristic of $F$, then $A$ is
+  diagonalizable.
+  \begin{proof}
+    See \cite{wiki:diagonalizable_matrix}
+  \end{proof}
+  \label{thm:diagonalizable_matrix}
+\end{theorem}
 
 \section{Functions aka maps}
 
