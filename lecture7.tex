@@ -312,13 +312,23 @@ root of $X^n - a$). Take
       proved below. 
     }
     Now, let us show that all eigenspaces have dimension 1. Indeed if
-    $x,y$ are in the same eigenspace then
-    $\sigma\left(\frac{x}{y}\right) = \frac{x}{y}$ because $x$ and $y$
-    are multiplied by the same number. Therefore $\frac{x}{y} \in
-    K$. And this is exactly means that dimension of the eigenspace is
-    1.
+    $x,y$ are in the same \nameref{def:eigenspace} then
+    $\sigma\left(\frac{x}{y}\right) = \frac{x}{y}$
     \footnote{
-      ???
+      $L^{\left<\sigma\right>} = K$ i.e. $L^{\sigma} = K$.
+    }
+    because $x$ and $y$
+    are multiplied by the same number.
+    Therefore $\frac{x}{y} \in
+    K$. And this is exactly means that dimension of the eigenspace is
+    1, $x,y$ are proportional over $K$.
+    \footnote{
+      ??? If the eigenspace dimension is 1 then 
+      $x = \alpha k_x, y = \alpha k_y$ and $\frac{x}{y} =
+      \frac{k_x}{k_y} \in K$. If eigenspace dimension is 2 then
+      the following situation is possible
+      $x = \alpha^2 k_x, y = \alpha k_y$ and $\frac{x}{y} =
+      \alpha \frac{k_x}{k_y} \notin K$
     }
     Thus all roots of 1 are eigenvalues of $\sigma$. Then take
     $\alpha$ such that $\sigma\left(\alpha\right) = \zeta \alpha$
@@ -334,7 +344,7 @@ root of $X^n - a$). Take
     $\left<\sigma\right>$ - orbit of $\alpha$ has $n$ elements
     that the degree of the extension is exactly $n$. While this is
     easy because either degree of the extension was less than $n$,
-    then also, alpha would have to be fixed by some non-trivial
+    then also, $\alpha$ would have to be fixed by some non-trivial
     subgroup of Galois group by Galois correspondence. And then its
     orbit would have less than $n$ elements.  
   \end{proof}
