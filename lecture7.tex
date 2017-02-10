@@ -260,8 +260,19 @@ root of $X^n - a$). Take $d = \min{\left\{ i \mid \alpha^i \in
     $\delta = d$. Consider
     $g\left(\alpha^\delta\right) = f\left(g\right)^\delta \cdot
     \alpha^\delta = \alpha^\delta$ because $f\left(g\right)$ is a root
-    of 1 ($f\left(g\right) = \sqrt[\delta]{1}$). Thus $\alpha^\delta
-    \in K$. And $\alpha^i \notin K$ for $i < \delta$ since otherwise
+    of 1 ($f\left(g\right) = \sqrt[\delta]{1}$).
+    \footnote{
+      Using $g\left(\alpha\right)g\left(\alpha\right) = g\left(\alpha
+      \cdot \alpha \right) = g\left(\alpha^2\right)$:
+      \begin{eqnarray}
+        f^\delta\left(g\right) =
+        \frac{g^\delta\left(\alpha\right)}{\alpha^\delta} =
+        \frac{g\left(\alpha^\delta\right)}{\alpha^\delta}.
+        \nonumber
+      \end{eqnarray}      
+    }
+    Thus $\alpha^\delta
+    \in K$ ( see (\ref{eq:lec5_2})). And $\alpha^i \notin K$ for $i < \delta$ since otherwise
     $\deg P_{min}\left(\alpha, K\right) = i < \delta$. But this is
     impossible because
     \[
