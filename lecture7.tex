@@ -399,6 +399,21 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
   \begin{proof}
     First of all notice that roots of $P$ are $\alpha + k$ where $k
     \in \mathbb{F}_p$ ($k$ is an element of prime field).
+    \footnote{
+      In $\mathbb{F}_p$ we have $k^p = k$ and therefore 
+      \begin{eqnarray}
+        \left(\alpha + k\right)^p -
+        \left(\alpha + k\right) -a =
+        \nonumber \\
+        =\alpha^p + k^p - \alpha -k - a =
+        \alpha^p + k - \alpha -k - a =
+        \nonumber \\
+        =
+        \alpha^p - \alpha - a =0,
+        \nonumber
+      \end{eqnarray}
+      as soon as $\alpha$ is a root of $X^p - X - a$.
+    }
 
     If $P$ is irreducible then \nameref{def:galoisgroup} should be
     transitive on the roots (see remark \ref{rem:lec5_onnormalext})  then
