@@ -420,7 +420,15 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
     $\exists \sigma \in Gal\left(K\left(\alpha\right)/K\right)$ such that
     $\sigma\left(\alpha\right) = \alpha + 1$ (because roots of $P$ are
     $\alpha + k$). The \nameref{def:grouporder} for $\sigma$ is
-    $p = \left[K\left(\alpha\right):K\right]$ so the $\sigma$ must
+    $p = \left[K\left(\alpha\right):K\right]$
+    \footnote{
+      \[
+      \sigma^p = \sigma(\sigma(\sigma( \dots ( \sigma(\alpha) ) \dots
+      ))) = \alpha + p = \alpha
+      \]
+      i.e. $\sigma^p = id$ and order of $\left<\sigma\right>$ is $p$.
+    }
+    so the $\sigma$ must
     generate the \nameref{def:galoisgroup}:
     $Gal\left(K\left(\alpha\right)/K\right) = \left<\sigma\right>$.
 
