@@ -454,12 +454,13 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
       $\forall x \in K: \sigma\left(x\right) = x$ (see
       (\ref{eq:lec5_2})).
     }
-    and the \nameref{def:rank} $rg f = p -1$
+    and the \nameref{def:rank} $rg f = p -1$.
     \footnote{
       ??? in lectures we can hear about range (\nameref{def:image}) not a
       \nameref{def:rank} but by future content we spoke about the rank
       but not about range (image)
     }
+    We have 
     $\left(\sigma - id\right)^p = 0$
     \footnote{
       In $\mathbb{F}_p$ we have
@@ -469,7 +470,14 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
       as soon as $\left<\sigma\right>$ has order $p$.      
     }
     so the \nameref{def:kernel} must
-    be included into \nameref{def:image}: $K = \ker f \subset \Ima f$
+    be included into \nameref{def:image}:
+    \footnote{
+      For some $x \in Im\left(f\right)$
+      ($x = f^p(a)$)
+      we have
+      $f(x) = 0$ so $x \in \ker{f}$
+    }
+    $K = \ker f \subset \Ima f$
     because otherwise $L = \ker f \oplus \Ima f$ ($L$ is a
     \nameref{def:directsum}
     \footnote{
