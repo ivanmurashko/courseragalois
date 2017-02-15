@@ -563,11 +563,30 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
 Another way to view this: consider the tensor product $L_1 \otimes_K
 L_2$ - there is a $K$-algebra. By \nameref{def:universalproperty}
 there is a map from the tensor product to $L$:
-\[
+\(
 j: L_1 \otimes_K L_2 \to L  
-\]
-such that $j\left(l_1 \otimes l_2\right) = l_1 l_2$ (??? can be considered
-as a bilinear map required for the universal property). The
+\)
+such that $j\left(l_1 \otimes l_2\right) = l_1 l_2$
+\footnote{
+  By the \nameref{def:universalproperty} $j$ is a 
+  \nameref{def:homomorphism}, but by lemma
+  \ref{lem:lec1_homomorphism_is_injection} the homomorphism is
+  injection.
+}
+
+  \begin{tikzpicture}[description/.style={fill=white,inner sep=2pt}]
+    \matrix (m) [matrix of math nodes, row sep=3em,
+      column sep=2.5em, text height=1.5ex, text depth=0.25ex]
+            { L_1 \times L_2 & & L \\
+              & L_1 \otimes_K L_2 & \\ };
+            %\draw[double,double distance=5pt] (m-1-1) – (m-1-3);
+            \path[->]
+            (m-1-1) edge node[auto] {$ f: (l_1,l_2) \to l_1 l_2 $} (m-1-3)
+            edge node[auto] {$ \phi $} (m-2-2)
+            (m-2-2) edge node[auto] {$ \tilde{f} = j $} (m-1-3);
+  \end{tikzpicture}
+
+The 
 \nameref{def:image} $\Ima j$ is a sub-algebra of $L$. If $L$ is
 algebraic then any sub algebra is a sub field (see proposition
 \ref{prop:lec1_algebraicsubalgebra}) and this 
