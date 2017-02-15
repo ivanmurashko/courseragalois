@@ -471,11 +471,21 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
       \]
       Lets show that $\left(f\left(x\right), f^2\left(x\right)\dots,
       f^{p-1}\left(x\right) \right)$ is linearly independent.
-      For $\lambda_i \in L$:
+      For $k \in K, x \in L$ we can get
       \[
-      \sum_{i=1}^{p-1} \lambda_i f^i\left(x\right) = 0
+      f\left(k \cdot x\right) =
+      \sigma\left(k \cdot x\right) - k \cdot x =
+      \sigma\left(k\right) \cdot \sigma\left(x\right) -
+      k \cdot x = k \cdot \sigma\left(x\right) - k \cdot x =
+      k \cdot f\left(x\right).
       \]
-      then applying $f^{p-i}$ ????
+      Thus for $k_i \in K$ such that:
+      \[
+      \sum_{i=1}^{p-1} k_i f^i\left(x\right) = 0
+      \]
+      applying $f^{p-1}$ one can get that $k_1 = 0$, applying
+      $f^{p-2}$ gives us $k_2 = 0$. Continue the way we get that all
+      $k_i = 0$. That proves the linear independence.
     }
     We have 
     $\left(\sigma - id\right)^p = 0$
