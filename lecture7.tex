@@ -485,7 +485,14 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
       \]
       applying $f^{p-1}$ one can get that $k_1 = 0$, applying
       $f^{p-2}$ gives us $k_2 = 0$. Continue the way we get that all
-      $k_i = 0$. That proves the linear independence.
+      $k_i = 0$. That proves the linear independence. Therefore
+      $rg\left(f\right) \ge p - 1$. The vector
+      $y = \left(f^{p-1}\left(x\right), f^{p-1}\left(x\right)\dots,
+      f^{p-1}\left(x\right) \right)$ is not zero but $f(y) = 0$
+      therefore $y \in \ker f$. This means that $\dim{\ker f} \ge
+      1$. Using \nameref{thm:ranknullity} one can conclude that only
+      possible choice there is $\dim{\ker f} = 1$ and
+      $rg\left(f\right) = p - 1$. 
     }
     We have 
     $\left(\sigma - id\right)^p = 0$
