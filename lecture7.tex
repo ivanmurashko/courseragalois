@@ -506,10 +506,13 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
     so the \nameref{def:kernel} must
     be included into \nameref{def:image}:
     \footnote{
-      For some $x \in Im\left(f\right)$
-      ($x = f^p(a)$)
-      we have
-      $f(x) = 0$ so $x \in \ker{f}$
+      As soon as $f \ne 0$ exists $x \in L$ such that
+      $y = f^{p-1}\left(x\right) \ne 0$ but $f\left(y\right) = 0$
+      therefore $y \in \ker f$. Using the fact that $\dim{\ker f} = 1$
+      (follows from $rg(f) = p - 1$ and \nameref{thm:ranknullity}) and
+      $y \in \Ima f$ ($y = f\left(f^{p-2}\left(x\right)\right)$) one
+      can conclude that  the \nameref{def:kernel} must
+      be included into \nameref{def:image}.
     }
     $K = \ker f \subset \Ima f$
     because otherwise $L = \ker f \oplus \Ima f$ ($L$ is a
@@ -521,7 +524,7 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
     of 
     kernel and image) and $f^k$ is never zero (but we have $f^p = 0$)
     \footnote{
-      ??? $L = \ker f \oplus \Ima f$ holds if $f$ is projection i.e.
+      ??? By the way $L = \ker f \oplus \Ima f$ holds if $f$ is projection i.e.
       $f^2 = f$ i.e. $f^k = f \ne 0$.
     }.
 
