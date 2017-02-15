@@ -456,9 +456,26 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
     }
     and the \nameref{def:rank} $rg f = p -1$.
     \footnote{
-      ??? in lectures we can hear about range (\nameref{def:image}) not a
+      In lectures we can hear about range (\nameref{def:image}) not a
       \nameref{def:rank} but by future content we spoke about the rank
-      but not about range (image)
+      but not about range (image). In any way the equation $rg f = p
+      -1$ requires some explanation. As soon as $f^{p-1} \ne 0$
+      $\exists x \in L$ such that $f^{p-1}\left(x\right) \ne
+      0$. Therefore $f^{k}\left(x\right) \ne 0$  for all $k < p - 1$
+      because in other case
+      \[
+      f^{p-1}\left(x\right) = f\left( \dots f\left(
+      f^k\left(x\right) \right) \dots \right) =
+      f\left( \dots f\left( 0 \right) \dots \right) =
+      0.
+      \]
+      Lets show that $\left(f\left(x\right), f^2\left(x\right)\dots,
+      f^{p-1}\left(x\right) \right)$ is linearly independent.
+      For $\lambda_i \in L$:
+      \[
+      \sum_{i=1}^{p-1} \lambda_i f^i\left(x\right) = 0
+      \]
+      then applying $f^{p-i}$ ????
     }
     We have 
     $\left(\sigma - id\right)^p = 0$
