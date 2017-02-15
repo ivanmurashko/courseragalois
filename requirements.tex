@@ -1173,6 +1173,24 @@ elements of the module.
   \label{def:nullity}
 \end{definition}
 
+\begin{theorem}[Rank–nullity theorem]
+  Let $V$ and $W$ be vector spaces over some field and let $T: V \to
+  W$ be a linear map. Then the \nameref{def:rank} of $T$ is the
+  dimension of the image of $T$ and the \nameref{def:nullity} of $T$
+  is the dimension of the kernel of $T$, so we have
+  \[
+  \dim\left(\Ima T\right) + \dim\left(\ker T\right) = \dim V
+  \]
+  or, equivalently
+  \[
+  rg(T) + nul(T) = \dim(V)
+  \]
+  \label{thm:ranknullity}
+  \begin{proof}
+    See \cite{wiki:ranknullity}
+  \end{proof}
+\end{theorem}
+
 \begin{definition}[General linear group of a vector space]
   If $V$ is a \nameref{def:vectorspace} over field $K$  the general
   linear group of $V$, written $GL\left(V\right)$ or
