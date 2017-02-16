@@ -631,7 +631,28 @@ $L_{1,2}$ are fields.
     }
 
     About dimensions (``finite extension of degree'' in the property
-    formulation). By the \nameref{thm:basechange}:
+    formulation). By the \nameref{thm:basechange}
+    \footnote{
+      From \nameref{thm:basechange} one can get
+      \[
+      \left|Hom_K\left(L_1, \bar{K}\right)\right| =
+      \left|Hom_{L_2}\left(L_2 \otimes_K L_1, \bar{K}\right)\right|
+      \]
+      But proposition \ref{prop:lec3_2}
+      says that
+      \[
+      \left|Hom_K\left(L_1, \bar{K}\right)\right| =
+      \deg\left(P_{min}\left(x,K\right)\right) =
+      \left[L_1 : K\right] = 
+      \dim_K\left(L_1\right)
+      \]
+      and
+      \[
+      \left|Hom_{L_2}\left(L_2 \otimes_K L_1, \bar{K}\right)\right| =
+      \left[L_2 \otimes_K L_1 : L_2\right] = 
+      \dim_{L_2}\left(L_1 \otimes_K L_2 \right)
+      \]
+    }: 
     \[
     \dim_K L_1 = \dim_{L_2}\left(L_1 \otimes_K L_2\right)
     \]
