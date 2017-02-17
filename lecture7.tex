@@ -786,8 +786,8 @@ $L_{1,2}$ are fields.
     }
 
     \ref{thm:lec7_2_c} implies \ref{thm:lec7_2_d}: if we have some
-    relation $\sum a_{ij} x_i y_j = 0, a_{ij} \in K$ then since $x_i$
-    linearly independent over $K$ one can get $\sum a_{ij} y_j = 0$
+    relation $\sum_{i,j} a_{ij} x_i y_j = 0, a_{ij} \in K$ then since $x_i$
+    linearly independent over $K$ one can get $\sum_{j} a_{ij} y_j = 0$
     but as soon as $y_j$ linearly independent we will get $a_{ij} =
     0$.
 
@@ -798,8 +798,16 @@ $L_{1,2}$ are fields.
     $j\left(z\right) = \sum a_{ij} x_i y_j = 0$ i.e. $a_{ij} = 0$ and
     therefore $z = 0$. I.e. $j$ is \nameref{def:injection}.
 
-    The part about finite degrees follows from the 4 properties (???
-    need a proof)
+    The part about finite degrees follows from the 4 properties.
+    \footnote{
+      Let $L_1$ and $L_2$ are linearly disjoint extensions over $K$
+      with finite degree: $\left[L_1:K\right] = n, \left[L_2:K\right]
+      = m$. From \ref{thm:lec7_2_c} we can conclude that
+      $\left[L_1 L_2:L_2\right] = n$ and using theorem
+      \ref{thm:mulformuladegrees} we will obtain 
+      $\left[L_1 L_2:K\right] = \left[L_1 L_2:L_2\right]
+      \left[L_2 : K\right] = nm$.
+    }
   \end{proof}
   \label{thm:lec7_2}
 \end{theorem}
