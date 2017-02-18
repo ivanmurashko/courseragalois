@@ -959,22 +959,41 @@ $L_{1,2}$ are fields.
     \nameref{thm:galoiscorrespondence}. So if also $x \in L_1$ then it
     should be $x \in K' = L_1 \cap \L_2$. So if $L_1$ is finite over
     $K$ then by   \nameref{thm:galoiscorrespondence} we can conclude
-    that $\Ima \phi = Gal\left(L/K'\right)$ because the
+    that $\Ima \phi = Gal\left(L_1/K'\right)$
+    \footnote{
+      In the lectures Ekaterina marked it as $\Ima \phi =
+      Gal\left(L/K'\right)$ but really we should have $L_1$ instead of
+      $L$ there.
+    }
+    because the
     \nameref{def:fixedfield} is $K'$.
 
-    In general (??? not finite $L_1$ over $K$) we have to find finite
+    In general
+    \footnote{
+      not finite $L_1$ over $K$
+    }
+    we have to find finite
     sub-extension of $L_1$: let denote it as $L_1'$. We also have a
-    finite Galois sub extension of $L_1$ that contains $L_1'$.
-    You can take the union of all images of $L_1'$ by all
-    automorphisms. And this will be a finite union since $L_1'$ was
-    finite, so there are finitely many possible roots of minimal
-    polynomials so there are not really many possibilities for the
-    images of this $L_1'$. So I shall leave it as an exercise (??? add
-    proof), but the
-    solution is more or less what I just have told you.
+    finite Galois sub extension of $L_1$ that contains $L_1'$. We
+    denote this Galois sub-extension as $L_1''$.
+    \footnote{
+      ??? The claim require a proof. Ekaterina provided only initial ideas
+      about how the proof can look like:
+      You can take the union of all images of $L_1'$ by all
+      automorphisms. And this will be a finite union since $L_1'$ was
+      finite, so there are finitely many possible roots of minimal
+      polynomials so there are not really many possibilities for the
+      images of this $L_1'$. So I shall leave it as an exercise , but the
+      solution is more or less what I just have told you.
+    }   
 
-    Lets denote the Galois sub-extension as $L_1''$. We have
-    $\forall L_1''$ and $L_2$ are linearly disjoint over $K'$ then it follows
+    We have
+    $L_1''$ and $L_2$ are linearly disjoint over $K'$
+    \footnote{
+      As soon as $j$ is injection, the theorem \ref{thm:lec7_2} gives
+      us that $L_1''$ and $L_2$ are linearly disjoint over $K'$. 
+    }
+    then it follows
     that $L_1$ and $L_2$ are also linearly disjoint over $K'$
     (see theorem \ref{thm:lec7_2} point \ref{thm:lec7_2_c}).
 
@@ -988,6 +1007,7 @@ $L_{1,2}$ are fields.
   \label{thm:lec7_3}
 \end{theorem}
 
+\section{On the Galois group of the composite}
 
 From the theorem \ref{thm:lec7_3} follows the following proposition
 \begin{proposition}
@@ -1024,9 +1044,6 @@ From the theorem \ref{thm:lec7_3} follows the following proposition
   \end{enumerate}
   \label{prop:lec7_3}
 \end{proposition}
-
-
-\section{On the Galois group of the composite}
 
 Let me give you a small example:
 \begin{example}
