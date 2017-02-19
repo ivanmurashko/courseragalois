@@ -1037,6 +1037,11 @@ From the theorem \ref{thm:lec7_3} follows the following proposition
   \item $L_1$ and $L_2$ are both Galois over $K$ and linearly disjoint then
     the following map $g \to \left(\left. g \right|_{L_1}, \left. g
     \right|_{L_2}\right)$ defines the isomorphism
+    \footnote{
+      $Gal\left(L_1/K\right) \times Gal\left(L_2/K\right)$ is a
+      \nameref{def:directproduct} of 2 groups
+      $Gal\left(L_1/K\right)$ and $Gal\left(L_2/K\right)$.
+    }
     \[
     Gal\left(L_1 L_2/K\right) \cong Gal\left(L_1/K\right) \times Gal\left(L_2/K\right)
     \]
@@ -1044,7 +1049,7 @@ From the theorem \ref{thm:lec7_3} follows the following proposition
     $Gal\left(L/K\right) = G_1 \times G_2$ then $L = L^{G_1} L^{G_2}$
     which are linearly disjoint over the intersection.
     \begin{proof}
-      The first part is very sure because the interjectivity of this
+      The first part is very sure because the injectivity of this
       map is clear: if something is trivial both on $L_1$ and $L_2$,
       then  it's trivial on the composite,
       \footnote{
@@ -1055,9 +1060,40 @@ From the theorem \ref{thm:lec7_3} follows the following proposition
       $L_1 \otimes_K L_2 \cong_j L_1 L_2$ then
       $j \cdot \left(g_1 \otimes g_2\right) \cdot j^{-1}$ goes to
       $\left(g_1, g_2\right)$.
+      \footnote{
+        Let $x \in L_1$ then
+        \begin{eqnarray}
+          \left(j \cdot
+          \left(\left.g\right|_{L_1} \otimes \left.g\right|_{L_2}\right) \cdot
+          j^{-1}\right)(x) = j \cdot \left(\left.g\right|_{L_1}(x) \otimes
+          \left.g\right|_{L_2}(1)\right) =
+          \nonumber \\
+          = \left.g\right|_{L_1}(x) \cdot 1 = g_1(x).
+          \nonumber
+        \end{eqnarray}
+        If $x \in L_2$ then
+        \begin{eqnarray}
+          \left(j \cdot
+          \left(\left.g\right|_{L_1} \otimes \left.g\right|_{L_2}\right) \cdot
+          j^{-1}\right)(x) = j \cdot \left(\left.g\right|_{L_1}(1) \otimes
+          \left.g\right|_{L_2}(x)\right) =
+          \nonumber \\
+          = 1 \cdot \left.g\right|_{L_2}(x) = g_2(x)
+          \nonumber
+        \end{eqnarray}
+        or in common case $j \cdot \left(g_1 \otimes g_2\right) \cdot
+        j^{-1} \to \left(g_1, g_2\right)$.
 
-      The second part. $L^{G_1}$ and $L^{G_2}$ are both Galois because
-      $G_1$ and $G_2$ are normal in the product:
+      }
+
+      The second part. $L^{G_1}$ and $L^{G_2}$ are both Galois
+      \footnote{
+        see theorem \ref{thm:galoiscorrespondence} point
+        \ref{thm:galoiscorrespondence:item2a} 
+      }
+      because
+      $G_1$ and $G_2$ are normal in the product
+      (see property \ref{property:directproduct}):
       $G_1, G_2 \triangleleft G_1 \times G_2$. What I mean is $G_1$
       embedded to the product by identifying it with $G_1 \times e$
       where $e$ is the neutral element of $G_2$.
