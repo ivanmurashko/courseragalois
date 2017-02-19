@@ -179,6 +179,8 @@ property.
   \label{def:commutatorsubgroup}
 \end{definition}
 
+\subsection{Group action}
+
 \begin{definition}[Action]
   An action of a group is a way of
   interpreting the elements of the 
@@ -250,6 +252,26 @@ property.
   \label{def:freeaction}
 \end{definition}
 
+\subsection{Direct product}
+
+\begin{definition}[Direct product]
+  Given groups $G$ and $H$, the direct product $G \times H$ is defined as follows:
+
+  The underlying set is the Cartesian product, $G \times H$. That is, the
+  ordered pairs $\left(g,h\right)$, where $g \in G$ and $h \in H$. 
+  The binary operation on $G \times H$ is defined component-wise:
+  \[
+  \left(g_1,h_1\right)\left(g_2,h_2\right) =
+  \left(g_1 \cdot g_2, h_1 \circ h_2\right)
+  \]
+  The resulting algebraic object satisfies the axioms for a group.
+  See \cite{wiki:directproduct}.
+
+  The direct product of 2 \nameref{def:abeliangroup}s is also called
+  \nameref{def:directsum} 
+  
+  \label{def:directproduct}
+\end{definition}
 
 \subsection{Sylow theorems}
 
@@ -316,7 +338,10 @@ property.
   The direct sum of two abelian groups $A$ and
   $B$ is another abelian group $A \oplus B$ consisting of the ordered
   pairs
-  $\left(a, b\right)$ where $a \in A$ and $b \in B$ \cite{wiki:directsum}
+  $\left(a, b\right)$ where $a \in A$ and $b \in B$.
+  \cite{wiki:directsum}
+  See also \nameref{def:directproduct}.
+  
   \label{def:directsum}
 \end{definition}
 
@@ -348,6 +373,7 @@ property.
   to a group of the form
   \[
   \mathbb{Z}^n \oplus \mathbb{Z}_{q_1} \oplus
+  +
   \dots \oplus \mathbb{Z}_{q_t}
   \]
   where the rank $n \ge 0$, and the numbers $q_1, \dots , q_t$ are
