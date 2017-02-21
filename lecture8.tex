@@ -68,7 +68,17 @@ by radicals.
     $\bar{K}$ or, in other words, images of $L$ by
     $Gal\left(\bar{K}/K\right)$.
     \footnote{
-      ???
+      ??? First claim. If $g \in Gal\left(\bar{K}/K\right)$ and $L$ is
+      solvable then $L_g = g(L)$ i.e. image of $L$ is also
+      solvable. Lets prove it by induction if $L =
+      K\left(\alpha\right)$ then $\exists n \in \mathbb{N}$ such that
+      $\alpha^n = a \in K$ therefore $\alpha$ is a root of the
+      following polynomial $X^n - a$. We have, as soon as $g$ permutes the
+      roots of the polynomial, $g\left(K\left(\alpha\right)\right) =
+      K\left(\beta\right)$ where $\beta = g(\alpha)$ and $\beta$ is a
+      root of $X^n -a$ i.e. $\beta^n \in K$ or, in other words,
+      $g\left(K\left(\alpha\right)\right)$ is also solvable by
+      radicals. ???
     }
   \end{proof}
   \label{property:solvable}
@@ -84,7 +94,8 @@ will recall the definition of basic properties.
   $G$ is called solvable if it has a filtration 
   i. e. $G = G_0 \supset G_1 \supset \dots \supset G_{r-1} \supset G_r
   = \left\{e\right\}$, such that $G_i$ is a normal subgroup of
-  $G_{i-1}$ and the \nameref{def:quotientgroup} $G_{i-1}/G_i$ is abelian.
+  $G_{i-1}$ and the \nameref{def:quotientgroup} $G_{i-1}/G_i$ is
+  an \nameref{def:abeliangroup}.
   \label{def:solvablegroup}
 \end{definition}
 
@@ -107,7 +118,14 @@ will recall the definition of basic properties.
   Consider $S_4$ - the group of permutations (see also example
   \ref{ex:s3group}). It's solvable because 
   $S_4 \supset A_4 \supset K \supset \left\{e\right\}$, where $K$ -
-  is a subgroup of double transpositions (see example
+  is a subgroup
+  \footnote{
+    There is a well known Klein four group $V_4$ \cite{wiki:klein4group} -
+    the only non-cyclic group of order 4. It also denoted as $K_4$. We
+    have already seen it at example \ref{ex:lec7_cyclotomic8}.
+  }
+  of double transpositions
+  (see example
   \ref{ex:permutation} for permutation cycles notation):
   \[
   K = \left\{
@@ -116,11 +134,6 @@ will recall the definition of basic properties.
   \]
   A double transposition is a product of two transpositions with
   distinct support, right, which permute the distinct elements.
-  \footnote{
-    There is a well known Klein four group $V_4$ \cite{wiki:klein4group} -
-    the only non-cyclic group of order 4. It also denoted as $K_4$. We
-    have already seen it at example \ref{ex:lec7_cyclotomic8}.
-  }
   $A_4 \triangleleft S_4$, $\left|S_4/A_4\right| = 2$, i.e.
   $S_4/A_4$ is cyclic of order 2.
 
