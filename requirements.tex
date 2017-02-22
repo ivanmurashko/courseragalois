@@ -148,8 +148,9 @@ property.
 \begin{definition}[Quotient group]
   A quotient group or factor group is a mathematical group obtained by
   aggregating similar elements of a larger group using an equivalence
-  relation that preserves the group structure. For example, the cyclic
-  group of addition modulo n can be obtained from the integers by
+  relation that preserves the group structure. For example, the
+  \nameref{def:cyclicgroup} of addition modulo n can be obtained from
+  the integers by 
   identifying elements that differ by a multiple of n and defining a
   group structure that operates on each such class (known as a
   congruence class) as a single entity. It is part of the mathematical
@@ -179,7 +180,8 @@ property.
   subgroup, because $\mathbb{Z}$ is \nameref{def:abeliangroup}. There
   are only two \nameref{def:coset}s: the set 
   of even integers and the set of odd integers; therefore, the
-  quotient group $\mathbb{Z}/2\mathbb{Z}$ is the cyclic group with two
+  quotient group $\mathbb{Z}/2\mathbb{Z}$ is the
+  \nameref{def:cyclicgroup} with two 
   elements. This 
   quotient group is isomorphic with the set $\left\{ 0, 1 \right\}$
   with addition modulo 2; informally, it is sometimes said that
@@ -358,6 +360,28 @@ property.
   \end{proof}
   \label{thm:abelianelement}
 \end{theorem}
+
+\begin{theorem}[Cyclic Group is Abelian]
+  Let $G$ be a \nameref{def:cyclicgroup} then $G$ is
+  \nameref{def:abeliangroup} 
+  \begin{proof}
+    As soon as $G = \left<g\right>$ then
+    $\forall x,y \in G, \exists n,m \in \mathbb{N}$ such that
+    $x = g^n, y = g^m$. In the case
+    \[
+    xy = g^n g^m = g^{n+m} = g^m g^n = yx,
+    \]
+    i.e. $G$ is abelian. 
+  \end{proof}
+  \label{thm:cyclic_group_is_abelian}
+\end{theorem}
+
+\begin{remark}[Not every Abelian group is cyclic]
+  The theorem statement cannot be reversed i.e. there exist abelian
+  group that are not cyclic. For example well known Klein four group
+  $V_4$ \cite{wiki:klein4group} that is an
+  \nameref{def:abeliangroup} but not \nameref{def:cyclicgroup}  
+\end{remark}
 
 \begin{definition}[Direct sum]
   The direct sum of two abelian groups $A$ and
