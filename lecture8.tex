@@ -186,7 +186,25 @@ will recall the definition of basic properties.
       We have that $G_{i-1}/G_i$ is an
       \nameref{def:abeliangroup} and now we have to prove that the
       \nameref{def:quotientgroup} 
-      $H_{i-1}/H_i$ is abelian.
+      $H_{i-1}/H_i$ is abelian. $\forall h' \in H_{i-1}/H_i, \exists
+      h_{i-1} \in H_{i-1}$ such that $h' = \left\{h_{i-1},
+      H_i\right\}$. From other hand $h_{i-1} \in G_{i-1}$ and
+      $H_i \subset G_i$ therefore we can associate with $h'$ the
+      $g' =  \left\{h_{i-1}, G_i\right\} \in G_{i-1}/G_i$. I.e. we just
+      got an injection $f: H_{i-1}/H_i \xrightarrow[h' \to g']{}
+      G_{i-1}/G_i$. Obviously we have $\forall h',h'' \in H_{i-1}/H_i$
+      the following relation
+      \[
+      f\left(h' h''\right) = g' g'' =
+      f\left(h'\right) f\left(h''\right),
+      \]
+      where $g'' = \left\{h'', G_i\right\}$ and
+      $g' g'' = \left\{h' h'', G_i\right\}$. Therefore $f$ is
+      \nameref{def:homomorphism}. Thus $\forall a,b \in H_{i-1}/H_i$
+      we have $f(ab) = f(a) f(b)$, but as soon as $G_{i-1}/G_i$ is
+      abelian, $f(a) f(b) = f(b) f(a) = f(ba)$, or, using property of
+      homomorphism, one can get that $ab=ba$ i.e. $H_{i-1}/H_i$ is an
+      \nameref{def:abeliangroup} and as result $H$ is solvable.
     }
   \end{proof}
   \label{property:lec8_solvable1}
