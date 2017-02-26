@@ -277,12 +277,22 @@ Lets also look at another definition of solvable group
   \begin{proof}
     Our filtration with \nameref{def:commutatorsubgroup}s
     $G \supseteq G^{(1)} \supseteq \dots \supseteq G^{(n)} =
-    \left\{e\right\}$ is a filtration with abelian quotient because
-    $G^{(i)}/\left[G^{(i)}, G^{(i)}\right] = G^{(i)}/G^{(i+1)}$ is an
-    \nameref{def:abeliangroup}.
+    \left\{e\right\}$
+    is a filtration with abelian quotient because
+    $G/\left[G, G\right]$ as well as 
+    $G^{(i)}/\left[G^{(i)}, G^{(i)}\right] = G^{(i)}/G^{(i+1)}$ are
+    \nameref{def:abeliangroup}s.
+    \footnote{
+      See definition \ref{def:abelianization} and theorem
+      \ref{thm:about_quotient_group_and_commutatorsubgroup}
+    }
 
     From the other hand if $G/H$ is an \nameref{def:abeliangroup} then
-    $H \supset \left[G, G\right]$. So if a finite filtration with
+    $H \supset \left[G, G\right]$.
+    \footnote{
+      See theorem \ref{thm:about_quotient_group_and_commutatorsubgroup}
+    }
+    So if a finite filtration with
     abelian quotient exists then the filtration given by $G^{(i)}$ is
     also finite. It must terminate after a finite steps. So, this
     proves the equivalence.  
