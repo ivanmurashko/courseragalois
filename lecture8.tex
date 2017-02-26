@@ -403,7 +403,7 @@ Lets also look at another definition of solvable group
 
     Let $M_i = M^{G_i}$. We know $M_i \hookrightarrow M_{i+1}$ is a
     cyclic Galois extension of order $n_i \mid n$ and roots of 1 are
-    in it therefore there is Kummer extension.
+    in it, thus there is Kummer extension.
     \footnote{
       We have $M_i = M^{G_i}$ where
       \[
@@ -420,11 +420,23 @@ Lets also look at another definition of solvable group
       we have the
       following ``tower'':
       \[
-      L = M_0 \subset M_1 \subset \dots \subset M_{r-1} \subset M_r = M
+      L = M_0 \subset M_1 \subset \dots \subset M_{r-1} \subset M_r = M.
       \]
-      see section \ref{sec:kummerextension}
+      If we consider $M_i \subset M_{i+1}$ then we can get the
+      following: $M_i$ contains all $n$-th roots of unity as soon as
+      $K\left(\zeta_n\right) = L \subset M_i$; $M_{i+1}$ is
+      \nameref{def:galoisextension} over $M_i$ with
+      \nameref{def:galoisgroup} $G_i/G_{i+1}$
+      (we have $G_i = Gal\left(M/M_i\right)$,
+      $G_{i+1} = Gal\left(M/M_{i+1}\right)$ and therefore
+      $G_i/G_{i+1} = Gal\left(M_{i+1}/M_i\right)$)
+      which is cyclic of order
+      $n_i \mid n$ and as
+      result $M_{i+1}$ will be also be cyclic of the same order $n_i
+      \mid n$. Therefore $M_{i+1}$ is a Kummer extension 
+      (see section \ref{sec:kummerextension}) over $M_i$,
     }
-    So
+    and therefore
     $M_{i+1} = M_i\left(\sqrt[n_i]{a_i}\right)$ (see proposition
     \ref{prop:lec7_2}).
     So $M = K\left(\zeta_n, \alpha_1, \dots, \alpha_r\right)$ where
