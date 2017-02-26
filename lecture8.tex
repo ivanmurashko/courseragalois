@@ -403,8 +403,28 @@ Lets also look at another definition of solvable group
 
     Let $M_i = M^{G_i}$. We know $M_i \hookrightarrow M_{i+1}$ is a
     cyclic Galois extension of order $n_i \mid n$ and roots of 1 are
-    in it therefore there is Kummer extension (see section
-    \ref{sec:kummerextension}). So
+    in it therefore there is Kummer extension.
+    \footnote{
+      We have $M_i = M^{G_i}$ where
+      \[
+      M_0 = M^{G_0} = M^G = M^{Gal\left(M/L\right)} = L
+      \]
+      and
+      \[
+      M_r = M^{G_r} = M^{\{e\}} = M.
+      \]
+      Thus by \nameref{thm:galoiscorrespondence},
+      as soon as
+      $G_r \triangleleft G_{r-1} \triangleleft \dots \triangleleft G_1
+      \triangleleft G_0 = G$,
+      we have the
+      following ``tower'':
+      \[
+      L = M_0 \subset M_1 \subset \dots \subset M_{r-1} \subset M_r = M
+      \]
+      see section \ref{sec:kummerextension}
+    }
+    So
     $M_{i+1} = M_i\left(\sqrt[n_i]{a_i}\right)$ (see proposition
     \ref{prop:lec7_2}).
     So $M = K\left(\zeta_n, \alpha_1, \dots, \alpha_r\right)$ where
