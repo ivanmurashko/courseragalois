@@ -80,9 +80,22 @@ by radicals.
       root of $X^{n_1} -a$ i.e. $\beta^{n_1} \in K$ or, in other words,
       $g\left(K\left(\alpha\right)\right)$ is also solvable by
       radicals. Using induction hypothesis we have that if
-      $K\left(\alpha_1, \dots, \alpha_i\right)$ is solvable then
-      $g\left(K\left(\alpha_1, \dots, \alpha_i\right)\right)$ is also
-      solvable ???
+      $F = K\left(\alpha_1, \dots, \alpha_i\right)$ is solvable then
+      $g\left(F\right)$ is also
+      solvable but by \nameref{thm:galoiscorrespondence} (item
+      \ref{thm:galoiscorrespondence:item2b}) 
+      \[
+      g\left(F\right) = F.
+      \]
+      Now consider a solvable extension $F\left(\alpha_{i+1}\right)$
+      i.e. $\exists n_{i+1} \in \mathbb{N}$ such that
+      $\alpha_{i+1}^{n_{i+1}} \in F$. Therefore $\alpha_{i+1}$ is a
+      root of the polynomial $X^{n_{i+1}} - a$ where $a \in F$.
+      The $g$ permutes the roots of the polynomial and therefore
+      $g\left(F\left(\alpha_{i+1}\right)\right) = F\left(\beta\right)$
+      where
+      $\beta$ is a root of $X^{n_{i+1}} - a$ therefore
+      $F\left(\beta\right)$ is also solvable extension.
     }
   \end{proof}
 \end{property}
