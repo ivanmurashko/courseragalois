@@ -51,6 +51,7 @@ by radicals.
     \nameref{def:galoisextension} $E$ containing $L$ and solvable by
     radicals.    
   \end{enumerate}
+  \label{property:solvable}
   \begin{proof}
     For the first property (the proof is missing in the lectures): let
     $L = L_1 L_2$ where $L_1$ and $L_2$ are solvable i.e.
@@ -84,7 +85,6 @@ by radicals.
       solvable ???
     }
   \end{proof}
-  \label{property:solvable}
 \end{property}
 
 \subsection{Solvable groups}
@@ -313,7 +313,7 @@ Lets also look at another definition of solvable group
         any 3-cycle is a \nameref{def:commutatorsubgroup} and 3-cycles
         generate $A_n$
         \footnote{
-          3-cycle are even permutations and result of
+          ??? 3-cycle are even permutations and result of
           their compositions is also even
         }
       \item If $n \ge 5$ then $\left[A_n, A_n\right] = A_n$ thus the
@@ -329,7 +329,10 @@ Lets also look at another definition of solvable group
         elements and then taking the commutators of those $A_4$, we
         see that all double transpositions are in the $\left[A_n,
           A_n\right]$ (\nameref{def:commutatorsubgroup} of $A_n$). But
-        if $n \ge 5$, they generate $A_n$.          
+        if $n \ge 5$, they generate $A_n$.
+        \footnote{
+          ???
+        }
     \end{enumerate}
   \end{proof}
   \label{thm:lec8_sn_solvability}
@@ -445,7 +448,8 @@ Lets also look at another definition of solvable group
 
     For another direction: if $P$ is solvable then $G$ is
     solvable. Let $E$ is solvable extension containing $F$. We may
-    suppose that this is Galois. Then write
+    suppose (using property \ref{property:solvable}) that this is Galois.
+    Then write
     $E = K\left(\alpha_1, \dots, \alpha_r\right)$ where
     $\alpha_i^{n_i} \in K\left(\alpha_1, \dots,
     \alpha_{i-1}\right)$. Then let $L = K\left(\zeta_n\right)$
@@ -456,10 +460,28 @@ Lets also look at another definition of solvable group
     K\left(\alpha_1, \dots, \alpha_i\right)$ - cyclic extension of
     order $n_i$. We have $Gal\left(M/L\right)$ is solvable by this
     cyclic subgroups. $Gal\left(M/K\right)$ is also solvable since
-    $Gal\left(M/L\right)$ subgroup and the quotient
-    $\cong Gal\left(L/K\right)$ which is abelian.
-    $Gal\left(F/K\right)$ is a quotient of $Gal\left(M/K\right)$ thus
-    is solvable too.    
+    \[
+    Gal\left(M/L\right) \subset Gal\left(M/K\right)
+    \]
+    and the quotient
+    \[
+    \frac{Gal\left(M/K\right)}{Gal\left(M/L\right)}
+    \cong Gal\left(L/K\right)
+    \]
+    which is abelian.
+    \footnote{
+      as result the property \ref{property:lec8_solvable3} gives us
+      the solvability of $Gal\left(M/K\right)$
+    }
+    $Gal\left(F/K\right)$ is a quotient
+    \footnote{
+      ??? subset
+    }
+    of $Gal\left(M/K\right)$ thus
+    it is solvable too.
+    \footnote{
+      by the property \ref{property:lec8_solvable1}
+    }    
   \end{proof}
   \label{thm:lec8_1}
 \end{theorem}
