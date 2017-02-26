@@ -382,7 +382,22 @@ Lets also look at another definition of solvable group
     \[
     G = G_0 \supset G_1 \supset \dots \supset G_r = \left\{e\right\}
     \]
-    and $G_i/G_{i+1}$ - cyclic of order $n_i \mid n$. And as soon as
+    and $G_i/G_{i+1}$ - cyclic
+    \footnote{
+      see property \ref{property:lec8_solvable4}
+    }
+    of order $n_i \mid n$.
+    \footnote{
+      As soon as $G_i, G_{i+1} \subset G$ then using
+      \nameref{thm:lagrange} theorem one can get that
+      $\left|G_i\right| \mid \left|G\right|$ as well as
+      $\left|G_{i+1}\right| \mid \left|G\right|$ and therefore
+      $\left|G_i/G_{i+1}\right| \mid \left|G\right|$. But
+      $G \subset Gal\left(F/K\right)$, thus
+      $\left|G\right| \mid \left|Gal\left(F/K\right)\right| = n$. As
+      result $\left|G_i/G_{i+1}\right|$ divides $n$.
+    }
+    And as soon as
     $n_i \mid n$ (very important), all $n$-th roots of 1 are in $M$
     (this is why we adjoin the $L$).
 
