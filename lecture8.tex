@@ -345,12 +345,17 @@ Lets also look at another definition of solvable group
   $F$ is a \nameref{def:splittingfield} of $P$ over $K$.
   \begin{proof}
     First of all lets proof that if $Gal\left(P\right)$ is solvable
-    then $P$ is solvable. Let $n - \left[F:K\right]$ and consider
+    then $P$ is solvable. Let $n = \left[F:K\right]$ and consider
     $L = K\left(\zeta_n\right)$ where $\zeta_n$ - $n$-th root of 1.
-    Let $M = FL$ - a \nameref{def:compositeextension}. So this is the
+    Let $M = FL$ is a \nameref{def:compositeextension}. So this is the
     splitting and field of $P$ of which we have adjoined all the
     $n$-th roots of unity.  Then $M$ is a
-    \nameref{def:galoisextension} and
+    \nameref{def:galoisextension}
+    \footnote{
+      Accordingly property \ref{property:lec7_2} the composition of
+      two Galois extensions will also be Galois.
+    }
+    and
     $Gal\left(M/K\right) \hookrightarrow Gal\left(F/K\right)$.
     $\forall g \in Gal\left(M/K\right)$ leaves $F$ invariant.
     If $g\mid_F = id$ then $g = id$. Then the image in fact of this
