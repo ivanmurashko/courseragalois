@@ -356,11 +356,29 @@ Lets also look at another definition of solvable group
       two Galois extensions will also be Galois.
     }
     and
-    $Gal\left(M/K\right) \hookrightarrow Gal\left(F/K\right)$.
-    $\forall g \in Gal\left(M/K\right)$ leaves $F$ invariant.
+    $Gal\left(M/L\right) \hookrightarrow Gal\left(F/K\right)$.
+    \footnote{
+      See theorem \ref{thm:lec7_3} where $L_1 = F, L_2 = L, L_1 L_2 =
+      M = FL$.
+    }
+    $\forall g \in Gal\left(M/L\right)$ leaves $F$ invariant.
+    \footnote{
+      ???
+    }
     If $g\mid_F = id$ then $g = id$. Then the image in fact of this
-    map is of the Galois group of $F$ over the intersection of $F$ and
-    $L$.  So $G = Gal\left(M/K\right)$ is solvable i.e.
+    map is $Gal\left(F/F \cap L\right)$.
+    \footnote{
+      See theorem \ref{thm:lec7_3} where $L_1 = F, L_2 = L, L_1 L_2 =
+      M$.
+    }    
+    So $G = Gal\left(M/L\right)$
+    is solvable
+    \footnote{
+      Using property \ref{property:lec8_solvable1} $G$ is solvable as
+      soon as $G \subset Gal\left(F/K\right)$ and 
+      $Gal\left(F/K\right)$ is solvable
+    }
+    i.e. 
     \[
     G = G_0 \supset G_1 \supset \dots \supset G_r = \left\{e\right\}
     \]
