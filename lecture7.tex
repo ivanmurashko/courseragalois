@@ -191,7 +191,13 @@ can happen as we have seen, the Galois group becomes smaller.
 \label{sec:kummerextension}
 
 Consider a field $K$ such that the characteristics of $K$ is prime to
-a certain number $n$: $\left(char(K), n\right) = 1$ and such that $X^n
+a certain number $n$: $\left(char(K), n\right) = 1$
+\footnote{
+  case $char(K) = 0$ is also included because it is used only one time
+  to prove separability (see note
+  \ref{note:lec7_kummer_extension_char_zero}) 
+}
+and such that $X^n
 - 1$ splits in $K$. So $K$ contains all roots of unity. Consider an
 element $a$ of $K$ : $a \in K$ and let $\alpha = \sqrt[n]{a}$ (i.e. a
 root of $X^n - a$). Take
@@ -224,13 +230,18 @@ root of $X^n - a$). Take
     Therefore $K\left(\alpha\right)$
     is a splitting field of $X^n - a$ thus it's
     normal. The extension is also separable because
-    $\left(char(K), n\right) = 1$.
+    $\left(char(K), n\right) = 1$.    
     \footnote{
       If $P_n = X^n - a$ then $P_n' = n X^{n-1} \ne 0$ as soon as
       $\left(char(K), n\right) = 1$ and as result $(P_n, P_n') = 1$
       and $P_n$ does not have multiple roots and therefore it is
       separable. As result the extension $K\left(\alpha\right)$ is
       also separable.
+
+      The case $char(K) = 0$ is obvious because such extensions are
+      always separable (see section
+      \ref{sec:lec3_separable_elements}).
+      \label{note:lec7_kummer_extension_char_zero}
     }
     Thus $K\left(\alpha\right)$ is \nameref{def:galoisextension}.
 
