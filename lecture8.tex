@@ -69,33 +69,52 @@ by radicals.
     $\bar{K}$ or, in other words, images of $L$ by
     $Gal\left(\bar{K}/K\right)$.
     \footnote{
-      ??? First claim. If $g \in Gal\left(\bar{K}/K\right)$ and $L$ is
-      solvable then $L_g = g(L)$ i.e. image of $L$ is also
-      solvable. Lets prove it by induction if $L =
-      K\left(\alpha\right)$ then $\exists n_1 \in \mathbb{N}$ such that
-      $\alpha^{n_1} = a \in K$ therefore $\alpha$ is a root of the
-      following polynomial $X^{n_1} - a$. We have, as soon as $g$ permutes the
-      roots of the polynomial, $g\left(K\left(\alpha\right)\right) =
-      K\left(\beta\right)$ where $\beta = g(\alpha)$ and $\beta$ is a
-      root of $X^{n_1} -a$ i.e. $\beta^{n_1} \in K$ or, in other words,
-      $g\left(K\left(\alpha\right)\right)$ is also solvable by
-      radicals. Using induction hypothesis we have that if
-      $F = K\left(\alpha_1, \dots, \alpha_i\right)$ is solvable then
-      $g\left(F\right)$ is also
-      solvable but by \nameref{thm:galoiscorrespondence} (item
-      \ref{thm:galoiscorrespondence:item2b}) 
+      Lets prove by induction. For the first step we have that
+      $K\left(\alpha\right)$ is solvable therefore
+      $\exists d = \min\{j \mid \alpha^j \in K\}$. Let
+      $\zeta_d$ is a root of unity i.e. root of $X^d - 1$ then by
+      proposition \ref{prop:lec7_1}, the
+      $K\left(\zeta_d, \alpha\right) \supset K\left(\alpha\right)$ is
+      a Galois extension and it has a finite degree ($\le d \cdot d$).
+
+      Using induction hypothesis we have that if
+      $K\left(\alpha_1, \dots, \alpha_i\right)$ is solvable then there
+      exists a Galois extension of finite degree
+      $F = K\left(\beta_1, \dots, \beta_k \right)$ that is solvable
+      and $K\left(\alpha_1, \dots, \alpha_i\right) \subset F$.
+      By \nameref{thm:galoiscorrespondence} (item
+      \ref{thm:galoiscorrespondence:item2b}) we have that
+      $\forall g \in G = Gal\left(\bar{K}/K\right)$:
       \[
       g\left(F\right) = F.
       \]
-      Now consider a solvable extension $F\left(\alpha_{i+1}\right)$
-      i.e. $\exists n_{i+1} \in \mathbb{N}$ such that
-      $\alpha_{i+1}^{n_{i+1}} \in F$. Therefore $\alpha_{i+1}$ is a
-      root of the polynomial $X^{n_{i+1}} - a$ where $a \in F$.
-      The $g$ permutes the roots of the polynomial and therefore
-      $g\left(F\left(\alpha_{i+1}\right)\right) = F\left(\beta\right)$
-      where
-      $\beta$ is a root of $X^{n_{i+1}} - a$ therefore
-      $F\left(\beta\right)$ is also solvable extension.
+      Lets consider $F\left(\alpha_{i+1}\right)$. As we know
+      (by induction hypothesis)
+      $K\left(\alpha_1, \dots, \alpha_i, \alpha_{i+1}\right)$ is
+      solvable i.e.
+      \(
+      \exists d = \min\{k \mid \alpha_{i+1}^k
+      \in K\left(\alpha_1, \dots, \alpha_i\right)\}
+      \)
+      therefore $\alpha_{i+1}$ is a root of the following irreducible
+      polynomial $X^d - a$ where $a = \alpha_{i+1}^d$.
+      The Galois group $G = Gal\left(\bar{K}/K\right)$ permutes the
+      roots of the polynomial and as result $\forall g \in G$
+      \[
+      L_g = g\left(F\left(\alpha_{i+1}\right)\right) =
+      F\left(\beta_g\right),
+      \]
+      where $\beta_g = g\left(\alpha_{i+1}\right)$ is a root of $X^d -
+      a$. I.e. $L_g$ is solvable. If we take a composite extension
+      $L \cup_{g \in G} L_g$ then by first property of
+      \ref{property:solvable} it will be solvable but as soon as
+      $L$ is the image of all $g \in G$ then
+      $\forall g \in G: g\left(L\right) = L$ and by
+      \nameref{thm:galoiscorrespondence} (item
+      \ref{thm:galoiscorrespondence:item2b})  the extension $L$ is
+      Galois. $L$ is a splitting field of $X^d - a$ (because it
+      contains all its roots) but by theorem \ref{thm:lec2_1} it has
+      finite degree: $\left[L : F\right] \le d!$.
     }
   \end{proof}
 \end{property}
