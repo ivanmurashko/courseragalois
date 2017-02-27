@@ -254,7 +254,29 @@ will recall the definition of basic properties.
     then $\pi\left(G_i\right)$ gives a filtration $\left(G/H\right)_i$
     on $G/H$ with required properties.
     \footnote{
-      ??? 
+      ??? We can associate each element $g \in G$ with
+      $\bar{g} \in G/H$ via the following map:
+      $\pi: G \xrightarrow[g \to \bar{g}]{} G/H$. I.e.
+      $\pi(g) = \bar{g} = gH$. Thus we also have
+      $\pi\left(G_i\right) = \bar{G}_i = G_i H$. Lets prove that
+      $\bar{G}_i$ forms the required filtration i.e. that
+      $\bar{G}_i \triangleleft \bar{G}_{i-1}$
+      and $\bar{G}_{i-1}/\bar{G}_i$ is \nameref{def:abeliangroup}.
+
+      For normality prove we have that
+      ${G}_i \triangleleft {G}_{i-1}$ i.e.
+      $\forall g \in {G}_{i-1}: g G_i = G_i g$ but
+      $\forall \bar{g} \in \bar{G}_{i-1}$ we have
+      \[
+      \bar{g} \bar{G}_{i} = g H G_i H
+      \]
+      but $H \triangleleft G$ i.e.
+      $\forall g' \in G_i \subset G: g' H = H g'$ therefore
+      \[
+      \bar{g} \bar{G}_{i} = g G_i H =
+      G_i g H = G_i g H H = G_i H g H = \bar{G}_i \bar{g}
+      \]
+      that finished the normality proof.
     }
   \end{proof}
   \label{property:lec8_solvable2}
@@ -398,7 +420,8 @@ Lets also look at another definition of solvable group
     }
     $\forall g \in Gal\left(M/L\right)$ leaves $F$ invariant.
     \footnote{
-      ???
+      $g(F) = F$ see \nameref{thm:galoiscorrespondence} (point
+      \ref{thm:galoiscorrespondence:item2b}) 
     }
     If $g\mid_F = id$ then $g = id$. Then the image in fact of this
     map is $Gal\left(F/F \cap L\right)$.
