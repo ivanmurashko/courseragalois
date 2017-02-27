@@ -119,18 +119,6 @@ property.
   \label{def:propersubgroup}
 \end{definition}
 
-\begin{definition}[Normal subgroup]
-  A subgroup, $N$, of a group $G$, is called a normal subgroup if it
-  is invariant under conjugation i.e. 
-  \[
-  N \triangleleft G \Leftrightarrow
-  \forall n \in N, \forall g \in G, g n g^{-1} \in N
-  \]
-  
-  The definition taken from \cite{wiki:normalsubgroup}
-  \label{def:normalsubgroup}
-\end{definition}
-
 \begin{definition}[Coset]
   If $G$ is a group, and $H$ is a subgroup of $G$, and $g$ is an
   element of $G$, then
@@ -143,6 +131,21 @@ property.
   \]
   is the right coset of $H$ in $G$ with respect to $g$.
   \label{def:coset}
+\end{definition}
+
+\begin{definition}[Normal subgroup]
+  A subgroup, $N$, of a group $G$, is called a normal subgroup if it
+  is invariant under conjugation i.e. 
+  \[
+  N \triangleleft G \Leftrightarrow
+  \forall n \in N, \forall g \in G, g n g^{-1} \in N
+  \]  
+  The definition taken from \cite{wiki:normalsubgroup}
+
+  We also can write normality in the \nameref{def:coset} notation as
+  follows.
+  $N \triangleleft G$ if $\forall g \in G: gN = Ng$.
+  \label{def:normalsubgroup}
 \end{definition}
 
 \begin{definition}[Quotient group]

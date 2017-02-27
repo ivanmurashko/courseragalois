@@ -205,15 +205,17 @@ will recall the definition of basic properties.
     \footnote{
       We have $H_i = G_i \cap H$ and as soon as
       $G_i \triangleleft G_{i-1}$ we also get
-      $H_i \triangleleft H_{i-1}$. Really $\forall h_i \in H_i$ we
-      have $h_i \in G_i \cap H \subset G_i$. Thus, using normality
+      $H_i \triangleleft H_{i-1}$. Really $\forall h \in H_{i-1}$ we
+      have $h \in G_{i-1} \cap H \subset G_{i-1}$. Thus, using normality
+      (see definition \ref{def:normalsubgroup})
       $G_i \triangleleft G_{i-1}$,
       \[
-      h_i G_{i-1} = G_{i-1} h_i.
+      h G_{i} = G_{i} h.
       \]
       The last equation also holds for any subset of $G_{i-1}$ and
-      especially for $H_i = G_i \cap H \subset G_i$. As result we can
-      conclude $H_i \triangleleft H_{i-1}$.
+      especially for $H_{i} = G_{i} \cap H \subset G_{i}$. I.e.
+      $\forall h \in H_{i-1}: h H_i = H_i h$ or in other words,
+      $H_i \triangleleft H_{i-1}$.
 
       We have that $G_{i-1}/G_i$ is an
       \nameref{def:abeliangroup} and now we have to prove that the
@@ -263,7 +265,8 @@ will recall the definition of basic properties.
       $\bar{G}_i \triangleleft \bar{G}_{i-1}$
       and $\bar{G}_{i-1}/\bar{G}_i$ is \nameref{def:abeliangroup}.
 
-      For normality prove we have that
+      For normality (see definition \ref{def:normalsubgroup}) prove we
+      have that 
       ${G}_i \triangleleft {G}_{i-1}$ i.e.
       $\forall g \in {G}_{i-1}: g G_i = G_i g$ but
       $\forall \bar{g} \in \bar{G}_{i-1}$ we have
@@ -277,6 +280,10 @@ will recall the definition of basic properties.
       G_i g H = G_i g H H = G_i H g H = \bar{G}_i \bar{g}
       \]
       that finished the normality proof.
+
+      For the abelian quotient proof we have that
+      ${G}_{i-1}/{G}_i$ is \nameref{def:abeliangroup} therefore
+      $\forall a,b \in {G}_{i-1}: a b G_i = b a G_i$.
     }
   \end{proof}
   \label{property:lec8_solvable2}
