@@ -256,7 +256,7 @@ will recall the definition of basic properties.
     then $\pi\left(G_i\right)$ gives a filtration $\left(G/H\right)_i$
     on $G/H$ with required properties.
     \footnote{
-      ??? We can associate each element $g \in G$ with
+      We can associate each element $g \in G$ with
       $\bar{g} \in G/H$ via the following map:
       $\pi: G \xrightarrow[g \to \bar{g}]{} G/H$. I.e.
       $\pi(g) = \bar{g} = gH$. Thus we also have
@@ -283,7 +283,19 @@ will recall the definition of basic properties.
 
       For the abelian quotient proof we have that
       ${G}_{i-1}/{G}_i$ is \nameref{def:abeliangroup} therefore
-      $\forall a,b \in {G}_{i-1}: a b G_i = b a G_i$.
+      $\forall a,b \in {G}_{i-1}: a b G_i = b a G_i$. Using the fact
+      that $H$ is a \nameref{def:normalsubgroup} one can get
+      \begin{eqnarray}
+        \bar{a} \bar{b} \bar{G}_i =
+        a H b H G_i H = a b G_i H = b a G_i H =
+        \nonumber \\
+        = b a G_i H H = b a H G_i H = b a H H G_i H =
+        b H a H G_i H =
+        \nonumber \\
+        = \bar{b} \bar{a} \bar{G}_i,
+        \nonumber 
+      \end{eqnarray}
+      i.e. $\bar{G}_{i-1}/\bar{G}_i$ is \nameref{def:abeliangroup}.
     }
   \end{proof}
   \label{property:lec8_solvable2}
