@@ -303,16 +303,76 @@ will recall the definition of basic properties.
 
 \begin{property}
   If $H \triangleleft G$, $H$ and $G/H$ are solvable then $G$ is
-  solvable. 
+  solvable.
+  \label{property:lec8_solvable3}
   \begin{proof}
     Put togeter the filtration $H_i$ and
     $\pi^{-1}\left(\left(G/H\right)_j\right)$ (see
     (\ref{eq:lec8_solvable_pi}) for $\pi$ definition).
     \footnote{
-      ???
+      $\forall \bar{g} \in \bar{G} = G/H$ we can consider it as a set
+      of elements: $\bar{g} = \{\forall h \in H: h g\}$ where
+      $g \in G$.
+      If we combine then we will get the following: $\cup_g \bar{g} =
+      G$. Thus from $\bar{G}_i \triangleleft \bar{G}_{i - 1}$ one can
+      get $\forall \bar{g} \in \bar{G}_{i - 1}: \bar{g} \bar{G}_i =
+      \bar{G}_i \bar{g}$ or in other words
+      (with $G_{i - 1} = \cup_{\bar{g} \in \bar{G}_{i - 1}} \bar{g}$)
+      $\forall g \in G_{i - 1}$ we have the following
+      \[
+      g G_{i - 1} = g H G_{i - 1} H =
+      \bar{g} \bar{G}_{i-1} =
+      \bar{G}_{i-1} \bar{g} =
+      G_{i - 1} H g H =
+      G_{i - 1} H H g = G_{i - 1} g,
+      \]
+      i.e.
+      ${G}_i \triangleleft {G}_{i - 1}$.
+      As result the filtration
+      \[
+      \{e\} = \bar{H} \triangleleft \dots \triangleleft
+      \bar{G}_i \triangleleft \bar{G}_{i - 1} \triangleleft \dots
+      \triangleleft \bar{G}_0 = \bar{G} 
+      \]
+      produces the following one
+      \begin{equation}
+      H \triangleleft \dots \triangleleft
+      G_i \triangleleft G_{i - 1} \triangleleft \dots
+      \triangleleft G_0 = G.
+      \label{eq:lec8_solvable3_note}
+      \end{equation}
+      If $\bar{G}_{i - 1}/\bar{G}_{i}$ is abelian, i.e.
+      $\forall \bar{a},\bar{b} \in \bar{G}_{i - 1}$:
+      $\bar{a} \bar{b} \bar{G}_{i} = \bar{b} \bar{a} \bar{G}_{i}$, we
+      can get the following
+      $\forall a, b \in G_{i-1}$ (as soon as $G_i = G_i H$ because
+      $G_i$ is got by multiplication to elements from $H$)
+      \begin{eqnarray}
+      a b G_i = a b G_i H = a b G_i H H =
+      a b H G_i H = a b H H G_i H = a H b H G_i H =
+      \nonumber \\
+      =
+      \bar{a} \bar{b} \bar{G}_{i} = \bar{b} \bar{a} \bar{G}_{i} =
+      b H a H G_i H = b a H G_i H = b a G_i H = b a G_i
+      \nonumber
+      \end{eqnarray}
+      i.e. the \nameref{def:quotientgroup} $G_{i-1}/G_i$ is an Abelian
+      group.
+
+      Finally combining (\ref{eq:lec8_solvable3_note}) with $H$
+      solvability one can get
+      \[
+      \{e\} \triangleleft \dots
+      \triangleleft
+      H_j \triangleleft H_{j - 1} \triangleleft \dots
+      \triangleleft H
+      \triangleleft \dots \triangleleft
+      G_i \triangleleft G_{i - 1} \triangleleft \dots
+      \triangleleft G_0 = G
+      \]
+      i.e. $G$ is solvable.
     }
   \end{proof}
-  \label{property:lec8_solvable3}
 \end{property}
 
 \begin{property}
