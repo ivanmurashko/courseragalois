@@ -392,13 +392,22 @@ Just another example \cite{bib:KeithConradFiniteFields}
   \footnote{
     Not every finite group is cyclic. For instance the non-abelian
     group $S_3$ (see example \ref{ex:s3group}) consists of 6 elements
-    but not it is not cyclic.
+    but it is not cyclic.
 
     If we want to have a cyclic group it should be
     \nameref{def:abeliangroup} in the case it can be represented in
     the form of a cyclic group or a direct sum of cyclic groups
-    accordingly the fundamental theorem of finite abelian groups
-    \cite{wiki:abeliangroup}. (From the staff) But a product of two
+    accordingly \nameref{thm:fgagroup}. Another important requirement
+    is that the orders of the cyclic group have to be coprime.
+
+    For example there are 2 groups of order 4:
+    the cyclic one - $\mathbb{Z}/4\mathbb{Z}$ and $V_4$ -
+    Klein four group $V_4$ \cite{wiki:klein4group}.
+    $V_4 = \mathbb{Z}/2\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z}$ is
+    non-cyclic because the orders are not coprime: $gcd(2,2) = 2 \ne
+    1.$  
+
+    (From the staff) But a product of two
     cyclic groups is 
     again cyclic, if their orders are coprime. For example, consider
     the element $\left(1,1\right) \in \mathbb{Z}/2\mathbb{Z} \times
