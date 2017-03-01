@@ -148,6 +148,15 @@ property.
   \label{def:normalsubgroup}
 \end{definition}
 
+\begin{definition}[Simple group]
+   A simple group is a nontrivial group whose only
+   \nameref{def:normalsubgroup}s are the trivial group and the group
+   itself.
+
+   The definition taken from \cite{wiki:simplegroup}
+   \label{def:simplegroup}
+\end{definition}
+
 \begin{definition}[Quotient group]
   A quotient group or factor group is a mathematical group obtained by
   aggregating similar elements of a larger group using an equivalence
@@ -380,8 +389,8 @@ property.
     Let $m$ is the maximal order of group $G$. In this case by
     \nameref{thm:lagrange} $m \mid n$ i. e. $n = k_1 m$ where $k_1 \in
     \mathbb{Z}$. Let $l$ is the order of $g$ i.e. $g^l = e$. By the
-    theorem \ref{thm:abelianelementorder} $l \mid m$ i.e. $m = k_2
-    l$. Thus
+    theorem \ref{thm:abelianelementorder} $l \mid m$ i.e.
+    $m = k_2 l$. Thus
     \[
     g^n = \left(g^m\right)^{k_1} = 
     \left(g^l\right)^{k_2 k_1} = e.
@@ -393,6 +402,7 @@ property.
 \begin{theorem}[Cyclic Group is Abelian]
   Let $G$ be a \nameref{def:cyclicgroup} then $G$ is
   \nameref{def:abeliangroup} 
+  \label{thm:cyclic_group_is_abelian}
   \begin{proof}
     As soon as $G = \left<g\right>$ then
     $\forall x,y \in G, \exists n,m \in \mathbb{N}$ such that
@@ -402,7 +412,6 @@ property.
     \]
     i.e. $G$ is abelian. 
   \end{proof}
-  \label{thm:cyclic_group_is_abelian}
 \end{theorem}
 
 \begin{remark}[Not every Abelian group is cyclic]
@@ -462,6 +471,12 @@ property.
   \label{thm:fgagroup}
 \end{theorem}
 
+\begin{theorem}[Simple subgroup of an abelian group]
+  Every non-simple abelian group has a simple normal subgroup.
+  ??? add link ???
+  \label{thm:simple_subgroup_of_abelian}
+\end{theorem}
+  
 \section{Permutations}
 
 \begin{example}[Permutation]

@@ -388,9 +388,23 @@ will recall the definition of basic properties.
   finite filtration with cyclic quotients.
   \begin{proof}
     This is just because a finite \nameref{def:abeliangroup} is just a
-    product of cyclic groups.
+    product of cyclic groups (see see \nameref{thm:fgagroup}).
     \footnote{
-      ??? see \nameref{thm:fgagroup}
+      ??? If exists a finite filtration of $G$ with cyclic quotient then
+      the $G$ is solvable because \nameref{def:cyclicgroup} is
+      abelian (see theorem \ref{thm:cyclic_group_is_abelian}).
+
+      The other direction is not so simple. Lets $G$ is solvable then
+      $G_i \triangleleft G_{i - 1}$ and $G_{i-1} / G_{i} = K$ -
+      abelian. The $K$ is a finite \nameref{def:abeliangroup}. But by
+      theorem \ref{thm:simple_subgroup_of_abelian} any finite abelian
+      group $K$ has a simple (see \nameref{def:simplegroup}) subgroup
+      $K_1$. The group $K/K_1$ is again abelian, so it has a simple
+      subgroup $K_2/K_1$ we can continue until we reach $K$. Thus we
+      get a set of subgroups
+      of $G_i$ containing $G_{i-1}$ that we can
+      insert in the original series; repeat for each $i$ and finally
+      you get a composition series with abelian factors.        
     }
   \end{proof}
   \label{property:lec8_solvable4}
