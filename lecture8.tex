@@ -388,7 +388,23 @@ for the property \ref{property:lec8_solvable4} proof
   If $G$ is finite \nameref{def:abeliangroup} than $G$ is solvable and
   there exists a finite filtration with cyclic quotients for $G$.
   \begin{proof}
-    ???
+    Accordingly theorem \ref{thm:fgagroup}) each finite
+    \nameref{def:abeliangroup} $G$ can be represented as
+    \[
+    G = K_1 \oplus K_2 \oplus \dots \oplus K_{n-1} \oplus K_n,
+    \]
+    where $K_i$ is a \nameref{def:cyclicgroup}. If we denote
+    \[
+    G_i = K_1 \oplus K_2 \oplus \dots \oplus K_{i} 
+    \]
+    when, by property \ref{property:directproduct}, we can get
+    \[
+    \{e\} = G_0 \triangleleft G_1 \triangleleft \dots \triangleleft
+    G_n = G.
+    \]
+    The gotten filtration has cyclic quotients because
+    (see property \ref{property:directproductquotient})
+    $G_i/G_{i-1} = K_i$, where $K_i$ is a cyclic group.
   \end{proof}
   \label{property:lec8_solvable4add}
 \end{property}
