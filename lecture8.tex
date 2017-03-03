@@ -382,22 +382,52 @@ will recall the definition of basic properties.
   \end{proof}
 \end{property}
 
+The following property is not a part of the lectures but it's required
+for the property \ref{property:lec8_solvable4} proof
+\begin{property}
+  If $G$ is finite \nameref{def:abeliangroup} than $G$ is solvable and
+  there exists a finite filtration with cyclic quotients for $G$.
+  \begin{proof}
+    ???
+  \end{proof}
+  \label{property:lec8_solvable4add}
+\end{property}
+
 \begin{property}
   If $G$ is finite than $G$ is solvable (i.e. has a finite filtration with
   Abelian quotients) if and only if there exists a
   finite filtration with cyclic quotients.
+  \label{property:lec8_solvable4}
   \begin{proof}
     This is just because a finite \nameref{def:abeliangroup} is just a
     product of cyclic groups (see see \nameref{thm:fgagroup}).
     \footnote{
-      ??? If exists a finite filtration of $G$ with cyclic quotient then
+       If exists a finite filtration of $G$ with cyclic quotient then
       the $G$ is solvable because \nameref{def:cyclicgroup} is
       abelian (see theorem \ref{thm:cyclic_group_is_abelian}).
 
       The other direction is not so simple. Lets $G$ is solvable then
       $G_i \triangleleft G_{i - 1}$ and $G_{i-1} / G_{i} = K$ -
-      abelian.
-      ??? see \nameref{thm:correspondence} and \nameref{thm:fgagroup}
+      abelian. The property \ref{property:lec8_solvable4add} (that
+      follows from \nameref{thm:fgagroup}) says us that there exists a
+      finite filtration with cyclic quotients for $K$ i.e.
+      \[
+      \{e\} = K^{(n)} \triangleleft \dots \triangleleft
+      K^{(j)} \triangleleft K^{(j - 1)} \triangleleft \dots \triangleleft
+      K_0 = K
+      \]
+      where $K^{(j-1)}/K^{(j)}$ is cyclic. The \nameref{thm:correspondence}
+      says us that $\forall K^{(j)}, \exists G_{i}^{(j)} \subset G_{i-1}$
+      with the same properties i.e.
+      $G_i^{(j)} \triangleleft G_i^{(j-1)}$ and
+      $G_i^{(j-1)}/G_i^{(j)}$ is cyclic. As result we can complete
+      each $G_i \triangleleft G_{i-1}$ with
+      \[
+      G_i = G_i^{(n)} \triangleleft \dots
+      \triangleleft G_i^{(j)} \triangleleft G_i^{(j-1)} \triangleleft \dots
+      \triangleleft G_i^{(0)} = G_{i-1}
+      \]
+      and the result filtration will have cyclic quotients.
       %% The $K$ is a finite \nameref{def:abeliangroup}. But by
       %% theorem \ref{thm:simple_subgroup_of_abelian} any finite abelian
       %% group $K$ has a simple (see \nameref{def:simplegroup}) subgroup
@@ -409,7 +439,6 @@ will recall the definition of basic properties.
       %% you get a composition series with abelian factors.        
     }
   \end{proof}
-  \label{property:lec8_solvable4}
 \end{property}
 
 Lets also look at another definition of solvable group
