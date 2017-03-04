@@ -549,29 +549,91 @@ property.
 \begin{example}[Permutation]
   The following permutation
   \[ \pi = 
-    \begin{array}{c}
+  \begin{array}{c}
     1 \to 2 \\
     2 \to 5 \\
     3 \to 4 \\
     4 \to 3 \\
     5 \to 1 
-    \end{array}
-    \]
-    can be also written in different forms. The most common one is the following:
-    \[
-    \pi = \begin{pmatrix}
-      1 & 2 & 3 & 4 & 5 \\
-      2 & 5 & 4 & 3 & 1
-    \end{pmatrix}.
-    \]
-    In the permutation we can see 2 cycles:
-    $1 \to 2 \to 5 \to 1$ and $3 \to 4 \to 3$. The first cycle can be
-    written as $(1,2,5)$ (or $(5,1,2)$ or $(2,5,1)$) and the second
-    one as $(3,4)$ (or $(4,3)$). The cycles gives us the shortest form
-    of writing the permutation:
-    \[
-    \pi = (1,2,5)(3,4) = (3,4)(5,1,2).
-    \]
+  \end{array}
+  \]
+  can be also written in different forms. The most common one is the following:
+  \[
+  \pi = \begin{pmatrix}
+    1 & 2 & 3 & 4 & 5 \\
+    2 & 5 & 4 & 3 & 1
+  \end{pmatrix}.
+  \]
+  In the permutation we can see 2 cycles:
+  $1 \to 2 \to 5 \to 1$ and $3 \to 4 \to 3$. The first cycle can be
+  written as $(1,2,5)$ (or $(5,1,2)$ or $(2,5,1)$) and the second
+  one as $(3,4)$ (or $(4,3)$). The cycles gives us the shortest form
+  of writing the permutation:
+  \[
+  \pi = (1,2,5)(3,4) = (3,4)(5,1,2).
+  \]
+  
+  If we have 2 permutations
+  \[
+  \pi_1 = \begin{pmatrix}
+    1 & 2 & 3 & 4 & 5 \\
+    3 & 1 & 5 & 2 & 4
+  \end{pmatrix}.
+  \]
+  and
+  \[
+  \pi_2 = \begin{pmatrix}
+    1 & 2 & 3 & 4 & 5 \\
+    2 & 5 & 4 & 3 & 1
+  \end{pmatrix}.
+  \]
+  then we can combine them into the new one (via a multiplication)
+  \[ \pi = \pi_1 \pi_2 = 
+  \begin{array}{c}
+    1 \to 2 \to 1 \\
+    2 \to 5 \to 4\\
+    3 \to 4 \to 2\\
+    4 \to 3 \to 5\\
+    5 \to 1 \to 3 
+  \end{array} =
+  \begin{pmatrix}
+    1 & 2 & 3 & 4 & 5 \\
+    1 & 4 & 2 & 5 & 3
+  \end{pmatrix} = (1)(2,4,5,3) = (2,4,5,3)
+  \]
+
+  We have identity element
+  \[
+  e =  \begin{pmatrix}
+    1 & 2 & 3 & 4 & 5 \\
+    1 & 2 & 3 & 4 & 5
+  \end{pmatrix}
+  \]
+  such that $\forall \pi: \pi e = e \pi = \pi$.
+  
+  For every $\pi$ we can define $\pi^{-1}$ such that
+  $\pi \pi^{-1} = \pi^{-1} \pi = e$.
+
+  For our example
+  \[
+  \pi = \begin{pmatrix}
+    1 & 2 & 3 & 4 & 5 \\
+    2 & 5 & 4 & 3 & 1
+  \end{pmatrix} = (1,2,5)(3,4)
+  \]
+  we have
+  \[
+  \pi^{-1} = \begin{pmatrix}   
+    2 & 5 & 4 & 3 & 1 \\
+    1 & 2 & 3 & 4 & 5 
+  \end{pmatrix} =
+  \begin{pmatrix}   
+    1 & 2 & 3 & 4 & 5 \\
+    5 & 1 & 4 & 3 & 2 
+  \end{pmatrix} = (1,5,2)(3,4)
+  \]
+
+  As result we have a \nameref{def:group} of permutations.
   \label{ex:permutation}
 \end{example}
 
