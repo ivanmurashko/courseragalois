@@ -377,7 +377,45 @@ property.
   \]
   \label{property:directproductquotient}
   \begin{proof}
-    ???
+    Lets prove the first claim:
+    $G/G_1 \cong G_2$ (the second one is analogous).
+    Consider projection
+    $\pi: G \xrightarrow[(g_1, g_2) \to (1_{G_1}, g_2)]{} G_2$. The
+    $\pi$ is \nameref{def:homomorphism}. Really
+    let $a = (a_1, a_2), b = (b_1, b_2) \in G$ where
+    $a_{1}, b_1 \in G_1$, $a_2, b_{2} \in G_2$:
+    \begin{eqnarray}
+      \pi\left(a \cdot b\right) = \pi\left(
+      (a_1, a_2) \cdot (b_1, b_2)
+      \right) =
+      \nonumber \\
+      = \pi\left(
+      (a_1 b_1, a_2 b_2)
+      \right) = a_2 b_2 =
+      \pi\left(a\right) \pi\left(b\right)
+      \nonumber
+    \end{eqnarray}
+    As result $\pi$ is a \nameref{def:homomorphism}.
+    
+    The $\pi$ is also a \nameref{def:surjection} because $\forall a_2
+    \in G_2$ $\exists a \in G$ such that $\pi(a) = a_2$. Really we can
+    use $a = (1_{G_1}, a_2)$.
+    
+    Therefore by \nameref{thm:firstisomorphism} one can get
+    \[
+    G/\ker{\pi} \cong G_2,
+    \]
+    but $\forall g_1 \in G_1$ we have $(g_1, 1_{G_2}) \in \ker{\pi}$.
+    And conversely $\forall k \in \ker \pi$ we have $k = (k_1, k_2)$
+    where $k_1 \in G_1$ and $k_2 = 1_{G_2}$.
+    As result (see property \ref{property:directproduct})
+    \[
+    \ker \pi = \left(G_1, 1_{G_2}\right) \cong G_1.
+    \]
+    Therefore
+    \[
+    G/G_1 \cong G_2.
+    \]
   \end{proof}
 \end{property}
 
