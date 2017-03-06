@@ -513,7 +513,23 @@ Lets also look at another definition of solvable group
         \ref{def:alternatinggroup}). It can be seen from the fact that
         any 3-cycle is a \nameref{def:commutatorsubgroup}
         \footnote{
-          ???
+          Let $n \ge 3$ and $(a,b,c) \in S_n$ is a 3-cycle then
+          \begin{eqnarray}
+            (a,b,c) = (a,b,c)^2 =
+            \left((a,b)(a,c)\right)^2 =
+            \nonumber \\
+            = (a,b)(a,c)(a,b)(a,c) =
+            (b,a)^{-1}(c,a)^{-1}(a,b)(a,c) =
+            \nonumber \\
+            =
+            (a,b)^{-1}(a,c)^{-1}(a,b)(a,c) =
+            \nonumber \\
+            =
+            \left[
+              (a,b),(a,c)
+              \right] \subset \left[S_n, S_n\right].
+            \nonumber
+          \end{eqnarray}
         }
         and 3-cycles
         generate $A_n$
