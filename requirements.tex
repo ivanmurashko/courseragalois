@@ -105,6 +105,21 @@ property.
   \label{thm:lagrange}
 \end{theorem}
 
+\begin{theorem}[Finite group of prime order]
+  Let $G$ is a finite group of prime order i.e.
+  $\left|G\right| = p$, where $p$ is prime number. Then $G$ is a
+  \nameref{def:cyclicgroup}. 
+  \label{thm:finite_group_of_prime_order}
+  \begin{proof}
+    Let $g \in G$ such that $g \ne e$ then, by theorem
+    \ref{thm:lagrange},
+    we have 
+    $\left|\left<g\right>\right| \mid \left|G\right|$. Thus
+    $\left|\left<g\right>\right| = p$ because 
+    $\left|G\right| = p$ and $p$ is a prime number. As result we have
+    $G = \left<g\right>$ and therefore $G$ is a cyclic group.
+  \end{proof}
+\end{theorem}
 
 \begin{definition}[Subgroup]
   Let we have a \nameref{def:group} $\left(G, \circ\right)$. The
@@ -307,7 +322,7 @@ property.
   If group $G$ and the set the group acting $X$ are finite then
 
   \[
-  \left|G\right| = \left|G\left(x\right)\right|\left|G_x\right|
+  \left|G\right| = \left|Orb\left(x\right)\right|\left|G_x\right|
   \]
   where $x \in X$, $G\left(x\right)$ - is the \nameref{def:orbit},
   $G_x$ - \nameref{def:stabilizersubgroup}.

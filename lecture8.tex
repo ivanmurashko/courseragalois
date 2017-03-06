@@ -721,6 +721,9 @@ radicals.
       the group of automorphisms which exchange roots and the complex
       conjugation will exchange the 2 complex roots).
       The complex conjugation is the transposition of roots
+      \footnote{
+        $(1,2) = 1 \to 2 \to 1$
+      }
     \item As soon as $P$ is irreducible then $Gal\left(P\right)$
       should act transitively (see definition \ref{def:transitive}) on
       roots (see theorem \ref{thm:lec5_3}). We have an irreducible
@@ -733,14 +736,24 @@ radicals.
       $Gal\left(P\right) \subset S_5$ acts transitively. This means
       that $5 \mid \left|Gal\left(P\right)\right|$. That is because
       (see \nameref{thm:orbitstabilizertheorem})
-      $\left|G\right| = \left|G\left(x\right)\right| \left|G_x\right|$
-      ($G\left(x\right)$ - is the \nameref{def:orbit},
+      $\left|G\right| = \left|Orb\left(x\right)\right| \left|G_x\right|$
+      ($Orb\left(x\right)$ - is the \nameref{def:orbit},
       $G_x$ - \nameref{def:stabilizersubgroup})
-      but the orbit has 5 elements and therefore 5 divides
+      but the orbit has 5 elements
+      \footnote{
+        $\left|Orb\left(x\right)\right| = 5$ because there are 5
+        different roots that can be permuted by the Galois group.
+      }
+      and therefore 5 divides
       the cardinality of $G$. This means, by \nameref{cor:sylow} 
       theorems, that our group contains something of order 5. But only
-      5-cycle has order 5. But a 5-cycle and transposition generate
-      $S_5$. So $Gal\left(P\right) = S_5$.      
+      5-cycle has order 5 (see theorem
+      \ref{thm:finite_group_of_prime_order}). 
+      But a 5-cycle and transposition generate
+      $S_5$. So $Gal\left(P\right) = S_5$.
+      \footnote{
+        ???
+      }
   \end{enumerate}
   In fact, the same argument is valid for $S_p$ with every $p$ - prime. 
   I.e. applies to an arbitrary prime number $p$ instead of 5.
