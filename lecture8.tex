@@ -786,11 +786,36 @@ radicals.
     X_n\right]$ (multi-variable polynomial rings). We have the same
   also for field extensions:
   $K\left(T_1, \dots, T_n\right) \subset K\left(X_1, \dots,
-  X_n\right)$. The $K\left(X_1, \dots, X_n\right)$ is algebraic and a
+  X_n\right)$.
+  The $K\left(X_1, \dots, X_n\right)$ is algebraic and a
   splitting field for our general polynomial. So it has degree at most
-  $n!$. On the other hand
+  $n!$, i.e.
+  $\left[K\left(X_1, \dots, X_n\right):K\right] \le n!$
+  (see theorem \ref{thm:lec2_1}). On the other hand
   $K\left(T_1, \dots, T_n\right) \subset K\left(X_1, \dots,
-  X_n\right)^{S_n}$ so degree of the extension is $n!$ and
+  X_n\right)^{S_n}$
+  \footnote{
+    This is because $S_n$ permutes the roots, for instance $X_k \to X_l \to
+    X_k$, but the equations for $T_i$ are not changed during the
+    transformation. 
+  }
+  so degree of the extension is $n!$
+  \footnote{
+    We have that
+    $S_n \subset Gal\left(K\left(X_1, \dots, X_n\right)/
+    K\left(T_1, \dots, T_n\right)\right)$ and therefore
+    \[
+    \left[K\left(X_1, \dots, X_n\right):
+      K\left(T_1, \dots, T_n\right)\right] \ge \left|S_n\right| = n!.
+    \]
+    Thus with $\left[K\left(X_1, \dots, X_n\right):K\right] \le n!$
+    one can get that
+    $\left[K\left(X_1, \dots, X_n\right):
+      K\left(T_1, \dots, T_n\right)\right] = n!$
+    and
+    $\left[K\left(X_1, \dots, X_n\right):K\right] = n!$.
+  }
+  and
   \[
   K\left(T_1, \dots, T_n\right) = K\left(X_1, \dots,
   X_n\right)^{S_n}.
