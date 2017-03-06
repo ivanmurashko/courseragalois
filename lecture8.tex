@@ -514,19 +514,20 @@ Lets also look at another definition of solvable group
         any 3-cycle is a \nameref{def:commutatorsubgroup}
         \footnote{
           Let $n \ge 3$ and $(a,b,c) \in S_n$ is a 3-cycle then
+          (see example \ref{ex:transposition_product})
           \begin{eqnarray}
             (a,b,c) = (a,b,c)^2 =
-            \left((a,b)(a,c)\right)^2 =
+            \left((a,c)(a,b)\right)^2 =
             \nonumber \\
-            = (a,b)(a,c)(a,b)(a,c) =
-            (b,a)^{-1}(c,a)^{-1}(a,b)(a,c) =
+            = (a,c)(a,b)(a,c)(a,b) =
+            (c,a)^{-1}(b,a)^{-1}(a,c)(a,b) =
             \nonumber \\
             =
-            (a,b)^{-1}(a,c)^{-1}(a,b)(a,c) =
+            (a,c)^{-1}(a,b)^{-1}(a,c)(a,b) =
             \nonumber \\
             =
             \left[
-              (a,b),(a,c)
+              (a,c),(a,b)
               \right] \subset \left[S_n, S_n\right].
             \nonumber
           \end{eqnarray}
@@ -535,7 +536,9 @@ Lets also look at another definition of solvable group
         generate $A_n$
         \footnote{
           Any even permutation can be represented in a form of product
-          of transpositions. The number of transpositions should be
+          of transpositions (see theorem
+          \ref{thm:permutationrepresent}). The number of
+          transpositions should be 
           even. We have several cases there:
           \begin{enumerate}
             \item The transpositions with different elements produces
@@ -555,9 +558,9 @@ Lets also look at another definition of solvable group
               (a,b)(c,d)
               \]
             \item The transpositions that have a same element produces
-              a 3-cycle
+              a 3-cycle (see example \ref{ex:transposition_product})
               \[
-              (a,b)(a,c) = (a,b,c)
+              (a,c)(a,b) = (a,b,c)
               \]
           \end{enumerate}
           As soon as we have even number of transposition then we will
