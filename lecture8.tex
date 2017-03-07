@@ -896,7 +896,11 @@ $\rho$. We claim that $\rho$ is something that is called as
 \nameref{def:regularrepresentation}.
 \begin{definition}[Regular representation]
   Let a vector space $V$ has a basis indexed by elements of group $G$:
-  $e_g$ where $g \in G$. $\rho_{reg}\left(h\right)$ acts by
+  $e_g$ where $g \in G$. $\rho_{reg}\left(h\right)$
+  \footnote{
+    where $h \in G$.
+  }
+  acts by
   permutations:
   \footnote{
     $\rho_{reg}\left(h\right)$ is an \nameref{def:automorphism} of $V$
@@ -922,8 +926,19 @@ The $\bar{K}^n$ is a \nameref{def:directsum} of $n$
 ($n = \left|G = Gal\left(L/K\right)\right|$)
 copies of $\bar{K}$.
 The sum is indexed by the embeddings of $L$ into
-$\bar{K}$. Pick one $j: L \hookrightarrow \bar{K}$ and all others can
-be obtained by group \nameref{def:action} $j \circ g, g \in G$. So
+$\bar{K}$.
+\footnote{
+  The embeddings are also noticed as the set of 
+  homomorphisms $Hom_K\left(L, \bar{K}\right)$.
+}
+Pick one $j: L \hookrightarrow \bar{K}$ and all others can
+be obtained by group \nameref{def:action} $j \circ g, g \in G$.
+\footnote{
+  This is because the \nameref{def:galoisgroup} acts transitively on
+  the set of homomorphisms from $L$ to $\bar{K}$ ($Hom_K\left(L,
+  \bar{K}\right)$), see theorem \ref{thm:lec5_3}. 
+}
+So
 $\bar{K}^n$ has a basis indexed by $G$ and the \nameref{def:action} of
 $G$ permutes the basis vectors. So $L \otimes_K \bar{K} \cong
 \bar{K}^n \cong$ \nameref{def:regularrepresentation} of $G$ over
