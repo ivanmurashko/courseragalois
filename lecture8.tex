@@ -578,7 +578,11 @@ Lets also look at another definition of solvable group
         permutations of 
         those 4 elements as a subgroup of permutations of $n$
         elements and then taking the commutators of those $A_4$, we
-        see that all double transpositions are in the $\left[A_n,
+        see
+        \footnote{
+          ???
+        }
+        that all double transpositions are in the $\left[A_n,
           A_n\right]$ (\nameref{def:commutatorsubgroup} of $A_n$). But
         if $n \ge 5$, they generate $A_n$.
         \footnote{
@@ -894,6 +898,13 @@ $\rho$. We claim that $\rho$ is something that is called as
   Let a vector space $V$ has a basis indexed by elements of group $G$:
   $e_g$ where $g \in G$. $\rho_{reg}\left(h\right)$ acts by
   permutations:
+  \footnote{
+    $\rho_{reg}\left(h\right)$ is an \nameref{def:automorphism} of $V$
+    i.e.
+    \[
+    \rho_{reg}\left(h\right): V \xrightarrow[e_g \to e_{gh}]{} V.
+    \]
+  }
   \[
   \rho_{reg}\left(h\right) e_g = e_{hg}.
   \]
@@ -906,17 +917,23 @@ representation. We have seen that (see proof of the theorem
 \[
 L \otimes_K \bar{K} \cong \bar{K}^n.
 \]
-The sum $\bar{K}^n$ of $n$ ($n = \left|G = Gal\left(L/K\right)\right|$)
-copies of $\bar{K}$ is indexed by the embeddings of $L$ into
+
+The $\bar{K}^n$ is a \nameref{def:directsum} of $n$
+($n = \left|G = Gal\left(L/K\right)\right|$)
+copies of $\bar{K}$.
+The sum is indexed by the embeddings of $L$ into
 $\bar{K}$. Pick one $j: L \hookrightarrow \bar{K}$ and all others can
 be obtained by group \nameref{def:action} $j \circ g, g \in G$. So
 $\bar{K}^n$ has a basis indexed by $G$ and the \nameref{def:action} of
 $G$ permutes the basis vectors. So $L \otimes_K \bar{K} \cong
 \bar{K}^n \cong$ \nameref{def:regularrepresentation} of $G$ over
 $\bar{K}$. In particular $\exists x$ such that $gx \mid_{g \in G}$
-form a basis of $L \otimes_K \bar{K}$ over $\bar{K}$.
+forms a basis of $L \otimes_K \bar{K}$ over $\bar{K}$.
+\footnote{
+  ???
+}
 
-Elements of $G$ are linearly independent in in the space of
+Elements of $G$ are linearly independent in the space of
 \nameref{def:endomorphism}s
 $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
 
@@ -980,7 +997,7 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
     see also definition \ref{def:directsummodules}
   }
   which are
-  isomorphic to $L$. Sums are permuted by $G = Gal\left(L/k\right)$.
+  isomorphic to $L$. Sums are permuted by $G = Gal\left(L/K\right)$.
   \begin{proof}
   So if $L = K\left(\alpha\right)$ is a splitting field of the
   polynomial $P = \left(X - \alpha_1\right) \cdot \dots \cdot \left(X
