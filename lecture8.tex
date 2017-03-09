@@ -986,7 +986,18 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
     G$. Let $x \in L$ then $g_1\left(x\right), \dots,
     g_n\left(x\right)$ is a basis if and only if matrix formed by
     $g_i\left(x\right)$ in the basis $e_j$ has non zero
-    determinant. But this determinant is a polynomial in the
+    determinant.
+    \footnote{
+      ??? We consider the following polynomial for each $g_i$:
+      $P_i = \sum_{i=1}^n k_{ij} X_j$, where
+      $P_i \in K\left[X_1, \dots, X_n\right]$ and 
+      $k_{ij} \in K$.  
+    }
+    But this determinant is a polynomial
+    \footnote {
+      ??? $\det = ???$
+    }
+    in the
     coefficient, which is not identically zero. Well, why? Because if
     it was identically zero, it would remain identically zero also
     after the base changed to $\bar{K}$. Since it has a $\bar{K}$
@@ -995,21 +1006,34 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
     There are many $x \in L \otimes_K \bar{K}$ such that
     $g_i\left(x\right)$ form a basis. And over an infinite field, a
     polynomial which is not identically zero cannot vanish
-    identically. And over an infinite field, only a polynomial which
+    identically ($P \ne 0$). And over an infinite
+    field, only a polynomial which 
     is identically 0 can vanish at every point.
+    \footnote{
+      I.e. polynomial of the following polynomial ring
+      $P \in K\left[X_1, \dots, X_n\right]$ can vanish at every point
+      only if it is identically zero $P = 0$.
+    }
 
-    Let me to clarify the point: $P \in K\left[X\right]$ has at most
-    $\deg P$ roots. So if $K$ infinite and $P$ has every element of
+    Let me to clarify the point. $P \in K\left[X\right]$ has at most
+    $\deg P$ roots.
+    \footnote{
+      Therefore it is impossible to have each $k \in K$ as a root of
+      the polynomial because in the case the number of roots
+      $\left|K\right| = \infty > \deg P$.
+    }
+    So if $K$ infinite and $P$ has every element of
     $K$ as a root then $P = 0$ ($P$ is zero as an element of
     $K\left[X\right]$).
 
     By induction we can get the same statement for a polynomial in
-    several variables. so, our polynomial which is the determinant of the matrix, 
+    several variables. So, our polynomial which is the determinant of
+    the matrix,  
     is non zero, as a polynomial of several variable because it 
-    has non rules over algebraic closure. 
-    And so, it also has to have rules, well non rules over $K$. So, there
+    does not have roots over algebraic closure $\bar{K}$. 
+    And so, it also does not have roots over $K$. So, there
     exists a point $x \in L$ (not anymore in $L \otimes_K \bar{K}$)
-    such that $det(\dots) \ne 0$ at $x$ so $g_i\left(x\right)$ form a
+    such that $\det(\dots) \ne 0$ at $x$ so $g_i\left(x\right)$ form a
     basis.
 
     If $K$ is finite then the argument with roots of a polynomial does
