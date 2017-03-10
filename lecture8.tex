@@ -1037,16 +1037,29 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
     basis.
 
     If $K$ is finite then the argument with roots of a polynomial does
-    not apply any more. But in the case \nameref{def:galoisgroup}s are
+    not apply any more. But in the case the \nameref{def:galoisgroup} is
     cyclic i.e. $G = \left<\sigma\right>$. We have $id, \sigma, \dots,
-    \sigma^{n-1}$ are linearly independent since this is the case over
-    $\bar{K}$. Then the minimal polynomial of $\sigma$ as an
-    \nameref{def:endomorphism} of $L$ over $K$ is $X^n - 1$. Thus
+    \sigma^{n-1}$ are linearly independent because they are linearly
+    independent  over
+    $\bar{K}$.
+    \footnote{
+      ???
+      }
+    Then the minimal polynomial of $\sigma$ as an
+    \nameref{def:endomorphism} of $L$ over $K$ is $X^n - 1$.
+    This is because a lower degree polynomial cannot vanish at
+    $\sigma$
+    since, the lower power of $\sigma$ are linearly independent.  
+    Thus
     \[
     L \cong K\left[X\right]/\left(X^n - 1\right)
     \]
-    as a $K$-module with $X$ acting by $\sigma$. This is a cyclic
-    module and any generator $x$ shall do i.e. $x, \sigma x, \dots,
+    as a $K\left[X\right]$-module with $X$ acting by $\sigma$. This is a cyclic
+    module
+    \footnote{
+      ??? $ = \left<x\right>$
+    }
+    and any generator $x$ shall do i.e. $x, \sigma x, \dots,
     \sigma^{n-1} x$ form a basis.
   \end{proof}
   \label{thm:normalbase}
@@ -1067,14 +1080,23 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
   polynomial $P = \left(X - \alpha_1\right) \cdot \dots \cdot \left(X
   - \alpha_n\right)$ (where $\alpha \in \{\alpha_1, \dots,
   \alpha_n\}$) that is isomorphic to $K\left[X\right]/(P)$. If 
-  we tensor it to $L$ we will get
-  \[
+  we tensor it to $L$ we will get (see examples \ref{ex:lec4_1} and
+  \ref{ex:lec5_1}) 
+  \begin{eqnarray}
+    L \otimes_K L \cong
+    L \otimes_K K\left[X\right]/\left(X - \alpha_1\right) \cdot \dots \cdot \left(X
+    - \alpha_n\right) \cong
+    \nonumber \\
+    \cong
   L\left[X\right]/\left(X - \alpha_1\right) \cdot \dots \cdot \left(X
   - \alpha_n\right) \cong
+  \nonumber \\
+  \cong
   L\left[X\right]/\left(X - \alpha_1\right) \times
   \dots \times
   L\left[X\right]/\left(X - \alpha_n\right)
-  \]
+  \nonumber
+  \end{eqnarray}
   that is a product of copies of $L$ permuted by Galois action
   \end{proof}
   \label{rem:lec8_1}
@@ -1082,7 +1104,8 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
 
 In topology one has Galois covering $Y \to X$. $G$ acts on $Y$, $X$
 quotient. The covering is characterized by the property that $Y
-\times_X Y = \sqcup_{g \in G} Y_g$, $Y_g = \{\left(y, gy\right)\}$.
+\times_X Y = \sqcup_{g \in G} Y_g$ (is a disjoint union), $Y_g =
+\{\left(y, gy\right)\}$. 
 \footnote{
   ??? add an explanation
 }
