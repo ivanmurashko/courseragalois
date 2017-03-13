@@ -988,15 +988,82 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
     $g_i\left(x\right)$ in the basis $e_j$ has non zero
     determinant.
     \footnote{
-      ??? We consider the following polynomial for each $g_i$:
-      $P_i = \sum_{i=1}^n k_{ij} X_j$, where
-      $P_i \in K\left[X_1, \dots, X_n\right]$ and 
-      $k_{ij} \in K$.  
+      We have $x = X_1 e_1 + \dots X_n e_n$ where $X_i \in K$.
+      $\forall g_l \in G: g_l(x) = \sum_i X_i g_l(e_i)$
+      because $g_l(X_i) = X_i$ (remember that $L^G = K$).
+      For each $g_l(e_i)$ we can write
+      \[
+      g_l(e_i) = \sum_j k_{ij}^{(l)} e_j
+      \]      
+      We have $k_{ij}^{(l)}$ are predefined
+      (because $\{g_l\}$ and $\{e_i\}$ are predefined)
+      elements of $L$ and therefore $X_i$ can only be changed.
+
+      We want $\{g_j(x)\}$ to be linearly independent set of elements
+      from $L$. Therefore the equation
+      \[
+      c_1 g_1(x) + \dots c_n g_n(x) = 0,
+      \]
+      where $c_i \in K$, should holds only for $c_1 = c_2 = \dots =
+      c_n = 0$.
+      We also can write
+      \begin{eqnarray}
+      c_1 \sum_j \left(\sum_i X_i k_{ij}^{(1)} \right) e_j  +
+      c_2 \sum_j \left(\sum_i X_i k_{ij}^{(2)} \right) e_j  +
+      \dots
+      +
+      \nonumber \\
+      +
+      c_n \sum_j \left(\sum_i X_i k_{ij}^{(n)} \right) e_j  =
+      \sum_j 0 e_j = 0
+      \nonumber
+      \end{eqnarray}
+      The equation can also be rewritten in the matrix form
+      \begin{eqnarray}
+        \begin{bmatrix}
+          \sum_i X_i k_{i1}^{(1)} & \sum_i X_i k_{i1}^{(2)} & \cdots &
+          \sum_i X_i k_{i1}^{(n)} \\
+          \sum_i X_i k_{i2}^{(1)} & \sum_i X_i k_{i2}^{(2)} & \cdots &
+          \sum_i X_i k_{i2}^{(n)} \\
+          \vdots & \vdots & \cdots & \vdots \\
+          \sum_i X_i k_{in}^{(1)} & \sum_i X_i k_{in}^{(2)} & \cdots &
+          \sum_i X_i k_{in}^{(n)} \\
+        \end{bmatrix}
+        \begin{bmatrix}
+          c_1 \\
+          c_2 \\
+          \vdots \\
+          c_n
+        \end{bmatrix}
+        =      
+        \begin{bmatrix}
+          0 \\
+          0 \\
+          \vdots \\
+          0
+        \end{bmatrix}
+        \nonumber
+      \end{eqnarray}
+      The equation has non-trivial solutions only if
+      \[
+      \det\left(
+        \begin{bmatrix}
+          \sum_i X_i k_{i1}^{(1)} & \sum_i X_i k_{i1}^{(2)} & \cdots &
+          \sum_i X_i k_{i1}^{(n)} \\
+          \sum_i X_i k_{i2}^{(1)} & \sum_i X_i k_{i2}^{(2)} & \cdots &
+          \sum_i X_i k_{i2}^{(n)} \\
+          \vdots & \vdots & \cdots & \vdots \\
+          \sum_i X_i k_{in}^{(1)} & \sum_i X_i k_{in}^{(2)} & \cdots &
+          \sum_i X_i k_{in}^{(n)} \\
+        \end{bmatrix}      
+      \right) \ne 0.
+      \]
+      The determinant can always be written in the form of
+      multi-variable polynomial
+      $P \in L\left[X_1, \dots, X_n\right]$ i.e. the polynomial
+      coefficients are from $L$.  
     }
     But this determinant is a polynomial
-    \footnote {
-      ??? $\det = ???$
-    }
     in the
     coefficient, which is not identically zero. Well, why? Because if
     it was identically zero, it would remain identically zero also
