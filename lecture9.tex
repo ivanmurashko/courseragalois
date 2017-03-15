@@ -11,14 +11,14 @@ Let $P \in \mathbb{Z}\left[X\right]$. We want to know what is
 $Gal\left(P\right)$. Just a reminder that $Gal\left(P\right) =
 Gal\left(K/\mathbb{Q}\right)$ where $K$ is a
 \nameref{def:splittingfield} of $P$. We have already done the work for
-several types of polynomials: cyclotomic polynomial,
+several types of polynomials: \nameref{def:cyclotomicpolynomial}s,
 \nameref{sec:kummerextension} and so on.
 
-Sometimes if, our polynomial is a kind of combination of then the
+Sometimes, if our polynomial is a kind of combination of them, then the
 explicit information about the roots helps to calculate the Galois
 group. For instance if we have polynomial $X^5 - 2$ we know it's
-roots: $\sqrt[5]{2}, j^k \sqrt[5]{2}$, where $j= e^{\frac{2 \pi
-    i}{5}}, 1 \le k \le 4$. Now we have a lot about
+roots: $\sqrt[5]{2}, j^k \sqrt[5]{2}$, where
+$j= e^{\frac{2 \pi i}{5}}, 1 \le k \le 4$. Now we have a lot about the
 \nameref{def:galoisgroup}. If $K$ is the splitting field of the
 polynomial then we have the following towers:
 
@@ -36,10 +36,30 @@ polynomial then we have the following towers:
   \end{tikzpicture}
   
 From that we know we can conclude that it follows that our Galois
-group, contains a normal cyclic subgroup of a order of five
-$\mathbb{Z}/5\mathbb{Z}$. And then 
+group, contains a normal cyclic subgroup of a order 5:
+$\mathbb{Z}/5\mathbb{Z}$.
+\footnote{
+  We have the following towers:
+  $\mathbb{Q} \subset \mathbb{Q}\left(j\right) \subset
+  \mathbb{Q}\left(j, \sqrt[5]{2}\right) = K$, where
+  $\mathbb{Q}\left(j\right)$ and $\mathbb{Q}\left(j,
+  \sqrt[5]{2}\right)$ are \nameref{def:galoisextension}s.
+  By \nameref{thm:galoiscorrespondence} one can get that
+  \[
+  Gal\left(K/\mathbb{Q}\left(j\right)\right) \triangleleft
+  Gal\left(K/\mathbb{Q}\right) = Gal\left(P\right).
+  \]
+  As soon as (see theorem \ref{thm:lec5_4}),
+  \[
+  \left|Gal\left(K/\mathbb{Q}\left(j\right)\right)\right| =
+  \left[K:\mathbb{Q}\left(j\right)\right] = 5,
+  \]
+  the $Gal(P)$ has a normal subgroup of order 5.
+}
+And then 
 the quotient is the Galois group of cyclotomic extension, so this is
-$\left(\mathbb{Z}/5\mathbb{Z}\right)^\times$. So this is a group of
+$\left(\mathbb{Z}/5\mathbb{Z}\right)^\times$.
+So this is a group of
 order 20. You can show that this 
 is noncommutative, and from this exact sequence, you have some
 information about it. But what will we do if we don't know the
