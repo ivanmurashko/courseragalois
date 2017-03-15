@@ -119,10 +119,21 @@ prime and this will be the subject of the lecture.
   \begin{proof}
     $1 \to 2 \to 3$ is easy
     \footnote{
-      ??? provide an explanation
+      $1 \to 2$ is really easy because the finite set $\{1,\alpha,
+      \dots, \alpha^{n-1}\}$ generates
+      $A\left[\alpha\right]$ i.e.
+      $\forall x \in A\left[\alpha\right], \exists \{x_i\}
+      \subset A$ such that $x = \sum_{i=0}^{n-1} x_i \alpha^{i}$.
+
+      $2 \to 3$ is even more easy because $C=A\left[\alpha\right]$ will work.
     } and we will concentrate on $3 \to 1$.
 
     Let $x_1, \dots, x_r$ generate $C$ as $A$-module then we can write
+    \footnote{
+      As soon as $\alpha x_i \in C$ is an element of $C$ that can be written
+      as a linear combination of
+      $x_1, \dots, x_r$ with coefficients from $A$.
+    }
     \[
     \alpha x_i = \sum \lambda_{ij}x_j,
     \]
@@ -135,7 +146,8 @@ prime and this will be the subject of the lecture.
       x_1 \\ \vdots \\ x_r
     \end{pmatrix} = 0.
     \]
-    Thus
+    Thus (see (\ref{eq:lec4_det}) at theorem
+    \ref{thm:structurefinitekalgebra} proof)
     \[
     \det M \cdot
     \begin{pmatrix}
@@ -145,6 +157,10 @@ prime and this will be the subject of the lecture.
     Therefore $det M \cdot C = 0$ but $1 \in C$ thus $\det M = 0$.
     The equation $\det M = 0$ can be considered as a polynomial with
     $\alpha$ as a root.
+    \footnote{
+      The polynomial will be a \nameref{def:monicpolynomial} because
+      the matrix element can have $\alpha$ with coefficient equal $1$.
+    }
   \end{proof}
   \label{lem:lec9_1}
 \end{lemma}
