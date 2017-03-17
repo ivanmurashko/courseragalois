@@ -259,8 +259,17 @@ proof.
       therefore by proposition \ref{prop:lec9_add},
       $A\left[\alpha_1, \alpha_2, \dots, \alpha_r\right] = B$ is finitely
       generated $A$-module.
-      
-      ??? provide the proof
+
+      Let $B$ is finitely generated $A$ module i.e.
+      $B = \sum_{i=1}^r \alpha_i x_i$, where
+      $\alpha_i \in B$ - the module generators and $x_i \in A$.
+      If we look at any $\alpha_i$ we can notice that
+      $A\left[\alpha_i\right] \subset B$ - finitely generated $A$
+      module and therefore by lemma \ref{lem:lec9_1},
+      $\alpha_i$ is an integral element. We also have (from definition
+      \ref{def:fgmodule}) that $\forall b \in B, \exists \{x_i\} \in
+      A$ such that $b = \sum_{i=1}^r \alpha_i x_i$. Therefore
+      $B = A\left[\alpha_1, \alpha_2, \dots, \alpha_r\right]$.
     }
   \end{proof}
   \label{prop:lec9_2}
