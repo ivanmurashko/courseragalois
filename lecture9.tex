@@ -222,9 +222,24 @@ proof.
   Let $A \subset B \subset C$. $B$ integral over $A$, $C$ integral
   over $B$ then $C$ is an \nameref{def:integralextension} over $A$.
   \begin{proof}
-    Proof is left as an exercise
+    Proof is left as an exercise.     
     \footnote{
-      ??? provide the proof
+      Let $x \in C$ then
+      \[
+      x^n + b_{n-1} x^{n-1} + \dots + b_1 x + b_0 = 0,
+      \]
+      where $b_i \in B$. Thus $x$ is an integral element over
+      $A\left[b_0, b_1, \dots, b_{n-1}\right]$. We also have that $B$
+      is integral over $A$ therefore $b_i$ is an integral over $A$. As
+      result we have $b_0$ is integral over $A$, $b_1$ is integral
+      over $A\left[b_0\right]$, and so on $x$ is integral over
+       $A\left[b_0, b_1, \dots, b_{n-1}\right]$. As result with
+      proposition \ref{prop:lec9_add} we have that
+      $A\left[b_0, b_1, \dots, b_{n-1}, x\right]$ is a finitely
+      generated $A$ module and as
+      $A\left[x\right] \subset A\left[b_0, b_1, \dots, b_{n-1},
+        x\right]$, the lemma \ref{lem:lec9_1} gives us that $x$ is an
+      integral element over $A$.
     }
   \end{proof}
   \label{prop:lec9_1}
