@@ -341,8 +341,25 @@ proof.
     \frac{p^n + q a_n p^{n-1} + q^2 a_{n-1} p^{n-2} + \dots + q^{n-1}
       a_1 p + q^n a_0}{q^n} = 0
     \]
-    therefore $q \mid p^n$ which is in contradiction with
-    $\left(p, q\right) = 1$. Unless $q$ is invertable that is $x \in A$.
+    therefore $q \mid p^n$
+    \footnote{
+      This is because we have
+      \[
+      p^n = q \left(-a_n p^{n-1} - q a_{n-1} p^{n-2} - \dots - q^{n-2}
+      a_1 p - q^{n-1} a_0\right)
+      \]
+      and
+      \[
+      \left(-a_n p^{n-1} - q a_{n-1} p^{n-2} - \dots - q^{n-2}
+      a_1 p - q^{n-1} a_0\right) \in A
+      \]
+    }
+    which is in contradiction with
+    $\left(p, q\right) = 1$. As result we have that $q$ is invertible
+    and therefore $x \in A$.
+    \footnote{
+      $q^{-1} \in A$ and $x = \frac{p}{q} = p q^{-1} \in A$.
+    }
     \end{proof}
 \end{remark}
 
