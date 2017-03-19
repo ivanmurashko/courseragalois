@@ -414,7 +414,35 @@ Let $K$ is a \nameref{def:numberfield} and $\left[K:\mathbb{Q}\right]
     Then the $P_{min} \mid Q$. So $Q = P_{min} R$.
     If we pick $P_{min}$ to be monic, then by an
     argument very similar to that of the \nameref{lem:gauss} lemma,
-    we conclude  that both $P_{min}, R \in \mathbb{Z}\left[X\right]$.  
+    we conclude  that both $P_{min}, R \in \mathbb{Z}\left[X\right]$.
+    \footnote{
+      I.e. we can always write
+      \[
+      Q = m n P_1 R_1 
+      \]
+      where $P_1, R_1 \in \mathbb{Z}\left[X\right]$. Choose $p$ is a
+      prime divisor of $m n$ we can write
+      \[
+      \bar{P_1}\bar{R_1} = \bar{Q} = 0
+      \]
+      where $\bar{Q} = Q \mod p$, $\bar{P}_1 = P_1 \mod p$,
+      $\bar{R_1} = R_1 \mod p$ thus $\bar{P}_1$ or $\bar{R}_1$ are
+      equal to 0. Let $\bar{R}_1 = 0$ thus all coefficients of $R_1$ are
+      divided by $p$ i.e. $R_1 = \frac{R_2}{p}$ where
+      $R_2 \in \mathbb{Z}\left[X\right]$. Therefore
+      \[
+      Q = \frac{mn}{p}P_1 R_2
+      \]
+      Continue this way we can conclude that
+      \[
+      Q = P_s R_t, 
+      \]
+      where $P_s, R_t \in \mathbb{Z}\left[X\right]$. As soon as $Q$ is
+      monic then both $P_s$ and $R_t$ are monic. Using the fact that
+      $P_s = z P_{min}$ where $z \in \mathbb{Z}$ we have
+      $P_s\left(\alpha\right) = 0$ and therefore we can
+      conclude that $P_s$ is the minimal polynomial. 
+    }
   \end{proof}
   \label{property:lec9_2}
 \end{property}
