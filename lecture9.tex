@@ -582,7 +582,28 @@ The following remark is not a part of the lectures
   \begin{proof}
     The first property is obvious from the definition.
     \footnote{
-      ???
+      Let $\alpha, \beta \in E$ then
+      \begin{eqnarray}
+        \mathrm{N}_{E/K}\left(\alpha \beta\right) =
+          \prod_{\sigma_i: E \hookrightarrow \bar{K}}
+          \sigma_i\left(\alpha \beta\right) =
+          \nonumber \\
+          =
+          \prod_{\sigma_i: E \hookrightarrow \bar{K}}
+          \sigma_i\left(\alpha\right)
+          \sigma_i\left(\beta\right) =
+          \nonumber \\
+          =
+          \mathrm{N}_{E/K}\left(\alpha\right)
+          \mathrm{N}_{E/K}\left(\beta\right).
+        \nonumber
+      \end{eqnarray}
+      By analogy one can get
+      \[
+      \mathrm{Tr}_{E/K}\left(\alpha + \beta\right)=
+      \mathrm{Tr}_{E/K}\left(\alpha\right) +
+      \mathrm{Tr}_{E/K}\left(\beta\right)
+      \]
       Take into consideration remark \ref{rem:lec9_add} the finally
       got the required statement.
     }
