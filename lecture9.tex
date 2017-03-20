@@ -545,16 +545,32 @@ The following remark is not a part of the lectures
   \item If we have the tower of extensions $K \subset F \subset E$
     then
     \[
-    \mathrm{N}_{E/K}\left(\alpha\right) =
-    \mathrm{N}_{F/K}\left(\alpha\right) \circ
-    \mathrm{N}_{E/F}\left(\alpha\right)
+    \mathrm{N}_{E/K} =
+    \mathrm{N}_{F/K} \circ
+    \mathrm{N}_{E/F}
     \]
     and the same for trace
     \[
-    \mathrm{Tr}_{E/K}\left(\alpha\right) =
-    \mathrm{Tr}_{F/K}\left(\alpha\right) \circ
-    \mathrm{Tr}_{E/F}\left(\alpha\right)
+    \mathrm{Tr}_{E/K} =
+    \mathrm{Tr}_{F/K} \circ
+    \mathrm{Tr}_{E/F}
     \]
+    \footnote{      
+      or in other words
+      \[
+      \mathrm{N}_{E/K}\left(\alpha\right) =
+      \mathrm{N}_{F/K} \left(
+      \mathrm{N}_{E/F}\left(\alpha\right)
+      \right)
+      \]
+      and
+      \[
+      \mathrm{Tr}_{E/K}\left(\alpha\right) =
+      \mathrm{Tr}_{F/K} \left(
+      \mathrm{Tr}_{E/F}\left(\alpha\right)
+      \right)
+      \]
+    }
     \item Consider $T: E \times E \xrightarrow[(x, y) \to
       \mathrm{Tr}_{E/K}\left(xy\right)  ]{} K$. This is a
       non-degenerate $K$-bilinear form (see
