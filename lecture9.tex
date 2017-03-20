@@ -591,21 +591,30 @@ The following remark is not a part of the lectures
           =
           \prod_{\sigma_i: E \hookrightarrow \bar{K}}
           \sigma_i\left(\alpha\right)
-          \sigma_i\left(\beta\right) =
-          \nonumber \\
+          \sigma_i\left(\beta\right) 
           =
           \mathrm{N}_{E/K}\left(\alpha\right)
           \mathrm{N}_{E/K}\left(\beta\right).
         \nonumber
       \end{eqnarray}
-      By analogy one can get
+      With remark \ref{rem:lec9_add} we can get that
       \[
-      \mathrm{Tr}_{E/K}\left(\alpha + \beta\right)=
-      \mathrm{Tr}_{E/K}\left(\alpha\right) +
-      \mathrm{Tr}_{E/K}\left(\beta\right)
+      \mathrm{N}_{E/K}: E^\times \to K^\times
       \]
-      Take into consideration remark \ref{rem:lec9_add} the finally
-      got the required statement.
+
+      If we take $a,b \in K, \sigma \in Hom_K\left(E, \bar{K}\right)$
+      then one can get that
+      $\sigma\left(a \alpha\right) = a
+      \sigma\left(\alpha\right)$. This is because $a$ is fixed under
+      every embedding of $E$ over $K$ (\cite{bib:lang} page 286).
+      Therefore one can get
+      \[
+      \mathrm{Tr}_{E/K}\left(a \alpha + b \beta\right)=
+      a \mathrm{Tr}_{E/K}\left(\alpha\right) +
+      b \mathrm{Tr}_{E/K}\left(\beta\right)
+      \]
+      I.e. there is a $K$-linear map of $E$ to $K$
+      (see remark \ref{rem:lec9_add}).
     }
 
     The second one uses the following fact:
@@ -620,7 +629,7 @@ The following remark is not a part of the lectures
     $E$ into $\bar{K}$ then the embedings of $E$ into $\bar{K}$ are
     just the compositions $\{\tau_j \mu_i\}$.
 
-    For the 4th property. Indeed if $x \in \ker T$ then
+    For the 4th property. Indeed if $x \in \ker \mathrm{Tr}$ then
     $\mathrm{Tr}_{E/K}\left(xy\right) = 0, \forall y \in E$ (see
     definition \ref{def:nondegeneratebf}). But this
     can't be a case when $xy \in K \setminus \{0\}$ by definition
