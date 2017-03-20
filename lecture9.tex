@@ -498,9 +498,25 @@ The following remark is not a part of the lectures
     \mathrm {N}_{E/K}\left(\alpha\right)$. In the case
     $\mathrm {N}_{E/K}\left(\alpha\right) \in K$ because
     $E^{Gal\left(E/K\right)} = K$.
-    
-    Theorem  \ref{thm:lec5_3} says that $Gal\left(E/K\right)$ acts
-    transitively on the set $Hom_K\left(E, \bar{K}\right)$ ???
+
+    The $g$ just permutes the homomorphisms $Hom_K\left(E,
+    \bar{K}\right)$ i.e.
+    $\left|g Hom_K\left(E, \bar{K}\right)\right| =
+    \left|Hom_K\left(E, \bar{K}\right)\right|$. If this is not the
+    truth then $\exists \sigma_i, sigma_j, \sigma_k \in Hom_K\left(E,
+    \bar{K}\right)$ such that
+    $g\sigma_i = \sigma_k$ and $g \sigma_j = \sigma_k$.
+    Therefore
+    \[
+    \sigma_k = g^{-1} \sigma_j = g^{-1} g \sigma_i = \sigma_i
+    \]
+    that is contradiction.
+    $K^\times$ is an \nameref{def:abeliangroup} by  the field definition
+    (\ref{def:field}) thus the product in
+    \nameref{def:norm} does not depend on the order and the product
+    result become the same after the permutation.
+
+    The same result is for \nameref{def:trace}.
   \end{proof}
   \label{rem:lec9_add}
 \end{remark}
