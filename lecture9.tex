@@ -460,8 +460,8 @@ and can be considered as a recall)
   \prod_{\sigma_i: E \hookrightarrow \bar{K}} \sigma_i\left(\alpha\right)
   \]
   i.e. we took a product by all $K$ embeddings of $E$ into the
-  algebraic closure of $K$. And we also assume that the product is
-  finite i.e. $i = 1, \dots, r$.
+  algebraic closure of $K$. And we also assume that $E$ is
+  finite and as result $i = 1, \dots, r$.
   \label{def:norm}
 \end{definition}
 
@@ -473,16 +473,37 @@ and can be considered as a recall)
   \sum_{\sigma_i: E \hookrightarrow \bar{K}} \sigma_i\left(\alpha\right)
   \]
   i.e. we took a sum by all $K$ embeddings of $E$ into the
-  algebraic closure of $K$. And we also assume that the sum is
-  finite i.e. $i = 1, \dots, r$.
+  algebraic closure of $K$. And we also assume that $E$ is
+  finite and as result $i = 1, \dots, r$.
   \label{def:trace}
 \end{definition}
 
-In the definitions \ref{def:trace} and \ref{def:trace} we assume that
-the extension $E$ is \nameref{def:separableextension}. If you're
-extension is not separable then you won't have to take it to the power
-equal to the pure inseparable degree of $E/K$, but for simplicity,
+In the definitions \ref{def:norm} and \ref{def:trace} we assume that
+the extension $E$ is \nameref{def:separableextension}. If the
+extension is not separable then you have to take it to the power
+equal to the pure inseparable degree of $E/K$,
+\footnote{
+  ???
+}
+but for simplicity,
 we shall suppose that everything is separate.
+
+The following remark is not a part of the lectures
+\begin{remark}
+  We have $\mathrm {N}_{E/K}\left(\alpha\right) \in K$ and
+  $\mathrm {Tr}_{E/K}\left(\alpha\right) \in K$
+  \begin{proof}
+    Let $g \in Gal\left(E/K\right)$. We have to prove that
+    $g\left(\mathrm {N}_{E/K}\left(\alpha\right)\right) =
+    \mathrm {N}_{E/K}\left(\alpha\right)$. In the case
+    $\mathrm {N}_{E/K}\left(\alpha\right) \in K$ because
+    $E^{Gal\left(E/K\right)} = K$.
+    
+    Theorem  \ref{thm:lec5_3} says that $Gal\left(E/K\right)$ acts
+    transitively on the set $Hom_K\left(E, \bar{K}\right)$ ???
+  \end{proof}
+  \label{rem:lec9_add}
+\end{remark}
 
 \begin{property}
   \begin{enumerate}
