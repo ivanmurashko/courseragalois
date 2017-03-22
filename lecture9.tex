@@ -451,7 +451,21 @@ Let $K$ is a \nameref{def:numberfield} and $\left[K:\mathbb{Q}\right]
 
 \subsection{Norms and traces}
 (The material was given inside the proof of theorem \ref{thm:lec9_1}
-and can be considered as a recall)
+and can be considered as a recall. The remarks
+\ref{rem:lec9_embedding} and \ref{rem:lec9_add} are not parts of the
+lectures and were given for better understanding the material)
+
+\begin{remark}[$K$ embedding of $E$ into the algebraic closure
+    $\bar{K}$]
+  Let $K \subset E \subset \bar{K}$. When we say about $K$ embedding
+  of $E$ into the algebraic closure $\bar{K}$ we assume
+  $\sigma \in Hom_K\left(E, \bar{K}\right)$ i.e. $\sigma$ is a
+  \nameref{def:homomorphism} of \nameref{def:kalgebra}s i.e. the map
+  that preserves the structure and especially $\sigma(K) = K$ i.e.
+  $\forall k \in K: \sigma(k) = k$.
+  \label{rem:lec9_embedding}
+\end{remark}
+
 \begin{definition}[Norm]
   Let $K \hookrightarrow E$ - finite separable field extension. Let $\alpha \in
   E$.   Define the norm of alpha with respect to this extension as
@@ -460,7 +474,8 @@ and can be considered as a recall)
   \prod_{\sigma_i: E \hookrightarrow \bar{K}} \sigma_i\left(\alpha\right)
   \]
   i.e. we took a product by all $K$ embeddings of $E$ into the
-  algebraic closure of $K$. And we also assume that $E$ is
+  algebraic closure of $K$ (see remark \ref{rem:lec9_embedding}).
+  And we also assume that $E$ is
   finite and as result $i = 1, \dots, r$.
   \label{def:norm}
 \end{definition}
@@ -473,8 +488,8 @@ and can be considered as a recall)
   \sum_{\sigma_i: E \hookrightarrow \bar{K}} \sigma_i\left(\alpha\right)
   \]
   i.e. we took a sum by all $K$ embeddings of $E$ into the
-  algebraic closure of $K$. And we also assume that $E$ is
-  finite and as result $i = 1, \dots, r$.
+  algebraic closure of $K$ (see remark \ref{rem:lec9_embedding}). And
+  we also assume that $E$ is finite and as result $i = 1, \dots, r$. 
   \label{def:trace}
 \end{definition}
 
@@ -502,10 +517,10 @@ equal to the pure inseparable degree of $E/K$,
 but for simplicity,
 we shall suppose that everything is separate.
 
-The following remark is not a part of the lectures
 \begin{remark}
   We have $\mathrm {N}_{E/K}\left(\alpha\right) \in K$ and
   $\mathrm {Tr}_{E/K}\left(\alpha\right) \in K$
+  \label{rem:lec9_add}
   \begin{proof}
     Let $g \in Gal\left(E/K\right)$. We have to prove that
     $g\left(\mathrm {N}_{E/K}\left(\alpha\right)\right) =
@@ -533,7 +548,6 @@ The following remark is not a part of the lectures
 
     The same result is for \nameref{def:trace}.
   \end{proof}
-  \label{rem:lec9_add}
 \end{remark}
 
 \begin{property}
@@ -630,9 +644,8 @@ The following remark is not a part of the lectures
       then one can get that
       $\sigma\left(a \alpha\right) = a
       \sigma\left(\alpha\right)$. This is because $a$ is fixed under
-      every embedding of $E$ over $K$ (\cite{bib:lang} page 286) (We
-      can look at $\sigma$ as at a homomorphism between
-      2 \nameref{def:kalgebra}s: $E$ and $\bar{K}$) 
+      every embedding of $E$ over $K$ (\cite{bib:lang} page 286), see
+      also remark \ref{rem:lec9_embedding}.
       
       Therefore one can get
       \[
