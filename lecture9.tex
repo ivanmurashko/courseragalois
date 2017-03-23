@@ -669,7 +669,27 @@ we shall suppose that everything is separate.
     $E$ into $\bar{K}$ then the embedings of $E$ into $\bar{K}$ are
     just the compositions $\{\tau_j \mu_i\}$.
     \footnote{
-      \cite{bib:lang} p. 285 gives us the following proof ???
+      We have $K \subset F \subset \bar{K}$, and (see remark
+      \ref{rem:lec9_embedding}):
+      \[
+      \begin{cases}
+        \tau_j: F \to \bar{K} \text{ such that }
+        \forall k \in K: \tau_j(k) = k, \\
+        \mu_i: E \to \bar{K}  \text{ such that }
+        \forall f \in F: \mu_i(f) = f.
+      \end{cases}
+      \]
+      If we extend homomorphism $\tau_j: F
+      \to \bar{K}$ to the automorphism
+      $\bar{K} \to \bar{K}$ and denote the result with the same
+      $\tau_j$ (\cite{bib:lang} p. 285). 
+      As result we have $\tau_j \mu_i: E \to \bar{K}$. We also have
+      $\forall k \in K \subset F$
+      \(
+      \mu_i(k) = k
+      \) (as soon as $k \in F$) and therefore
+      $\tau_j(\mu_i(k)) = \tau_j(k) = k$. Thus
+      $\tau_j \mu_i \in Hom_K\left(E, \bar{K}\right)$.
     }
 
     For the 4th property. Indeed if $x \in \ker \mathrm{Tr}$ then
