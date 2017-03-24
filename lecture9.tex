@@ -773,12 +773,57 @@ linear map (i.e. sum of diagonal elements of the linear map matrix in
 a basis) and the $\mathrm{N}_{E/K}\left(a\right)$ is the
 determinant
 \footnote{
-  ??? add a proof
+  Consider an easy case when $E = K\left(a\right)$. In the case
+  $a$ is a root of $P_{min}\left(a, K\right) = a_n + a_{n-1} X + \dots +
+  a_1 X^{n-1} + X^{n}$.
+  We have the following basis $1, a, \dots, a^{n-1}$. The basis is
+  transformed by multiplication via the following rules
+  \[
+  \begin{cases}
+    1 \to a, \\
+    a \to a^2, \\
+    \vdots \\
+    a^{n-1} \to a^n = -a_n - a_{n-1} a - \dots -
+    a_1 a^{n-1}.
+  \end{cases}
+  \]
+  Therefore the \nameref{def:endomorphism} matrix is the following:
+  \[
+  M = 
+  \begin{bmatrix}
+    0 & 1 & 0 & \cdots & 0 & 0 \\
+    0 & 0 & 1 & \cdots & 0 & 0 \\
+    \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+    0 & 0 & 0 & \cdots & 0 & 1 \\
+    -a_n & -a_{n-1} & -a_{n-2} & \cdots & -a_2 & -a_1 
+  \end{bmatrix}
+  \]
+  It can be easy seen (with 2d item of
+  the property \ref{property:lec9_norm_trace}) that
+  \[
+  \mathrm{Tr}\left(M\right) = -a_1 = 
+  \mathrm{Tr}_{E/K}\left(a\right)
+  \]
+  and
+  \[
+  \det\left(M\right) = (-1)^n
+  \det \left( \begin{bmatrix}
+    0 & 1 & 0 & \cdots & 0 & 0 \\
+    0 & 0 & 1 & \cdots & 0 & 0 \\
+    \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+    0 & 0 & 0 & \cdots & 0 & 1 \\
+    a_n & a_{n-1} & a_{n-2} & \cdots & a_2 & a_1 
+  \end{bmatrix}
+  \right) = 
+  (-1)^n a_n = 
+  \mathrm{N}_{E/K}\left(a\right).
+  \]  
 }
-. Now this $f_a$ is a linear map, a $K$-linear map. It's an
-\nameref{def:endomorphism} of a vector space you are working, and the trace of a is
-the trace of this endomorphism, and the norm of a is the determinant
-of this endomorphism.  
+. Now this $f_a$ is a a $K$-linear map. It's an
+\nameref{def:endomorphism} of a vector space $E/K$, and
+the $\mathrm{Tr}_{E/K}\left(a\right)$ is
+the trace of this endomorphism, and the
+$\mathrm{N}_{E/K}\left(a\right)$ is the determinant of this endomorphism.  
 
 \subsection{Theorem about rings of integers}
 \begin{theorem}
