@@ -692,12 +692,28 @@ we shall suppose that everything is separate.
       $\tau_j \mu_i \in Hom_K\left(E, \bar{K}\right)$.
     }
 
-    For the 4th property. Indeed if $x \in \ker \mathrm{Tr}$ then
+    For the 4th property. Indeed if $x \in \ker T$,
+    \footnote{
+      $T: E \times E \to K$
+    }
+    that means 
     $\mathrm{Tr}_{E/K}\left(xy\right) = 0, \forall y \in E$ (see
-    definition \ref{def:nondegeneratebf}). But this
+    definition \ref{def:nondegeneratebf}), but this
     can't be a case when $xy \in K \setminus \{0\}$ by definition
-    \ref{def:trace} $\mathrm{Tr}_{E/K}\left(xy\right) =
+    \ref{def:trace}
+    \footnote{
+      and by taking into consideration the following fact
+      (see remark \ref{rem:lec9_embedding}):
+      if $xy \in K$
+      then $\sigma_i(xy) = xy$ 
+    }
+    $\mathrm{Tr}_{E/K}\left(xy\right) =
     \left[E:K\right] xy$.
+    \footnote{
+      we proved that $T$ has a trivial kernel i.e. only $x = 0$ is in
+      the $\ker T$. There is one of definitions of the non-degenerate
+      $K$-bilinear form (see definition \ref{def:nondegeneratebf}) 
+    }
 
     For the 5th property we know that
     \begin{eqnarray}
