@@ -620,6 +620,7 @@ we shall suppose that everything is separate.
         We have $K = \mathbb{Q}$ in the property.
       }
   \end{enumerate}
+  \label{property:lec9_norm_trace}
   \begin{proof}
     The first property is obvious from the definition.
     \footnote{
@@ -722,14 +723,14 @@ we shall suppose that everything is separate.
     \begin{eqnarray}
     \mathrm{Tr}_{E/\mathbb{Q}}\left(\alpha\right) =
     \mathrm{Tr}_{\mathbb{Q}(\alpha)/\mathbb{Q}}\left(
-    \mathrm{Tr}_{K/\mathbb{Q}(\alpha)}\left(\alpha\right)
+    \mathrm{Tr}_{E/\mathbb{Q}(\alpha)}\left(\alpha\right)
     \right) =
     \nonumber \\
     =
     \mathrm{Tr}_{\mathbb{Q}(\alpha)/\mathbb{Q}}\left(
-    \left[K:\mathbb{Q}(\alpha)\right] \alpha
+    \left[E:\mathbb{Q}(\alpha)\right] \alpha
     \right) =
-    \left[K:\mathbb{Q}(\alpha)\right]
+    \left[E:\mathbb{Q}(\alpha)\right]
     \mathrm{Tr}_{\mathbb{Q}(\alpha)/\mathbb{Q}}\left(
      \alpha
     \right)
@@ -747,9 +748,19 @@ we shall suppose that everything is separate.
     \alpha
     \right)
     \) is a coefficient of $P_{min}\left(\alpha, \mathbb{Q}\right) \in
-    \mathbb{Z}\left[X\right]$ (see property \ref{property:lec9_2}).     
+    \mathbb{Z}\left[X\right]$.
+    \footnote{
+      Property \ref{property:lec9_2} says that $P_{min}\left(\alpha,
+      \mathbb{Q}\right) \in \mathbb{Z}\left[X\right]$. But 2d item of
+      the property \ref{property:lec9_norm_trace} says that the
+      \nameref{def:trace} is a coefficient of the polynomial i.e.
+      \(
+      \mathrm{Tr}_{\mathbb{Q}(\alpha)/\mathbb{Q}}\left(
+      \alpha
+      \right) \in \mathbb{Z}
+      \)
+    }
   \end{proof}
-  \label{property:lec9_norm_trace}
 \end{property}
 
 Why such names are used? Consider the following map
