@@ -915,7 +915,7 @@ $\mathrm{N}_{E/K}\left(a\right)$ is the determinant of this endomorphism.
 
 \section{Reduction modulo a prime}
 
-Let $P \in \mathbb{Z}\left[X\right]$ - an irreducible polynomial with integer
+Let $P \in \mathbb{Z}\left[X\right]$ is an irreducible polynomial with integer
 coefficients. $K$ is a \nameref{def:splittingfield} of $P$ over
 $\mathbb{Q}$ and $n = \left[K:\mathbb{Q}\right]$. Let
 $G = Gal\left(P\right) \eqdef Gal\left(K/\mathbb{Q}\right)$. We denote
@@ -923,16 +923,42 @@ roots of $P$ as $\alpha_1, \dots, \alpha_n$ and they are elements of
 $O_K$. $G$ acts on the set of roots, and on $O_K$. We will denote
 $O_K$ as $A$. Let $p$ is a prime number and we will consider $A/pA$.
 As we have seen
+\footnote{
+  see proposition \ref{prop:lec4_prop2} where $M = A, A=\mathbb{Z}$
+  and $I = p\mathbb{Z}$.
+}
 \[
-A/pA \cong A \otimes \mathbb{Z}/p\mathbb{Z}
+A/pA \cong A \otimes_{\mathbb{Z}} \mathbb{Z}/p\mathbb{Z} =
+A \otimes_{\mathbb{Z}} \mathbb{F}_p
 \]
-there $n$-dimension vector space over $\mathbb{F}_p$. Maximal ideals
+there $A \otimes_{\mathbb{Z}} \mathbb{F}_p$ is a 
+$n$-dimension vector space over $\mathbb{F}_p$
+\footnote{
+  As soon as $A=O_K$ is a free
+  $\mathbb{Z}$-module of rank $n$ (see theorem \ref{thm:lec9_1}) then
+  proposition 
+  \ref{prop:lec4_Addon} gives us that $A \otimes_{\mathbb{Z}}
+  \mathbb{F}_p$ is a free $\mathbb{F}_p$-module with rank equal
+  to $n$.
+}.
+Maximal ideals
 of $A/pA$ are in one-to-one correspondence with maximal ideals of $A$
 containing $p$. As we know (see theorem
 \ref{thm:structurefinitekalgebra}) there are only finitely many
-maximal ideal in a finite field. Therefore $A$ also has finitly many
+maximal ideal in a finite algebra over a field. Therefore $A$ also has
+finitly many 
 maximal ideals $J_1, \dots, J_r$ containing $p$. Our group $G$ acting
 on $A$ must permute these maximal ideals in some way.
+\footnote{
+  Let $J$ is an \nameref{def:ideal} of $A$, then $A J = J$
+  (i.e. $\forall a \in A, j \in J: aj \in J$). Let also $g \in G$ then
+  $g\left(A\right) = A$ and
+  \[
+  A g\left(J\right) = g\left(A\right) g\left(J\right) =
+  g\left(AJ\right) = g\left(J\right)
+  \]
+  i.e. $g\left(J\right)$ is also an ideal of $A$.
+}
 
 Lets consider a subgroup $D_i \subset G$ which stabilizes $J_i$ (see
 definition \ref{def:stabilizersubgroup}) i.e.
