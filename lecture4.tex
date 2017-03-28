@@ -901,7 +901,7 @@ therefore with result from example \ref{ex:lec4_1} one can get
 \cong
 ^{\mathbb{C}\left[X\right]}/_{\left(X^2 + 1\right)}
 \]
-but by \nameref{thm:chineseremainder}
+but by \nameref{thm:chineseremainder} theorem
 \[
 ^{\mathbb{C}\left[X\right]}/_{\left(X^2 + 1\right)}
 \cong
@@ -1004,7 +1004,7 @@ not a field (see also section \ref{lec1_sec14}).
   \label{lem:aboutrelprimeideals}
 \end{lemma}
 
-\begin{theorem}[Chinese remainder theorem]
+\begin{theorem}[Chinese remainder]
   Let $I_1, \dots, I_n$ - ideals and map
   $\pi: A \to A/I_1 \times \dots \times A/I_n$ defined as follows
   \begin{equation}
@@ -1034,7 +1034,7 @@ not a field (see also section \ref{lec1_sec14}).
     \ker \phi = \ker \pi = I_1 \cap \dots \cap I_n = I_1 \dots I_n.
     \]
   }
-  
+  \label{thm:chineseremainder}  
   \begin{proof}
     Let $\pi$ is \nameref{def:surjection}. In the case
     $\exists a_i \in A$ such that
@@ -1065,7 +1065,6 @@ not a field (see also section \ref{lec1_sec14}).
     \]
     i.e. $\pi$ is surjective.
   \end{proof}
-  \label{thm:chineseremainder}
 \end{theorem}
 
 Let $K$ is a field and $A$ is a finite (finite dimensional vector
@@ -1158,7 +1157,7 @@ space) $K$-algebra.
     \begin{enumerate}
     \item
       Let $m_1, \dots, m_i$ are maximal ideals. By
-      \nameref{thm:chineseremainder} we have
+      \nameref{thm:chineseremainder} theorem we have
       \footnote{
         Maximal ideals are relatively prime because
         in a commutative ring with unity, every
@@ -1287,7 +1286,7 @@ space) $K$-algebra.
     \item Using part 2
       $\exists n_1, \dots, n_r$ such that
       $m_1^{n_1} \dots m_r^{n_r} = 0$ (for example we can assume
-      $n_i = n$). Then by \nameref{thm:chineseremainder}
+      $n_i = n$). Then by \nameref{thm:chineseremainder} theorem
       \[
       A \cong
       A/{m_1^{n_1}} \times \dots \times A/{m_r^{n_r}}.
