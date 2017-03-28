@@ -983,12 +983,12 @@ Then there exists a natural homomorphism
 \(
 D_i \to Gal\left(k_i/\mathbb{F}_p\right)
 \).
-\footnote{
-  ???
-}
 Since $D_i$ stabilizes $J_i$ and it acts on the residual classes of
 modulo $J_i$ so there is a homomorphism of $D_i$ into the
-\nameref{def:galoisgroup}.
+\nameref{def:galoisgroup}.\footnote{
+  ???
+}
+
 
 \begin{theorem}
   \begin{enumerate}
@@ -1008,7 +1008,16 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
     \nameref{def:transitive}. By \nameref{thm:chineseremainder}
     theorem $\exists x \in A$ such that
     $x \equiv 0 (\mod J_i),  x \equiv 1 (\mod g\left(J_1\right))
-    \forall g \in G$. Consider a product of all such things:
+    \forall g \in G$.
+    \footnote{
+      We have that all $J_i$ are relatively prime (???) and as result
+      the map $\pi\left(a\right)$ from (\ref{eq:lec4_crt_map}) is
+      \nameref{def:surjection} 
+      i.e. for any residuals and therefore for the chosen ones
+      ($\equiv 0 \mod J_i$ and $\equiv 1 \mod J_1$) exists $x$ that
+      produces the residuals. 
+    }
+    Consider a product of all such things:
     \[
     a = \prod_{g} g x
     \]

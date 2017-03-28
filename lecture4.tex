@@ -1007,9 +1007,10 @@ not a field (see also section \ref{lec1_sec14}).
 \begin{theorem}[Chinese remainder theorem]
   Let $I_1, \dots, I_n$ - ideals and map
   $\pi: A \to A/I_1 \times \dots \times A/I_n$ defined as follows
-  \[
-  \pi(a) = \left(a \mod I_1, \dots, a \mod I_n\right)
-  \]
+  \begin{equation}
+    \pi(a) = \left(a \mod I_1, \dots, a \mod I_n\right)
+    \label{eq:lec4_crt_map}
+  \end{equation}
   The kernel $\ker \pi = I_1 \cap \dots \cap I_n$.
 
   The $\pi$ is \nameref{def:surjection} if and only if $I_1, \dots,
