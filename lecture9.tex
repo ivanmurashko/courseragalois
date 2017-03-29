@@ -1021,7 +1021,8 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
       \nameref{def:surjection} 
       i.e. for any residuals and therefore for the chosen ones
       ($\equiv 0 \mod J_i$ and $\equiv 1 \mod J_1$) exists $x$ that
-      produces the residuals. 
+      produces the residuals.
+      \label{note:lec9_crt}
     }
     Consider a product of all such things:
     \[
@@ -1084,15 +1085,37 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
     }
     We may assume that $i=1$. By the
     \nameref{thm:primitiveelement} theorem $\exists z \in
-    \mathbb{F}_p$ such that $k_1 = \mathbb{F}_p\left(z\right)$. 
+    \mathbb{F}_p$ such that $k_1 = \mathbb{F}_p\left(z\right)$
+    i.e. $z$ generates $k_i/\mathbb{F}_p$.
     By \nameref{thm:chineseremainder} theorem $\exists y \in A$ such that
-    $y \in J_i, i \ne 1,  y \equiv z (\mod J_1)$. Consider polynomial
+    $y \in J_i, i \ne 1,  y \equiv z (\mod J_1)$.
+    \footnote{
+      I.e. using the same argument as in note \ref{note:lec9_crt} one
+      can conclude that $\exists y \in A$ such that its residual are
+      the following $\forall i \ne 1$: $\equiv 0 \mod J_i$ and $\equiv z
+      \mod J_1$.
+    }
+    Consider polynomial
     $Q = \prod_{g \in G} \left(X - g\left(y\right)\right)$. There is a
     polynomial with integral coefficients i.e.
     $Q \in \mathbb{Z}\left[X\right]$. This is because we know that
-    coefficients are $G$ invariant i.e. in $\mathbb{Q}$ moreover they
-    are integral over $\mathbb{Z}$ and are in $\mathbb{Z}$ as soon as
-    $\mathbb{Z}$ is integrally closed.
+    coefficients are $G$ invariant
+    i.e. $Q \in
+    \mathbb{Q}\left[X\right]$
+    \footnote{
+      $Q = P_{min}\left(y, \mathbb{Q}\right)$.
+    }
+    moreover the roots
+    are \nameref{def:integralelement}s over $\mathbb{Z}$
+    \footnote{
+      as soon as $y \in A = O_K$.
+    }
+    and therefore the polynomial arguments are in $\mathbb{Z}$.
+    \footnote{
+      Ekaterina also said that ??? 
+      as soon as
+      $\mathbb{Z}$ is \nameref{def:integrallyclosed}.
+    }
 
     Lets study $\bar{Q} = Q \mod J_1$. If $g \notin D_1$ then $\exists
     i$ such that $g\left(J_i\right) = J_1$ and particularly $g(y) \in
