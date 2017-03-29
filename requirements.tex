@@ -1084,7 +1084,7 @@ product of any two nonzero elements is nonzero.
 
 \begin{definition}[Prime ideal]
   An ideal $I$ of a commutative ring $R$ is prime if it has the
-  following 2 properties
+  following 2 properties \cite{wiki:primeideal}
   \footnote{
     There is a generalization of prime numbers in arithmetic
   }
@@ -1094,6 +1094,18 @@ product of any two nonzero elements is nonzero.
   \end{enumerate}
   \label {def:primeideal}
 \end{definition}
+
+\begin{lemma}[$n\mathbb{Z}$ prime ideal]
+  A positive integer $n$ is a prime if and only if $n\mathbb{Z}$ is a
+  \nameref{def:primeideal} in $\mathbb{Z}$ \cite{wiki:primeideal}
+  \label{lem:primeideal_in_Z}
+\end{lemma}
+
+\begin{lemma}
+  All nonzero \nameref{def:primeideal}s are maximal in a principal
+  ideal domain \cite{wiki:maxideal}
+  \label{lem:primeideal_is_maximal}
+\end{lemma}
 
 \begin{definition}[Proper ideal]
 $I$ is a proper ideal of a ring $R$ if $I \subsetneq R$.
