@@ -963,6 +963,7 @@ on $A$ must permute these maximal ideals in some way.
   g\left(AJ\right) = g\left(J\right)
   \]
   i.e. $g\left(J\right)$ is also an ideal of $A$.
+  \label{note:lec9_permute_ideal}
 }
 
 Lets consider a subgroup $D_i \subset G$ which stabilizes $J_i$ (see
@@ -1118,7 +1119,15 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
     }
 
     Lets study $\bar{Q} = Q \mod J_1$. If $g \notin D_1$ then $\exists
-    i$ such that $g\left(J_i\right) = J_1$ and particularly $g(y) \in
+    i$ such that $g\left(J_i\right) = J_1$
+    \footnote{
+      If $g \notin D_1$ then $g^{-1} \notin D_1$ i.e.
+      $g^{-1}\left(J_1\right) \ne J_1$ i.e. as soon as $g \in G$
+      permutes the ideals (see note \ref{note:lec9_permute_ideal})
+      then $\exists i$ such that 
+      $g^{-1}\left(J_1\right) = J_i$ i.e. $g\left(J_i\right) = J_1$.
+    }
+    and particularly $g(y) \in
     J_1$. Therefore for such $g$ we have
     \[
     \overline{X -g\left(y\right)} = X -g\left(y\right) \mod J_1 = X. 
@@ -1132,11 +1141,21 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
     \(
     \prod_{g \in D_1}
     \left(X - \overline{g\left(y\right)}\right)
-    \) has $z$ as a root and $D_1$ acts transitively on its roots.
+    \) has $z$ as a root
+    \footnote{
+      Let $g = id \in D_1$ then
+      $\overline{g\left(y\right)} = y \mod J_1 = z$        
+    }
+    and $D_1$ acts transitively on its roots.
 
-    Now recall that $z$ generates $k_1$. Thus an element of
+    Now recall that $z$ generates $k_1$ (i.e. $k_1 =
+    \mathbb{F}_p\left(z\right)$). Thus an element of 
     $Gal\left(k_1/\mathbb{F}_p\right)$ is determined by the image of
-    $z$. And we have an element of $D_1$ which sends $z$ to any
+    $z$.
+    \footnote{
+      Because we have bijection $g \to g(z)$. 
+    }
+    And we have an element of $D_1$ which sends $z$ to any
     possible image of it. But this means that
     \(
     D_1 \twoheadrightarrow
@@ -1146,7 +1165,7 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
     For the second part of the theorem we assume that $\bar{P}$ has no
     multiple roots. So $\alpha_1, \dots, \alpha_n$ -roots of $P$ and
     $\bar{\alpha}_1, \dots, \bar{\alpha}_n$ -roots of $\bar{P}$ where
-    $\bar{\alpha}_i = \alpha_i \mod J_1$ (??? may be $\mod p$).
+    $\bar{\alpha}_i = \alpha_i \mod J_1$.
 
     Lets $g \in D_1$ acts as $id$ on $k_1$. Then, of course,
     $g\left(\bar{\alpha}_i\right) = \bar{\alpha}_i$.
@@ -1154,15 +1173,32 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
     it can not be different from $\alpha_i$ since they will have
     diffeent reduction $\mod J_1$. So
     $\forall i,  g\left(\alpha_i\right) = \alpha_i$ and therefore $g =
-    id$. Thus conclusion that $D_1 \cong
-    Gal\left(k_1/\mathbb{F}_p\right)$. By the same argument
+    id$.
+    \footnote{
+      This proves injection of the map
+      $D_1 \to
+      Gal\left(k_1/\mathbb{F}_p\right)$
+      (see lecture 6 note \ref{note:lec6_staff_comment}).
+    }
+    Thus conclusion that $D_1 \cong
+    Gal\left(k_1/\mathbb{F}_p\right)$.
+
+    By the same argument
+    \footnote{
+      i.e.
+      $\forall g \in Gal\left(k_1/\mathbb{F}_p\left[\bar{\alpha}_1,
+        \dots, \bar{\alpha}_n\right]\right)$ and
+      $\forall x \in \mathbb{F}_p\left[\bar{\alpha}_1,
+        \dots, \bar{\alpha}_n\right]$ we have $g(x) = x$ i.e.
+      $g = id$.
+    }
     \[
     Gal\left(k_1/\mathbb{F}_p\left[\bar{\alpha}_1,
       \dots, \bar{\alpha}_n\right]\right) = id
     \]
     therefore
     $k_1 = \mathbb{F}_p\left[\bar{\alpha}_1,
-      \dots, \bar{\alpha}_n\right]$.
+      \dots, \bar{\alpha}_n\right]$ i.e. $k_1$ is a splitting field.
   \end{proof}
   \label{thm:lec9_2}
 \end{theorem}
