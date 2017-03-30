@@ -998,9 +998,18 @@ forms a basis of $L \otimes_K \bar{K}$ over $\bar{K}$.
   Galois group $G = Gal\left(L/K\right)$ acts on
   $L \otimes_K \bar{K}$ as $g \otimes id_{\bar{K}}$ where $g \in G$.
   (see for example proof of theorem \ref{thm:basechange})
-  ??? let $l \in L$ such that $g(l)$ forms a basis in $L$ (???) then,
-  accordingly proposition \ref{prop:lec4_Addon},
-  $\{g(l) \otimes_K 1_{\bar{K}}\}$ forms a $\bar{K}$-basis.
+
+  As soon as $L \otimes_K \bar{K} \cong \bar{K}^n$ is a regular
+  representation  then ???
+  
+  Unfortunately we can not use the result of \ref{thm:normalbase}
+  theorem there 
+  because the prove of the theorem uses the statement that
+  a basis of $L \otimes_K \bar{K}$ over $\bar{K}$
+  exists and formed by the $G$. If we were able to use it we would say 
+  say that $\exists x \in L$ such that $g(x)$ forms a $K$ basis in $L$
+  therefore,  accordingly proposition \ref{prop:lec4_Addon},
+  $\{g(x) \otimes_K 1_{\bar{K}}\}$ forms a $\bar{K}$-basis. 
 } And, as result, the elements of $G$ are linearly independent in the space of
 \nameref{def:endomorphism}s
 $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
@@ -1016,6 +1025,7 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
   $G$ are
   linearly independent in the space of \nameref{def:endomorphism}s
   $End_{K}\left(L\right)$
+  \label{thm:normalbase}
   \begin{proof}
     First of all consider a case when $K$ is infinite. Let pick some
     basis $e_1, \dots, e_n$ - $K$-basis in $L$. $g_1, \dots, g_n \in
@@ -1172,7 +1182,6 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
     and any generator $x$ shall do i.e. $x, \sigma x, \dots,
     \sigma^{n-1} x$ form a basis.
   \end{proof}
-  \label{thm:normalbase}
 \end{theorem}
 
 \section{Relation with coverings}
