@@ -1210,13 +1210,21 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
     and any generator $x$ shall do i.e. $x, \sigma x, \dots,
     \sigma^{n-1} x$ form a basis.
     \footnote{
-      ??? $K$-basis of $K\left[X\right]/\left(X^n - 1\right)$ is the
+      $K$-basis of $K\left[X\right]/\left(X^n - 1\right)$ is the
       following $1, X, \dots, X^{n-1}$
-      \cite{bib:KeithConradLinearchar}. Each element of the basis is a 
-      linear map $L \to L$. I.e. the image of the basis will also be
-      $K$-basis of $L$ (as soon as $L \cong K\left[X\right]/\left(X^n
-      - 1\right)$). I.e. if $x \in L$ is a generator of $L$ as
-      a $K\left[X\right]$-module then 
+      \cite{bib:KeithConradLinearchar}.
+      Thus any element can be (???) represented as follows $k_0 + k_1 X +
+      \dots + k_{n-1} X^{n-1}$, where $k_i \in K$. Let $x \in L$ is
+      the generator of $L$ 
+      as $K\left[X\right]$-module then
+      \begin{eqnarray}
+      L = \left.\left(k_0 + k_1 X + \dots + k_{n-1}
+      X^{n-1}\right)\right|_{X=\sigma}x =
+      \nonumber \\
+      = k_0 x + k_1 \sigma(x) + \dots + k_{n-1}\sigma^{n-1}(x)
+      \nonumber
+      \end{eqnarray}
+      i.e.  
       $x, \sigma x, \dots, \sigma^{n-1} x$ is a $K$ basis of $L$.
     }
   \end{proof}
