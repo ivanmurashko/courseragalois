@@ -9,7 +9,22 @@
 \usepackage{amssymb}
 \usepackage{array}
 \usepackage{booktabs}
-\usepackage[breaklinks]{hyperref}
+
+% http://tex.stackexchange.com/questions/42343/how-to-add-a-navigation-window-to-a-latex-generated-pdf-document
+\usepackage{hyperref}
+\hypersetup{
+  pdftex,
+  allcolors=blue,
+  bookmarksnumbered=true,     
+  bookmarksopen=true,         
+  bookmarksopenlevel=1,       
+  colorlinks=true,            
+  pdfstartview=Fit,           
+  pdfpagemode=UseOutlines,  
+  pdfpagelayout=TwoPageRight
+}
+\usepackage{hypcap}
+
 \usepackage{tikz}
 \usetikzlibrary{matrix,arrows}
 \usepackage{mathtools}
