@@ -1175,7 +1175,17 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
     \nameref{def:endomorphism} of $L$ over $K$ is $X^n - 1$.
     This is because a lower degree polynomial cannot vanish at
     $\sigma$
-    since, the lower power of $\sigma$ are linearly independent.  
+    since, the lower power of $\sigma$ are linearly independent.
+    \footnote{
+      $\sigma^n = 1$ as soon as $G=\left<\sigma\right>$ (cyclic group
+      of order $n$).
+      If $\exists m < n$ such that $\sum_{i=0}^m c_i \sigma^i = 0$ and
+      $c_i \ne 0$ then the set $1, \sigma, \dots, \sigma^m$ is not
+      linearly independent that is in contradiction with
+      \nameref{thm:dedekind} theorem.
+      Thus the minimal polynomial for $\sigma$ is
+      $X^n-1$. 
+    }
     Thus
     \[
     L \cong K\left[X\right]/\left(X^n - 1\right)
