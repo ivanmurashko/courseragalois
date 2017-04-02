@@ -981,8 +981,8 @@ be obtained by group \nameref{def:action} $j \circ g, g \in G$.
 So
 $\bar{K}^n$ has a basis indexed by $G$ and the \nameref{def:action} of
 $G$ permutes the basis vectors. So $L \otimes_K \bar{K} \cong
-\bar{K}^n \cong$ \nameref{def:regularrepresentation} of $G$ over
-$\bar{K}$.
+\bar{K}^n \cong R$, where R is a \nameref{def:regularrepresentation} of $G$ over
+$\bar{K}$. 
 \footnote{
   %% ??? Consider the basis of $\bar{K}^n$ written in the following form
   %% $\left(e_1, e_2, \dots, e_n\right)$, where $e_i \in \bar{K}$. 
@@ -1018,6 +1018,14 @@ In particular $\exists x \in L \otimes_K \bar{K}$
 such that $gx \mid_{g \in G}$
 forms a basis of $L \otimes_K \bar{K}$ over $\bar{K}$.
 \footnote{
+  We have an isomorphism $L \otimes_K \bar{K} \cong R$, where $R$ is
+  \nameref{def:regularrepresentation}. If $\{e_g\}$ is the basis of
+  $R$ we can pick up one element of the basis, for instance $e_{id}$
+  and find the corresponded element in $L \otimes_K \bar{K}$,
+  $x \in L \otimes_K \bar{K}$,
+  such that $\phi(x) = e_{id}$, where $\phi$ is the isomorphism. If $g
+  \in G$ then ??? $\phi(g(x)) = g\left(\phi(x)\right) = g(e_{id}) =
+  e_g$. I.e. $\{g(x)\mid g \in G\}$ is the basis of $L \otimes_K \bar{K}$.
   %% ???Let pick up a single element of $G$: $\sigma \in G$ and construct the
   %% following map 
   %% \[
@@ -1042,17 +1050,17 @@ forms a basis of $L \otimes_K \bar{K}$ over $\bar{K}$.
   %% (see for example proof of theorem \ref{thm:basechange}).
   
   
-  As soon as $L \otimes_K \bar{K} \cong \bar{K}^n$ is a regular
-  representation  then ???
+  %% As soon as $L \otimes_K \bar{K} \cong \bar{K}^n$ is a regular
+  %% representation  then ???
   
-  Unfortunately we can not use the result of \ref{thm:normalbase}
-  theorem there 
-  because the prove of the theorem uses the statement that
-  a basis of $L \otimes_K \bar{K}$ over $\bar{K}$
-  exists and formed by the $G$. If we were able to use it we would say 
-  that $\exists x \in L$ such that $g(x)$ forms a $K$ basis in $L$
-  therefore,  accordingly proposition \ref{prop:lec4_Addon},
-  $\{g(x) \otimes_K 1_{\bar{K}}\}$ forms a $\bar{K}$-basis. 
+  %% Unfortunately we can not use the result of \ref{thm:normalbase}
+  %% theorem there 
+  %% because the prove of the theorem uses the statement that
+  %% a basis of $L \otimes_K \bar{K}$ over $\bar{K}$
+  %% exists and formed by the $G$. If we were able to use it we would say 
+  %% that $\exists x \in L$ such that $g(x)$ forms a $K$ basis in $L$
+  %% therefore,  accordingly proposition \ref{prop:lec4_Addon},
+  %% $\{g(x) \otimes_K 1_{\bar{K}}\}$ forms a $\bar{K}$-basis. 
 } And, as result, the elements of $G$ are linearly independent in the space of
 \nameref{def:endomorphism}s
 $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
@@ -1163,7 +1171,15 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
     it was identically zero, it would remain identically zero also
     after the base changed to $\bar{K}$.
     \footnote{
-      ???       
+      Let there is no $l \in L$ such that $g(l)$ is the basis of $L$.
+      But there exists $x = l \otimes k \in L \otimes_{\bar{K}} \bar{K}$
+      such that $g(x)$ forms a basis i.e.
+      $\{g(l) \otimes k\mid g \in G\}$ is $\bar{K}$ basis of $L
+      \otimes_{\bar{K}} \bar{K}$, but in the case $\{g(l) \otimes
+      1_K\mid g \in G\}$ will also be a $\bar{K}$ basis. Therefore
+      accordingly proposition \ref{prop:lec4_Addon},
+      $\{g(l)\mid g \in G\}$ forms a $K$-basis in $L$ that is in a
+      contradiction with initial assumption.
     }
     Since it has a $\bar{K}$
     point where it does not vanish.
