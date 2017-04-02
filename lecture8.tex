@@ -984,29 +984,64 @@ $G$ permutes the basis vectors. So $L \otimes_K \bar{K} \cong
 \bar{K}^n \cong$ \nameref{def:regularrepresentation} of $G$ over
 $\bar{K}$.
 \footnote{
-  Each item in sum $\bar{K}^n$ can be associated with a base vector,
-  for instance the first item is related to $e_1 = (1,0,0,0,\dots)$,
-  the second one is related to $e_2 = (0,1,0,0,\dots)$, etc. as result
-  each homomorphism $j \in Hom_K\left(L,\bar{K}\right)$ can be
-  associated with an item in sum $\bar{K}^n$
-  (see 3d statement of theorem \ref{thm:lec5_1})
-  and as result with a base
-  vector. But we have that $Gal\left(L/K\right)$ can be used to
-  produce any $j \in Hom_K\left(L,\bar{K}\right)$ (see theorem
-  \ref{thm:lec5_3}). Therefore we can 
-  associate any base vector (via $j$) with an element of
-  $Gal\left(L/K\right)$.
+  Consider the basis of $\bar{K}^n$ written in the following form
+  $\left(e_1, e_2, \dots, e_n\right)$, where $e_i \in \bar{K}$. 
+  By theorem \ref{thm:lec5_1} (3d statement) there exist $l \in L$ and
+  $k \in \bar{K}$ such that $e_j = k \phi_j(l)$, where
+  $\phi_j(l) \in Hom_K\left(L,\bar{K}\right)$. If we restrict $\phi_j$
+  to $L$ then we get an automorphism. We can also number the elements
+  of the group $G$, as result: 
+  $\left.\phi_j\right|_L = h_j \in G$. Therefore we can define
+  \nameref{def:regularrepresentation} of $G$ as follows:
+  \[
+  \rho_{reg}\left(h_k\right)(e_j) = e_i,
+  \]
+  where $h_i = h_k h_j$, or
+  $h_k(e_j) = k h_k h_j(l) = k h_i(l) = e_i$. I.e. $\rho_{reg}$
+  permutes the base vectors.
+  %% Each item in sum $\bar{K}^n$ can be associated with a base vector,
+  %% for instance the first item is related to $e_1 = (1,0,0,0,\dots)$,
+  %% the second one is related to $e_2 = (0,1,0,0,\dots)$, etc. as result
+  %% each%%  homomorphism $j \in Hom_K\left(L,\bar{K}\right)$ can be
+  %% associated with an item in sum $\bar{K}^n$
+  %% (see 3d statement of theorem \ref{thm:lec5_1})
+  %% and as result with a base
+  %% vector. But we have that $Gal\left(L/K\right)$ can be used to
+  %% produce any $j \in Hom_K\left(L,\bar{K}\right)$ (see theorem
+  %% \ref{thm:lec5_3}). Therefore we can 
+  %% associate any base vector (via $j$) with an element of
+  %% $Gal\left(L/K\right)$.
 }
 In particular $\exists x \in L \otimes_K \bar{K}$
 such that $gx \mid_{g \in G}$
 forms a basis of $L \otimes_K \bar{K}$ over $\bar{K}$.
 \footnote{
-  Galois group $G = Gal\left(L/K\right)$ acts on
-  $L \otimes_K \bar{K}$ as $g \otimes id_{\bar{K}}$ where $g \in G$.
-  (see for example proof of theorem \ref{thm:basechange})
-
-  As soon as $L \otimes_K \bar{K} \cong \bar{K}^n$ is a regular
-  representation  then ???
+  ???Let pick up a single element of $G$: $\sigma \in G$ and construct the
+  following map 
+  \[
+  \lambda_\sigma: L \otimes_{\bar{K}} \bar{K}
+  \xrightarrow[y \otimes x \to x \sigma(y) ]{} \bar{K} 
+  \]
+  Consider the following equation
+  \[
+  \sum_{\sigma \in G} c_{\sigma} \lambda_{\sigma} = 0
+  \]
+  If the equation holds for any $y \otimes x \in L \otimes_{\bar{K}}
+  \bar{K}$ then by theorem \ref{thm:dedekind} $\forall \sigma \in G:
+  c_\sigma = 0$. Or in other words $\exists k = y \otimes x \in L \otimes_{\bar{K}}
+  \bar{K}$ such that 
+  \[
+  \sum_{\sigma \in G} c_{\sigma} \lambda_{\sigma}(k) = c_{\sigma} \sigma(k) = 0
+  \]
+  only if all $c_\sigma = 0$ i.e. $\sigma(k)$ form a basis in 
+  $L \otimes_{\bar{K}} \bar{K}$
+  %% Galois group $G = Gal\left(L/K\right)$ acts on
+  %% $L \otimes_K \bar{K}$ as $g \otimes id_{\bar{K}}$ where $g \in G$
+  %% (see for example proof of theorem \ref{thm:basechange}).
+  
+  
+  %% As soon as $L \otimes_K \bar{K} \cong \bar{K}^n$ is a regular
+  %% representation  then ???
   
   Unfortunately we can not use the result of \ref{thm:normalbase}
   theorem there 
