@@ -1242,9 +1242,16 @@ space) $K$-algebra.
       \tilde{M} M = \det M \cdot id,
       \)
       \footnote{
-        In the case $\det M = 0$ we can assume that $\tilde{M} =
-        0$. In other case $\exists M^{-1}$ and therefore $\tilde{M} =
-        \det M \cdot M^{-1}$ will work.
+        If $M$ is a matrix over a field we can consider the following
+        2 cases:
+        \begin{enumerate}
+        \item $\det M = 0$: we can assume that $\tilde{M} = 0$
+        \item $\det M \ne 0$: at the case $\exists M^{-1}$ and
+          therefore $\tilde{M} = 
+          \det M \cdot M^{-1}$ will work.
+        \end{enumerate}
+        For more common case we have to look at Adjugate matrix
+        \cite{wiki:adjugatematrix} 
       }      
       i.e.
       \begin{equation}
