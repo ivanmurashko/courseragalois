@@ -1212,7 +1212,20 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
     By induction we can get the same statement for a polynomial in
     several variables.
     \footnote{
-      ???
+      Let $P_n \in K_n = K\left[X_1, X_2, \dots, X_{n-1}, X_n\right]$ and we
+      proved the statement for any $P_{n-1} \in K_{n-1} = K\left[X_1, X_2, \dots,
+        X_{n-1}\right]$ i.e. if $\forall k_1, k_2, \dots, k_{n-1}
+      \in K$ we have $P_{n-1}\left(k_1, k_2, \dots, k_{n-1}\right) =
+      0$ then $P_{n-1} = 0_K$.
+
+      We want to proof that if $P_n$ vanishes for any choice of
+      $k_1, \dots, k_n \in K$ then it is identically 0. 
+      Consider $P_n$ as a polynomial of single
+      variable $X_n$ with coefficients from $K_{n-1}$. If the
+      polynomial is 0 for every $k_n \in K$ then its coefficients are
+      0. But by the induction hypothesis they are identically 0 (as
+      soon as they stays zero for any $k_i$ choice). Thus the result
+      polynomial is also identically zero: $P_n = 0_K$
     }
     So, our polynomial which is the determinant of
     the matrix,  
