@@ -439,28 +439,41 @@ nilpotents. So let me formulate it as a theorem.
       a reduced algebra is reduced and same for local.  
     \item Leave as an excises
       \footnote{
-        We have that
-        $\forall l \otimes k \in L \otimes_K \bar{K}, \exists
-        \bar{k}^n = \left(
-        k \phi_1\left(l\right),
-        \dots,
-        k \phi_n\left(l\right)
-        \right) \in \bar{K}^n$.
-
-        From other side $\{\phi_i\}$ - distinct homomorphisms and can
-        be considered as distinct \nameref{def:character}s. Therefore
-        by theorem \ref{thm:dedekind} the homomorphisms are linearly
-        independent i.e. form a basis in $\bar{K}^n$. I.e.
-        any $\bar{k}^n \in \bar{K}^n$ can be represented as
+        Accordingly \cite{mathstackexchange:tensorproduct} we have the
+        following proof.
+        Let $l_1, l_2, \dots, l_n$ is a $K$ basis in $L$.
+        Then we can
+        construct the following elements of $\bar{K}^n$:
+        $v_i = \left(\phi_1(l_i), \phi_2(l_i), \dots,
+        \phi_n(l_i)\right)$. We can construct the following matrix if
+        we put the base vectors as columns:
         \[
-        \bar{k}^n = k
-        \left(
-        \phi_1\left(l\right),
-        \dots,
-        \phi_n\left(l\right)
-        \right)
+        \begin{bmatrix}
+          \phi_1(l_1) & \phi_1(l_2) & \cdots & \phi_1(l_n) \\
+          \phi_2(l_1) & \phi_2(l_2) & \cdots & \phi_2(l_n) \\
+          \vdots & \vdots & \ddots & \vdots \\
+          \phi_n(l_1) & \phi_n(l_2) & \cdots & \phi_n(l_n) \\
+        \end{bmatrix}
         \]
-        where $k \in \bar{K}$ and $l \in L$.
+        Linear dependence relation between rows looks like
+        \begin{eqnarray}
+          \sum_{k=1} c_k \phi_k(l_i) = 0.
+          \label{eq:lec5_note_isom}
+        \end{eqnarray}
+        Thus $\forall l \in L^\ast, \exists \{k_i\} \subset K: l =
+        \sum_{i=1}^nk_i l_i$ (as soon as $\{l_i\}$ is the $K$ basis of
+        $L$). Thus after multiplication (\ref{eq:lec5_note_isom}) by
+        $k_i$ and summation we have
+        \begin{eqnarray}
+         \sum_{i=1} k_i \sum_{k=1} c_k \phi_k(l_i) =
+        \sum_{k=1} c_k \phi_k(l) = 0
+        \nonumber
+        \end{eqnarray}
+        that should hold for any $k_i$ and as result for any $l$. By
+        theorem \ref{thm:dedekind} we can conclude that $\forall k:
+        c_k = 0$. As result we have the set $\{v_i\}$ as linear
+        independent. The size of the set is $n = \dim \bar{K}^n$
+        i.e. $\{v_i\}$ is the $\bar{K}$ basis of $\bar{K}^n$.
       }
     \end{enumerate}
   \end{proof}
