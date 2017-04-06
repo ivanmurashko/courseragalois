@@ -982,107 +982,82 @@ So
 $\bar{K}^n$ has a basis indexed by $G$ and the \nameref{def:action} of
 $G$ permutes the basis vectors.
 \footnote{
-  ???
-  If
-  \[
-  e_1 = (\alpha, \alpha^2, \dots, \alpha^{n-1}) =
-  (\phi_1(\alpha), \phi_1(\alpha^2), \dots, \phi_1(\alpha^{n-1}))
+  We have $L$ is a \nameref{def:galoisextension} i.e. (via
+  \nameref{thm:primitiveelement} theorem) $\exists \alpha \in L$
+  such that $L=K\left(\alpha\right)$, where $\alpha$ is a root of a
+  polynomial $P_{min}\left(\alpha, K\right)$ of degree $\left[L:K\right] = n$.
+  The consider the set of the following vectors in $\bar{K}^n$:
+  \[  
+  e_i = \left(\phi_1(\alpha^{i-1}), \phi_2(\alpha^{i-1}), \dots,
+  \phi_n(\alpha^{i-1})\right), 
   \]
-  is a basis vector then $g_i: \alpha \to \alpha_i$ gives us another one:
+  where $\phi_j$ -distinct homomorphisms such that $\phi_j(\alpha) =
+  \alpha_j$ - is another root of $P_{min}\left(\alpha, K\right)$.
+  
+  The set is linearly independent:
   \begin{eqnarray}
-  g_i e_1 =
-  (\phi_1(g_i \alpha), \phi_1(g_i \alpha^2), \dots, \phi_1(g_i
-  \alpha^{n-1})) =
-  \nonumber \\
-  =(\phi_1(\alpha_i), \phi_1(\alpha_i^2), \dots, \phi_1(
-  \alpha_i^{n-1})) =  
-  \nonumber \\
-  = (\phi_i(\alpha), \phi_i(\alpha^2), \dots, \phi_i(\alpha^{n-1})) = e_i
-  \nonumber
+    \sum_{i=1}^{n}c_i e_i =
+    \left(\sum_{i=1}^{n} c_i \alpha_1^{i-1},
+    \sum_{i=1}^{n} c_i \alpha_2^{i-1}, \dots,
+    \sum_{i=1}^{n} c_i \alpha_n^{i-1}\right) =
+    \nonumber \\
+    = \left(P(\alpha_1), P(\alpha_2), \dots, P(\alpha_n)\right),
+    \nonumber
+  \end{eqnarray}
+  where $P(X) = \sum_{i=1}^{n}c_i X^{i-1}$. It can have $\alpha_1,
+  \alpha_2, \dots, \alpha_n$ as roots only if all $c_i = 0$
+  because the minimal polynomial $\forall \alpha_i$ has degree $n >
+  n-1$.
+  As result
+  $\{e_i\}$ are linearly independent.
+
+  If we put the vectors into a matrix as rows we can get
+  \[
+  A =
+  \begin{bmatrix}
+    \phi_1(1) & \phi_2(1) & \phi_3(1) & \dots &
+    \phi_n(1) \\
+    \phi_1(\alpha) & \phi_2(\alpha) & \phi_3(\alpha) & \dots &
+    \phi_n(\alpha) \\
+    \phi_1(\alpha^2) & \phi_2(\alpha^2) & \phi_3(\alpha^2) & \dots &
+    \phi_n(\alpha^2) \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    \phi_1(\alpha^{n-1}) & \phi_2(\alpha^{n-1}) & \phi_2(\alpha^{n-1})
+    & \dots &
+    \phi_n(\alpha^{n-1}) \\
+  \end{bmatrix}.
+  \]
+  The columns are also linearly independent (as rows) and therefore
+  \begin{equation}
+  v_i = \left(\phi_i(1), \phi_i(\alpha), \dots,
+  \phi_i(\alpha^{n-1})\right)
+  \label{eq:lec8_note_basis}
+  \end{equation}
+  is a basis of $\bar{K}^n$. If $g \in G$ such that
+  $g(\alpha_i) = \alpha_j$ then
+  \begin{eqnarray}
+    g(v_i) = g\left(
+    1,\alpha_i, \dots, \alpha_i^{n-1}
+    \right) =
+    \nonumber \\
+    =
+    \left(
+    1,\alpha_j, \dots, \alpha_j^{n-1}
+    \right)
+    =
+    \left(\phi_j(1), \phi_j(\alpha), \dots,
+    \phi_j(\alpha^{n-1})\right) = v_j
+    \nonumber
   \end{eqnarray}
 }
 So $L \otimes_K \bar{K} \cong
 \bar{K}^n \cong R$, where R is a \nameref{def:regularrepresentation}
 of $G$ over $\bar{K}$. 
-\footnote{
-  %% ??? Consider the basis of $\bar{K}^n$ written in the following form
-  %% $\left(e_1, e_2, \dots, e_n\right)$, where $e_i \in \bar{K}$. 
-  %% By theorem \ref{thm:lec5_1} (3d statement) there exist $l \in L$ and
-  %% $k \in \bar{K}$ such that $e_j = k \phi_j(l)$, where
-  %% $\phi_j(l) \in Hom_K\left(L,\bar{K}\right)$. If we restrict $\phi_j$
-  %% to $L$ then we get an automorphism. We can also number the elements
-  %% of the group $G$, as result: 
-  %% $\left.\phi_j\right|_L = h_j \in G$. Therefore we can define
-  %% \nameref{def:regularrepresentation} of $G$ as follows:
-  %% \[
-  %% \rho_{reg}\left(h_k\right)\left[\left(0, \dots, e_j, \dots,
-  %%   0\right)\right] =
-  %% \left(0, \dots, e_i, \dots, 0\right)
-  %% \]
-  %% where $h_i = h_k h_j$, or
-  %% $h_k(e_j) = k h_k h_j(l) = k h_i(l) = e_i$. I.e. $\rho_{reg}$
-  %% permutes the base vectors.
-  ???
-  %% Each item in sum $\bar{K}^n$ can be associated with a base vector,
-  %% for instance the first item is related to $e_1 = (1,0,0,0,\dots)$,
-  %% the second one is related to $e_2 = (0,1,0,0,\dots)$, etc. as result
-  %% each%%  homomorphism $j \in Hom_K\left(L,\bar{K}\right)$ can be
-  %% associated with an item in sum $\bar{K}^n$
-  %% (see 3d statement of theorem \ref{thm:lec5_1})
-  %% and as result with a base
-  %% vector. But we have that $Gal\left(L/K\right)$ can be used to
-  %% produce any $j \in Hom_K\left(L,\bar{K}\right)$ (see theorem
-  %% \ref{thm:lec5_3}). Therefore we can 
-  %% associate any base vector (via $j$) with an element of
-  %% $Gal\left(L/K\right)$.
-}
 In particular $\exists x \in L \otimes_K \bar{K}$
 such that $gx \mid_{g \in G}$
 forms a basis of $L \otimes_K \bar{K}$ over $\bar{K}$.
 \footnote{
-  We have an isomorphism $L \otimes_K \bar{K} \cong R$, where $R$ is
-  \nameref{def:regularrepresentation}. If $\{e_g\}$ is the basis of
-  $R$ we can pick up one element of the basis, for instance $e_{id}$
-  and find the corresponded element in $L \otimes_K \bar{K}$,
-  $x \in L \otimes_K \bar{K}$,
-  such that $\phi(x) = e_{id}$, where $\phi$ is the isomorphism. If $g
-  \in G$ then ??? $\phi(g(x)) = g\left(\phi(x)\right) = g(e_{id}) =
-  e_g$. I.e. $\{g(x)\mid g \in G\}$ is the basis of $L \otimes_K \bar{K}$.
-  %% ???Let pick up a single element of $G$: $\sigma \in G$ and construct the
-  %% following map 
-  %% \[
-  %% \lambda_\sigma: L \otimes_{\bar{K}} \bar{K}
-  %% \xrightarrow[y \otimes x \to x \sigma(y) ]{} \bar{K} 
-  %% \]
-  %% Consider the following equation
-  %% \[
-  %% \sum_{\sigma \in G} c_{\sigma} \lambda_{\sigma} = 0
-  %% \]
-  %% If the equation holds for any $y \otimes x \in L \otimes_{\bar{K}}
-  %% \bar{K}$ then by theorem \ref{thm:dedekind} $\forall \sigma \in G:
-  %% c_\sigma = 0$. Or in other words $\exists k = y \otimes x \in L \otimes_{\bar{K}}
-  %% \bar{K}$ such that 
-  %% \[
-  %% \sum_{\sigma \in G} c_{\sigma} \lambda_{\sigma}(k) = c_{\sigma} \sigma(k) = 0
-  %% \]
-  %% only if all $c_\sigma = 0$ i.e. $\sigma(k)$ form a basis in 
-  %% $L \otimes_{\bar{K}} \bar{K}$
-  %% Galois group $G = Gal\left(L/K\right)$ acts on
-  %% $L \otimes_K \bar{K}$ as $g \otimes id_{\bar{K}}$ where $g \in G$
-  %% (see for example proof of theorem \ref{thm:basechange}).
-  
-  
-  %% As soon as $L \otimes_K \bar{K} \cong \bar{K}^n$ is a regular
-  %% representation  then ???
-  
-  %% Unfortunately we can not use the result of \ref{thm:normalbase}
-  %% theorem there 
-  %% because the prove of the theorem uses the statement that
-  %% a basis of $L \otimes_K \bar{K}$ over $\bar{K}$
-  %% exists and formed by the $G$. If we were able to use it we would say 
-  %% that $\exists x \in L$ such that $g(x)$ forms a $K$ basis in $L$
-  %% therefore,  accordingly proposition \ref{prop:lec4_Addon},
-  %% $\{g(x) \otimes_K 1_{\bar{K}}\}$ forms a $\bar{K}$-basis. 
+  you can take one basis vector from (\ref{eq:lec8_note_basis}): $x = v_i$ 
 } And, as result, the elements of $G$ are linearly independent in the space of
 \nameref{def:endomorphism}s
 $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
