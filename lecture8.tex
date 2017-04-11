@@ -1086,9 +1086,10 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
       $\forall g_l \in G: g_l(x) = \sum_i X_i g_l(e_i)$
       because $g_l(X_i) = X_i$ (remember that $L^G = K$).
       For each $g_l(e_i)$ we can write
-      \[
-      g_l(e_i) = \sum_j k_{ij}^{(l)} e_j
-      \]      
+      \begin{equation}
+        g_l(e_i) = \sum_j k_{ij}^{(l)} e_j
+        \label{eq:lec8_note_basis}
+      \end{equation}      
       We have $k_{ij}^{(l)}$ are predefined
       (because $\{g_l\}$ and $\{e_i\}$ are predefined)
       elements of $L$ and therefore $X_i$ can only be changed.
@@ -1167,17 +1168,23 @@ $End_{\bar{K}}\left(L \otimes_K \bar{K}\right)$
     Well, why? Because if
     it was identically zero, it would remain identically zero also
     after the base changed to $\bar{K}$.
-    \footnote{      
-      ??? Let there is no $l \in L$ such that $g(l)$ is the basis of $L$
-      (i.e. determinant is 0).
-      But there exists $x = l \otimes k \in L \otimes_{\bar{K}} \bar{K}$
-      such that $g(x)$ forms a basis i.e.
-      $\{g(l) \otimes k\mid g \in G\}$ is $\bar{K}$ basis of $L
-      \otimes_{\bar{K}} \bar{K}$, but in the case $\{g(l) \otimes
-      1_K\mid g \in G\}$ will also be a $\bar{K}$ basis. Therefore
-      accordingly proposition \ref{prop:lec4_Addon},
-      $\{g(l)\mid g \in G\}$ forms a $K$-basis in $L$ that is in a
-      contradiction with initial assumption.
+    \footnote{
+      The element $g \in G$ acts on $l \otimes k \in L \otimes_K
+      \bar{K}$ as follows $g\left(l \otimes k\right) = g(l) \otimes k$
+      (see proof for the theorem \ref{thm:basechange}). Using
+      proposition \ref{prop:lec4_Addon} we 
+      have $x = X_1 e_1 \otimes 1_{\bar{K}} + \dots X_n e_n \otimes
+      1_{\bar{K}}$ and $X_i \in \bar{K}$.
+      With equation (\ref{eq:lec8_note_basis}) we have 
+      \[
+      g_l\left(e_i \otimes 1_{\bar{K}} \right) =
+      g_l\left(e_i \right) \otimes 1_{\bar{K}} =
+      \sum_j k_{ij}^{(l)} e_j \otimes 1_{\bar{K}}
+      \]      
+      i.e. all $k_{ij}^{(l)}$ are the same as in the
+      (\ref{eq:lec8_note_det}) and as result the polynomial
+      coefficients will be the same (i.e. the polynomial will be
+      identically zero).
     }
     Since it has a $\bar{K}$
     point where it does not vanish.
