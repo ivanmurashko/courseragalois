@@ -157,7 +157,17 @@ prime and this will be the subject of the lecture.
       x_1 \\ \vdots \\ x_r
     \end{pmatrix} = 0.
     \]
-    Therefore $det M \cdot C = 0$ but $1 \in C$ thus $\det M = 0$.
+    Therefore $\det M \cdot C = 0$ but $1 \in C$ thus $\det M = 0$.
+    \footnote{
+      There is a question why do we need $\det M \cdot C = 0$, may be
+      we can directly write $\det M = 0$. Staff provided a good
+      example why it's necessary: Sending generators to zero is not
+      sufficient for having zero determinant. For example, consider a
+      ring $A$, its ideal $I \subset A$ and $A/I$ as a
+      $A$-\nameref{def:cyclicmodule} i.e. module with one generator.
+      If $x \in A$ is the generator then we can just say that $\det M x
+      \in I$ and as result $\det M$ not necessary to be zero.
+    }
     The equation $\det M = 0$ can be considered as a polynomial with
     $\alpha$ as a root.
     \footnote{
