@@ -448,9 +448,26 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
     i.e. $\alpha \in K$. Leave it for an exercise
     \footnote{
       Let $\alpha$ is a root then we can get $p$ different roots as
-      $\alpha + k$ where $k \in \mathbb{F}_p$. Thus we have $p$
-      different roots and the polynomial of degree $p$ ($X^p - X -a$)
-      splits 
+      $\alpha + k$ where $k \in \mathbb{F}_p$. Suppose that $\alpha
+      \notin K$ and $Q$ is a
+      factor of $P$ (it should exist as soon as $P$ is reducible). $Q$
+      splits in $K\left(\alpha\right)$ as soon as $P$ splits there and
+      its factors have the form $X - \left(\alpha - i\right)$.
+      Let $d = \deg Q$, i.e.
+      \[
+      Q = \prod_{i}\left(X - \left(\alpha - i\right)\right) = X^d +
+      a_1 X^{d-1} + \dots + a_d.
+      \]
+      Consider the coefficient $a_1$. It should have the form
+      $a_1 = \sum_{i} \left(\alpha - i\right) = d \alpha -j$ (where
+      $i$ is taken 
+      from $d$ factors of $Q$ and $\sum_{i} i = j$ - another
+      integer). $a_1 \in K$ (and as result $Q \in K\left[X\right]$)
+      only if $d = 0 \mod p$. Therefore $P$ has no nontrivial
+      factors that is in the contradiction with statement that $P$ is
+      reducible.
+
+      Thanks Ben Petschel for the hint.
     }
 
     Now we will prove the converse statement. Let $L$ is a
