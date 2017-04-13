@@ -14,6 +14,53 @@ definitions, theorems and examples mostly taken from Wikipedia.
   \label{def:class}
 \end{definition}
 
+\begin{definition}[Disjoint union]
+  Let \cite{wiki:disjointunion} $\{A_i: i \in I\}$ be a family of sets
+  indexed by $I$. The 
+  disjoint union of this family is the set
+  \[
+  \sqcup_{i \in I} A_i = \cup_{i \in I}\left\{
+  \left(x, i\right): x \in A_i
+  \right\}.
+  \]
+  The elements of the disjoint union are ordered pairs $(x, i)$. Here $i$
+  serves as an auxiliary index that indicates which Ai the element $x$
+  came from.
+  \label{def:disjointunion}
+\end{definition}
+
+\begin{example}[Disjoint union]
+  Let \cite{wiki:disjointunion} we have 2 sets $A_0 = \{1,2,3\}$ and
+  $A_1 = \{1,2\}$. 
+  We can construct the following sets of pairs
+  \begin{eqnarray}
+  A_0^\ast = \left\{
+  \left(1,0\right),
+  \left(2,0\right),
+  \left(3,0\right)
+  \right\},
+  \nonumber \\
+  A_1^\ast = \left\{
+  \left(1,1\right),
+  \left(2,1\right)
+  \right\}  
+  \nonumber
+  \end{eqnarray}
+  so
+  \[
+  A_0 \sqcup A_1 = A_0^\ast \cup A_1^\ast =
+  \left\{
+  \left(1,0\right),
+  \left(2,0\right),
+  \left(3,0\right),
+  \left(1,1\right),
+  \left(2,1\right)
+  \right\}
+  \]
+  \label{ex:disjointunion}
+\end{example}
+
+
 \section{Groups}
 
 \begin{definition}[Monoid]
