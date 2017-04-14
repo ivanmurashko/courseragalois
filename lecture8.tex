@@ -632,12 +632,36 @@ Lets also look at another definition of solvable group
 
 \section{Galois theorem on solvability by radicals}
 
+The following claim missing in the lectures but it's important for the
+theorem \ref{thm:lec8_1} proof.
+\begin{claim}
+  Let $K \subset L \subset M$ and both $M$ and $L$ are
+  \nameref{def:galoisextension}s over $K$ then
+  \[
+  \frac{Gal\left(M/K\right)}{Gal\left(M/L\right)}
+  \cong Gal\left(L/K\right).
+  \]
+  \begin{proof}
+    Consider the following group \nameref{def:homomorphism}
+    \[
+    \phi:Gal\left(M/K\right) \xrightarrow[g \to g\mid_L]{} Gal\left(L/K\right).
+    \]
+    The \nameref{thm:galoiscorrespondence} theorem says that $\phi$ is
+    a \nameref{def:surjection} with kernel
+    $Gal\left(L/F\right)$. Therefore by
+    \nameref{thm:firstisomorphism} theorem one can get the required
+    statement. 
+  \end{proof}
+  \label{claim:galoisquotient}
+\end{claim}
+
 \begin{theorem}
   Let $P \in K\left[X\right]$. $P$ is a
   \nameref{def:solvablepolynomial} if and only if
   $Gal\left(P\right)$ is solvable. There
   $Gal\left(P\right)$ is (by definition) $Gal\left(F/K\right)$ where
   $F$ is a \nameref{def:splittingfield} of $P$ over $K$.
+  \label{thm:lec8_1}
   \begin{proof}
     First of all lets proof that if $Gal\left(P\right)$ is solvable
     then $P$ is solvable. Let $n = \left[F:K\right]$ and consider
@@ -724,7 +748,8 @@ Lets also look at another definition of solvable group
       \nameref{def:galoisextension} over $M_i$ with
       \nameref{def:galoisgroup} $G_i/G_{i+1}$
       (we have $G_i = Gal\left(M/M_i\right)$,
-      $G_{i+1} = Gal\left(M/M_{i+1}\right)$ and therefore
+      $G_{i+1} = Gal\left(M/M_{i+1}\right)$ and therefore, by claim
+      \ref{claim:galoisquotient}, 
       $G_i/G_{i+1} = Gal\left(M_{i+1}/M_i\right)$)
       which is cyclic of order
       $n_i \mid n$ and as
@@ -756,7 +781,7 @@ Lets also look at another definition of solvable group
     \[
     Gal\left(M/L\right) \subset Gal\left(M/K\right)
     \]
-    and the quotient
+    and the quotient (see claim \ref{claim:galoisquotient})
     \[
     \frac{Gal\left(M/K\right)}{Gal\left(M/L\right)}
     \cong Gal\left(L/K\right)
@@ -776,7 +801,6 @@ Lets also look at another definition of solvable group
       by the property \ref{property:lec8_solvable1}
     }    
   \end{proof}
-  \label{thm:lec8_1}
 \end{theorem}
 
 \section{Examples of equations not solvable by radicals."General
