@@ -9,6 +9,7 @@
 \usepackage{amssymb}
 \usepackage{array}
 \usepackage{booktabs}
+\usepackage{imakeidx}
 
 % http://tex.stackexchange.com/questions/42343/how-to-add-a-navigation-window-to-a-latex-generated-pdf-document
 \usepackage{hyperref}
@@ -33,7 +34,19 @@
 \newcommand{\eqdef}{\overset{\mathrm{def}}{=\joinrel=}}
 
 \newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{definition}[theorem]{Definition}
+
+%
+% https://tex.stackexchange.com/questions/98626/automatically-add-theorems-to-index-and-label-them/98634
+%
+\newtheorem{xdefinition}[theorem]{Definition}
+\NewDocumentEnvironment{definition}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to definition
+                         {\begin{xdefinition}}
+                         {\begin{xdefinition}[#1]\index{Definition!#1@#1}}
+                       }%
+                       {\end{xdefinition}}
+
 \newtheorem{example}[theorem]{Example}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{claim}[theorem]{Claim}
@@ -41,6 +54,26 @@
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{property}[theorem]{Property}
 \newtheorem{remark}[theorem]{Remark}
+
+%
+% https://tex.stackexchange.com/questions/357118/expand-nameref-before-creating-index
+%
+
+\makeatletter
+\newcommand{\getnamereftext}[1]{%
+  \@ifundefined{r@#1}{}{%
+    \unexpanded\expandafter\expandafter\expandafter{%
+      \expandafter\expandafter\expandafter\@thirdoffive\csname r@#1\endcsname
+    }%
+  }%
+}
+
+\newcommand{\indexref}[1]{%
+  {\nameref{#1}}%
+  \expandafter\index{{\getnamereftext{#1}}}
+}
+
+\makeindex
 
 \title{Introduction to Galois Theory}
 \author{}
@@ -60,8 +93,7 @@
 \input ./lecture8.tex
 \input ./lecture9.tex
 \input ./requirements.tex
-
+\printindex
 \bibliographystyle{gost780s}
 \bibliography{galois}
-
 \end{document}

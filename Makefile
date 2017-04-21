@@ -9,5 +9,5 @@ pdf: galois.tex
 	pdflatex galois.tex
 
 clean:
-	rm -rf *.aux galois.bbl *.dvi *.blg *.toc *.out
+	rm -rf *.aux galois.bbl *.dvi *.blg *.toc *.out *.idx
 	find . \( -name "*.log" -o -name "*~" \) -exec rm -rf {} \; 
