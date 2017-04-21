@@ -10,16 +10,16 @@ integral ring extensions and also about norms and traces.
 Let $P \in \mathbb{Z}\left[X\right]$. We want to know what is
 $Gal\left(P\right)$. Just a reminder that $Gal\left(P\right) =
 Gal\left(K/\mathbb{Q}\right)$ where $K$ is a
-\nameref{def:splittingfield} of $P$. We have already done the work for
-several types of polynomials: \nameref{def:cyclotomicpolynomial}s,
-\nameref{sec:kummerextension} and so on.
+\indexref{def:splittingfield} of $P$. We have already done the work for
+several types of polynomials: \indexref{def:cyclotomicpolynomial}s,
+\indexref{sec:kummerextension} and so on.
 
 Sometimes, if our polynomial is a kind of combination of them, then the
 explicit information about the roots helps to calculate the Galois
 group. For instance if we have polynomial $X^5 - 2$ we know it's
 roots: $\sqrt[5]{2}, j^k \sqrt[5]{2}$, where
 $j= e^{\frac{2 \pi i}{5}}, 1 \le k \le 4$. Now we have a lot about the
-\nameref{def:galoisgroup}. If $K$ is the splitting field of the
+\indexref{def:galoisgroup}. If $K$ is the splitting field of the
 polynomial then we have the following towers:
 
   \begin{tikzpicture}[descr/.style={fill=white,inner sep=2.5pt}]
@@ -43,8 +43,8 @@ $\mathbb{Z}/5\mathbb{Z}$.
   $\mathbb{Q} \subset \mathbb{Q}\left(j\right) \subset
   \mathbb{Q}\left(j, \sqrt[5]{2}\right) = K$, where
   $\mathbb{Q}\left(j\right)$ and $\mathbb{Q}\left(j,
-  \sqrt[5]{2}\right)$ are \nameref{def:galoisextension}s.
-  By \nameref{thm:galoiscorrespondence} one can get that
+  \sqrt[5]{2}\right)$ are \indexref{def:galoisextension}s.
+  By \indexref{thm:galoiscorrespondence} one can get that
   \[
   Gal\left(K/\mathbb{Q}\left(j\right)\right) \triangleleft
   Gal\left(K/\mathbb{Q}\right) = Gal\left(P\right).
@@ -85,10 +85,10 @@ prime and this will be the subject of the lecture.
 
 \subsection{Ring extensions}
 \begin{definition}[Integral element]
-  Let $A$ be an \nameref{def:integraldomain}, i.e. a ring without zero
+  Let $A$ be an \indexref{def:integraldomain}, i.e. a ring without zero
   divisors and let $B$ is an extension of $A$. The element $\alpha
   \in B$ is called integral over $A$ if $\alpha$ is a root of a
-  \nameref{def:monicpolynomial} $P \in A\left[X\right]$.
+  \indexref{def:monicpolynomial} $P \in A\left[X\right]$.
 
   So one can write the following relation
   \[
@@ -100,7 +100,7 @@ prime and this will be the subject of the lecture.
 
 \begin{example}
   $\frac{1}{2}$ is not integral element over $\mathbb{Z}$ but
-  $\sqrt{2}$ is an \nameref{def:integralelement} over $\mathbb{Z}$.
+  $\sqrt{2}$ is an \indexref{def:integralelement} over $\mathbb{Z}$.
 
   This is because the polynomial in the definition
   \ref{def:integralelement} is monic i.e. the leading coefficient is
@@ -164,14 +164,14 @@ prime and this will be the subject of the lecture.
       example why it's necessary: Sending generators to zero is not
       sufficient for having zero determinant. For example, consider a
       ring $A$, its ideal $I \subset A$ and $A/I$ as a
-      $A$-\nameref{def:cyclicmodule} i.e. module with one generator.
+      $A$-\indexref{def:cyclicmodule} i.e. module with one generator.
       If $x \in A$ is the generator then we can just say that $\det M x
       \in I$ and as result $\det M$ not necessary to be zero.
     }
     The equation $\det M = 0$ can be considered as a polynomial with
     $\alpha$ as a root.
     \footnote{
-      The polynomial will be a \nameref{def:monicpolynomial} because
+      The polynomial will be a \indexref{def:monicpolynomial} because
       the matrix element can have $\alpha$ with coefficient equal $1$.
     }
   \end{proof}
@@ -184,7 +184,7 @@ prime and this will be the subject of the lecture.
 
 \begin{definition}[Integral extension]
   Let $A \subset B$. $B$ is integral over $A$ if $\forall \alpha \in
-  B$, $\alpha$ is an \nameref{def:integralelement} over $A$.  
+  B$, $\alpha$ is an \indexref{def:integralelement} over $A$.  
   \label{def:integralextension}
 \end{definition}
 
@@ -231,7 +231,7 @@ proof.
 
 \begin{proposition}
   Let $A \subset B \subset C$. $B$ integral over $A$, $C$ integral
-  over $B$ then $C$ is an \nameref{def:integralextension} over $A$.
+  over $B$ then $C$ is an \indexref{def:integralextension} over $A$.
   \begin{proof}
     Proof is left as an exercise.     
     \footnote{
@@ -260,7 +260,7 @@ proof.
   $B$ is a finitely generated over $A$ as a module (see definition
   \ref{def:fgmodule}) if and only if
   $B=A\left[\alpha_1, \dots, \alpha_r\right]$ where each $\alpha_i$ is
-  an \nameref{def:integralelement} over $A$.
+  an \indexref{def:integralelement} over $A$.
   \begin{proof}
     Proof is left as an exercise
     \footnote{
@@ -316,12 +316,12 @@ proof.
   closure of $A$ in $B$ equals to $A$.
 
   $A$ is integrally closed (without mention of any $B$) if it is
-  integrally closed in \nameref{def:fractionfield} $\mathrm {Frac}(A)$.
+  integrally closed in \indexref{def:fractionfield} $\mathrm {Frac}(A)$.
   \label{def:integrallyclosed}
 \end{definition}
 
 \begin{example}
-  $\mathbb{Z}$ is \nameref{def:integrallyclosed}.
+  $\mathbb{Z}$ is \indexref{def:integrallyclosed}.
   \footnote{
     $\mathrm {Frac}(\mathbb{Z}) = \mathbb{Q}$. An arbitrary element
     $q \in \mathbb{Q}$ is an integral element over
@@ -335,9 +335,9 @@ proof.
 
 \begin{remark}
   More generally any
-  \nameref{def:ufd} is \nameref{def:integrallyclosed}.
+  \indexref{def:ufd} is \indexref{def:integrallyclosed}.
   \begin{proof}
-    Let $A$ be a \nameref{def:ufd} and $x \in \mathrm {Frac}(A)$ such
+    Let $A$ be a \indexref{def:ufd} and $x \in \mathrm {Frac}(A)$ such
     that $x \ne 0$. So
     $x = \frac{p}{q}$ such that $p,q \in A, \left(p, q\right) = 1$
     (this means no common prime divisor). If $x$ integral over $A$
@@ -382,10 +382,10 @@ proof.
   \label{def:numberfield}
 \end{definition}
 
-Let $K$ is a \nameref{def:numberfield} and $\left[K:\mathbb{Q}\right]
+Let $K$ is a \indexref{def:numberfield} and $\left[K:\mathbb{Q}\right]
 = N$.
 \begin{definition}[Ring of integers]
-  Let $K$ is a \nameref{def:numberfield}. The ring of integers
+  Let $K$ is a \indexref{def:numberfield}. The ring of integers
   $O_K \subset K$ is the integral closure of $\mathbb{Z}$
   in $K$. 
 
@@ -419,11 +419,11 @@ Let $K$ is a \nameref{def:numberfield} and $\left[K:\mathbb{Q}\right]
 
     The second part is also easy. If we have such
     $\alpha \in O_K$, it is a
-    root of some \nameref{def:monicpolynomial}
+    root of some \indexref{def:monicpolynomial}
     $Q \in \mathbb{Z}\left[X\right]$.
     Then the $P_{min} \mid Q$. So $Q = P_{min} R$.
     If we pick $P_{min}$ to be monic, then by an
-    argument very similar to that of the \nameref{lem:gauss} lemma,
+    argument very similar to that of the \indexref{lem:gauss} lemma,
     we conclude  that both $P_{min}, R \in \mathbb{Z}\left[X\right]$.
     \footnote{
       I.e. we can always write
@@ -470,7 +470,7 @@ lectures and were given for better understanding the material)
   Let $K \subset E \subset \bar{K}$. When we say about $K$ embedding
   of $E$ into the algebraic closure $\bar{K}$ we assume
   $\sigma \in Hom_K\left(E, \bar{K}\right)$ i.e. $\sigma$ is a
-  \nameref{def:homomorphism} of \nameref{def:kalgebra}s i.e. the map
+  \indexref{def:homomorphism} of \indexref{def:kalgebra}s i.e. the map
   that preserves the structure and especially $\sigma(K) = K$ i.e.
   $\forall k \in K: \sigma(k) = k$.
 
@@ -509,7 +509,7 @@ lectures and were given for better understanding the material)
 \end{definition}
 
 In the definitions \ref{def:norm} and \ref{def:trace} we assume that
-the extension $E$ is \nameref{def:separableextension}. If the
+the extension $E$ is \indexref{def:separableextension}. If the
 extension is not separable then you have to take it to the power
 equal to the pure inseparable degree of $E/K$,
 \footnote{
@@ -527,7 +527,7 @@ equal to the pure inseparable degree of $E/K$,
   \sum_{\sigma_i: E \hookrightarrow \bar{K}} \sigma_i\left(\alpha\right),
   \nonumber
   \end{eqnarray}
-  where $\left[E:K\right]_i$ is \nameref{def:inseparabledegree}.
+  where $\left[E:K\right]_i$ is \indexref{def:inseparabledegree}.
 }
 but for simplicity,
 we shall suppose that everything is separate.
@@ -558,10 +558,10 @@ we shall suppose that everything is separate.
     that is contradiction.
     By  the field definition
     (\ref{def:field}) the product in
-    \nameref{def:norm} does not depend on the order and the
+    \indexref{def:norm} does not depend on the order and the
     result become the same after the permutation.
 
-    The same result is for \nameref{def:trace}.
+    The same result is for \indexref{def:trace}.
   \end{proof}
 \end{remark}
 
@@ -622,7 +622,7 @@ we shall suppose that everything is separate.
       because $\mathrm{Tr}_{E/F}: E \to F$ and
       $\mathrm{Tr}_{F/K}: F \to K$ (see remark
       \ref{rem:lec9_add}).
-      The same is valid for \nameref{def:norm}.  
+      The same is valid for \indexref{def:norm}.  
     }
     \item Consider $T: E \times E \xrightarrow[(x, y) \to
       \mathrm{Tr}_{E/K}\left(xy\right)  ]{} K$. This is a
@@ -678,7 +678,7 @@ we shall suppose that everything is separate.
 
     The second one uses the following fact:
     $\sigma_i\left(\alpha\right)$ are roots of $P_{min}\left(\alpha,
-    K\right)$. The \nameref{def:norm} is a product and it's assigned
+    K\right)$. The \indexref{def:norm} is a product and it's assigned
     to its constant term ($a_n$) and the sum is the first coefficient 
     term ($a_1$) (see also example \ref{ex:lec8_generalequation}).
 
@@ -768,7 +768,7 @@ we shall suppose that everything is separate.
       Property \ref{property:lec9_2} says that $P_{min}\left(\alpha,
       \mathbb{Q}\right) \in \mathbb{Z}\left[X\right]$. But 2d item of
       the property \ref{property:lec9_norm_trace} says that the
-      \nameref{def:trace} is a coefficient of the polynomial i.e.
+      \indexref{def:trace} is a coefficient of the polynomial i.e.
       \(
       \mathrm{Tr}_{\mathbb{Q}(\alpha)/\mathbb{Q}}\left(
       \alpha
@@ -802,7 +802,7 @@ determinant
     a_1 a^{n-1}.
   \end{cases}
   \]
-  Therefore the \nameref{def:endomorphism} matrix can be written as
+  Therefore the \indexref{def:endomorphism} matrix can be written as
   follows: 
   \[
   M = 
@@ -828,7 +828,7 @@ determinant
   \]  
 }
 . Now this $f_a$ is a a $K$-linear map. It's an
-\nameref{def:endomorphism} of a vector space $E/K$, and
+\indexref{def:endomorphism} of a vector space $E/K$, and
 the $\mathrm{Tr}_{E/K}\left(a\right)$ is
 the trace of this endomorphism, and the
 $\mathrm{N}_{E/K}\left(a\right)$ is the determinant of this endomorphism.  
@@ -836,7 +836,7 @@ $\mathrm{N}_{E/K}\left(a\right)$ is the determinant of this endomorphism.
 \subsection{Theorem about rings of integers}
 \begin{theorem}
   $O_k$ is a finitely generated (see definition \ref{def:fgmodule})
-  $\mathbb{Z}$-module that is a \nameref{def:freemodule} of
+  $\mathbb{Z}$-module that is a \indexref{def:freemodule} of
   rank (see definition \ref{def:rankfreemodule}) $n$, where $n=
   \left[K:\mathbb{Q}\right]$. 
   \label{thm:lec9_1}
@@ -865,8 +865,8 @@ $\mathrm{N}_{E/K}\left(a\right)$ is the determinant of this endomorphism.
     }.
 
     What is the $\mathbb{Z}$-module this is a finitely generated
-    \nameref{def:fgagroup} and we know a lot of things about such
-    groups. The \nameref{def:fgagroup} is the same as
+    \indexref{def:fgagroup} and we know a lot of things about such
+    groups. The \indexref{def:fgagroup} is the same as
     finitely generated $\mathbb{Z}$-module. Any such group is isomorphic
     to (see theorem \ref{thm:fgagroup})
     \[
@@ -885,9 +885,9 @@ $\mathrm{N}_{E/K}\left(a\right)$ is the determinant of this endomorphism.
     (x,y) \to \mathrm{Tr}_{K/\mathbb{Q}}\left(xy\right) 
     \]
     this is
-    \nameref{def:nondegeneratebf} (see 4th property
+    \indexref{def:nondegeneratebf} (see 4th property
     \ref{property:lec9_norm_trace}) therefore $\exists v_1, \dots,
-    v_n$ - \nameref{def:dualbasis} ($\mathbb{Q}$-basis of $K$)
+    v_n$ - \indexref{def:dualbasis} ($\mathbb{Q}$-basis of $K$)
     and we have the property that
     $\mathrm{Tr}_{K/\mathbb{Q}}\left(e_i v_j\right) = \delta_{ij}$.
     \footnote{
@@ -898,14 +898,14 @@ $\mathrm{N}_{E/K}\left(a\right)$ is the determinant of this endomorphism.
       We have $f_{x+y} = f_x + f_y$ and $f_{ax} = a f_x$
       i.e. the set $\{f_x\} = K^\ast$ is the linear space.
       The map $K \xrightarrow[x \to f_x]{} K^\ast$ is
-      \nameref{def:surjection} by the $f_x$ construction. The map is
-      also \nameref{def:injection} as soon as the map $T: K \times K \to \mathbb{Q}$ is
-      \nameref{def:nondegeneratebf} and as result the $f_x(y) =
+      \indexref{def:surjection} by the $f_x$ construction. The map is
+      also \indexref{def:injection} as soon as the map $T: K \times K \to \mathbb{Q}$ is
+      \indexref{def:nondegeneratebf} and as result the $f_x(y) =
       T(x,y)$ has a trivial kernel (if $x \ne 0$): $\ker f =
       \{0\}$. Therefore we can conclude that $K^\ast$ is
-      \nameref{def:dualspace}. I.e. exists a set of elements 
+      \indexref{def:dualspace}. I.e. exists a set of elements 
       $\{f_{v_j}\} \subset K^\ast$  which
-      form the \nameref{def:dualbasis} to $\{e_i\}$ i.e. $f_{v_j}(e_i) =
+      form the \indexref{def:dualbasis} to $\{e_i\}$ i.e. $f_{v_j}(e_i) =
       \delta_{ij}$. Each element $f_{v_j}$ of dual space corresponds
       to $v_j \in K$. For such $v_j$ we have:
       \[
@@ -948,7 +948,7 @@ $\mathrm{N}_{E/K}\left(a\right)$ is the determinant of this endomorphism.
 \section{Reduction modulo a prime}
 
 Let $P \in \mathbb{Z}\left[X\right]$ is an irreducible polynomial with integer
-coefficients. $K$ is a \nameref{def:splittingfield} of $P$ over
+coefficients. $K$ is a \indexref{def:splittingfield} of $P$ over
 $\mathbb{Q}$ and $n = \left[K:\mathbb{Q}\right]$. Let
 $G = Gal\left(P\right) \eqdef Gal\left(K/\mathbb{Q}\right)$. We denote
 roots of $P$ as $\alpha_1, \dots, \alpha_n$ and they are elements of
@@ -982,7 +982,7 @@ finitly many
 maximal ideals $J_1, \dots, J_r$ containing $p$. Our group $G$ acting
 on $A$ must permute these maximal ideals in some way.
 \footnote{
-  Let $J$ is an \nameref{def:ideal} of $A$, then $A J = J$
+  Let $J$ is an \indexref{def:ideal} of $A$, then $A J = J$
   (i.e. $\forall a \in A, j \in J: aj \in J$). Let also $g \in G$ then
   $g\left(A\right) = A$ (see \cite{bib:lang} p. 341) and
   \[
@@ -1006,7 +1006,7 @@ and there is a finite
 extension of $\mathbb{F}_p$.
 \footnote{
   We have that $A$ is a $\mathbb{F}_p$-algebra. $J_i$ is a
-  \nameref{def:maxideal} of $A$ then by remark
+  \indexref{def:maxideal} of $A$ then by remark
   \ref{rem:lec5_quotientkalgebra} we have that $k_i = A/J_i$ is also
   $\mathbb{F}_p$-algebra i.e. $k_i$ is a field extension of
   $\mathbb{F}_p$ (see definition \ref{def:fextension2}). The extension
@@ -1018,7 +1018,7 @@ D_i \to Gal\left(k_i/\mathbb{F}_p\right)
 \).
 Since $D_i$ stabilizes $J_i$ and it acts on the residual classes of
 modulo $J_i$ so there is a homomorphism of $D_i$ into the
-\nameref{def:galoisgroup}.
+\indexref{def:galoisgroup}.
 \footnote{
   We can notice that both $k_i$ and $D_i$
   are related to $J_i$ because any $g^{(k)} \in
@@ -1037,7 +1037,7 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
   \item $G$ acts transitively (see definition \ref{def:transitive}) on
     $\{J_1, \dots, J_r\}$ and the map
     $D_i \to Gal\left(k_i/\mathbb{F}_p\right)$ is a
-    \nameref{def:surjection} i. e.
+    \indexref{def:surjection} i. e.
     $D_i \twoheadrightarrow Gal\left(k_i/\mathbb{F}_p\right)$
     \item If the reduction $\bar{P} = P \mod p$ has no multiple roots
       then the map $D_i \to Gal\left(k_i/\mathbb{F}_p\right)$ is
@@ -1048,7 +1048,7 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
   \begin{proof}
     For the first part. Suppose that for some $i$ and $\forall g \in G,
     g\left(J_1\right) \ne J_i$ i.e. suppose that there is not a
-    \nameref{def:transitive}. By \nameref{thm:chineseremainder} theorem
+    \indexref{def:transitive}. By \indexref{thm:chineseremainder} theorem
     $\exists x \in A$ such that
     $x \equiv 0 (\mod J_i),  x \equiv 1 (\mod g\left(J_1\right))
     \forall g \in G$.
@@ -1056,7 +1056,7 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
       We have that all $J_i$ are relatively prime (see note
       \ref{note:lec9_primeideal} below) and as result 
       the map $\pi\left(a\right)$ from (\ref{eq:lec4_crt_map}) is
-      \nameref{def:surjection} 
+      \indexref{def:surjection} 
       i.e. for any residuals and therefore for the chosen ones
       ($\equiv 0 \mod J_i$ and $\equiv 1 \mod J_1$) exists $x$ that
       produces the residuals.
@@ -1071,7 +1071,7 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
       This is because $\prod_{g} g x =
       \mathrm{N}_{A/\mathbb{Q}}\left(x\right)$, but by 5th item of
       property \ref{property:lec9_norm_trace} one can get that such
-      \nameref{def:norm}
+      \indexref{def:norm}
       (in the definition of norm we have homomorphism but not
       automorphism but accordingly remark \ref{rem:lec9_embedding} it
       is not important as soon as $A$ is a normal extension of
@@ -1088,9 +1088,9 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
     }
     $a \in \mathbb{Z} \cap J_i = (p)$
     \footnote{
-      We have $J_i$ is a \nameref{def:maxideal} and $A$ is a
-      \nameref{def:pid}. Therefore by lemma \ref{lem:primeideal_is_maximal},
-      $J_i$ is a \nameref{def:primeideal}
+      We have $J_i$ is a \indexref{def:maxideal} and $A$ is a
+      \indexref{def:pid}. Therefore by lemma \ref{lem:primeideal_is_maximal},
+      $J_i$ is a \indexref{def:primeideal}
       that contains $p  
       \in \mathbb{Z}$, but the prime ideal in $\mathbb{Z}$ that
       contains $p$ is $(p)$ (see lemma \ref{lem:primeideal_in_Z}).
@@ -1099,7 +1099,7 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
     - the ideal generated by the prime
     number $p$. So one has $a \in J_1$ since all $J_i$, and
     especially $J_1$, contains $p$. But this is impossible as soon as
-    $J_1$ is a \nameref{def:primeideal} (see note
+    $J_1$ is a \indexref{def:primeideal} (see note
     \ref{note:lec9_primeideal}). That is because if we have 
     $\prod_k x_k \in J_1$ ($x_k = g_k(x)$)
     then $\exists i$ such that $x_i \in J_1$ but
@@ -1117,15 +1117,15 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
     Gal\left(k_i/\mathbb{F}_p\right)$.
     \footnote{
       i.e. that there is a
-      \nameref{def:surjection} or in other words that $\forall \bar{g}_i
+      \indexref{def:surjection} or in other words that $\forall \bar{g}_i
       \in Gal\left(k_i/\mathbb{F}_p\right), \exists d_i \in D_i$ such that
       $d_i \to \bar{g}_i$.
     }
     We may assume that $i=1$. By the
-    \nameref{thm:primitiveelement} theorem $\exists z \in
+    \indexref{thm:primitiveelement} theorem $\exists z \in
     \mathbb{F}_p$ such that $k_1 = \mathbb{F}_p\left(z\right)$
     i.e. $z$ generates $k_i/\mathbb{F}_p$.
-    By \nameref{thm:chineseremainder} theorem $\exists y \in A$ such that
+    By \indexref{thm:chineseremainder} theorem $\exists y \in A$ such that
     $y \in J_i, i \ne 1,  y \equiv z (\mod J_1)$.
     \footnote{
       I.e. using the same argument as in note \ref{note:lec9_crt} one
@@ -1144,7 +1144,7 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
       $Q = P_{min}\left(y, \mathbb{Q}\right)$.
     }
     moreover the roots
-    are \nameref{def:integralelement}s over $\mathbb{Z}$
+    are \indexref{def:integralelement}s over $\mathbb{Z}$
     \footnote{
       as soon as $y \in A = O_K$.
     }
@@ -1152,7 +1152,7 @@ modulo $J_i$ so there is a homomorphism of $D_i$ into the
     \footnote{
       Ekaterina also said that ??? 
       as soon as
-      $\mathbb{Z}$ is \nameref{def:integrallyclosed}.
+      $\mathbb{Z}$ is \indexref{def:integrallyclosed}.
     }
 
     Lets study $\bar{Q} = Q \mod J_1$. If $g \notin D_1$ then $\exists
