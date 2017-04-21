@@ -43,11 +43,19 @@
                        {\IfNoValueTF{#1}
                          % no optional argument to definition
                          {\begin{xdefinition}}
-                         {\begin{xdefinition}[#1]\index{Definition!#1@#1}}
+                         {\begin{xdefinition}[#1]\index{#1!definition}}
                        }%
                        {\end{xdefinition}}
+\newtheorem{xexample}[theorem]{Example}
+\NewDocumentEnvironment{example}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to example
+                         {\begin{xexample}}
+                         {\begin{xexample}[#1]\index{#1!example}}
+                       }%
+                       {\end{xexample}}
 
-\newtheorem{example}[theorem]{Example}
+                       
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{claim}[theorem]{Claim}
 \newtheorem{proposition}[theorem]{Proposition}
