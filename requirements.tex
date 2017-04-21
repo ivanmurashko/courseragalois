@@ -64,6 +64,7 @@ definitions, theorems and examples mostly taken from Wikipedia.
 \section{Groups}
 
 \begin{definition}[Monoid]
+  \label{def:monoid}
   The set of elements $M$ with defined binary operation $\circ$ we will call
   as a monoid if the following conditions are satisfied.
   \begin{enumerate}
@@ -74,10 +75,10 @@ definitions, theorems and examples mostly taken from Wikipedia.
   \item Identity element: $\exists e \in M$ such that
     $\forall a \in M$: $e \circ a = a \circ e = a$
   \end{enumerate}
-  \label{def:monoid}
 \end{definition}
 
 \begin{definition}[Group]
+  \label{def:group}
   Let we have a set of elements $G$ with a defined binary operation
   $\circ$ that satisfied the following properties.
   \begin{enumerate}
@@ -91,7 +92,6 @@ definitions, theorems and examples mostly taken from Wikipedia.
     $a \circ a^{-1} = e$
   \end{enumerate}
   In this case $\left(G, \circ\right)$ is called as group.
-  \label{def:group}
 \end{definition}
 Therefore the group is a \indexref{def:monoid} with inverse element
 property. 
@@ -1055,6 +1055,7 @@ The \indexref{def:ring} is a generalization of integer numbers conception.
 \subsection{Ideals}
 
 \begin{definition}[Ideal]
+  \label{def:ideal}
   Lets we have the \indexref{def:ring}
   $\left(R, \oplus, \odot\right)$. Subset $I \subset R$ will be an
   ideal if it satisfied the following conditions
@@ -1064,7 +1065,6 @@ The \indexref{def:ring} is a generalization of integer numbers conception.
   \item $\forall i \in I$ and $\forall r \in R$:
     $i \odot r \in I$ and $r \odot i \in I$
   \end{enumerate}
-  \label{def:ideal}
 \end{definition}
 
 \begin{example}[Ideal $2 \mathbb{Z}$]
@@ -1469,6 +1469,7 @@ and/or on the right) is defined between elements of the ring and
 elements of the module.
 
 \begin{definition}[Module]
+  \label{def:module}
   Let $R$ is a \indexref{def:ring} and $1_R$ is it's multiplicative
   identity. A left R-module $M$ consists of an \indexref{def:abeliangroup}
   $\left(M, +\right)$ and an operation $\cdot: R \times M \to M$ such
@@ -1480,7 +1481,6 @@ elements of the module.
   \item $\left(rs\right) \cdot x = r \cdot \left(s \cdot x\right)$
   \item $1_R \cdot x = x$
   \end{enumerate}
-  \label{def:module}
 \end{definition}
 
 \begin{example}[Module]
@@ -1496,6 +1496,7 @@ elements of the module.
 \end{definition}
 
 \begin{definition}[Free module]
+  \label{def:freemodule}
   The \indexref{def:module} that has a basis (i.e. linearly independent
   generating set) 
   is called as free module \cite{wiki:freemodule}.
@@ -1510,7 +1511,6 @@ elements of the module.
     e_n = 0_M$ for distinct elements $e_1, \dots, e_n \in E$ then
     $r_1 = \dots = r_n = 0_R$.
   \end{enumerate}
-  \label{def:freemodule}
 \end{definition}
 
 \begin{definition}[Rank of free module]
@@ -1568,6 +1568,7 @@ elements of the module.
 \subsection{Linear algebra}
 
 \begin{definition}[Vector space]
+  \label{def:vectorspace}
   Let $F$ is a \indexref{def:field}. The set $V$ is called as vector
   space under $F$ if the following conditions are satisfied
   \begin{enumerate}
@@ -1593,7 +1594,6 @@ elements of the module.
       $a\cdot(x+y) = a\cdot x + a \cdot y$
     \end{enumerate}        
   \end{enumerate}
-  \label{def:vectorspace}
 \end{definition}
 
 \begin{lemma}[About vector space isomorphism]
