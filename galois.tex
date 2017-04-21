@@ -10,6 +10,7 @@
 \usepackage{array}
 \usepackage{booktabs}
 \usepackage{imakeidx}
+\usepackage{scrbase}
 
 % http://tex.stackexchange.com/questions/42343/how-to-add-a-navigation-window-to-a-latex-generated-pdf-document
 \usepackage{hyperref}
@@ -121,7 +122,7 @@
 
 \newcommand{\indexref}[1]{%
   {\nameref{#1}} (\autoref{#1})%
-  \expandafter\ifstrequal\expandafter{#1}{def}%
+  \ifstrstart{#1}{def:}%
   {\expandafter\index{{\getnamereftext{#1}}}}%
   {\expandafter\index{{\getnamereftext{#1} \namecref{#1}}}}%
 }
