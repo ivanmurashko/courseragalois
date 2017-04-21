@@ -54,14 +54,27 @@
                          {\begin{xexample}[#1]\index{#1!example}}
                        }%
                        {\end{xexample}}
+\newtheorem{xremark}[theorem]{Remark}
+\NewDocumentEnvironment{remark}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to remark
+                         {\begin{xremark}}
+                         {\begin{xremark}[#1]\index{#1!remark}}
+                       }%
+                       {\end{xremark}}
+\newtheorem{xlemma}[theorem]{Lemma}
+\NewDocumentEnvironment{lemma}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to lemma
+                         {\begin{xlemma}}
+                         {\begin{xlemma}[#1]\index{#1!lemma}}
+                       }%
+                       {\end{xlemma}}
 
-                       
-\newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{claim}[theorem]{Claim}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{property}[theorem]{Property}
-\newtheorem{remark}[theorem]{Remark}
 
 %
 % https://tex.stackexchange.com/questions/357118/expand-nameref-before-creating-index
