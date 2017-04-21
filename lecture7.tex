@@ -1083,6 +1083,10 @@ From the theorem \ref{thm:lec7_3} follows the following proposition
   \item conversely to the first part: if
     $Gal\left(L/K\right) = G_1 \times G_2$ then $L = L^{G_1} L^{G_2}$
     which are linearly disjoint over the intersection.
+    \footnote{
+      i.e. $L^{G_1}$ and $L^{G_2}$ are linearly disjoint over $L^{G_1}
+      \cap L^{G_2}$ 
+    }
     \begin{proof}
       The first part is very sure because the injectivity of this
       map is clear: if something is trivial both on $L_1$ and $L_2$,
@@ -1162,14 +1166,21 @@ From the theorem \ref{thm:lec7_3} follows the following proposition
       where $e$ is the neutral element of $G_2$.
 
       The intersection $L^{G_1} \cap L^{G_2}$ is fixed by $G$ so
-      $L^{G_1} \cap L^{G_2} = K$. Linear disjoint follows from
-      $L^{G_1} \cap L^{G_2} = K$ since we are in the Galois case.
+      $L^{G_1} \cap L^{G_2} = K$.
       \footnote{
         ??? Let $x \in L^{G_1} \cap L^{G_2}$ then $\forall g_1 \in
         G_1, g_2 \in G_2: g_1(x) = x, g_2(x) = x$. Or in other words
         $\forall g \in G : g = (g_1, g_2)$ we have $g(x) =
         x$. Therefore $G$ fixes $L^{G_1} \cap L^{G_2}$, but
         $G = Gal\left(L/K\right)$ thus $L^{G_1} \cap L^{G_2} = K$.
+      }
+      Linear disjoint follows from
+      $L^{G_1} \cap L^{G_2} = K$ since we are in the Galois case.
+      \footnote{
+        We can use theorem \ref{thm:lec7_3} as soon as
+        $L^{G_1}$ and $L^{G_2}$ are both Galois
+        (see theorem \ref{thm:galoiscorrespondence} point
+        \ref{thm:galoiscorrespondence:item2a}).
       }
     \end{proof}
   \end{enumerate}
