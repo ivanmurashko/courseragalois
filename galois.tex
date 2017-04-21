@@ -33,12 +33,23 @@
 \DeclareMathOperator{\Ima}{Im}
 \newcommand{\eqdef}{\overset{\mathrm{def}}{=\joinrel=}}
 
+%
+% https://tex.stackexchange.com/questions/187388/amsthm-with-shared-counters-messes-up-autoref-references
+%
+\usepackage{aliascnt}
+\usepackage{cleveref}
+
+\theoremstyle{theorem}
 \newtheorem{theorem}{Theorem}[chapter]
 
 %
 % https://tex.stackexchange.com/questions/98626/automatically-add-theorems-to-index-and-label-them/98634
 %
-\newtheorem{xdefinition}[theorem]{Definition}
+\theoremstyle{definition}
+\newaliascnt{definition}{theorem}
+\newtheorem{xdefinition}[definition]{Definition}
+\aliascntresetthe{definition}
+\providecommand*{\definitionautorefname}{Definition}
 \NewDocumentEnvironment{definition}{oo}
                        {\IfNoValueTF{#1}
                          % no optional argument to definition
@@ -46,7 +57,12 @@
                          {\begin{xdefinition}[#1]\index{#1!definition}}
                        }%
                        {\end{xdefinition}}
-\newtheorem{xexample}[theorem]{Example}
+
+\theoremstyle{example}
+\newaliascnt{example}{theorem}
+\newtheorem{xexample}[example]{Example}
+\aliascntresetthe{example}
+\providecommand*{\exampleautorefname}{Example}
 \NewDocumentEnvironment{example}{oo}
                        {\IfNoValueTF{#1}
                          % no optional argument to example
@@ -54,7 +70,12 @@
                          {\begin{xexample}[#1]\index{#1!example}}
                        }%
                        {\end{xexample}}
-\newtheorem{xremark}[theorem]{Remark}
+
+\theoremstyle{remark}
+\newaliascnt{remark}{theorem}
+\newtheorem{xremark}[remark]{Remark}
+\aliascntresetthe{remark}
+\providecommand*{\remarkautorefname}{Remark}
 \NewDocumentEnvironment{remark}{oo}
                        {\IfNoValueTF{#1}
                          % no optional argument to remark
@@ -62,15 +83,24 @@
                          {\begin{xremark}[#1]\index{#1!remark}}
                        }%
                        {\end{xremark}}
-\newtheorem{xlemma}[theorem]{Lemma}
+
+                       
+\theoremstyle{lemma}
+\newaliascnt{lemma}{theorem}
+\newtheorem{xlemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+\providecommand*{\lemmaautorefname}{Lemma}
 \NewDocumentEnvironment{lemma}{oo}
                        {\IfNoValueTF{#1}
                          % no optional argument to lemma
                          {\begin{xlemma}}
-                         {\begin{xlemma}[#1]\index{#1!lemma}}
+                         {\begin{xlemma}[#1]
+                             \index{#1 lemma!lemma}
+                         }
                        }%
                        {\end{xlemma}}
 
+                       
 \newtheorem{claim}[theorem]{Claim}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
@@ -90,8 +120,8 @@
 }
 
 \newcommand{\indexref}[1]{%
-  {\nameref{#1}}%
-  \expandafter\index{{\getnamereftext{#1}}}
+  {\nameref{#1}} (\autoref{#1})%
+  \expandafter\index{{\getnamereftext{#1} \namecref{#1}}}
 }
 
 \makeindex
