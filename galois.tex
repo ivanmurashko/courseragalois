@@ -124,10 +124,36 @@
   {\nameref{#1}}%
   \ifstrstart{#1}{def:}%
   {\expandafter\index{{\getnamereftext{#1}}}}%
-  { (\autoref{#1})\expandafter\index{{\getnamereftext{#1} \namecref{#1}}}}%
+  { (\autoref{#1})
+    \def\makeidx
+        {\ifstrstart{#1}{lem:}
+          {
+            \index{{\getnamereftext{#1} lemma}}
+          }
+          {\ifstrstart{#1}{thm:}
+            {
+              \index{{\getnamereftext{#1} theorem}}
+            }
+            {\ifstrstart{#1}{rem:}
+              {
+                \index{{\getnamereftext{#1} remark}}
+              }
+              {\ifstrstart{#1}{ex:}
+                {
+                  \index{{\getnamereftext{#1} example}}
+                }
+                {
+                  \index{{\getnamereftext{#1} \namecref{#1}}}
+                }
+              }
+            }
+          }
+        }
+    \makeidx
+  }%
 }
 
-\makeindex
+\makeindex[intoc]
 
 \title{Introduction to Galois Theory}
 \author{}
