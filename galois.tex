@@ -81,6 +81,23 @@
                        }%
                        {\end{xexample}}
 
+\theoremstyle{gapexample}
+\newaliascnt{gapexample}{xtheorem}
+\newtheorem{xgapexample}[gapexample]{GAP Example}
+\aliascntresetthe{gapexample}
+\providecommand*{\gapexampleautorefname}{GAP Example}
+\NewDocumentEnvironment{gapexample}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to gapexample
+                         {\begin{xgapexample}}
+                         {\begin{xgapexample}[#1]
+                             \index{#1!example}
+                             \index{GAP example!#1}
+                         }
+                       }%
+                       {\end{xgapexample}}
+
+                       
 \theoremstyle{remark}
 \newaliascnt{remark}{xtheorem}
 \newtheorem{xremark}[remark]{Remark}
