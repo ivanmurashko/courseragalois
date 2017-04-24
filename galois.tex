@@ -43,7 +43,7 @@
 \theoremstyle{theorem}
 %\newtheorem{theorem}{Theorem}[chapter]
 \newtheorem{xtheorem}{Theorem}[chapter]
-\providecommand*{\theoremautorefname}{Theorem}
+\providecommand*{\xtheoremautorefname}{Theorem}
 \NewDocumentEnvironment{theorem}{oo}
                        {\IfNoValueTF{#1}
                          % no optional argument to theorem
@@ -154,7 +154,8 @@
   {\nameref{#1}}%
   \ifstrstart{#1}{def:}%
   {\expandafter\index{{\getnamereftext{#1}}}}%
-  { (\autoref{#1})
+  {
+    (\autoref{#1})
     \def\makeidx
         {\ifstrstart{#1}{lem:}
           {
