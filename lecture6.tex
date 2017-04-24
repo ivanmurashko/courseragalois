@@ -773,6 +773,30 @@ $\left|\mu_n^*\right| = \phi\left(n\right)$.
   \]  
 \end{example}
 
+\begin{gapexample}[Cyclotomic polynomial]
+  There are several ways to get a \nameref{def:cyclotomicpolynomial}
+  in GAP \cite{url:gap}. Consider 7th cyclotomic polynomial.
+  
+  We can use the fact that
+  $\Phi_7 = P_{min}\left(\zeta_7,\mathbb{Q}\right)$:
+  \begin{verbatim}
+    gap> x:=Indeterminate(Rationals,"x");;
+    gap> zeta:=E(7);;
+    gap> MinimalPolynomial(Rationals, zeta);
+    x^6+x^5+x^4+x^3+x^2+x+1
+    gap> 
+  \end{verbatim}
+  I.e. $\Phi_7 = P_{min}\left(\zeta_7,\mathbb{Q}\right) =
+  X^6+X^5+X^4+X^3+X^2+X+1$.
+
+  Another way to get the same answer is
+  \begin{verbatim}
+    gap> x:=Indeterminate(Rationals,"x");;
+    gap> CyclotomicPolynomial(Rationals,7);
+    x^6+x^5+x^4+x^3+x^2+x+1
+  \end{verbatim}
+\end{gapexample}
+
 \begin{proposition}
   \begin{enumerate}
     \item 
