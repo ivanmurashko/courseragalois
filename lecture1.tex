@@ -8,7 +8,7 @@ basic properties such as the multiplicativity of degree in towers.
 
 \subsection{K-algebra}
 \begin{definition}[K-algebra]
-  Let $K$ be a field and $A$ be a \indexref{def:vectorspace} over $K$
+  Let $K$ be a field and $A$ be a \mynameref{def:vectorspace} over $K$
   equipped with 
   an additional binary operation $A \times A \rightarrow A$ that we
   denote as $\cdot$ here. The $A$ is an algebra over $K$ if the
@@ -54,13 +54,13 @@ Why the 2 definitions are equivalent?
 
 \begin{lemma}[K-algebra and homomorphism]
 Given a K-algebra is the same as
-having \indexref{def:homomorphism} $f: K \rightarrow A$ of rings.
+having \mynameref{def:homomorphism} $f: K \rightarrow A$ of rings.
 \begin{proof}
 Really if I have a K-algebra I can define the
-\indexref{def:homomorphism} $f(k) = k \cdot 1_A$, where $1_A$ is an
+\mynameref{def:homomorphism} $f(k) = k \cdot 1_A$, where $1_A$ is an
 identity element of $A$. Thus $k \cdot 1_A \in A$.
 
-And conversely if I have the \indexref{def:homomorphism}
+And conversely if I have the \mynameref{def:homomorphism}
 $f: K \rightarrow A$
 I can define the K-algebra structure by setting
 $k a = f(k) a$ because $f(k), a \in A$ and there is a multiplication
@@ -71,8 +71,8 @@ defined on $A$. As result I have a rule for multiplication a scalar
 \end{lemma}
 
 \begin{lemma}[About homomorphism of fields]
-Any \indexref{def:homomorphism} of fields is
-\indexref{def:injection}.
+Any \mynameref{def:homomorphism} of fields is
+\mynameref{def:injection}.
 \footnote{
   But the statement is not valid for groups. In that case the
   homomorphism is injection if and only if the 
@@ -97,12 +97,12 @@ that is impossible.
 \end{lemma}
 
 There are some comments on the results. We have got that a
-\indexref{def:homomorphism} can be set between field $K$ and its
+\mynameref{def:homomorphism} can be set between field $K$ and its
 K-algebra.
-The \indexref{def:homomorphism} is \indexref{def:injection}
+The \mynameref{def:homomorphism} is \mynameref{def:injection}
 therefore we can allocate a sub-field $A' \subset A$ for that we will
-have the \indexref{def:homomorphism} is a \indexref{def:surjection} and
-therefore we have an \indexref{def:isomorphism} between original field $K$
+have the \mynameref{def:homomorphism} is a \mynameref{def:surjection} and
+therefore we have an \mynameref{def:isomorphism} between original field $K$
 and a sub-field $A'$. This means that we can say that the original
 field $K$ is a sub-field for the K-algebra.
 
@@ -117,7 +117,7 @@ field $K$ is a sub-field for the K-algebra.
   \footnote{the example was not present in the lectures}
   I will show
   that $K$ algebra is not a field. Consider
-  $K = \mathbb{R}$. \indexref{def:vectorspace} $A = \mathbb{R}^2$ i.e.
+  $K = \mathbb{R}$. \mynameref{def:vectorspace} $A = \mathbb{R}^2$ i.e.
   $A$ consists of vectors of the following form
   \[
   x = \left(
@@ -152,7 +152,7 @@ field $K$ is a sub-field for the K-algebra.
   \right)
   \]
 
-  It can be seen that all requirements of \indexref{def:kalgebra} are
+  It can be seen that all requirements of \mynameref{def:kalgebra} are
   satisfied
   \begin{eqnarray}
     (x + y) \cdot z =
@@ -291,10 +291,10 @@ the prime fields. Any field is an extension of one of those.
 
 \subsection{Field $K\left[X\right]/\left(P\right)$}
 \label{lec1_sec14}
-Let $K\left[X\right]$ \indexref{def:ring} of polynomials.
+Let $K\left[X\right]$ \mynameref{def:ring} of polynomials.
 The $P \in K\left[X\right]$ is an
-\indexref{def:irreducible}. $\left(P\right)$ is an 
-\indexref{def:ideal} formed by the polynomial.
+\mynameref{def:irreducible}. $\left(P\right)$ is an 
+\mynameref{def:ideal} formed by the polynomial.
 \footnote{
   I.e.
   \(
@@ -314,7 +314,7 @@ If $Q \in K\left[X\right]$ is a polynomial that $Q \notin
   $Q \notin \left(P\right)$
 }
 Then with
-\indexref{lem:bezout} we can get $\exists A, B \in K\left[X\right]$
+\mynameref{lem:bezout} we can get $\exists A, B \in K\left[X\right]$
 such that
 \[
 A P + B Q = 1,
@@ -331,7 +331,7 @@ thus $B$ is $Q^{-1}$ in $K\left[X\right]/\left(P\right)$.
 
   Let $K$ is a field and $a \in K$ then $K\left[X\right]/\left(X -
   a\right)$ is also a field and there exists an
-  \indexref{def:isomorphism} between the field and $K$ i.e.
+  \mynameref{def:isomorphism} between the field and $K$ i.e.
   \begin{equation}
     K\left[X\right]/\left(X - a\right) \cong K
     \label{eq:lec1_ex1_1}
@@ -339,11 +339,11 @@ thus $B$ is $Q^{-1}$ in $K\left[X\right]/\left(P\right)$.
 
   The $K\left[X\right]/\left(X - a\right)$ is a field just because
   $X-a$ is
-  \indexref{def:irreducible} (see example \ref{ex:irreducible}).
+  \mynameref{def:irreducible} (see example \ref{ex:irreducible}).
 
   For the proof the main statement (\ref{eq:lec1_ex1_1}) lets consider a
   polynomial $P \in  K\left[X\right]$ and 
-  define the following \indexref{def:homomorphism}:
+  define the following \mynameref{def:homomorphism}:
   \begin{equation}
   \phi: K\left[X\right]/\left(X - a\right)
   \xrightarrow[P(X) \to P(a)]{} K
@@ -351,7 +351,7 @@ thus $B$ is $Q^{-1}$ in $K\left[X\right]/\left(P\right)$.
   \end{equation}
 
   The $\phi$ defined by (\ref{eq:lec1_ex1_2}) is
-  \indexref{def:homomorphism}. For the proof of the claim lets take
+  \mynameref{def:homomorphism}. For the proof of the claim lets take
   $P_1, P_2 \in K\left[X\right]/\left(X - a\right)$. Clear that
   $\phi\left(P_1 + P_2\right) = P_1\left(a\right) + P_2\left(a\right)
   = \phi\left(P_1\right) + \phi\left(P_1\right)$. The same holds with
@@ -371,13 +371,13 @@ thus $B$ is $Q^{-1}$ in $K\left[X\right]/\left(P\right)$.
   $P$ that is in the ideal $\left(X - a\right)$ has $P(a) = 0$ i.e. in
   the kernel of $\phi$.
 
-  Next we should show that $\phi$ is \indexref{def:surjection} it's
+  Next we should show that $\phi$ is \mynameref{def:surjection} it's
   easy because $\forall k \in K$ we can consider constant polynomial
   $P = k$ from $K\left[X\right]$. For the polynomial we will have
   $\phi\left(k\right) = k$.
 
   Now (\ref{eq:lec1_ex1_1}) follows from the
-  \indexref{thm:firstisomorphism}. 
+  \mynameref{thm:firstisomorphism}. 
   
   \label{ex:lec1_fieldquotionisomorphism}
 \end{example}
@@ -387,16 +387,16 @@ thus $B$ is $Q^{-1}$ in $K\left[X\right]/\left(P\right)$.
 \subsection{$K\left[X\right]/\left(P\right)$ field}
 
 Alternative proof that $K\left[X\right]/\left(P\right)$ is the
-\indexref{def:field}. The $\left(P\right)$ is a \indexref{def:maxideal}
+\mynameref{def:field}. The $\left(P\right)$ is a \mynameref{def:maxideal}
 \footnote{
-  To prove that $\left(P\right)$ is a \indexref{def:maxideal} we have
-  to use \indexref{lem:bezout}.
+  To prove that $\left(P\right)$ is a \mynameref{def:maxideal} we have
+  to use \mynameref{lem:bezout}.
 }
-but a quotient by a  \indexref{def:maxideal} is a \indexref{def:field}
-(see \indexref{thm:maxideal}).
+but a quotient by a  \mynameref{def:maxideal} is a \mynameref{def:field}
+(see \mynameref{thm:maxideal}).
 
 $K\left[X\right]/\left(P\right)$ is an extension of $K$ because it's
-\indexref{def:kalgebra}.
+\mynameref{def:kalgebra}.
 
 \begin{example}[$K = \mathbb{F}_2/\left(X^2+X+1\right)$]
   Lets consider the following field
@@ -475,17 +475,17 @@ $K\left[X\right]/\left(P\right)$ is an extension of $K$ because it's
 \subsection{Minimal polynomial}
 
 \begin{lemma}[About minimal polynomial existence]
-  If $\alpha$ is \indexref{def:algebraicelement} then
+  If $\alpha$ is \mynameref{def:algebraicelement} then
   $\exists!$ unitary polynomial $P$ of minimal degree such that
   $P\left(\alpha\right) = 0$. It is irreducible. $\forall Q$ such that
   $Q\left(\alpha\right) = 0$ is divisible by $P$
   \footnote{
-    see also \indexref{thm:irreduciblediv}
+    see also \mynameref{thm:irreduciblediv}
   }
   \begin{proof}
-    We know that $K\left[X\right]$ is a \indexref{def:pid} and a
+    We know that $K\left[X\right]$ is a \mynameref{def:pid} and a
     polynomial $Q\left(\alpha\right) = 0$ forms an
-    \indexref{def:ideal}: $I \left\{Q \in K\left[X\right] \mid
+    \mynameref{def:ideal}: $I \left\{Q \in K\left[X\right] \mid
     Q\left(\alpha\right) = 0 \right\}$, so the ideal is generated by
     one element: $I = \left(P\right)$. This is an unique (up to
     constant) polynomial minimal degree in $I$.
@@ -500,7 +500,7 @@ $K\left[X\right]/\left(P\right)$ is an extension of $K$ because it's
 \end{lemma}
 
 \begin{definition}[Minimal polynomial]
-  If $\alpha$ is \indexref{def:algebraicelement} then
+  If $\alpha$ is \mynameref{def:algebraicelement} then
   the unitary polynomial $P$ of minimal degree such that
   $P\left(\alpha\right) = 0$ is called minimal polynomial and denoted
   by  $P_{min}\left(\alpha, K\right)$.
@@ -513,11 +513,11 @@ $K\left[X\right]/\left(P\right)$ is an extension of $K$ because it's
 \begin{definition}
   Let $K \subset L$, $\alpha \in L$. The smallest sub-field contained
   $K$ and $\alpha$ denoted by $K\left(\alpha\right)$. The smallest
-  sub-ring (or \indexref{def:kalgebra}) contained $K$ and $\alpha$ denoted by $K\left[\alpha\right]$.
+  sub-ring (or \mynameref{def:kalgebra}) contained $K$ and $\alpha$ denoted by $K\left[\alpha\right]$.
 \end{definition}
 
-As soon as $K\left[\alpha\right]$ is a \indexref{def:kalgebra} it is a
-\indexref{def:vectorspace} over $K$ generated by
+As soon as $K\left[\alpha\right]$ is a \mynameref{def:kalgebra} it is a
+\mynameref{def:vectorspace} over $K$ generated by
 \[
 1, \alpha, \alpha^2, \dots,
 \alpha^n, \dots.
@@ -527,7 +527,7 @@ As soon as $K\left[\alpha\right]$ is a \indexref{def:kalgebra} it is a
   \[
   \mathbb{C} = \mathbb{R}\left(i\right) = \mathbb{R}\left[i\right]
   \]
-  $\mathbb{C}$ is also a \indexref{def:vectorspace} generated by $1$
+  $\mathbb{C}$ is also a \mynameref{def:vectorspace} generated by $1$
   and $i$: $\forall z \in \mathbb{Z}$ it holds $z = x + i y$ where
   $x,y \in \mathbb{R}$.
 \end{example}
@@ -537,7 +537,7 @@ As soon as $K\left[\alpha\right]$ is a \indexref{def:kalgebra} it is a
   \begin{enumerate}
   \item $\alpha$ is algebraic over $K$
   \item $K\left[\alpha\right]$ is a finite dimensional
-    \indexref{def:vectorspace} over $K$
+    \mynameref{def:vectorspace} over $K$
   \item $K\left[\alpha\right] = K\left(\alpha\right)$
     \footnote{
       Contrary to the example \ref{ex:kalgebranotfield} we see
@@ -546,7 +546,7 @@ As soon as $K\left[\alpha\right]$ is a \indexref{def:kalgebra} it is a
   \end{enumerate}
   \begin{proof}
     Lets proof that 1 implies 2. If $\alpha$ is algebraic over $K$
-    then using lemma \indexref{def:minpolynomial} $\exists
+    then using lemma \mynameref{def:minpolynomial} $\exists
     P_{min}\left(\alpha, K\right)$:
     \[
     P_{min}\left(\alpha, K\right) = \alpha^d + a_{d-1}\alpha^{d-1} +
@@ -560,7 +560,7 @@ As soon as $K\left[\alpha\right]$ is a \indexref{def:kalgebra} it is a
     this means that any $\alpha^n$ can be represented as a linear
     combination of finite number of powers of $\alpha$ i.e.
     $K\left[\alpha\right]$ generated by $1, \alpha, \dots,
-    \alpha^{d-1}$ is a finite dimensional \indexref{def:vectorspace}.
+    \alpha^{d-1}$ is a finite dimensional \mynameref{def:vectorspace}.
 
     Lets proof that 2 implies 3. Its enough to prove that
     $K\left[\alpha\right]$ is a field because
@@ -569,7 +569,7 @@ As soon as $K\left[\alpha\right]$ is a \indexref{def:kalgebra} it is a
     Let $x \ne 0 \in
     K\left[\alpha\right]$ then lets look at an operation
     $x \cdot K\left[\alpha\right] \rightarrow
-    K\left[\alpha\right]$. This is \indexref{def:injection}.
+    K\left[\alpha\right]$. This is \mynameref{def:injection}.
     \footnote{
       If $y, z \in K\left[\alpha\right]$ and
       $\dim K\left[\alpha\right] = d < \infty$ where
@@ -589,12 +589,12 @@ As soon as $K\left[\alpha\right]$ is a \indexref{def:kalgebra} it is a
       \[
       x \cdot y  \ne x \cdot z
       \]
-      i.e. \indexref{def:injection} property is satisfied.
+      i.e. \mynameref{def:injection} property is satisfied.
     }
     But the $K\left[\alpha\right]$ is finite dimensional
-    \indexref{def:vectorspace} and a \indexref{def:homomorphism} between
+    \mynameref{def:vectorspace} and a \mynameref{def:homomorphism} between
     2 vector spaces with the same dimension is
-    \indexref{def:surjection}
+    \mynameref{def:surjection}
     \footnote{
       Two vector spaces with same dimension are isomorphic each other
       (see lemma \ref{lem:vsisomorphism})
@@ -602,12 +602,12 @@ As soon as $K\left[\alpha\right]$ is a \indexref{def:kalgebra} it is a
     thus $\exists y \in K\left[\alpha\right]$
     such that $x \cdot y = 1_{K\left[\alpha\right]}$. Therefore $x$ is
     invertable and $K\left[\alpha\right]$ is a
-    \indexref{def:field}.
+    \mynameref{def:field}.
 
     Lets proof that 3 implies 1. Let $K\left[\alpha\right]$ is a
-    \indexref{def:field} but $\alpha$ is not algebraic. Thus $\forall P
+    \mynameref{def:field} but $\alpha$ is not algebraic. Thus $\forall P
     \in K\left[X\right]$ $P(\alpha) \ne 0$. The we have an
-    \indexref{def:injection} \indexref{def:homomorphism} $i$ :
+    \mynameref{def:injection} \mynameref{def:homomorphism} $i$ :
     $K\left[X\right] \to K\left[\alpha\right] = K\left(\alpha\right)$
     which sends $P\left(X\right)$ to $P\left(\alpha\right)$.
     \footnote{
@@ -638,7 +638,7 @@ As soon as $K\left[\alpha\right]$ is a \indexref{def:kalgebra} it is a
 
 \begin{proposition}
   If $L$ is algebraic over $K$ then any K-subalgebra of $L$ is a
-  \indexref{def:field}.
+  \mynameref{def:field}.
   \begin{proof}
     Let $L' \subset L$ is a subalgebra and let $\alpha \in L'$. We want
     to show that $\alpha$ is invertable. $\alpha$ is algebraic
@@ -665,7 +665,7 @@ As soon as $K\left[\alpha\right]$ is a \indexref{def:kalgebra} it is a
       $P_L\left(\alpha\right) = 0$ i.e. $\alpha$ is algebraic over $L$.
       
       As soon as $P_{min}\left(\alpha,K\right) \in L\left[X\right]$ then
-      using \indexref{lem:minpolynomial} one can get that
+      using \mynameref{lem:minpolynomial} one can get that
       $P_{min}\left(\alpha,L\right)$ divides
       $P_{min}\left(\alpha,K\right)$.
     }
@@ -694,9 +694,9 @@ lectures) as an illustration for proposition \ref{prop:lec1_algebraic}:
 
 \begin{theorem}[The multiplicativity formula for degrees]
   Let $K \subset L \subset M$. Then $M$ is
-  \indexref{def:finiteextension} over $K$ if and only if
-  $M$ is \indexref{def:finiteextension} over $L$ and
-  $L$ is \indexref{def:finiteextension} over $K$. In this case
+  \mynameref{def:finiteextension} over $K$ if and only if
+  $M$ is \mynameref{def:finiteextension} over $L$ and
+  $L$ is \mynameref{def:finiteextension} over $K$. In this case
   \[
   \left[M:K\right] = \left[M:L\right] \left[L:K\right].
   \]
@@ -772,11 +772,11 @@ lectures) as an illustration for proposition \ref{prop:lec1_algebraic}:
     From other side if we have a finite set of algebraic elements
     $\alpha_1, \dots, \alpha_d$ then
     $K\left[\alpha_1\right]$ is a finite dimensional
-    \indexref{def:vectorspace} over $K$,
+    \mynameref{def:vectorspace} over $K$,
     $K\left[\alpha_1, \alpha_2\right]$ is a finite dimensional
-    \indexref{def:vectorspace} over $K\left[\alpha_1\right]$ and
+    \mynameref{def:vectorspace} over $K\left[\alpha_1\right]$ and
     so on $K\left[\alpha_1, \dots, \alpha_d\right]$ is a finite dimensional
-    \indexref{def:vectorspace} over
+    \mynameref{def:vectorspace} over
     $K\left[\alpha_1, \dots, \alpha_{d-1}\right]$. All elements
     are algebraic thus
     \[
@@ -793,11 +793,11 @@ lectures) as an illustration for proposition \ref{prop:lec1_algebraic}:
 \section{Algebraicity in towers. An example}
 
 \begin{theorem}
-  $K \subset L \subset M$ then $M$ \indexref{def:algebraicextension}
+  $K \subset L \subset M$ then $M$ \mynameref{def:algebraicextension}
   over $K$ if and only if $M$ algebraic over $L$ and $L$ algebraic
   over $K$. 
   \begin{proof}
-    If $\alpha \in M$ is an \indexref{def:algebraicelement} over $K$ then
+    If $\alpha \in M$ is an \mynameref{def:algebraicelement} over $K$ then
     $\exists P \in K\left[X\right]$ such that
     $P\left(\alpha\right) = 0$ but the
     polynomial $P \in K\left[X\right] \subset L\left[X\right]$
@@ -916,11 +916,11 @@ lectures) as an illustration for proposition \ref{prop:lec1_algebraic}:
 What we have seen so far:
 
 \begin{itemize}
-\item $K$ is a field, $\alpha$ is an \indexref{def:algebraicelement}
+\item $K$ is a field, $\alpha$ is an \mynameref{def:algebraicelement}
   over $K$ if it is a root of a polynomial $P \in K\left[X\right]$.
-\item $L$ is an \indexref{def:algebraicextension} over $K$ if
+\item $L$ is an \mynameref{def:algebraicextension} over $K$ if
   $\forall \alpha \in L$: $\alpha$ is an algebraic over $K$
-\item $L$ is a \indexref{def:finiteextension} over $K$ if $dim_K L <
+\item $L$ is a \mynameref{def:finiteextension} over $K$ if $dim_K L <
   \infty$.
 \item If an extension is finite then it is algebraic
 \item An extension is finite if and only if it is algebraic and
@@ -1019,6 +1019,6 @@ over $\mathbb{Q}$, but what's about $x^{100}-2$?
   \label{lem:eisenstein}
 \end{lemma}
 
-Note: that both: \indexref{lem:gauss} and \indexref{lem:eisenstein} are
-valid by replacing $\mathbb{Z}$ with an \indexref{def:ufd} $R$ and
+Note: that both: \mynameref{lem:gauss} and \mynameref{lem:eisenstein} are
+valid by replacing $\mathbb{Z}$ with an \mynameref{def:ufd} $R$ and
 $\mathbb{Q}$ by its factorization field.

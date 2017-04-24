@@ -11,7 +11,7 @@ on extension of homomorphisms.
 
 \begin{definition}[Stem field]
 Let $P \in K\left[X\right]$ is an irreducible
-\indexref{def:monicpolynomial}. \indexref{def:fextension1} $E$ is a stem
+\mynameref{def:monicpolynomial}. \mynameref{def:fextension1} $E$ is a stem
 field of $P$ if $\exists \alpha \in E$ - the root of polynomial
 $P$ and $E = K\left[\alpha\right]$.
 \footnote{
@@ -23,7 +23,7 @@ $P$ and $E = K\left[\alpha\right]$.
 
 Such things exist, for instance we can take
 $K\left[X\right]/\left(P\right)$. It is a field because $P$ is
-an \indexref{def:irreducible} moreover the root of the $P$ is in the
+an \mynameref{def:irreducible} moreover the root of the $P$ is in the
 field (see example 
 \ref{ex:F2overP}).
 
@@ -31,7 +31,7 @@ We also can say that for any stem field $E$:
 \[
 K\left[X\right]/\left(P\right) \cong E.
 \]
-We can use the following \indexref{def:isomorphism}:
+We can use the following \mynameref{def:isomorphism}:
 $f: \forall \mathcal{P} \in K\left[X\right]/\left(P\right) \rightarrow
 \mathcal{P}(\alpha)$, there $\alpha$ is a root of polynomial $P$.
 \footnote{
@@ -43,13 +43,13 @@ To summarize we have the following
   The stem field exist and if we have 2 stem fields $E$ and $E'$ which
   correspond 2 roots of $P$: $E = K\left[\alpha\right]$,
   $E' = K\left[\alpha'\right]$ then $\exists! f: E \cong E'$
-  (\indexref{def:isomorphism} of K-algebras) such that $f(\alpha) =
+  (\mynameref{def:isomorphism} of K-algebras) such that $f(\alpha) =
   \alpha'$. 
   \begin{proof}
     Existence: $K\left[X\right]/\left(P\right)$ can be took as the
     stem field.
 
-    Uniquest of the \indexref{def:isomorphism} is easy because it is
+    Uniquest of the \mynameref{def:isomorphism} is easy because it is
     defined by it's value on argument $\alpha$:
     \footnote{
       \label{note:stemfieldisomorphismunique}
@@ -100,7 +100,7 @@ To summarize we have the following
 \begin{remark}[About stem field]
   \begin{enumerate}
   \item In particular: If a stem field contains 2 roots of $P$ then
-    $\exists!$ \indexref{def:automorphism} taking one root into
+    $\exists!$ \mynameref{def:automorphism} taking one root into
     another.
   \item If $E$ stem field then $\left[E:K\right] = \deg P$
   \item If $\left[E:K\right] = deg P$ and $E$ contains a root of $P$
@@ -122,7 +122,7 @@ To summarize we have the following
 
 \begin{corollary}
   $P \in K\left[X\right]$ is irreducible over $K$ if and only if it
-  does not have a root in \indexref{def:fextension1} $L$ of $K$ such that
+  does not have a root in \mynameref{def:fextension1} $L$ of $K$ such that
   $\left[L:K\right] \le \frac{n}{2}$, where $n = deg P$.
   \label{cor:lec2_1}
   \begin{proof}
@@ -133,7 +133,7 @@ To summarize we have the following
       $deg Q > \frac{n}{2}$ then we can take $R$ as $Q$
     }
     The
-    \indexref{def:stemfield} $L$ for $Q$ exists and it's degree is $deg Q
+    \mynameref{def:stemfield} $L$ for $Q$ exists and it's degree is $deg Q
     \le \frac{n}{2}$. $L$ should have a root of $Q$ (as soon as a root of
     $P$) by definition.
 
@@ -158,7 +158,7 @@ To summarize we have the following
   \label{cor:lec2_2}
   \begin{proof}
     If it is not a case and $\exists Q$ such that $Q \mid P$ in
-    $L\left[X\right]$. Let $M$ be a \indexref{def:stemfield} of $Q$
+    $L\left[X\right]$. Let $M$ be a \mynameref{def:stemfield} of $Q$
     over $L$.
 
     So we have $K \subset L \subset M = L\left(\alpha\right)$. $M$ is
@@ -173,7 +173,7 @@ To summarize we have the following
     $K\left(\alpha\right) \subseteq M$ and therefore $n \mid md$
     \footnote{
       $K \subset K\left( \alpha \right) \subset M$ and with
-      \indexref{thm:mulformuladegrees} we have
+      \mynameref{thm:mulformuladegrees} we have
       \[
       md = \left[M : L \right] \left[L : K \right] =
       \left[M : K \right] =
@@ -204,8 +204,8 @@ To summarize we have the following
     \item Splitting field $L$ exists and $\left[L:K\right] \le d!$,
       where $d = deg P$.
     \item If $L$ and $M$ are 2 splitting fields then
-      $\exists \phi: L \cong M$ (an \indexref{def:isomorphism}). But
-      the \indexref{def:isomorphism} is not necessary to be unique.
+      $\exists \phi: L \cong M$ (an \mynameref{def:isomorphism}). But
+      the \mynameref{def:isomorphism} is not necessary to be unique.
   \end{enumerate}
   \label{thm:lec2_1}
   \begin{proof}
@@ -213,19 +213,19 @@ To summarize we have the following
     trivial the $K$ itself is the splitting field. Now assume $d > 1$
     and that the theorem is valid for any polynomial of degree $< d$
     over any field $K$. Let $Q$ be any irreducible factor of $P$. We
-    can create a \indexref{def:stemfield} $L_1 = K\left(\alpha\right)$
-    for $Q$ that will be also a \indexref{def:stemfield} for $P$.
+    can create a \mynameref{def:stemfield} $L_1 = K\left(\alpha\right)$
+    for $Q$ that will be also a \mynameref{def:stemfield} for $P$.
 
     Over $L_1$ we have $P = (x - \alpha) R$, where $R$ is a polynomial
     with $deg R = d - 1$. We know (by induction) that
-    there exists a \indexref{def:splittingfield} $L$ for $R$ over $L_1$
+    there exists a \mynameref{def:splittingfield} $L$ for $R$ over $L_1$
     and its degree:
     \(
     \left[L:L_1\right] \le (d-1)!
     \)
     We have $K \subset L_1 \subset L$. The $L$ will be a splitting
     field for original polynomial $P$. Its degree (by
-    \indexref{thm:mulformuladegrees}) is $ \le d \cdot (d-1)! = d!$.
+    \mynameref{thm:mulformuladegrees}) is $ \le d \cdot (d-1)! = d!$.
 
     Uniqueness: Let $L$ and $M$ are 2 splitting fields. Let $\beta$ is
     a root of $Q$ (irreducible factor of $P$) in $M$.
@@ -260,7 +260,7 @@ To summarize we have the following
     a $K\left[\alpha\right]$-algebra
     \footnote{
       via
-      the existent \indexref{def:isomorphism}
+      the existent \mynameref{def:isomorphism}
       between $K\left[\alpha\right]$ and $K\left[\beta\right]$
     }
     and as 
@@ -293,20 +293,20 @@ To summarize we have the following
     }
     %% $M$ is splitting field for $S$ over
     %% $K\left(\beta\right) = M_1$. $M$ is also $L_1$-algebra (via the
-    %% \indexref{def:isomorphism} $\phi$) and as such it's a splitting
+    %% \mynameref{def:isomorphism} $\phi$) and as such it's a splitting
     %% field for $R$ over $L_1$. As soon as
     %% $\left[L:L_1\right] = \left[M:M_1\right]$ the $M/L_1 \cong L/L_1$
     %% because the $L_1$-algebras with the same dimension are isomorphic (see lemma
     %% \ref{lem:vsisomorphism}). Therefore we have an
-    %% $L_1 = K\left(\alpha\right)$ \indexref{def:isomorphism} $L \cong M$
-    %% and therefore $K$ \indexref{def:isomorphism} $L \cong M$.    
+    %% $L_1 = K\left(\alpha\right)$ \mynameref{def:isomorphism} $L \cong M$
+    %% and therefore $K$ \mynameref{def:isomorphism} $L \cong M$.    
   \end{proof}
 \end{theorem}
 
 \begin{remark}
-  The \indexref{def:isomorphism} considered in theorem \ref{thm:lec2_1}
+  The \mynameref{def:isomorphism} considered in theorem \ref{thm:lec2_1}
   is not unique. A splitting field  can 
-  have many \indexref{def:automorphism} and this is in fact the subject
+  have many \mynameref{def:automorphism} and this is in fact the subject
   of Galois theory.
 \end{remark}
 
@@ -321,7 +321,7 @@ To summarize we have the following
   has the following roots: $\sqrt[3]{2}, j\sqrt[3]{2}$ and
   $j^2\sqrt[3]{2}$, where $j = e^{\frac{2 \pi i}{3}}$. Splitting field
   is the following $L = \mathbb{Q}\left(\sqrt[3]{2}, j\right)$. Lets
-  find \indexref{def:automorphism}s of the field.
+  find \mynameref{def:automorphism}s of the field.
   $P_{min}\left(j, \mathbb{Q}\right) = X^2 + X + 1$ thus using remark
   \ref{rem:lec2_1} 
   $\left[\mathbb{Q}\left(j\right) : \mathbb{Q}\right] = 2$.
@@ -348,18 +348,18 @@ To summarize we have the following
   automorphism exist:
   \begin{enumerate}
     \item $\mathbb{Q}\left(\sqrt[3]{2}\right)$
-      \indexref{def:automorphism}. We have
+      \mynameref{def:automorphism}. We have
       $X^2+X+1$ as
       $P_{min}\left(j, \mathbb{Q}\left(\sqrt[3]{2}\right)\right)$. The
       polynomial has 2 roots: $j$ and $j^2$ and there is an
-      \indexref{def:automorphism} that exchanges the roots. Lets call it
+      \mynameref{def:automorphism} that exchanges the roots. Lets call it
       $\tau$
       \footnote{
         \label{note:lec2_example_j}
         $j \to j^2$ thus $j^2 \to j^4 = j$. Therefore $j
         \leftrightarrow j^2$
       }
-      \item $\mathbb{Q}\left(j\right)$ \indexref{def:automorphism}. In
+      \item $\mathbb{Q}\left(j\right)$ \mynameref{def:automorphism}. In
         this case the automorphism of exchanging $\sqrt[3]{2}$ and
         $j \sqrt[3]{2}$. \footnote{
           $\sqrt[3]{2} \to j \sqrt[3]{2}$ produces
@@ -393,7 +393,7 @@ To summarize we have the following
   \end{itemize}
 
   %% Lets also look at $\mathbb{Q}\left(\sqrt[3]{2}\right)$. The question
-  %% is the following: how many \indexref{def:homomorphism}s to $L =
+  %% is the following: how many \mynameref{def:homomorphism}s to $L =
   %% \mathbb{Q}\left(\sqrt[3]{2}, j\right)$ do we have. As we know
   %% \[
   %% L = \mathbb{Q}\left(\sqrt[3]{2}, j\right) =
@@ -403,7 +403,7 @@ To summarize we have the following
   %% $\sqrt[3]{2}, j\sqrt[3]{2}, j^2\sqrt[3]{2}$ and each permutation is a
   %% homomorphism. To demonstrate it lets look at the following
   %% permutation $\sqrt[3]{2} \leftrightarrow j\sqrt[3]{2}$. We have a
-  %% unique \indexref{def:isomorphism}
+  %% unique \mynameref{def:isomorphism}
   %% \[
   %% \mathbb{Q}\left(\sqrt[3]{2}\right) \to
   %% \mathbb{Q}\left(j\sqrt[3]{2}\right) \subset L.
@@ -423,14 +423,14 @@ To summarize we have the following
 \end{definition}
 
 \begin{example}[$\mathbb{C}$]
-  $\mathbb{C}$ is an \indexref{def:algebraicallyclosed}. This will be
+  $\mathbb{C}$ is an \mynameref{def:algebraicallyclosed}. This will be
   proved later.
 \end{example}
 
 \begin{definition}[Algebraic closure]
   An algebraic closure of $K$ is a field $L$ that is
-  \indexref{def:algebraicallyclosed} and
-  \indexref{def:algebraicextension} 
+  \mynameref{def:algebraicallyclosed} and
+  \mynameref{def:algebraicextension} 
   over $K$.
   \footnote{
     If $L$ is algebraic closure of $K$ then the following conditions
@@ -438,17 +438,17 @@ To summarize we have the following
     \begin{itemize}
       \item $\forall P \in L\left[ X \right]$ $\exists \alpha \in L$
         such that $P\left(\alpha\right) = 0$ (see definition of
-        \indexref{def:algebraicallyclosed})
+        \mynameref{def:algebraicallyclosed})
       \item $\forall \alpha \in L$ $\exists P \in K\left[ X \right]$
         such that $P\left(\alpha\right) = 0$ (see definition of
-        \indexref{def:algebraicextension})
+        \mynameref{def:algebraicextension})
     \end{itemize}
   }
   \label{def:algebraicclosure}
 \end{definition}
 
 \begin{theorem}[About Algebraic closure]
-  Any field $K$ has an \indexref{def:algebraicclosure}
+  Any field $K$ has an \mynameref{def:algebraicclosure}
   \begin{proof}
     Lets discuss the strategy of the prove.
     First construct $K_1$ such that $\forall P \in K\left[X\right]$
@@ -471,12 +471,12 @@ To summarize we have the following
     $A = K\left[\left(X_P\right)_{P \in S}\right]$ - multi-variable
     (one variable $X_P$ for each $P \in S$) polynomial ring.
 
-    Let $I \subset A$ is an \indexref{def:idealset} $P\left(X_P\right)$
+    Let $I \subset A$ is an \mynameref{def:idealset} $P\left(X_P\right)$
     $\forall P \in S$.\footnote
     {
       $I = \sum_i \lambda_i P_i\left(X_{P_i}\right)$, where $\lambda_i \in A$
     }
-    We claim that $I$ is a \indexref{def:properideal} i.e. $I \ne
+    We claim that $I$ is a \mynameref{def:properideal} i.e. $I \ne
     A$. If not then we can write (see theorem \ref{thm:properideal})
     \begin{equation}
       1_A = \sum_i^n \lambda_i P_i\left(X_{P_i}\right),
@@ -487,7 +487,7 @@ To summarize we have the following
     As soon as the
     sum is finite then I can take the product of the polynomials in
     the sum: $P = \prod_i^n P_i$ and I can create a
-    \indexref{def:splittingfield} $L$ for the polynomial $P$ over $K$
+    \mynameref{def:splittingfield} $L$ for the polynomial $P$ over $K$
     (see theorem \ref{thm:lec2_1}).
 
     $A$ is a polynomial ring and it's very easy produce a homomorphism
@@ -505,8 +505,8 @@ To summarize we have the following
     \]
     that is impossible.
 
-    Fact: Any \indexref{def:properideal} $I \subset A$ is contained in
-    the \indexref{def:maxideal} $m$ (see proposition
+    Fact: Any \mynameref{def:properideal} $I \subset A$ is contained in
+    the \mynameref{def:maxideal} $m$ (see proposition
     \ref{prop:propermaxideal} below) and $A/m$ is a field (see theorem
     \ref{thm:maxideal}).
 
@@ -520,7 +520,7 @@ To summarize we have the following
 \subsection{Ideals in a ring}
 \label{sec:lec2_ideals}
 The ring is commutative, associative with unity. Any
-\indexref{def:properideal} is in a \indexref{def:maxideal}. This is a
+\mynameref{def:properideal} is in a \mynameref{def:maxideal}. This is a
 consequence of what one calls Zorn's lemma
 
 \begin{definition}[Chain]
@@ -532,7 +532,7 @@ consequence of what one calls Zorn's lemma
 \end{definition}
 
 \begin{lemma}[Zorn]
-  If any non-empty \indexref{def:chain} $\mathcal{C}$ in a non-empty set
+  If any non-empty \mynameref{def:chain} $\mathcal{C}$ in a non-empty set
   $\mathcal{P}$ has an upper bound (that is $M \in \mathcal{P}$ such
   that $M \ge x, \forall x \in \mathcal{C}$) then $\mathcal{P}$ has a
   maximal element.
@@ -540,14 +540,14 @@ consequence of what one calls Zorn's lemma
 \end{lemma}
 
 \begin{proposition}
-  Any \indexref{def:properideal} is in a \indexref{def:maxideal}
+  Any \mynameref{def:properideal} is in a \mynameref{def:maxideal}
   \begin{proof}
-    We can use \indexref{lem:zorn} to prove that any proper ideal is
-    in a \indexref{def:maxideal}.
+    We can use \mynameref{lem:zorn} to prove that any proper ideal is
+    in a \mynameref{def:maxideal}.
     
     Let $\mathcal{P}$ is the set of proper ideals in $A$ containing
     $I$. The set is not empty because it has at least one element $I$. Any
-    \indexref{def:chain} $\mathcal{C} = \left\{I_\alpha\right\}$
+    \mynameref{def:chain} $\mathcal{C} = \left\{I_\alpha\right\}$
     \footnote{
       The order is the following $I_\alpha \le I_\beta$ if
       $I_\alpha \subset I_\beta$
@@ -559,7 +559,7 @@ consequence of what one calls Zorn's lemma
   \label{prop:propermaxideal}
 \end{proposition}
 
-If we take a \indexref{def:quotientring} by maximal ideal it's always a
+If we take a \mynameref{def:quotientring} by maximal ideal it's always a
 field
 \footnote{
   We refer to it as a theorem with definition provided in
@@ -583,16 +583,16 @@ K \subset K_1 \subset K_2 \subset \dots \subset K_{i-1} \subset K_i
 \subset \dots
 \]
 $K_i$ is a field where each polynomial $P \in K_{i-1}$ has a root. The
-field $K_i$ is \indexref{def:quotientring} of huge polynomial ring
-$K_{i-1}\left[X\right]$ by a suitable \indexref{def:maxideal} that is
-got by means of \indexref{lem:zorn}.
+field $K_i$ is \mynameref{def:quotientring} of huge polynomial ring
+$K_{i-1}\left[X\right]$ by a suitable \mynameref{def:maxideal} that is
+got by means of \mynameref{lem:zorn}.
 
 Another question is the closure unique? The answer is yes. We start
 the proof with the following theorem 
 
 \begin{theorem}[About extension of homomorphism]
-  Let $K \subset L \subset M$ - \indexref{def:algebraicextension}.
-  $K \subset \Omega$, where $\Omega$ - \indexref{def:algebraicclosure}
+  Let $K \subset L \subset M$ - \mynameref{def:algebraicextension}.
+  $K \subset \Omega$, where $\Omega$ - \mynameref{def:algebraicclosure}
   of $K$.
   $\forall \phi: L \to \Omega$ extends to $\widetilde{\phi}: M \to
   \Omega$
@@ -600,7 +600,7 @@ the proof with the following theorem
     see also example \ref{ex:homomorphismext}.
   }
   \begin{proof}
-    Apply \indexref{lem:zorn} to the following set (of pairs)
+    Apply \mynameref{lem:zorn} to the following set (of pairs)
     \[
     \mathcal{E} = \left\{
     \left(N, \psi\right): L \subset N \subset M, \psi \mbox{ extends }
@@ -616,7 +616,7 @@ the proof with the following theorem
     \left(N, \psi\right) \le \left(N', \psi'\right),
     \]
     if $N \subseteq N'$ and $\psi'/N = \psi$ ($\psi'$ extends $\psi$).
-    Any \indexref{def:chain} $\left(N_\alpha, \psi_\alpha\right)$
+    Any \mynameref{def:chain} $\left(N_\alpha, \psi_\alpha\right)$
     has an upper bound $\left(N, \psi\right)$, where
     \(
     N = \cup_\alpha N_\alpha
@@ -629,7 +629,7 @@ the proof with the following theorem
     Lets suppose that $N_0 \ne M$, i.e.
     $N_0 \subsetneq M$. Now it's very easy to get a
     contradiction. Lets take $x \in M \setminus N_0$ and consider
-    \indexref{def:minpolynomial} $P_{min}\left(x, N_0\right)$. It
+    \mynameref{def:minpolynomial} $P_{min}\left(x, N_0\right)$. It
     should have a root $\alpha \in \Omega$. Now we extend $N_0$ to
     $N_0\left(x\right)$ and define $\psi'$ on
     $N_0\left(x\right)$ as follows: $\forall y \in N_0: \psi'(y)
@@ -652,13 +652,13 @@ the proof with the following theorem
     \]
     in this case homomorphism $K \to \Delta$ can be extended to
     $\Delta' \to \Delta$ i.e. there exists a homomorphism
-    (i.e. \indexref{def:injection}) from $\Delta'$ to $\Delta$.
+    (i.e. \mynameref{def:injection}) from $\Delta'$ to $\Delta$.
 
     If we assume $M = \Delta$ and $\Omega = \Delta$ then there exists
-    a homomorphism (i.e. \indexref{def:injection}) from $\Delta$ to
-    $\Delta'$. The \indexref{def:injection} is also
-    \indexref{def:surjection} in another direction: $\Delta' \to
-    \Delta$ and as result we have \indexref{def:isomorphism} $\Delta' \to
+    a homomorphism (i.e. \mynameref{def:injection}) from $\Delta$ to
+    $\Delta'$. The \mynameref{def:injection} is also
+    \mynameref{def:surjection} in another direction: $\Delta' \to
+    \Delta$ and as result we have \mynameref{def:isomorphism} $\Delta' \to
     \Delta$ 
   \end{proof}
   \label{col:algebraic_closure_isomorphism}
