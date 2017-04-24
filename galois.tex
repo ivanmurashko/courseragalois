@@ -83,14 +83,18 @@
 
 \theoremstyle{gapexample}
 \newaliascnt{gapexample}{xtheorem}
-\newtheorem{xgapexample}[gapexample]{GAP Example}
+\newtheorem{xgapexample}[gapexample]{Example}
 \aliascntresetthe{gapexample}
-\providecommand*{\gapexampleautorefname}{GAP Example}
+\providecommand*{\gapexampleautorefname}{Example}
 \NewDocumentEnvironment{gapexample}{oo}
                        {\IfNoValueTF{#1}
                          % no optional argument to gapexample
                          {\begin{xgapexample}}
                          {\begin{xgapexample}[#1]
+                             \footnote{
+                               The example is not a part of the lectures
+                               and it uses GAP \cite{url:gap}.
+                             }                             
                              \index{#1!example}
                              \index{GAP example!#1}
                          }
