@@ -83,6 +83,20 @@ information about it. But what will we do if we don't know the
 roots. One of the tool that we will use is the reduction of modulo
 prime and this will be the subject of the lecture.
 
+\begin{gapexample}[Galois group]
+  Let investigate the \mynameref{def:galoisgroup}
+  $Gal\left(K/\mathbb{Q}\right)$ via GAP:
+  \begin{verbatim}
+    gap> x:=Indeterminate(Rationals,"x");;
+    gap> n:=5;;
+    gap> i:=GaloisType(x^n-2);;
+    gap> g:=TransitiveGroup(n,i);;
+    gap> g;
+    F(5) = 5:4
+    gap> 
+  \end{verbatim}
+\end{gapexample}
+
 \subsection{Ring extensions}
 \begin{definition}[Integral element]
   Let $A$ be an \mynameref{def:integraldomain}, i.e. a ring without zero
