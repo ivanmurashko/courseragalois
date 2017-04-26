@@ -360,7 +360,8 @@ Just another example \cite{bib:KeithConradFiniteFields}
 \footnote{
   There is not a part of the video lectures
 }
-\begin{example}
+\begin{example}[Polynomial factorization over a finite field]
+  \label{ex:lec3_polfactorization}
   In $\mathbb{F}_2\left[X\right]$, the irreducible factorization of
   $X^{2^n} -X$ for $n=1,2,3,4$ is as follows
   \begin{eqnarray}
@@ -382,6 +383,32 @@ Just another example \cite{bib:KeithConradFiniteFields}
   have to take into consideration the following fact
   $1 = -1 \mod 2$
 \end{example}
+
+\begin{gapexample}[Polynomial factorization over a finite field in GAP]
+  At the moment GAP provides only methods to factorize polynomials
+  over finite fields, over subfields of cyclotomic
+  fields, and over algebraic extensions of these \cite{bib:gap}.
+  
+  There is an example of such factorization in
+  $\mathbb{F}_2\left[X\right]$ similar to \autoref{ex:lec3_polfactorization}
+  \begin{verbatim}  
+    gap> x:=Indeterminate(GF(2),"x");;
+    gap> Factors(x^8-x);
+    [ x, x+Z(2)^0, x^3+x+Z(2)^0, x^3+x^2+Z(2)^0 ]
+    gap> x:=Indeterminate(GF(2),"x");;
+    gap> Factors(x^2-x);
+    [ x, x+Z(2)^0 ]
+    gap> Factors(x^4-x);
+    [ x, x+Z(2)^0, x^2+x+Z(2)^0 ]
+    gap> Factors(x^8-x);
+    [ x, x+Z(2)^0, x^3+x+Z(2)^0, x^3+x^2+Z(2)^0 ]
+    gap> Factors(x^16-x);
+    [ x, x+Z(2)^0, x^2+x+Z(2)^0, x^4+x+Z(2)^0, x^4+x^3+Z(2)^0, 
+      x^4+x^3+x^2+x+Z(2)^0 ]
+    gap>
+  \end{verbatim}
+\end{gapexample}
+
 
 \section{Multiplicative group and automorphism group of a finite
   field}
