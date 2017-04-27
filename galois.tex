@@ -101,6 +101,17 @@
                        }%
                        {\end{xgapexample}}
 
+%
+% https://tex.stackexchange.com/questions/250035/transform-output-theoremstyleremark-from-italics-to-bold
+%
+\makeatletter
+\def\th@remark{%
+  \thm@headfont{\bfseries}%
+  \normalfont % body font
+  \thm@preskip\topsep \divide\thm@preskip\tw@
+  \thm@postskip\thm@preskip
+}
+\makeatother
                        
 \theoremstyle{remark}
 \newaliascnt{remark}{xtheorem}
