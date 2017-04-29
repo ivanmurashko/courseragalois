@@ -401,7 +401,14 @@ root of $X^n - a$). Take
 \end{proposition}
   
 \section{Artin-Schreier extensions}
-Let $n = char K$ this is called as Artin-Schreier extensions.
+
+\begin{definition}[Artin-Schreier extension]
+  Let $L$ is an extension of a field $K$ such that $char K = p$, where $p$
+  is a prime number. If degree of the extension $n=\left[L:K\right]$
+  is equal to $p$, i.e. $n = char K$ then the extension is called  as
+  Artin-Schreier extension. 
+  \label{def:srtinschreierextension}
+\end{definition}
 
 \begin{definition}[Cyclic extension]
   The Galois extension is called cyclic extension if the corresponding
@@ -409,7 +416,8 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
   \label{def:cyclicextension}
 \end{definition}
 
-\begin{theorem}
+\begin{theorem}[Artin-Schreier]
+  \label{thm:lec7_1}
   Let $p = char(K)$ and let
   $P = X^p - X - a \in K\left[X\right]$. Then $P$ is irreducible or
   splits over $K$. Let $\alpha$ be a root. If $P$ is irreducible then
@@ -584,7 +592,6 @@ Let $n = char K$ this is called as Artin-Schreier extensions.
     $\alpha^p - \alpha =  a \in K$ and $\alpha$ is a root of $X^p - X
     - a$ and this finished the proof of the theorem.
   \end{proof}
-  \label{thm:lec7_1}
 \end{theorem}
 
 \section{Composite extensions. Properties}
