@@ -166,7 +166,6 @@
   \ifstrstart{#1}{def:}%
   {\expandafter\index{{\getnamereftext{#1}}}}%
   {
-    (\autoref{#1})
     \def\makeidx
         {\ifstrstart{#1}{lem:}
           {
@@ -192,6 +191,7 @@
           }
         }
     \makeidx
+    (\autoref{#1})
   }%
 }
 
