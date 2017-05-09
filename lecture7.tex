@@ -781,6 +781,7 @@ $L_{1,2}$ are fields.
 \section{Linearly disjoint extensions. Examples}
 
 \begin{theorem}
+  \label{thm:lec7_2}
   The following statements are equivalent (for algebraic extensions)
   \begin{enumerate}
   \item $L_1 \otimes_K L_2$ is a field \label{thm:lec7_2_a}
@@ -871,7 +872,6 @@ $L_{1,2}$ are fields.
       \left[L_2 : K\right] = nm$.
     }
   \end{proof}
-  \label{thm:lec7_2}
 \end{theorem}
 
 \begin{example}
@@ -1202,18 +1202,49 @@ From the theorem \ref{thm:lec7_3} follows the following proposition
       The intersection $L^{G_1} \cap L^{G_2}$ is fixed by $G$ so
       $L^{G_1} \cap L^{G_2} = K$.
       \footnote{
-        ???Lets define the action of $g = (g_1, g_2) \in G_1 \times G_2$
-        on $L_1L_2$. If $x \in L_1, x \notin L_2$ then $g(x) =
-        (g_1(x), g_2(1_{L_2})) = (g_1(x), 1_{L_2}) = g_1(x)$. If $x
-        \in L_2, x \notin L_1$ then $g(x) = 
-        (1_{L_1}, g_2(x)) = g_2(x)$. If $x \in L_1 \cap L_2$ then
-        $g_1(x) = g_2(x) = g'(x)$ and 
-        $g(x) = (g_1(x), g_2(x)) = g'(x)$.???
+        Lets define the action of $g = (g_1, g_2) \in G_1 \times G_2$
+        on $L_1L_2$. By definition \mynameref{def:compositeextension},
+        any element of $L_1L_2$ can be represented in the form $x =
+        \sum_{ij} l_i^{(1)}l_j^{(2)}$, where
+        $l_i^{(1)} \in L_1, l_j^{(2)} \in L_2$
+        (see also \autoref{thm:lec7_2} (statement
+        \ref{thm:lec7_2_d})). Thus
+        \[
+        g(x) = (g_1, g_2)(x) = \sum_{ij} 
+        g_1\left(l_i^{(1)}\right)
+        g_2\left(l_j^{(2)}\right).
+        \]
+        We also have
+        \[
+        g_1(x) = \sum_{ij} 
+        g_1\left(l_i^{(1)}\right)
+        l_j^{(2)}
+        \]
+        and
+        \[
+        g_2(x) = \sum_{ij} 
+        l_i^{(1)}
+        g_2\left(l_j^{(2)}\right).
+        \]
         
-        ??? Let $x \in L^{G_1} \cap L^{G_2}$ then $\forall g_1 \in
-        G_1, g_2 \in G_2: g_1(x) = x, g_2(x) = x$. Or in other words
-        $\forall g \in G : g = (g_1, g_2)$ we have $g(x) =
-        x$. Therefore $G$ fixes $L^{G_1} \cap L^{G_2}$, but
+        Let $x \in L^{G_1} \cap L^{G_2}$ then $\forall g_1 \in
+        G_1, g_2 \in G_2: g_1(x) = x, g_2(x) = x$.
+        Therefore
+        \[
+        g_1\left(l_i^{(1)}\right) = l_i^{(1)},
+        g_2\left(l_j^{(2)}\right) = l_j^{(2)}.
+        \]
+        I.e. $l_{i,j}^{(1,2)} \in K$.
+        Or in other words
+        $\forall g \in G : g = (g_1, g_2)$ we have
+        \[
+        g(x) = (g_1, g_2)(x) = \sum_{ij} 
+        g_1\left(l_i^{(1)}\right)
+        g_2\left(l_j^{(2)}\right) =
+        \sum_{ij} l_i^{(1)}l_j^{(2)} =
+        x.
+        \]
+        Therefore $G$ fixes $L^{G_1} \cap L^{G_2}$, but
         $G = Gal\left(L/K\right)$ thus $L^{G_1} \cap L^{G_2} = K$.
       }
       Linear disjoint follows from
