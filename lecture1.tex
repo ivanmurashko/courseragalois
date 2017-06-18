@@ -53,47 +53,47 @@ and another definition
 Why the 2 definitions are equivalent?
 
 \begin{lemma}[K-algebra and homomorphism]
-Given a K-algebra is the same as
-having \mynameref{def:homomorphism} $f: K \rightarrow A$ of rings.
-\begin{proof}
-Really if I have a K-algebra I can define the
-\mynameref{def:homomorphism} $f(k) = k \cdot 1_A$, where $1_A$ is an
-identity element of $A$. Thus $k \cdot 1_A \in A$.
+  Given a K-algebra is the same as
+  having \mynameref{def:homomorphism} $f: K \rightarrow A$ of rings.
+  \begin{proof}
+    Really if I have a K-algebra I can define the
+    \mynameref{def:homomorphism} $f(k) = k \cdot 1_A$, where $1_A$ is an
+    identity element of $A$. Thus $k \cdot 1_A \in A$.
 
-And conversely if I have the \mynameref{def:homomorphism}
-$f: K \rightarrow A$
-I can define the K-algebra structure by setting
-$k a = f(k) a$ because $f(k), a \in A$ and there is a multiplication
-defined on $A$. As result I have a rule for multiplication a scalar
-($k \in K$) on a vector ($a \in A$).
-\end{proof}
-\label{lem:lec1_homkalgebra}
+    And conversely if I have the \mynameref{def:homomorphism}
+    $f: K \rightarrow A$
+    I can define the K-algebra structure by setting
+    $k a = f(k) a$ because $f(k), a \in A$ and there is a multiplication
+    defined on $A$. As result I have a rule for multiplication a scalar
+    ($k \in K$) on a vector ($a \in A$).
+  \end{proof}
+  \label{lem:lec1_homkalgebra}
 \end{lemma}
 
 \begin{lemma}[About homomorphism of fields]
-Any \mynameref{def:homomorphism} of fields is
-\mynameref{def:injection}.
-\footnote{
-  But the statement is not valid for groups. In that case the
-  homomorphism is injection if and only if the 
-  kernel is trivial and consists of only one element - identity.
-  See theorem \ref{thm:grouphomomorphsim}.
-}
-\begin{proof}
-Lets proof by contradiction.
-Really if $f(x) = f(y)$ and $x \ne y$ then
-\begin{eqnarray}
-  f(x) - f(y) = 0_A,
-  \nonumber \\
-  f(x - y) = 0_A,
-  \nonumber \\
-  f(x - y) f(\left(x - y\right)^{-1}) =
-  f\left(\frac{x - y}{x - y}\right) = f(1_K) = 1_A = 0_A
-  \nonumber
-\end{eqnarray}
-that is impossible.
-\end{proof}
-\label{lem:lec1_homomorphism_is_injection}
+  Any \mynameref{def:homomorphism} of fields is
+  \mynameref{def:injection}.
+  \footnote{
+    But the statement is not valid for groups. In that case the
+    homomorphism is injection if and only if the 
+    kernel is trivial and consists of only one element - identity.
+    See theorem \ref{thm:grouphomomorphsim}.
+  }
+  \begin{proof}
+    Lets proof by contradiction.
+    Really if $f(x) = f(y)$ and $x \ne y$ then
+    \begin{eqnarray}
+      f(x) - f(y) = 0_A,
+      \nonumber \\
+      f(x - y) = 0_A,
+      \nonumber \\
+      f(x - y) f(\left(x - y\right)^{-1}) =
+      f\left(\frac{x - y}{x - y}\right) = f(1_K) = 1_A = 0_A
+      \nonumber
+    \end{eqnarray}
+    that is impossible.
+  \end{proof}
+  \label{lem:lec1_homomorphism_is_injection}
 \end{lemma}
 
 There are some comments on the results. We have got that a
@@ -185,7 +185,7 @@ field $K$ is a sub-field for the K-algebra.
       (x_2 + y_2)z_2
     \end{array}
     \right) =
-        \left(
+    \left(
     \begin{array}{c}
       x_1 z_1 + y_1 z_1 \\
       x_2 z_2 + y_2 z_2
@@ -221,11 +221,11 @@ field $K$ is a sub-field for the K-algebra.
   \[
   1_L = 
   \left(
-    \begin{array}{c}
-      1 \\
-      1
-    \end{array}
-    \right)
+  \begin{array}{c}
+    1 \\
+    1
+  \end{array}
+  \right)
   \]
   The zero is the standard one from vector space
   \[
@@ -246,7 +246,7 @@ field $K$ is a sub-field for the K-algebra.
     0
   \end{array}
   \right)
-    \left(
+  \left(
   \begin{array}{c}
     0 \\
     1
@@ -277,14 +277,14 @@ If $L$ is a field there are 2 possibilities
 \item $1 + 1 + \dots \ne 0$. In this case
   $\mathbb{Z} \subset L$ but $\mathbb{Z}$ is not a field therefore $L$
   is an extension of $\mathbb{Q}$. In the case $char L = 0$
-  \item $1 + 1 + \dots + 1 = \sum_{i = 1}^m 1 = 0$ for some $m \in
-    \mathbb{Z}$. The first time when it happens is for a prime number
-    i.e. minimal $m$ with the property is prime. In this case $char L
-    = p$, where $p = \min m$  - the minimal $m$ (prime) with the
-    property. In this 
-    case $\mathbb{Z}/p\mathbb{Z} \subset L$. The
-    $\mathbb{Z}/p\mathbb{Z}$ is a field denoted by $\mathbb{F}_p$. The
-    $L$ is an extension of $\mathbb{F}_p$.
+\item $1 + 1 + \dots + 1 = \sum_{i = 1}^m 1 = 0$ for some $m \in
+  \mathbb{Z}$. The first time when it happens is for a prime number
+  i.e. minimal $m$ with the property is prime. In this case $char L
+  = p$, where $p = \min m$  - the minimal $m$ (prime) with the
+  property. In this 
+  case $\mathbb{Z}/p\mathbb{Z} \subset L$. The
+  $\mathbb{Z}/p\mathbb{Z}$ is a field denoted by $\mathbb{F}_p$. The
+  $L$ is an extension of $\mathbb{F}_p$.
 \end{enumerate}
 No other possibilities exist. The $\mathbb{Q}$ and $\mathbb{F}_p$ are
 the prime fields. Any field is an extension of one of those.
@@ -325,10 +325,9 @@ B Q \equiv 1 \mod P,
 \]
 thus $B$ is $Q^{-1}$ in $K\left[X\right]/\left(P\right)$.
 
-\begin{example}
-  The example is not a part of the lectures but it's very usefully in
-  future lectures.
-
+The claim is not a part of the lectures but it's very usefully in
+future lectures.
+\begin{claim}
   Let $K$ is a field and $a \in K$ then $K\left[X\right]/\left(X -
   a\right)$ is also a field and there exists an
   \mynameref{def:isomorphism} between the field and $K$ i.e.
@@ -336,51 +335,77 @@ thus $B$ is $Q^{-1}$ in $K\left[X\right]/\left(P\right)$.
     K\left[X\right]/\left(X - a\right) \cong K
     \label{eq:lec1_ex1_1}
   \end{equation}
+  \label{claim:lec1_fieldquotionisomorphism}
+  \begin{proof}
+    The $K\left[X\right]/\left(X - a\right)$ is a field just because
+    $X-a$ is
+    \mynameref{def:irreducible} (see example \ref{ex:irreducible}).
 
-  The $K\left[X\right]/\left(X - a\right)$ is a field just because
-  $X-a$ is
-  \mynameref{def:irreducible} (see example \ref{ex:irreducible}).
+    For the proof the main statement (\ref{eq:lec1_ex1_1}) lets consider a
+    polynomial $P \in  K\left[X\right]$ and 
+    define the following \mynameref{def:fieldhomomorphism}:
+    \begin{equation}
+      \phi: K\left[X\right]/\left(X - a\right)
+      \xrightarrow[P(X) \to P(a)]{} K
+      \label{eq:lec1_ex1_2}
+    \end{equation}
 
-  For the proof the main statement (\ref{eq:lec1_ex1_1}) lets consider a
-  polynomial $P \in  K\left[X\right]$ and 
-  define the following \mynameref{def:homomorphism}:
-  \begin{equation}
-  \phi: K\left[X\right]/\left(X - a\right)
-  \xrightarrow[P(X) \to P(a)]{} K
-  \label{eq:lec1_ex1_2}
-  \end{equation}
+    The $\phi$ defined by (\ref{eq:lec1_ex1_2}) is
+    \mynameref{def:fieldhomomorphism}. For the proof of the claim lets take
+    $P_1, P_2 \in K\left[X\right]/\left(X - a\right)$. Clear that
+    \[
+    \phi\left(P_1 + P_2\right) = P_1\left(a\right) + P_2\left(a\right)
+    = \phi\left(P_1\right) + \phi\left(P_1\right).
+    \]
+    The same holds with the multiplication:
+    \[
+    \phi\left(P_1 \cdot P_2\right) = P_1\left(a\right) \cdot P_2\left(a\right)
+    = \phi\left(P_1\right) \cdot \phi\left(P_1\right).
+    \]
+    %% For the inverse element image lets consider $P \in
+    %% K\left[X\right]/\left(X - a\right)$ such that $P \ne 0$ and as
+    %% result $\phi\left(P\right) = P\left(a\right) \ne 0$.
+    %% There exists $P^{-1} \in K\left[X\right]/\left(X - a\right)$ as
+    %% soon as $K\left[X\right]/\left(X - a\right)$ is a field. Therefore
+    %% we have
+    %% \begin{eqnarray}
+    %%   \phi(1) = \phi\left(P P^{-1}\right) =
+    %%   \phi\left(P\right)\phi\left(P^{-1}\right) =
+    %%   \nonumber \\
+    %%   = P\left(a\right) P^{-1}\left(a\right) = 1,
+    %%   \nonumber
+    %% \end{eqnarray}
+    %% i.e.
+    %% \[
+    %% \phi\left(P^{-1}\right) = \phi\left(P\right)^{-1}.
+    %% \]
+    That completes the proof of the \mynameref{def:fieldhomomorphism}.
+    %% Division is more complex but also can be
+    %% shown: if $P_2 \ne 0$ when there exists
+    %% $P_2^{-1} \in K\left[X\right]/\left(X - a\right)$ as soon as
+    %% $K\left[X\right]/\left(X - a\right)$ is the field then
+    %% with $\phi\left(P_2^{-1}\right) = P_2^{-1}\left(a\right) =
+    %% \frac{1}{\phi\left(P_2\right)}$ one can get
+    %% \[
+    %% \phi\left(\frac{P_1}{P_2}\right) =
+    %% \phi\left(P_1 P_2^{-1}\right) =
+    %% \phi\left(P_1\right) \phi\left(P_2^{-1}\right) =
+    %% \frac{\phi\left(P_1\right)}{\phi\left(P_2\right)}
+    %% \]
 
-  The $\phi$ defined by (\ref{eq:lec1_ex1_2}) is
-  \mynameref{def:homomorphism}. For the proof of the claim lets take
-  $P_1, P_2 \in K\left[X\right]/\left(X - a\right)$. Clear that
-  $\phi\left(P_1 + P_2\right) = P_1\left(a\right) + P_2\left(a\right)
-  = \phi\left(P_1\right) + \phi\left(P_1\right)$. The same holds with
-  the multiplication. Division is more complex but also can be
-  shown: if $P_2 \ne 0$ when there exists $P_2^{-1}$ as soon as
-  $K\left[X\right]/\left(X - a\right)$ is the field then
-  with $\phi\left(P_2^{-1}\right) = P_2^{-1}\left(a\right) =
-  \frac{1}{\phi\left(P_2\right)}$ one can get
-  \[
-  \phi\left(\frac{P_1}{P_2}\right) =
-  \phi\left(P_1 P_2^{-1}\right) =
-  \phi\left(P_1\right) \phi\left(P_2^{-1}\right) =
-  \frac{\phi\left(P_1\right)}{\phi\left(P_2\right)}
-  \]
+    We have $\ker{\phi} = \left(X - a\right)$ because for any polynomial
+    $P$ that is in the ideal $\left(X - a\right)$ has $P(a) = 0$ i.e. in
+    the kernel of $\phi$.
 
-  We have $\ker{\phi} = \left(X - a\right)$ because for any polynomial
-  $P$ that is in the ideal $\left(X - a\right)$ has $P(a) = 0$ i.e. in
-  the kernel of $\phi$.
+    Next we should show that $\phi$ is \mynameref{def:surjection} it's
+    easy because $\forall k \in K$ we can consider constant polynomial
+    $P = k$ from $K\left[X\right]$. For the polynomial we will have
+    $\phi\left(k\right) = k$.
 
-  Next we should show that $\phi$ is \mynameref{def:surjection} it's
-  easy because $\forall k \in K$ we can consider constant polynomial
-  $P = k$ from $K\left[X\right]$. For the polynomial we will have
-  $\phi\left(k\right) = k$.
-
-  Now (\ref{eq:lec1_ex1_1}) follows from the
-  \mynameref{thm:firstisomorphism}. 
-  
-  \label{ex:lec1_fieldquotionisomorphism}
-\end{example}
+    Now (\ref{eq:lec1_ex1_1}) follows from the
+    \mynameref{thm:firstisomorphism}. 
+  \end{proof}
+\end{claim}
 
 \section{Algebraic elements. Minimal polynomial}
 
@@ -467,8 +492,8 @@ $K\left[X\right]/\left(P\right)$ is an extension of $K$ because it's
 \begin{definition}[Algebraic element]
   Let $K \subset L$ and $\alpha \in L$. $\alpha$ is an algebraic
   element if $\exists P \in K\left[X\right]$ such that
-    $P\left(\alpha\right) = 0$. Otherwise the $\alpha$ is called
-    transcendental.
+  $P\left(\alpha\right) = 0$. Otherwise the $\alpha$ is called
+  transcendental.
   \label{def:algebraicelement}
 \end{definition}
 
@@ -511,14 +536,14 @@ $K\left[X\right]/\left(P\right)$ is an extension of $K$ because it's
   Consider the following minimal polynomial
   $P_{min}\left(\alpha, \mathbb{Q}\right)$, where $\alpha =
   \sqrt{2}$. In GAP \cite{url:gap} we have
-  \begin{verbatim}
-    gap> x:=Indeterminate(Rationals,"x");;
-    gap> alpha:=Sqrt(2);;
-    gap> MinimalPolynomial(Rationals, alpha);
-    x^2-2
-  \end{verbatim}
-  I.e. $P_{min}\left(\alpha, \mathbb{Q}\right) = X^2 -2$.
-  \label{ex:minpolynomial}
+\begin{verbatim}
+  gap> x:=Indeterminate(Rationals,"x");;
+  gap> alpha:=Sqrt(2);;
+  gap> MinimalPolynomial(Rationals, alpha);
+  x^2-2
+\end{verbatim}
+I.e. $P_{min}\left(\alpha, \mathbb{Q}\right) = X^2 -2$.
+\label{ex:minpolynomial}
 \end{gapexample}
 
 \section{Algebraic elements. Algebraic extensions}

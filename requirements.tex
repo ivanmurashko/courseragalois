@@ -1792,11 +1792,34 @@ elements of the module.
   The homomorphism is a function (map) between two sets that preserves
   its algebraic structure. For the case of groups
   $\left(X, \circ\right)$ and $\left(Y, \odot\right)$ the function
-  $f: X \rightarrow Y$ is called homomorphism if
+  $\phi: X \rightarrow Y$ is called homomorphism if
   $\forall x_1, x_2 \in X$ it holds
-  $f\left(x_1 \circ x_2\right) = f\left(x_1 \right) \odot f\left( x_2\right)$.
+  $\phi\left(x_1 \circ x_2\right) = \phi\left(x_1 \right) \odot
+  \phi\left( x_2\right)$. 
   \label{def:homomorphism}
 \end{definition}
+
+\begin{definition}[Field homomorphism]
+  Let \cite{proofwiki:fieldhomomorphism} $\left(F, +, \times\right)$
+  and $\left(K, \oplus, \otimes\right)$ are 
+  \mynameref{def:field}s. Let $\phi: F \rightarrow K$ is a mapping
+  such that both
+  $\left(F, +\right) \rightarrow \left(K, \oplus\right)$
+  and
+  $\left(F, \times\right) \rightarrow \left(K, \otimes\right)$
+  are \mynameref{def:homomorphism}s under $\phi$.
+
+  That is $\forall a, b \in F$:
+  \begin{enumerate}
+  \item $\phi\left(a + b\right) = \phi\left(a\right) \oplus \phi\left(b\right)$
+  \item $\phi\left(a \times b\right) = \phi\left(a\right) \otimes \phi\left(b\right)$
+  \end{enumerate}
+
+  Then $\phi: \left(F, +, \times\right) \rightarrow \left(K, \oplus,
+  \otimes\right)$ is a field homomorphism.
+  \label{def:fieldhomomorphism}
+\end{definition}
+
 
 \begin{definition}[Isomorphism]
   If a map is \mynameref{def:bijection} as well as
