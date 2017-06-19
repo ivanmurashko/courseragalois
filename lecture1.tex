@@ -71,7 +71,7 @@ Why the 2 definitions are equivalent?
 \end{lemma}
 
 \begin{lemma}[About homomorphism of fields]
-  Any \mynameref{def:homomorphism} of fields is
+  Any \mynameref{def:fieldhomomorphism} is
   \mynameref{def:injection}.
   \footnote{
     But the statement is not valid for groups. In that case the
@@ -79,6 +79,7 @@ Why the 2 definitions are equivalent?
     kernel is trivial and consists of only one element - identity.
     See theorem \ref{thm:grouphomomorphsim}.
   }
+  \label{lem:lec1_homomorphism_is_injection}
   \begin{proof}
     Lets proof by contradiction.
     Really if $f(x) = f(y)$ and $x \ne y$ then
@@ -92,8 +93,7 @@ Why the 2 definitions are equivalent?
       \nonumber
     \end{eqnarray}
     that is impossible.
-  \end{proof}
-  \label{lem:lec1_homomorphism_is_injection}
+  \end{proof}  
 \end{lemma}
 
 There are some comments on the results. We have got that a
@@ -393,17 +393,26 @@ future lectures.
     %% \frac{\phi\left(P_1\right)}{\phi\left(P_2\right)}
     %% \]
 
-    We have $\ker{\phi} = \left(X - a\right)$ because for any polynomial
-    $P$ that is in the ideal $\left(X - a\right)$ has $P(a) = 0$ i.e. in
-    the kernel of $\phi$.
+    %% We have $\ker{\phi} = \left(X - a\right)$ because for any polynomial
+    %% $P$ that is in the ideal $\left(X - a\right)$ has $P(a) = 0$ i.e. in
+    %% the kernel of $\phi$.
 
+    Lemma \mynameref{lem:lec1_homomorphism_is_injection} says that any
+    \mynameref{def:fieldhomomorphism} is \mynameref{def:injection},
+    i.e. $\phi$ is an injection.
+    
     Next we should show that $\phi$ is \mynameref{def:surjection} it's
     easy because $\forall k \in K$ we can consider constant polynomial
     $P = k$ from $K\left[X\right]$. For the polynomial we will have
     $\phi\left(k\right) = k$.
 
-    Now (\ref{eq:lec1_ex1_1}) follows from the
-    \mynameref{thm:firstisomorphism}. 
+    As result $\phi$ is \mynameref{def:injection} as well as
+    \mynameref{def:surjection} i.e. $\phi$ is
+    \mynameref{def:bijection}. With the fact that $\phi$ is
+    \mynameref{def:homomorphism} it will gives us that $\phi$ is
+    \mynameref{def:isomorphism}. 
+    %% Now (\ref{eq:lec1_ex1_1}) follows from the
+    %% \mynameref{thm:firstisomorphism}. 
   \end{proof}
 \end{claim}
 
