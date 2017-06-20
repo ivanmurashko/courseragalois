@@ -792,31 +792,59 @@ true for arbitrary modules over a ring.
   \item All \mynameref{def:homomorphism}s from $L$ to $\bar{K}$ have the
     same image.
     \footnote{
-      And the image is $L$ because $id$ is also a
+      And the image is $L$ as soon as $id$ is also a
       \mynameref{def:homomorphism}
       ??? There are 2 staff's comments about the claim:
       \begin{itemize}
       \item You can't naturally identify $L$ with a particular
         subfield of $\overline{K}$ (unless $L$ is given as a
         subfield of $\overline{K}$ a priori). But from the lecture
-        2.5 we know, that there exists an embedding $L
+        2.5 (see theorem \mynameref{thm:lec2_3}) we know, that there
+        exists an embedding $L 
         \hookrightarrow \overline{K}$ since $L$ is algebraic
         over $K$. And the theorem says that images of all such
         embeddings are equal if $L$ is normal over $K$. 
       \item My previous answer was a little bit misleading. I meant,
         if you have an arbitrary algebraic extension of $K$, there
-        is no canonical embedding into $\overline{K}$. Consider, for
-        example, a field $\mathbb{Q}/(x^3-2)$. It has several
-        embeddings into $\overline{\mathbb{Q}}$,
-        namely, $\mathbb{Q}(\sqrt[3]{2})$, $\mathbb{Q}(e^{2\pi
-          i/3}\sqrt[3]{2})$ and $\mathbb{Q}(e^{2\pi
-          i/3}\sqrt[3]{2})$. But if we consider the splitting field
-        of $x^3-2$, then it's image in $\overline{\mathbb{Q}}$
-        is $\mathbb{Q}(\sqrt[3]{2}, e^{2\pi i/3})$. So, yes, if we
+        is no canonical embedding into $\overline{K}$.
+
+        % Was removed by the staff
+        %% Consider, for
+        %% example, a field $\mathbb{Q}/(x^3-2)$. It has several
+        %% embeddings into $\overline{\mathbb{Q}}$,
+        %% namely, $\mathbb{Q}(\sqrt[3]{2})$, $\mathbb{Q}(e^{2\pi
+        %%   i/3}\sqrt[3]{2})$ and $\mathbb{Q}(e^{2\pi
+        %%   i/3}\sqrt[3]{2})$. But if we consider the splitting field
+        %% of $x^3-2$, then it's image in $\overline{\mathbb{Q}}$
+        %% is $\mathbb{Q}(\sqrt[3]{2}, e^{2\pi i/3})$. So, yes,
+
+        If we
         identify roots of polynomials which define $L$ with some
         elements of $\overline{K}$ (up to a permutation for each
         polynomial), then the image is $L$ itself. 
       \end{itemize}
+
+      As conclusion
+      \cite{bib:baker} (p. 54),
+      we can say that if $L$ is a splitting field of a
+      polynomial $P$ (just another definition of normal extension
+      \cite{bib:baker}) 
+      with roots $\alpha_1, \alpha_2, \dots, \alpha_n$ then
+      $L=K\left(\alpha_1, \alpha_2, \dots, \alpha_n\right)$ and as
+      soon as the homomorphism $\phi$ permutes the roots of $P$:
+      \begin{eqnarray}
+      \phi\left(L\right) =
+      \phi\left(K\left(\alpha_1, \alpha_2, \dots,
+      \alpha_n\right)\right) =
+      \nonumber \\
+      K \left(\phi\left(\alpha_1\right),
+      \phi\left(\alpha_2\right),
+      \dots
+      \phi\left(\alpha_n\right)
+      \right) =
+      K\left(\alpha_1, \alpha_2, \dots, \alpha_n\right) = L
+      \nonumber
+      \end{eqnarray}
     }
   \item The \mynameref{def:group} of \mynameref{def:automorphism}s
     $Aut\left(L/K\right)$ acts transitively (see definition
