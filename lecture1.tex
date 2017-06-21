@@ -270,27 +270,35 @@ field $K$ is a sub-field for the K-algebra.
   \label{ex:kalgebranotfield}
 \end{example}
 
-\subsection{Field characteristic}
-\label{sec:fieldcharacteristic}
-If $L$ is a field there are 2 possibilities
-\begin{enumerate}
-\item $1 + 1 + \dots \ne 0$. In this case
-  $\mathbb{Z} \subset L$ but $\mathbb{Z}$ is not a field therefore $L$
-  is an extension of $\mathbb{Q}$. In the case $char L = 0$
-\item $1 + 1 + \dots + 1 = \sum_{i = 1}^m 1 = 0$ for some $m \in
-  \mathbb{Z}$. The first time when it happens is for a prime number
-  i.e. minimal $m$ with the property is prime. In this case $char L
-  = p$, where $p = \min m$  - the minimal $m$ (prime) with the
-  property. In this 
-  case $\mathbb{Z}/p\mathbb{Z} \subset L$. The
-  $\mathbb{Z}/p\mathbb{Z}$ is a field denoted by $\mathbb{F}_p$. The
-  $L$ is an extension of $\mathbb{F}_p$.
-\end{enumerate}
-No other possibilities exist. The $\mathbb{Q}$ and $\mathbb{F}_p$ are
-the prime fields. Any field is an extension of one of those.
+\begin{definition}[Characteristic]
+  \label{def:fieldcharacteristic}
+  If $L$ is a field there are 2 possibilities
+  \begin{enumerate}
+  \item $1 + 1 + \dots \ne 0$. In this case
+    $\mathbb{Z} \subset L$ but $\mathbb{Z}$ is not a field therefore $L$
+    is an extension of $\mathbb{Q}$. In the case $char L = 0$
+  \item $1 + 1 + \dots + 1 = \sum_{i = 1}^m 1 = 0$ for some $m \in
+    \mathbb{Z}$. The first time when it happens is for a prime number
+    i.e. minimal $m$ with the property is prime. In this case $char L
+    = p$, where $p = \min m$  - the minimal $m$ (prime) with the
+    property. In this 
+    case $\mathbb{Z}/p\mathbb{Z} \subset L$. The
+    $\mathbb{Z}/p\mathbb{Z}$ is a field denoted by $\mathbb{F}_p$. The
+    $L$ is an extension of $\mathbb{F}_p$.
+  \end{enumerate}
+  No other possibilities exist. The $\mathbb{Q}$ and $\mathbb{F}_p$ are
+  the prime fields. Any field is an extension of one of those.
+\end{definition}
 
-\subsection{Field $K\left[X\right]/\left(P\right)$}
-\label{lec1_sec14}
+\begin{definition}[Prime field]
+  \label{def:primefield}
+  If $L$ is a field $\mathbb{Q} \subset L$, i.e. $char L = 0$ then
+  $\mathbb{Q}$ is the prime field for $L$. Otherwise, if $char L = p > 0$
+  then $\mathbb{F}_p$ is the prime field.
+\end{definition}
+
+\begin{claim}[About quotient field]
+\label{claim:lec1_sec14}
 Let $K\left[X\right]$ \mynameref{def:ring} of polynomials.
 The $P \in K\left[X\right]$ is an
 \mynameref{def:irreducible}. $\left(P\right)$ is an 
@@ -304,7 +312,9 @@ The $P \in K\left[X\right]$ is an
 }
 The set of residues by
 the polynomial forms a field that denoted by
-$K\left[X\right]/\left(P\right)$. How we can see it?
+$K\left[X\right]/\left(P\right)$.
+\begin{proof}
+How we can see it?
 If $Q \in K\left[X\right]$ is a polynomial that $Q \notin
 \left(P\right)$ when $Q$ is prime to $P$.
 \footnote{
@@ -324,10 +334,14 @@ or
 B Q \equiv 1 \mod P,
 \]
 thus $B$ is $Q^{-1}$ in $K\left[X\right]/\left(P\right)$.
+\end{proof}
+\end{claim}
 
-The claim is not a part of the lectures but it's very usefully in
-future lectures.
 \begin{claim}
+  \footnote{
+    The claim is not a part of the lectures but it's very usefully in
+    future lectures.
+  }
   Let $K$ is a field and $a \in K$ then $K\left[X\right]/\left(X -
   a\right)$ is also a field and there exists an
   \mynameref{def:isomorphism} between the field and $K$ i.e.
@@ -339,7 +353,8 @@ future lectures.
   \begin{proof}
     The $K\left[X\right]/\left(X - a\right)$ is a field just because
     $X-a$ is
-    \mynameref{def:irreducible} (see example \ref{ex:irreducible}).
+    \mynameref{def:irreducible} (see example \ref{ex:irreducible} and
+    claim \mynameref{claim:lec1_sec14}).
 
     For the proof the main statement (\ref{eq:lec1_ex1_1}) lets consider a
     polynomial $P \in  K\left[X\right]$ and 
@@ -420,8 +435,10 @@ future lectures.
 
 \subsection{$K\left[X\right]/\left(P\right)$ field}
 
-Alternative proof that $K\left[X\right]/\left(P\right)$ is the
-\mynameref{def:field}. The $\left(P\right)$ is a \mynameref{def:maxideal}
+Alternative proof of claim \ref{claim:lec1_sec14} i.e. the fact that
+$K\left[X\right]/\left(P\right)$ is the 
+\mynameref{def:field} as follows.
+The $\left(P\right)$ is a \mynameref{def:maxideal}
 \footnote{
   To prove that $\left(P\right)$ is a \mynameref{def:maxideal} we have
   to use \mynameref{lem:bezout}.
@@ -429,7 +446,8 @@ Alternative proof that $K\left[X\right]/\left(P\right)$ is the
 but a quotient by a  \mynameref{def:maxideal} is a \mynameref{def:field}
 (see \mynameref{thm:maxideal}).
 
-$K\left[X\right]/\left(P\right)$ is an extension of $K$ because it's
+We also can say that $K\left[X\right]/\left(P\right)$ is an extension
+of $K$ because it's 
 \mynameref{def:kalgebra}.
 
 \begin{example}[$K = \mathbb{F}_2/\left(X^2+X+1\right)$]

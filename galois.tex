@@ -143,8 +143,22 @@
                        }%
                        {\end{xlemma}}
 
-                       
-\newtheorem{claim}[xtheorem]{Claim}
+
+\theoremstyle{claim}
+\newaliascnt{claim}{xtheorem}
+\newtheorem{xclaim}[claim]{Claim}
+\aliascntresetthe{claim}
+\providecommand*{\claimautorefname}{Claim}
+\NewDocumentEnvironment{claim}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to claim
+                         {\begin{xclaim}}
+                         {\begin{xclaim}[#1]
+                             \index{#1 claim!declaration}
+                         }
+                       }%
+                       {\end{xclaim}}
+
 \newtheorem{proposition}[xtheorem]{Proposition}
 \newtheorem{corollary}[xtheorem]{Corollary}
 \newtheorem{property}[xtheorem]{Property}
