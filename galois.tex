@@ -102,6 +102,28 @@
                        }%
                        {\end{xgapexample}}
 
+\theoremstyle{myexample}
+\newaliascnt{myexample}{xtheorem}
+\newtheorem{xmyexample}[myexample]{Example}
+\aliascntresetthe{myexample}
+\providecommand*{\myexampleautorefname}{Example}
+\NewDocumentEnvironment{myexample}{oo}
+                       {\IfNoValueTF{#1}
+                         % no optional argument to myexample
+                         {\begin{xmyexample}
+                             \footnote{
+                               The example is not a part of the lectures.
+                             }                             
+                         }
+                         {\begin{xmyexample}[#1]
+                             \footnote{
+                               The example is not a part of the lectures.
+                             }                             
+                             \index{#1!example}
+                         }
+                       }%
+                       {\end{xmyexample}}
+
 
 \theoremstyle{myremark}
 \newaliascnt{myremark}{xtheorem}

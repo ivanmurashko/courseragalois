@@ -356,11 +356,8 @@ fields.
   \label{ex:lec3_ex1}
 \end{example}
 
-Just another example \cite{bib:KeithConradFiniteFields}
-\footnote{
-  There is not a part of the video lectures
-}
-\begin{example}[Polynomial factorization over a finite field]
+Just another example \cite{bib:KeithConradFiniteFields}:
+\begin{myexample}[Polynomial factorization over a finite field]
   \label{ex:lec3_polfactorization}
   In $\mathbb{F}_2\left[X\right]$, the irreducible factorization of
   $X^{2^n} -X$ for $n=1,2,3,4$ is as follows
@@ -382,7 +379,7 @@ Just another example \cite{bib:KeithConradFiniteFields}
   You can compare the example with example \ref{ex:lec3_ex1} but you
   have to take into consideration the following fact
   $1 = -1 \mod 2$
-\end{example}
+\end{myexample}
 
 \begin{gapexample}[Polynomial factorization over a finite field in GAP]
   At the moment GAP provides only methods to factorize polynomials
@@ -676,10 +673,7 @@ The $P' = 0$ i.e. it vanishes $P$ is a polynomial in $X^p$. I.e. if
 $P = \sum a_i x^i$ and $p \mid i$ or $a_i = 0$. In that case ($P' =
 0$) let $r = \max h$ such that $P$ is a polynomial in $X^{p^h}$ that
 is $a_i = 0$ whenever $p^h \nmid i$. See the following example
-\footnote{
-  The example is not a part of the video lectures.
-}
-\begin{example}
+\begin{myexample}
   Let $p = 2$. The polynomial $P\left(X\right) = X^{16} + 1$ has the
   required property ($P' = 0$). The polynomial can be present in the
   following form
@@ -696,7 +690,7 @@ is $a_i = 0$ whenever $p^h \nmid i$. See the following example
   where $Y = X^4$ and $Q(Y) = Y^3 + 1$. In the case
   $r=2, p^2 = 4 \mid 12$ because $h = 3 > 2$ does not fit into
   the requirements: $p^h = 2^3 = 8 \nmid 12$.
-\end{example}
+\end{myexample}
 
 \begin{proposition}
   Let $P\left(X\right) = Q\left(X^{p^r}\right)$ and $Q' \ne 0$ i.e.
