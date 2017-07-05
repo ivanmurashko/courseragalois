@@ -102,6 +102,23 @@
                        }%
                        {\end{xgapexample}}
 
+
+\theoremstyle{myremark}
+\newaliascnt{myremark}{xtheorem}
+\newtheorem{xmyremark}[myremark]{Remark}
+\aliascntresetthe{myremark}
+\providecommand*{\myremarkautorefname}{Remark}
+\NewDocumentEnvironment{myremark}{oo}
+                       {\begin{xmyremark}
+                         \footnote{
+                           The remark is not a part of the lectures
+                           but it is important to understand the below
+                           content. 
+                         }                             
+                       }
+                       {\end{xmyremark}}
+
+
 %
 % https://tex.stackexchange.com/questions/250035/transform-output-theoremstyleremark-from-italics-to-bold
 %
@@ -126,7 +143,6 @@
                          {\begin{xremark}[#1]\index{#1!remark}}
                        }%
                        {\end{xremark}}
-
                        
 \theoremstyle{lemma}
 \newaliascnt{lemma}{xtheorem}
