@@ -514,6 +514,38 @@ of $K$ because it's
   \label{ex:F2overP}
 \end{example}
 
+Arguments for the \autoref{ex:F2overP} can also be found in the
+following remark (not part of the lectures)
+\begin{remark}[About quotient field]
+Consider an arbitrary field $L$ ($L=\mathbb{F}_2$ at the
+\autoref{ex:F2overP}) and $P\left(X\right) = X^n + a_{n-1}X^{n-1} +
+a_{n-2} X^{n-2} + \dots + a_0 \in L\left[X\right]$ is an
+irreducible polynomial over $L$. Let $\alpha$ is a root of the
+polynomial then 
+\[
+\alpha^n + a_{n-1} \alpha^{n-1} + \dots + a_0 = 0,
+\]
+or
+\[
+\alpha^n = - a_{n-1} \alpha^{n-1} - \dots - a_0.
+\]
+Therefore $\forall l \ge n, \exists l_i \in L$ such that 
+\[
+\alpha^k = \sum_{i=0}^{n-1}l_i \alpha^{i}
+\]
+and as result $\forall x \in L/\left(P\right)$ exists $x_i \in L$
+such that 
+\[
+x = \sum_{i=0}^{n-1}x_i \alpha^{i}.
+\]
+We can say that we have the following basis: $\{\{L\}, \alpha, \dots,
+\alpha^{n-1}\}$ where $\{L\}$ - L basis. For \autoref{ex:F2overP} we
+have
+$\{L\}= \{\mathbb{F}_2\}= \{0,1\}$, $\alpha = \bar{X}$ and as result
+$K = \mathbb{F}_2/\left(X^2+X+1\right)$ will have the following basis
+$\{0,1,\bar{X}\}$.
+\end{remark}
+
 \subsection{Algebraic elements}
 
 \begin{definition}[Algebraic element]
