@@ -568,10 +568,42 @@ property.
 
 \begin{remark}[Not every Abelian group is cyclic]
   The theorem statement cannot be reversed i.e. there exist abelian
-  group that are not cyclic. For example well known Klein four group
-  $V_4$ \cite{wiki:klein4group} that is an
-  \mynameref{def:abeliangroup} but not \mynameref{def:cyclicgroup}  
+  group that are not cyclic. For example well known \mynameref{def:v4}
+  $V_4$  that is an
+  \mynameref{def:abeliangroup} but not \mynameref{def:cyclicgroup}
 \end{remark}
+
+\begin{definition}[Klein four group]
+  \label{def:v4}
+  The Klein four group $V_4$ is a group of order 4
+  \footnote{there are only 2 groups of order 4: $V_4$ and
+    $\mathbb{Z}/4\mathbb{Z}$ (the only cyclic group of order 4)}
+  The Cayley table for the group is on the table \ref{tab:CayleyV4}
+  \cite{wiki:klein4group}. 
+  \begin{table}
+    \centering
+    \caption{Cayley table for $V_4$}
+    \label{tab:CayleyV4}
+    \begin{tabular}{l|llll}
+      \toprule
+      $\circ$ & $e$ & $a$ & $b$ & $c$\\
+      \midrule
+      $e$ & $e$ & $a$ & $b$ & $c$ \\
+      $a$ & $a$ & $e$ & $c$ & $b$ \\
+      $b$ & $b$ & $c$ & $e$ & $a$ \\
+      $c$ & $c$ & $b$ & $a$ & $e$ \\    
+      \bottomrule
+    \end{tabular}
+    \end{table}  
+\end{definition}
+
+\begin{example}[Klein four group]
+  There are several examples of $V_4$:
+  \begin{itemize}
+  \item $V_4 \cong \mathbb{Z}/2\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z}$
+  \item $V_4 \cong \left(\mathbb{Z}/8\mathbb{Z}\right)^\times \cong \left(\mathbb{Z}/12\mathbb{Z}\right)^\times$
+  \end{itemize}
+\end{example}
 
 \begin{definition}[Direct sum]
   The direct sum of two abelian groups $A$ and
